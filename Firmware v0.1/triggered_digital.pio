@@ -1,0 +1,38 @@
+.program triggered_digital
+
+    wait 0 gpio 1
+    wait 1 gpio 1
+    irq set 0
+.wrap_target
+    in pins, 8
+.wrap
+
+% c-sdk {
+static inline void triggered_digital_program_init(PIO pio, uint sm, uint offset, uint pin, float clkdiv) {
+    pio_sm_config c = triggered_digital_program_get_default_config(offset);
+
+    // Set the IN base pin to the provided `pin` parameter
+    sm_config_set_in_pins(&c, pin);
+
+    // Set the pin directions to input at the PIO
+    pio_sm_set_consecutive_pindirs(pio, sm, pin, 8, false);
+
+    // Set clock divider
+    sm_config_set_clkdiv(&c, clkdiv);
+    
+    // Shifting to left
+    sm_config_set_in_shift(
+        &c,
+        false, // Shift-to-right = false (i.e. shift to left)
+        true,  // Autopush enabled
+        8      // Autopush threshold = 8
+    );
+
+    // We only receive, so disable the TX FIFO to make the RX FIFO deeper.
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+
+    // Load our configuration, and start the program from the beginning
+    pio_sm_init(pio, sm, offset, &c);
+    pio_sm_set_enabled(pio, sm, true); 
+}
+%}
