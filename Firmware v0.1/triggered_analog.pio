@@ -1,0 +1,46 @@
+.program triggered_analog
+
+.side_set 1 opt
+
+	wait 0 gpio 7
+    wait 1 gpio 7
+    irq set 0
+loop:
+    in pins, 8  side 0
+    jmp loop    side 1
+
+% c-sdk {
+static inline void triggered_analog_program_init(PIO pio, uint sm, uint offset, uint pin_base, uint side_set, float clkdiv) {
+    pio_sm_config c = triggered_analog_program_get_default_config(offset);
+
+    sm_config_set_sideset_pins(&c, side_set);
+	
+	sm_config_set_sideset(&c, 2, true, false);
+	
+	pio_gpio_init(pio, side_set);
+
+    // Set the IN base pin to the provided `pin_base` parameter
+    sm_config_set_in_pins(&c, pin_base);
+
+    // Set the pin directions to input at the PIO
+    pio_sm_set_consecutive_pindirs(pio, sm, pin_base, 8, false);
+	pio_sm_set_consecutive_pindirs(pio, sm, side_set, 1, true);
+    // Set clock divider
+    sm_config_set_clkdiv(&c, clkdiv);
+    
+    // Shifting to left.
+    sm_config_set_in_shift(
+        &c,
+        false, // Shift-to-right = false (i.e. shift to left)
+        true,  // Autopush enabled
+        8      // Autopush threshold = 8
+    );
+
+    // We only receive, so disable the TX FIFO to make the RX FIFO deeper.
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+
+    // Load our configuration, and start the program from the beginning
+    pio_sm_init(pio, sm, offset, &c);
+    pio_sm_set_enabled(pio, sm, true); 
+}
+%}

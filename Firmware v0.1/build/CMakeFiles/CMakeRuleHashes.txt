@@ -1,7 +1,9 @@
 # Hashes of file build rules.
 ef04940e1810cfae01702bcfefda4fc8 CMakeFiles/ELF2UF2Build
 e55cfee1eb673d784c404a38586f5283 CMakeFiles/ELF2UF2Build-complete
+ef04940e1810cfae01702bcfefda4fc8 CMakeFiles/Firmware_v0.1_triggered_analog_pio_h
 ef04940e1810cfae01702bcfefda4fc8 CMakeFiles/Firmware_v0.1_triggered_digital_pio_h
+ef04940e1810cfae01702bcfefda4fc8 CMakeFiles/Firmware_v0.1_untriggered_analog_pio_h
 ef04940e1810cfae01702bcfefda4fc8 CMakeFiles/Firmware_v0.1_untriggered_digital_pio_h
 08c68a70ea94b1c021e2a408de7c2cd7 elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build
 d032abfe0616542422c43563a47cf82b elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure
@@ -25,5 +27,7 @@ d9e714f731900c4f79d227a5e07cb1fe pico-sdk/src/rp2_common/pico_cyw43_driver/pioas
 906e55ee36b8b1f85beb73a1899d77f1 pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir
 70fb762c114eef24be05381335992cee pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch
 d866cef7ece4939497a8a54132e408df pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update
+109c23536005bb1741420a7ec5240df0 triggered_analog.pio.h
 e0f91b9d94ae43457a33955d8b6cfb84 triggered_digital.pio.h
+c4d5c7bb8854178438ddf4e3526ae3b2 untriggered_analog.pio.h
 b63b3cc805e5bbb9fb02425e30268320 untriggered_digital.pio.h

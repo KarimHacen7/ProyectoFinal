@@ -10,8 +10,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
 
-
-
 add_executable(${PROJECT_NAME}
     main.c
     configuration.c
@@ -26,6 +24,12 @@ pico_generate_pio_header(${PROJECT_NAME}
 pico_generate_pio_header(${PROJECT_NAME}  
         ${CMAKE_CURRENT_LIST_DIR}/triggered_digital.pio
 )
+pico_generate_pio_header(${PROJECT_NAME}  
+        ${CMAKE_CURRENT_LIST_DIR}/untriggered_analog.pio
+)
+pico_generate_pio_header(${PROJECT_NAME}  
+        ${CMAKE_CURRENT_LIST_DIR}/triggered_analog.pio
+)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(${PROJECT_NAME})
@@ -36,6 +40,7 @@ target_link_libraries(${PROJECT_NAME}
     hardware_pio
 	hardware_dma
     hardware_spi
+    hardware_adc
 )
 
 # Enable usb output, disable uart output

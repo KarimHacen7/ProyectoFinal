@@ -1,0 +1,2944 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Adaptador SOT-23 Diodos y PNP.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0230034"
+     inkscape:cx="232.15955"
+     inkscape:cy="607.52488"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g463" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g463"
+       transform="translate(-36.267241,69.490148)">
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g13" />
+      <g
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g15" />
+      <g
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g211" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g217" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g223" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g229" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g235" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g241" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g247" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g253" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g259" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g265" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g271" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g277" />
+      <g
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g283" />
+      <g
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         id="g285" />
+      <g
+         id="g597"
+         transform="translate(-31.108824,7.5259489)">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g19">
+          <rect
+             x="115.75"
+             y="51.75"
+             width="30.5"
+             height="35.5"
+             rx="0.000000"
+             id="rect17" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g209">
+          <g
+             id="g21" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g27">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 122.8,61.82 v -2 h 2 v 2 z"
+               id="path23" />
+            <circle
+               cx="123.8"
+               cy="63.360001"
+               r="1"
+               id="circle25" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g29" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g37">
+            <circle
+               cx="123.8"
+               cy="65.900002"
+               r="1"
+               id="circle31" />
+            <circle
+               cx="123.8"
+               cy="68.440002"
+               r="1"
+               id="circle33" />
+            <circle
+               cx="123.8"
+               cy="70.980003"
+               r="1"
+               id="circle35" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g39" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g43">
+            <circle
+               cx="123.8"
+               cy="73.519997"
+               r="1"
+               id="circle41" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g45" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g49">
+            <circle
+               cx="123.8"
+               cy="76.059998"
+               r="1"
+               id="circle47" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g51" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g55">
+            <circle
+               cx="123.8"
+               cy="78.599998"
+               r="1"
+               id="circle53" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g57" />
+          <g
+             id="g59" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g61" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g69">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,77.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path63" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,79.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path65" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,78.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path67" />
+          </g>
+          <g
+             id="g71" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g79">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,71.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path73" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,73.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path75" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,72.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path77" />
+          </g>
+          <g
+             id="g81" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g89">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,66.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path83" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,68.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path85" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,67.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path87" />
+          </g>
+          <g
+             id="g91" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g99">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,61.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path93" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,62.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path95" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,60.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path97" />
+          </g>
+          <g
+             id="g101" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g105">
+            <circle
+               cx="138.8"
+               cy="60.82"
+               r="1"
+               id="circle103" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g107" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g111">
+            <circle
+               cx="138.8"
+               cy="63.360001"
+               r="1"
+               id="circle109" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g113" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g117">
+            <circle
+               cx="138.8"
+               cy="65.900002"
+               r="1"
+               id="circle115" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g119" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g123">
+            <circle
+               cx="138.8"
+               cy="68.440002"
+               r="1"
+               id="circle121" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g125" />
+          <g
+             id="g127" />
+          <g
+             id="g129" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g131" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g133" />
+          <g
+             style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g205">
+            <path
+               d="m 136.28,60.82 h 2.52"
+               id="path135" />
+            <path
+               d="m 135.1,62 1.18,-1.18"
+               id="path137" />
+            <path
+               d="M 132.375,62 H 135.1"
+               id="path139" />
+            <path
+               d="m 136.3,63.6 0.24,-0.24"
+               id="path141" />
+            <path
+               d="M 136.275,63.6 H 136.3"
+               id="path143" />
+            <path
+               d="m 132.375,67.5 3.9,-3.9"
+               id="path145" />
+            <path
+               d="m 136.54,63.36 h 2.26"
+               id="path147" />
+            <path
+               d="m 135.4,68.1 2.2,-2.2"
+               id="path149" />
+            <path
+               d="m 137.6,65.9 h 1.2"
+               id="path151" />
+            <path
+               d="M 132.375,73 135.4,69.975"
+               id="path153" />
+            <path
+               d="M 135.4,69.975 V 68.1"
+               id="path155" />
+            <path
+               d="M 132.375,78.5 138.8,72.075"
+               id="path157" />
+            <path
+               d="M 138.8,72.075 V 68.44"
+               id="path159" />
+            <path
+               d="m 126.9,78.6 h -3.1"
+               id="path161" />
+            <path
+               d="M 127.75,79.45 126.9,78.6"
+               id="path163" />
+            <path
+               d="m 130.5,79.45 h -2.75"
+               id="path165" />
+            <path
+               d="M 127.36,76.06 H 123.8"
+               id="path167" />
+            <path
+               d="m 128.85,77.55 -1.49,-1.49"
+               id="path169" />
+            <path
+               d="m 130.5,77.55 h -1.65"
+               id="path171" />
+            <path
+               d="M 127.22,73.52 H 123.8"
+               id="path173" />
+            <path
+               d="m 127.65,73.95 -0.43,-0.43"
+               id="path175" />
+            <path
+               d="m 130.5,73.95 h -2.85"
+               id="path177" />
+            <path
+               d="M 127.18,70.98 H 123.8"
+               id="path179" />
+            <path
+               d="m 128.25,72.05 -1.07,-1.07"
+               id="path181" />
+            <path
+               d="m 130.5,72.05 h -2.25"
+               id="path183" />
+            <path
+               d="M 123.81,68.45 123.8,68.44"
+               id="path185" />
+            <path
+               d="m 130.5,68.45 h -6.69"
+               id="path187" />
+            <path
+               d="M 127.95,66.55 127.3,65.9"
+               id="path189" />
+            <path
+               d="m 127.3,65.9 h -3.5"
+               id="path191" />
+            <path
+               d="m 130.5,66.55 h -2.55"
+               id="path193" />
+            <path
+               d="m 128.35,62.95 h 2.15"
+               id="path195" />
+            <path
+               d="m 127.94,63.36 0.41,-0.41"
+               id="path197" />
+            <path
+               d="m 123.8,63.36 h 4.14"
+               id="path199" />
+            <path
+               d="m 130.5,61.05 h -6.47"
+               id="path201" />
+            <path
+               d="M 124.03,61.05 123.8,60.82"
+               id="path203" />
+          </g>
+          <g
+             id="g207" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g215">
+          <circle
+             cx="123.8"
+             cy="60.82"
+             r="0.625"
+             id="circle213" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g221">
+          <circle
+             cx="123.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle219" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g227">
+          <circle
+             cx="123.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle225" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g233">
+          <circle
+             cx="123.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle231" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g239">
+          <circle
+             cx="123.8"
+             cy="70.980003"
+             r="0.625"
+             id="circle237" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g245">
+          <circle
+             cx="123.8"
+             cy="73.519997"
+             r="0.625"
+             id="circle243" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g251">
+          <circle
+             cx="123.8"
+             cy="76.059998"
+             r="0.625"
+             id="circle249" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g257">
+          <circle
+             cx="123.8"
+             cy="78.599998"
+             r="0.625"
+             id="circle255" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g263">
+          <circle
+             cx="138.8"
+             cy="60.82"
+             r="0.625"
+             id="circle261" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g269">
+          <circle
+             cx="138.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle267" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g275">
+          <circle
+             cx="138.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle273" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g281">
+          <circle
+             cx="138.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle279" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g307">
+          <path
+             style="fill:none;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             d="m 121,57 h 20 v 25 h -20 z"
+             id="path287" />
+          <g
+             id="g289" />
+          <g
+             id="g291" />
+          <g
+             id="g293" />
+          <g
+             id="g295" />
+          <g
+             id="g297" />
+          <g
+             id="g299" />
+          <g
+             id="g301" />
+          <g
+             id="g303" />
+          <g
+             id="g305" />
+        </g>
+      </g>
+      <g
+         id="g597-9"
+         transform="translate(-31.108824,-87.263372)">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g19-1">
+          <rect
+             x="115.75"
+             y="51.75"
+             width="30.5"
+             height="35.5"
+             rx="0.000000"
+             id="rect17-9" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g209-0">
+          <g
+             id="g21-6" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g27-0">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 122.8,61.82 v -2 h 2 v 2 z"
+               id="path23-8" />
+            <circle
+               cx="123.8"
+               cy="63.360001"
+               r="1"
+               id="circle25-1" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g29-3" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g37-6">
+            <circle
+               cx="123.8"
+               cy="65.900002"
+               r="1"
+               id="circle31-1" />
+            <circle
+               cx="123.8"
+               cy="68.440002"
+               r="1"
+               id="circle33-8" />
+            <circle
+               cx="123.8"
+               cy="70.980003"
+               r="1"
+               id="circle35-6" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g39-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g43-6">
+            <circle
+               cx="123.8"
+               cy="73.519997"
+               r="1"
+               id="circle41-4" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g45-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g49-4">
+            <circle
+               cx="123.8"
+               cy="76.059998"
+               r="1"
+               id="circle47-4" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g51-6" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g55-1">
+            <circle
+               cx="123.8"
+               cy="78.599998"
+               r="1"
+               id="circle53-6" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g57-4" />
+          <g
+             id="g59-0" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g61-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g69-2">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,77.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path63-6" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,79.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path65-9" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,78.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path67-1" />
+          </g>
+          <g
+             id="g71-0" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g79-4">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,71.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path73-9" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,73.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path75-5" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,72.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path77-4" />
+          </g>
+          <g
+             id="g81-7" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g89-2">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,66.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path83-9" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,68.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path85-4" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,67.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path87-8" />
+          </g>
+          <g
+             id="g91-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g99-9">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,61.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path93-7" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,62.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path95-2" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,60.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path97-0" />
+          </g>
+          <g
+             id="g101-4" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g105-5">
+            <circle
+               cx="138.8"
+               cy="60.82"
+               r="1"
+               id="circle103-5" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g107-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g111-5">
+            <circle
+               cx="138.8"
+               cy="63.360001"
+               r="1"
+               id="circle109-0" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g113-2" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g117-1">
+            <circle
+               cx="138.8"
+               cy="65.900002"
+               r="1"
+               id="circle115-5" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g119-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g123-6">
+            <circle
+               cx="138.8"
+               cy="68.440002"
+               r="1"
+               id="circle121-1" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g125-8" />
+          <g
+             id="g127-6" />
+          <g
+             id="g129-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g131-2" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g133-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g205-1">
+            <path
+               d="m 136.28,60.82 h 2.52"
+               id="path135-5" />
+            <path
+               d="m 135.1,62 1.18,-1.18"
+               id="path137-7" />
+            <path
+               d="M 132.375,62 H 135.1"
+               id="path139-4" />
+            <path
+               d="m 136.3,63.6 0.24,-0.24"
+               id="path141-8" />
+            <path
+               d="M 136.275,63.6 H 136.3"
+               id="path143-4" />
+            <path
+               d="m 132.375,67.5 3.9,-3.9"
+               id="path145-8" />
+            <path
+               d="m 136.54,63.36 h 2.26"
+               id="path147-1" />
+            <path
+               d="m 135.4,68.1 2.2,-2.2"
+               id="path149-6" />
+            <path
+               d="m 137.6,65.9 h 1.2"
+               id="path151-2" />
+            <path
+               d="M 132.375,73 135.4,69.975"
+               id="path153-3" />
+            <path
+               d="M 135.4,69.975 V 68.1"
+               id="path155-1" />
+            <path
+               d="M 132.375,78.5 138.8,72.075"
+               id="path157-1" />
+            <path
+               d="M 138.8,72.075 V 68.44"
+               id="path159-9" />
+            <path
+               d="m 126.9,78.6 h -3.1"
+               id="path161-2" />
+            <path
+               d="M 127.75,79.45 126.9,78.6"
+               id="path163-1" />
+            <path
+               d="m 130.5,79.45 h -2.75"
+               id="path165-7" />
+            <path
+               d="M 127.36,76.06 H 123.8"
+               id="path167-7" />
+            <path
+               d="m 128.85,77.55 -1.49,-1.49"
+               id="path169-4" />
+            <path
+               d="m 130.5,77.55 h -1.65"
+               id="path171-5" />
+            <path
+               d="M 127.22,73.52 H 123.8"
+               id="path173-7" />
+            <path
+               d="m 127.65,73.95 -0.43,-0.43"
+               id="path175-6" />
+            <path
+               d="m 130.5,73.95 h -2.85"
+               id="path177-5" />
+            <path
+               d="M 127.18,70.98 H 123.8"
+               id="path179-9" />
+            <path
+               d="m 128.25,72.05 -1.07,-1.07"
+               id="path181-2" />
+            <path
+               d="m 130.5,72.05 h -2.25"
+               id="path183-0" />
+            <path
+               d="M 123.81,68.45 123.8,68.44"
+               id="path185-3" />
+            <path
+               d="m 130.5,68.45 h -6.69"
+               id="path187-9" />
+            <path
+               d="M 127.95,66.55 127.3,65.9"
+               id="path189-1" />
+            <path
+               d="m 127.3,65.9 h -3.5"
+               id="path191-5" />
+            <path
+               d="m 130.5,66.55 h -2.55"
+               id="path193-3" />
+            <path
+               d="m 128.35,62.95 h 2.15"
+               id="path195-7" />
+            <path
+               d="m 127.94,63.36 0.41,-0.41"
+               id="path197-4" />
+            <path
+               d="m 123.8,63.36 h 4.14"
+               id="path199-9" />
+            <path
+               d="m 130.5,61.05 h -6.47"
+               id="path201-8" />
+            <path
+               d="M 124.03,61.05 123.8,60.82"
+               id="path203-0" />
+          </g>
+          <g
+             id="g207-2" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g215-6">
+          <circle
+             cx="123.8"
+             cy="60.82"
+             r="0.625"
+             id="circle213-5" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g221-2">
+          <circle
+             cx="123.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle219-5" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g227-9">
+          <circle
+             cx="123.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle225-3" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g233-1">
+          <circle
+             cx="123.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle231-3" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g239-4">
+          <circle
+             cx="123.8"
+             cy="70.980003"
+             r="0.625"
+             id="circle237-6" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g245-8">
+          <circle
+             cx="123.8"
+             cy="73.519997"
+             r="0.625"
+             id="circle243-4" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g251-1">
+          <circle
+             cx="123.8"
+             cy="76.059998"
+             r="0.625"
+             id="circle249-6" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g257-8">
+          <circle
+             cx="123.8"
+             cy="78.599998"
+             r="0.625"
+             id="circle255-6" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g263-7">
+          <circle
+             cx="138.8"
+             cy="60.82"
+             r="0.625"
+             id="circle261-1" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g269-1">
+          <circle
+             cx="138.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle267-9" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g275-5">
+          <circle
+             cx="138.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle273-9" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g281-2">
+          <circle
+             cx="138.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle279-3" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g307-4">
+          <path
+             style="fill:none;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             d="m 121,57 h 20 v 25 h -20 z"
+             id="path287-4" />
+          <g
+             id="g289-4" />
+          <g
+             id="g291-1" />
+          <g
+             id="g293-2" />
+          <g
+             id="g295-7" />
+          <g
+             id="g297-1" />
+          <g
+             id="g299-8" />
+          <g
+             id="g301-5" />
+          <g
+             id="g303-1" />
+          <g
+             id="g305-5" />
+        </g>
+      </g>
+      <g
+         id="g597-0"
+         transform="translate(53.205823,-87.263372)">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g19-0">
+          <rect
+             x="115.75"
+             y="51.75"
+             width="30.5"
+             height="35.5"
+             rx="0.000000"
+             id="rect17-0" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g209-6">
+          <g
+             id="g21-7" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g27-07">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 122.8,61.82 v -2 h 2 v 2 z"
+               id="path23-83" />
+            <circle
+               cx="123.8"
+               cy="63.360001"
+               r="1"
+               id="circle25-5" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g29-6" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g37-1">
+            <circle
+               cx="123.8"
+               cy="65.900002"
+               r="1"
+               id="circle31-2" />
+            <circle
+               cx="123.8"
+               cy="68.440002"
+               r="1"
+               id="circle33-3" />
+            <circle
+               cx="123.8"
+               cy="70.980003"
+               r="1"
+               id="circle35-3" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g39-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g43-8">
+            <circle
+               cx="123.8"
+               cy="73.519997"
+               r="1"
+               id="circle41-5" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g45-7" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g49-1">
+            <circle
+               cx="123.8"
+               cy="76.059998"
+               r="1"
+               id="circle47-5" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g51-4" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g55-7">
+            <circle
+               cx="123.8"
+               cy="78.599998"
+               r="1"
+               id="circle53-0" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g57-7" />
+          <g
+             id="g59-2" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g61-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g69-8">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,77.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path63-4" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,79.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path65-6" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,78.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path67-7" />
+          </g>
+          <g
+             id="g71-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g79-7">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,71.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path73-7" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,73.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path75-0" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,72.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path77-0" />
+          </g>
+          <g
+             id="g81-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g89-3">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,66.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path83-8" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,68.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path85-41" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,67.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path87-5" />
+          </g>
+          <g
+             id="g91-4" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g99-7">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,61.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path93-8" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,62.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path95-7" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,60.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path97-2" />
+          </g>
+          <g
+             id="g101-0" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g105-3">
+            <circle
+               cx="138.8"
+               cy="60.82"
+               r="1"
+               id="circle103-7" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g107-6" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g111-3">
+            <circle
+               cx="138.8"
+               cy="63.360001"
+               r="1"
+               id="circle109-9" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g113-0" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g117-2">
+            <circle
+               cx="138.8"
+               cy="65.900002"
+               r="1"
+               id="circle115-0" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g119-7" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g123-7">
+            <circle
+               cx="138.8"
+               cy="68.440002"
+               r="1"
+               id="circle121-4" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g125-7" />
+          <g
+             id="g127-4" />
+          <g
+             id="g129-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g131-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g133-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g205-8">
+            <path
+               d="m 136.28,60.82 h 2.52"
+               id="path135-8" />
+            <path
+               d="m 135.1,62 1.18,-1.18"
+               id="path137-9" />
+            <path
+               d="M 132.375,62 H 135.1"
+               id="path139-3" />
+            <path
+               d="m 136.3,63.6 0.24,-0.24"
+               id="path141-7" />
+            <path
+               d="M 136.275,63.6 H 136.3"
+               id="path143-6" />
+            <path
+               d="m 132.375,67.5 3.9,-3.9"
+               id="path145-6" />
+            <path
+               d="m 136.54,63.36 h 2.26"
+               id="path147-5" />
+            <path
+               d="m 135.4,68.1 2.2,-2.2"
+               id="path149-4" />
+            <path
+               d="m 137.6,65.9 h 1.2"
+               id="path151-6" />
+            <path
+               d="M 132.375,73 135.4,69.975"
+               id="path153-5" />
+            <path
+               d="M 135.4,69.975 V 68.1"
+               id="path155-9" />
+            <path
+               d="M 132.375,78.5 138.8,72.075"
+               id="path157-0" />
+            <path
+               d="M 138.8,72.075 V 68.44"
+               id="path159-4" />
+            <path
+               d="m 126.9,78.6 h -3.1"
+               id="path161-1" />
+            <path
+               d="M 127.75,79.45 126.9,78.6"
+               id="path163-7" />
+            <path
+               d="m 130.5,79.45 h -2.75"
+               id="path165-2" />
+            <path
+               d="M 127.36,76.06 H 123.8"
+               id="path167-5" />
+            <path
+               d="m 128.85,77.55 -1.49,-1.49"
+               id="path169-8" />
+            <path
+               d="m 130.5,77.55 h -1.65"
+               id="path171-57" />
+            <path
+               d="M 127.22,73.52 H 123.8"
+               id="path173-8" />
+            <path
+               d="m 127.65,73.95 -0.43,-0.43"
+               id="path175-1" />
+            <path
+               d="m 130.5,73.95 h -2.85"
+               id="path177-52" />
+            <path
+               d="M 127.18,70.98 H 123.8"
+               id="path179-6" />
+            <path
+               d="m 128.25,72.05 -1.07,-1.07"
+               id="path181-6" />
+            <path
+               d="m 130.5,72.05 h -2.25"
+               id="path183-6" />
+            <path
+               d="M 123.81,68.45 123.8,68.44"
+               id="path185-8" />
+            <path
+               d="m 130.5,68.45 h -6.69"
+               id="path187-0" />
+            <path
+               d="M 127.95,66.55 127.3,65.9"
+               id="path189-7" />
+            <path
+               d="m 127.3,65.9 h -3.5"
+               id="path191-7" />
+            <path
+               d="m 130.5,66.55 h -2.55"
+               id="path193-1" />
+            <path
+               d="m 128.35,62.95 h 2.15"
+               id="path195-2" />
+            <path
+               d="m 127.94,63.36 0.41,-0.41"
+               id="path197-3" />
+            <path
+               d="m 123.8,63.36 h 4.14"
+               id="path199-8" />
+            <path
+               d="m 130.5,61.05 h -6.47"
+               id="path201-5" />
+            <path
+               d="M 124.03,61.05 123.8,60.82"
+               id="path203-1" />
+          </g>
+          <g
+             id="g207-0" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g215-2">
+          <circle
+             cx="123.8"
+             cy="60.82"
+             r="0.625"
+             id="circle213-2" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g221-7">
+          <circle
+             cx="123.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle219-1" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g227-97">
+          <circle
+             cx="123.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle225-9" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g233-3">
+          <circle
+             cx="123.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle231-1" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g239-6">
+          <circle
+             cx="123.8"
+             cy="70.980003"
+             r="0.625"
+             id="circle237-4" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g245-9">
+          <circle
+             cx="123.8"
+             cy="73.519997"
+             r="0.625"
+             id="circle243-6" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g251-5">
+          <circle
+             cx="123.8"
+             cy="76.059998"
+             r="0.625"
+             id="circle249-0" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g257-5">
+          <circle
+             cx="123.8"
+             cy="78.599998"
+             r="0.625"
+             id="circle255-3" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g263-3">
+          <circle
+             cx="138.8"
+             cy="60.82"
+             r="0.625"
+             id="circle261-2" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g269-6">
+          <circle
+             cx="138.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle267-6" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g275-6">
+          <circle
+             cx="138.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle273-3" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g281-3">
+          <circle
+             cx="138.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle279-9" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g307-1">
+          <path
+             style="fill:none;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             d="m 121,57 h 20 v 25 h -20 z"
+             id="path287-5" />
+          <g
+             id="g289-5" />
+          <g
+             id="g291-3" />
+          <g
+             id="g293-8" />
+          <g
+             id="g295-3" />
+          <g
+             id="g297-8" />
+          <g
+             id="g299-0" />
+          <g
+             id="g301-4" />
+          <g
+             id="g303-9" />
+          <g
+             id="g305-4" />
+        </g>
+      </g>
+      <g
+         id="g597-4"
+         transform="translate(53.205823,7.5259489)">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g19-9">
+          <rect
+             x="115.75"
+             y="51.75"
+             width="30.5"
+             height="35.5"
+             rx="0.000000"
+             id="rect17-7" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g209-2">
+          <g
+             id="g21-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g27-7">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 122.8,61.82 v -2 h 2 v 2 z"
+               id="path23-2" />
+            <circle
+               cx="123.8"
+               cy="63.360001"
+               r="1"
+               id="circle25-7" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g29-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g37-9">
+            <circle
+               cx="123.8"
+               cy="65.900002"
+               r="1"
+               id="circle31-9" />
+            <circle
+               cx="123.8"
+               cy="68.440002"
+               r="1"
+               id="circle33-7" />
+            <circle
+               cx="123.8"
+               cy="70.980003"
+               r="1"
+               id="circle35-0" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g39-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g43-9">
+            <circle
+               cx="123.8"
+               cy="73.519997"
+               r="1"
+               id="circle41-0" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g45-2" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g49-6">
+            <circle
+               cx="123.8"
+               cy="76.059998"
+               r="1"
+               id="circle47-8" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g51-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g55-5">
+            <circle
+               cx="123.8"
+               cy="78.599998"
+               r="1"
+               id="circle53-5" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g57-0" />
+          <g
+             id="g59-22" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g61-59" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g69-4">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,77.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path63-5" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,79.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path65-3" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,78.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path67-9" />
+          </g>
+          <g
+             id="g71-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g79-3">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,71.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path73-71" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,73.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path75-9" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,72.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path77-3" />
+          </g>
+          <g
+             id="g81-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g89-4">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,66.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path83-2" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,68.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path85-1" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,67.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path87-3" />
+          </g>
+          <g
+             id="g91-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g99-3">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,61.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path93-4" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,62.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path95-9" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,60.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path97-4" />
+          </g>
+          <g
+             id="g101-02" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g105-7">
+            <circle
+               cx="138.8"
+               cy="60.82"
+               r="1"
+               id="circle103-2" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g107-2" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g111-58">
+            <circle
+               cx="138.8"
+               cy="63.360001"
+               r="1"
+               id="circle109-3" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g113-01" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g117-0">
+            <circle
+               cx="138.8"
+               cy="65.900002"
+               r="1"
+               id="circle115-7" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g119-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g123-4">
+            <circle
+               cx="138.8"
+               cy="68.440002"
+               r="1"
+               id="circle121-2" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g125-81" />
+          <g
+             id="g127-64" />
+          <g
+             id="g129-12" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g131-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g133-2" />
+          <g
+             style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g205-89">
+            <path
+               d="m 136.28,60.82 h 2.52"
+               id="path135-9" />
+            <path
+               d="m 135.1,62 1.18,-1.18"
+               id="path137-4" />
+            <path
+               d="M 132.375,62 H 135.1"
+               id="path139-7" />
+            <path
+               d="m 136.3,63.6 0.24,-0.24"
+               id="path141-82" />
+            <path
+               d="M 136.275,63.6 H 136.3"
+               id="path143-1" />
+            <path
+               d="m 132.375,67.5 3.9,-3.9"
+               id="path145-7" />
+            <path
+               d="m 136.54,63.36 h 2.26"
+               id="path147-4" />
+            <path
+               d="m 135.4,68.1 2.2,-2.2"
+               id="path149-7" />
+            <path
+               d="m 137.6,65.9 h 1.2"
+               id="path151-26" />
+            <path
+               d="M 132.375,73 135.4,69.975"
+               id="path153-4" />
+            <path
+               d="M 135.4,69.975 V 68.1"
+               id="path155-8" />
+            <path
+               d="M 132.375,78.5 138.8,72.075"
+               id="path157-5" />
+            <path
+               d="M 138.8,72.075 V 68.44"
+               id="path159-6" />
+            <path
+               d="m 126.9,78.6 h -3.1"
+               id="path161-13" />
+            <path
+               d="M 127.75,79.45 126.9,78.6"
+               id="path163-12" />
+            <path
+               d="m 130.5,79.45 h -2.75"
+               id="path165-1" />
+            <path
+               d="M 127.36,76.06 H 123.8"
+               id="path167-2" />
+            <path
+               d="m 128.85,77.55 -1.49,-1.49"
+               id="path169-5" />
+            <path
+               d="m 130.5,77.55 h -1.65"
+               id="path171-6" />
+            <path
+               d="M 127.22,73.52 H 123.8"
+               id="path173-5" />
+            <path
+               d="m 127.65,73.95 -0.43,-0.43"
+               id="path175-7" />
+            <path
+               d="m 130.5,73.95 h -2.85"
+               id="path177-1" />
+            <path
+               d="M 127.18,70.98 H 123.8"
+               id="path179-3" />
+            <path
+               d="m 128.25,72.05 -1.07,-1.07"
+               id="path181-1" />
+            <path
+               d="m 130.5,72.05 h -2.25"
+               id="path183-1" />
+            <path
+               d="M 123.81,68.45 123.8,68.44"
+               id="path185-5" />
+            <path
+               d="m 130.5,68.45 h -6.69"
+               id="path187-4" />
+            <path
+               d="M 127.95,66.55 127.3,65.9"
+               id="path189-2" />
+            <path
+               d="m 127.3,65.9 h -3.5"
+               id="path191-1" />
+            <path
+               d="m 130.5,66.55 h -2.55"
+               id="path193-6" />
+            <path
+               d="m 128.35,62.95 h 2.15"
+               id="path195-78" />
+            <path
+               d="m 127.94,63.36 0.41,-0.41"
+               id="path197-5" />
+            <path
+               d="m 123.8,63.36 h 4.14"
+               id="path199-5" />
+            <path
+               d="m 130.5,61.05 h -6.47"
+               id="path201-3" />
+            <path
+               d="M 124.03,61.05 123.8,60.82"
+               id="path203-8" />
+          </g>
+          <g
+             id="g207-5" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g215-9">
+          <circle
+             cx="123.8"
+             cy="60.82"
+             r="0.625"
+             id="circle213-6" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g221-5">
+          <circle
+             cx="123.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle219-0" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g227-3">
+          <circle
+             cx="123.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle225-6" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g233-5">
+          <circle
+             cx="123.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle231-11" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g239-1">
+          <circle
+             cx="123.8"
+             cy="70.980003"
+             r="0.625"
+             id="circle237-2" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g245-7">
+          <circle
+             cx="123.8"
+             cy="73.519997"
+             r="0.625"
+             id="circle243-0" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g251-4">
+          <circle
+             cx="123.8"
+             cy="76.059998"
+             r="0.625"
+             id="circle249-8" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g257-0">
+          <circle
+             cx="123.8"
+             cy="78.599998"
+             r="0.625"
+             id="circle255-5" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g263-8">
+          <circle
+             cx="138.8"
+             cy="60.82"
+             r="0.625"
+             id="circle261-8" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g269-2">
+          <circle
+             cx="138.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle267-1" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g275-1">
+          <circle
+             cx="138.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle273-7" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g281-36">
+          <circle
+             cx="138.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle279-8" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g307-6">
+          <path
+             style="fill:none;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             d="m 121,57 h 20 v 25 h -20 z"
+             id="path287-6" />
+          <g
+             id="g289-0" />
+          <g
+             id="g291-7" />
+          <g
+             id="g293-4" />
+          <g
+             id="g295-0" />
+          <g
+             id="g297-3" />
+          <g
+             id="g299-00" />
+          <g
+             id="g301-57" />
+          <g
+             id="g303-4" />
+          <g
+             id="g305-0" />
+        </g>
+      </g>
+      <g
+         id="g597-8"
+         transform="translate(-31.108824,102.31527)">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g19-3">
+          <rect
+             x="115.75"
+             y="51.75"
+             width="30.5"
+             height="35.5"
+             rx="0.000000"
+             id="rect17-8" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g209-7">
+          <g
+             id="g21-3" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g27-9">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 122.8,61.82 v -2 h 2 v 2 z"
+               id="path23-21" />
+            <circle
+               cx="123.8"
+               cy="63.360001"
+               r="1"
+               id="circle25-55" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g29-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g37-7">
+            <circle
+               cx="123.8"
+               cy="65.900002"
+               r="1"
+               id="circle31-4" />
+            <circle
+               cx="123.8"
+               cy="68.440002"
+               r="1"
+               id="circle33-4" />
+            <circle
+               cx="123.8"
+               cy="70.980003"
+               r="1"
+               id="circle35-30" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g39-4" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g43-86">
+            <circle
+               cx="123.8"
+               cy="73.519997"
+               r="1"
+               id="circle41-9" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g45-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g49-8">
+            <circle
+               cx="123.8"
+               cy="76.059998"
+               r="1"
+               id="circle47-0" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g51-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g55-50">
+            <circle
+               cx="123.8"
+               cy="78.599998"
+               r="1"
+               id="circle53-4" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g57-5" />
+          <g
+             id="g59-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g61-3" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g69-9">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,77.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path63-59" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,79.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path65-0" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,78.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path67-2" />
+          </g>
+          <g
+             id="g71-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g79-31">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,71.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path73-76" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,73.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path75-6" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,72.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path77-01" />
+          </g>
+          <g
+             id="g81-4" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g89-1">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,66.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path83-26" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,68.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path85-5" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,67.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path87-0" />
+          </g>
+          <g
+             id="g91-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g99-1">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,61.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path93-9" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,62.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path95-97" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,60.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path97-6" />
+          </g>
+          <g
+             id="g101-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g105-2">
+            <circle
+               cx="138.8"
+               cy="60.82"
+               r="1"
+               id="circle103-1" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g107-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g111-6">
+            <circle
+               cx="138.8"
+               cy="63.360001"
+               r="1"
+               id="circle109-1" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g113-27" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g117-5">
+            <circle
+               cx="138.8"
+               cy="65.900002"
+               r="1"
+               id="circle115-6" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g119-6" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g123-63">
+            <circle
+               cx="138.8"
+               cy="68.440002"
+               r="1"
+               id="circle121-26" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g125-71" />
+          <g
+             id="g127-5" />
+          <g
+             id="g129-5" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g131-4" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g133-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g205-3">
+            <path
+               d="m 136.28,60.82 h 2.52"
+               id="path135-56" />
+            <path
+               d="m 135.1,62 1.18,-1.18"
+               id="path137-5" />
+            <path
+               d="M 132.375,62 H 135.1"
+               id="path139-72" />
+            <path
+               d="m 136.3,63.6 0.24,-0.24"
+               id="path141-6" />
+            <path
+               d="M 136.275,63.6 H 136.3"
+               id="path143-2" />
+            <path
+               d="m 132.375,67.5 3.9,-3.9"
+               id="path145-84" />
+            <path
+               d="m 136.54,63.36 h 2.26"
+               id="path147-16" />
+            <path
+               d="m 135.4,68.1 2.2,-2.2"
+               id="path149-78" />
+            <path
+               d="m 137.6,65.9 h 1.2"
+               id="path151-63" />
+            <path
+               d="M 132.375,73 135.4,69.975"
+               id="path153-34" />
+            <path
+               d="M 135.4,69.975 V 68.1"
+               id="path155-2" />
+            <path
+               d="M 132.375,78.5 138.8,72.075"
+               id="path157-14" />
+            <path
+               d="M 138.8,72.075 V 68.44"
+               id="path159-64" />
+            <path
+               d="m 126.9,78.6 h -3.1"
+               id="path161-3" />
+            <path
+               d="M 127.75,79.45 126.9,78.6"
+               id="path163-9" />
+            <path
+               d="m 130.5,79.45 h -2.75"
+               id="path165-25" />
+            <path
+               d="M 127.36,76.06 H 123.8"
+               id="path167-3" />
+            <path
+               d="m 128.85,77.55 -1.49,-1.49"
+               id="path169-6" />
+            <path
+               d="m 130.5,77.55 h -1.65"
+               id="path171-2" />
+            <path
+               d="M 127.22,73.52 H 123.8"
+               id="path173-53" />
+            <path
+               d="m 127.65,73.95 -0.43,-0.43"
+               id="path175-16" />
+            <path
+               d="m 130.5,73.95 h -2.85"
+               id="path177-7" />
+            <path
+               d="M 127.18,70.98 H 123.8"
+               id="path179-1" />
+            <path
+               d="m 128.25,72.05 -1.07,-1.07"
+               id="path181-9" />
+            <path
+               d="m 130.5,72.05 h -2.25"
+               id="path183-05" />
+            <path
+               d="M 123.81,68.45 123.8,68.44"
+               id="path185-6" />
+            <path
+               d="m 130.5,68.45 h -6.69"
+               id="path187-3" />
+            <path
+               d="M 127.95,66.55 127.3,65.9"
+               id="path189-8" />
+            <path
+               d="m 127.3,65.9 h -3.5"
+               id="path191-4" />
+            <path
+               d="m 130.5,66.55 h -2.55"
+               id="path193-9" />
+            <path
+               d="m 128.35,62.95 h 2.15"
+               id="path195-786" />
+            <path
+               d="m 127.94,63.36 0.41,-0.41"
+               id="path197-1" />
+            <path
+               d="m 123.8,63.36 h 4.14"
+               id="path199-87" />
+            <path
+               d="m 130.5,61.05 h -6.47"
+               id="path201-0" />
+            <path
+               d="M 124.03,61.05 123.8,60.82"
+               id="path203-4" />
+          </g>
+          <g
+             id="g207-4" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g215-5">
+          <circle
+             cx="123.8"
+             cy="60.82"
+             r="0.625"
+             id="circle213-4" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g221-25">
+          <circle
+             cx="123.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle219-9" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g227-32">
+          <circle
+             cx="123.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle225-0" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g233-30">
+          <circle
+             cx="123.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle231-0" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g239-0">
+          <circle
+             cx="123.8"
+             cy="70.980003"
+             r="0.625"
+             id="circle237-1" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g245-4">
+          <circle
+             cx="123.8"
+             cy="73.519997"
+             r="0.625"
+             id="circle243-1" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g251-9">
+          <circle
+             cx="123.8"
+             cy="76.059998"
+             r="0.625"
+             id="circle249-2" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g257-6">
+          <circle
+             cx="123.8"
+             cy="78.599998"
+             r="0.625"
+             id="circle255-1" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g263-4">
+          <circle
+             cx="138.8"
+             cy="60.82"
+             r="0.625"
+             id="circle261-9" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g269-7">
+          <circle
+             cx="138.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle267-7" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g275-51">
+          <circle
+             cx="138.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle273-72" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g281-5">
+          <circle
+             cx="138.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle279-91" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g307-5">
+          <path
+             style="fill:none;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             d="m 121,57 h 20 v 25 h -20 z"
+             id="path287-59" />
+          <g
+             id="g289-6" />
+          <g
+             id="g291-4" />
+          <g
+             id="g293-7" />
+          <g
+             id="g295-9" />
+          <g
+             id="g297-4" />
+          <g
+             id="g299-5" />
+          <g
+             id="g301-9" />
+          <g
+             id="g303-2" />
+          <g
+             id="g305-2" />
+        </g>
+      </g>
+      <g
+         id="g597-1"
+         transform="translate(53.205823,102.31527)">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g19-8">
+          <rect
+             x="115.75"
+             y="51.75"
+             width="30.5"
+             height="35.5"
+             rx="0.000000"
+             id="rect17-94" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g209-68">
+          <g
+             id="g21-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g27-8">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 122.8,61.82 v -2 h 2 v 2 z"
+               id="path23-29" />
+            <circle
+               cx="123.8"
+               cy="63.360001"
+               r="1"
+               id="circle25-4" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g29-0" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g37-71">
+            <circle
+               cx="123.8"
+               cy="65.900002"
+               r="1"
+               id="circle31-7" />
+            <circle
+               cx="123.8"
+               cy="68.440002"
+               r="1"
+               id="circle33-86" />
+            <circle
+               cx="123.8"
+               cy="70.980003"
+               r="1"
+               id="circle35-9" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g39-6" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g43-0">
+            <circle
+               cx="123.8"
+               cy="73.519997"
+               r="1"
+               id="circle41-51" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g45-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g49-7">
+            <circle
+               cx="123.8"
+               cy="76.059998"
+               r="1"
+               id="circle47-50" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g51-7" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g55-0">
+            <circle
+               cx="123.8"
+               cy="78.599998"
+               r="1"
+               id="circle53-7" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g57-3" />
+          <g
+             id="g59-04" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g61-7" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g69-7">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,77.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path63-43" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,79.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path65-7" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,78.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path67-94" />
+          </g>
+          <g
+             id="g71-17" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g79-8">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,71.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path73-91" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,73.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path75-1" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,72.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path77-016" />
+          </g>
+          <g
+             id="g81-3" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g89-7">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,66.4 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path83-7" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,68.3 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path85-13" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,67.35 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path87-7" />
+          </g>
+          <g
+             id="g91-1" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g99-5">
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 131.6375,61.85 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path93-6" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,62.8 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path95-28" />
+            <path
+               style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+               d="m 129.7625,60.9 0.0114,-0.0574 0.0325,-0.0487 0.0487,-0.0325 0.0574,-0.0114 h 1.175 l 0.0574,0.0114 0.0487,0.0325 0.0325,0.0487 0.0114,0.0574 v 0.3 l -0.0114,0.0574 -0.0325,0.0487 -0.0487,0.0325 -0.0574,0.0114 h -1.175 l -0.0574,-0.0114 -0.0487,-0.0325 -0.0325,-0.0487 -0.0114,-0.0574 z"
+               id="path97-1" />
+          </g>
+          <g
+             id="g101-8" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g105-6">
+            <circle
+               cx="138.8"
+               cy="60.82"
+               r="1"
+               id="circle103-10" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g107-27" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g111-0">
+            <circle
+               cx="138.8"
+               cy="63.360001"
+               r="1"
+               id="circle109-5" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g113-3" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g117-59">
+            <circle
+               cx="138.8"
+               cy="65.900002"
+               r="1"
+               id="circle115-9" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g119-9" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g123-47">
+            <circle
+               cx="138.8"
+               cy="68.440002"
+               r="1"
+               id="circle121-14" />
+          </g>
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g125-5" />
+          <g
+             id="g127-46" />
+          <g
+             id="g129-0" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.0212;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g131-42" />
+          <g
+             style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g133-82" />
+          <g
+             style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             id="g205-5">
+            <path
+               d="m 136.28,60.82 h 2.52"
+               id="path135-1" />
+            <path
+               d="m 135.1,62 1.18,-1.18"
+               id="path137-0" />
+            <path
+               d="M 132.375,62 H 135.1"
+               id="path139-1" />
+            <path
+               d="m 136.3,63.6 0.24,-0.24"
+               id="path141-9" />
+            <path
+               d="M 136.275,63.6 H 136.3"
+               id="path143-9" />
+            <path
+               d="m 132.375,67.5 3.9,-3.9"
+               id="path145-2" />
+            <path
+               d="m 136.54,63.36 h 2.26"
+               id="path147-42" />
+            <path
+               d="m 135.4,68.1 2.2,-2.2"
+               id="path149-3" />
+            <path
+               d="m 137.6,65.9 h 1.2"
+               id="path151-9" />
+            <path
+               d="M 132.375,73 135.4,69.975"
+               id="path153-8" />
+            <path
+               d="M 135.4,69.975 V 68.1"
+               id="path155-85" />
+            <path
+               d="M 132.375,78.5 138.8,72.075"
+               id="path157-09" />
+            <path
+               d="M 138.8,72.075 V 68.44"
+               id="path159-63" />
+            <path
+               d="m 126.9,78.6 h -3.1"
+               id="path161-27" />
+            <path
+               d="M 127.75,79.45 126.9,78.6"
+               id="path163-5" />
+            <path
+               d="m 130.5,79.45 h -2.75"
+               id="path165-3" />
+            <path
+               d="M 127.36,76.06 H 123.8"
+               id="path167-4" />
+            <path
+               d="m 128.85,77.55 -1.49,-1.49"
+               id="path169-9" />
+            <path
+               d="m 130.5,77.55 h -1.65"
+               id="path171-0" />
+            <path
+               d="M 127.22,73.52 H 123.8"
+               id="path173-6" />
+            <path
+               d="m 127.65,73.95 -0.43,-0.43"
+               id="path175-5" />
+            <path
+               d="m 130.5,73.95 h -2.85"
+               id="path177-8" />
+            <path
+               d="M 127.18,70.98 H 123.8"
+               id="path179-7" />
+            <path
+               d="m 128.25,72.05 -1.07,-1.07"
+               id="path181-0" />
+            <path
+               d="m 130.5,72.05 h -2.25"
+               id="path183-5" />
+            <path
+               d="M 123.81,68.45 123.8,68.44"
+               id="path185-68" />
+            <path
+               d="m 130.5,68.45 h -6.69"
+               id="path187-6" />
+            <path
+               d="M 127.95,66.55 127.3,65.9"
+               id="path189-6" />
+            <path
+               d="m 127.3,65.9 h -3.5"
+               id="path191-72" />
+            <path
+               d="m 130.5,66.55 h -2.55"
+               id="path193-8" />
+            <path
+               d="m 128.35,62.95 h 2.15"
+               id="path195-75" />
+            <path
+               d="m 127.94,63.36 0.41,-0.41"
+               id="path197-8" />
+            <path
+               d="m 123.8,63.36 h 4.14"
+               id="path199-53" />
+            <path
+               d="m 130.5,61.05 h -6.47"
+               id="path201-6" />
+            <path
+               d="M 124.03,61.05 123.8,60.82"
+               id="path203-87" />
+          </g>
+          <g
+             id="g207-42" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g215-59">
+          <circle
+             cx="123.8"
+             cy="60.82"
+             r="0.625"
+             id="circle213-7" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g221-253">
+          <circle
+             cx="123.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle219-8" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g227-99">
+          <circle
+             cx="123.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle225-2" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g233-50">
+          <circle
+             cx="123.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle231-05" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g239-16">
+          <circle
+             cx="123.8"
+             cy="70.980003"
+             r="0.625"
+             id="circle237-8" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g245-6">
+          <circle
+             cx="123.8"
+             cy="73.519997"
+             r="0.625"
+             id="circle243-65" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g251-2">
+          <circle
+             cx="123.8"
+             cy="76.059998"
+             r="0.625"
+             id="circle249-26" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g257-50">
+          <circle
+             cx="123.8"
+             cy="78.599998"
+             r="0.625"
+             id="circle255-4" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g263-6">
+          <circle
+             cx="138.8"
+             cy="60.82"
+             r="0.625"
+             id="circle261-93" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g269-3">
+          <circle
+             cx="138.8"
+             cy="63.360001"
+             r="0.625"
+             id="circle267-67" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g275-50">
+          <circle
+             cx="138.8"
+             cy="65.900002"
+             r="0.625"
+             id="circle273-0" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g281-0">
+          <circle
+             cx="138.8"
+             cy="68.440002"
+             r="0.625"
+             id="circle279-7" />
+        </g>
+        <g
+           style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="g307-2">
+          <path
+             style="fill:none;fill-opacity:0;stroke:#ffffff;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+             d="m 121,57 h 20 v 25 h -20 z"
+             id="path287-48" />
+          <g
+             id="g289-2" />
+          <g
+             id="g291-42" />
+          <g
+             id="g293-76" />
+          <g
+             id="g295-8" />
+          <g
+             id="g297-6" />
+          <g
+             id="g299-6" />
+          <g
+             id="g301-8" />
+          <g
+             id="g303-3" />
+          <g
+             id="g305-8" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

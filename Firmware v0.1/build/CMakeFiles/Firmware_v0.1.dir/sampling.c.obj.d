@@ -92,4 +92,7 @@ CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: \
  C:\Users\karim\Desktop\PROYEC~1\FIRMWA~1.1\build/untriggered_digital.pio.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HARDWA~4\include/hardware/clocks.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/clocks.h \
- C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/clocks.h
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/clocks.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HARDWA~1\include/hardware/adc.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/adc.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/adc.h

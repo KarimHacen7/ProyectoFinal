@@ -77,20 +77,25 @@ CMakeFiles\Firmware_v0.1.dir\main.c.obj: \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/uart.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/dreq.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\PI24F1~1\include/pico/stdio_usb.h \
- C:\Users\karim\Desktop\Proyecto\ Final\Firmware\ v0.1\configuration.h \
- C:\Users\karim\Desktop\Proyecto\ Final\Firmware\ v0.1\communication.h \
- C:\Users\karim\Desktop\Proyecto\ Final\Firmware\ v0.1\sampling.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/bus_ctrl.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/busctrl.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HARDWA~4\include/hardware/clocks.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/clocks.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/clocks.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HARDWA~1\include/hardware/adc.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/adc.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/adc.h \
+ C:\Users\karim\Desktop\PROYEC~1\FIRMWA~1.1\build/untriggered_digital.pio.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HA7843~1\include/hardware/pio.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/pio.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/pio.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HA7843~1\include/hardware/pio_instructions.h \
+ C:\Users\karim\Desktop\PROYEC~1\FIRMWA~1.1\build/triggered_digital.pio.h \
+ C:\Users\karim\Desktop\PROYEC~1\FIRMWA~1.1\build/untriggered_analog.pio.h \
+ C:\Users\karim\Desktop\PROYEC~1\FIRMWA~1.1\build/triggered_analog.pio.h \
+ C:\Users\karim\Desktop\Proyecto\ Final\Firmware\ v0.1\configuration.h \
+ C:\Users\karim\Desktop\Proyecto\ Final\Firmware\ v0.1\communication.h \
+ C:\Users\karim\Desktop\Proyecto\ Final\Firmware\ v0.1\sampling.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HA2639~1\include/hardware/dma.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/dma.h \
- C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/dma.h \
- C:\Users\karim\Desktop\PROYEC~1\FIRMWA~1.1\build/untriggered_digital.pio.h \
- C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HARDWA~4\include/hardware/clocks.h \
- C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/clocks.h \
- C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/clocks.h \
- C:\Users\karim\Desktop\PROYEC~1\FIRMWA~1.1\build/triggered_digital.pio.h
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/dma.h

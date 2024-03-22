@@ -119,6 +119,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_pio/include"
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_dma/include"
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_spi/include"
+  "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_adc/include"
   )
 
 # The set of dependency files which are needed:
@@ -150,6 +151,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/common/pico_util/datetime.c" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/datetime.c.obj" "gcc" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/datetime.c.obj.d"
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/common/pico_util/pheap.c" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj" "gcc" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj.d"
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/common/pico_util/queue.c" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/queue.c.obj" "gcc" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/queue.c.obj.d"
+  "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_adc/adc.c" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj" "gcc" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj.d"
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_claim/claim.c" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" "gcc" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj.d"
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" "gcc" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d"
   "C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_dma/dma.c" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj" "gcc" "CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj.d"

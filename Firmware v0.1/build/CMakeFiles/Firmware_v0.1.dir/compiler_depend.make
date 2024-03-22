@@ -1455,6 +1455,55 @@ CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\
 CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\common\pico_util\queue.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\timer.h"
 
 
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_adc\adc.c"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico\types.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico\assert.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\lib\gcc\arm-none-eabi\11.2.1\include\stdbool.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\assert.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\_ansi.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\newlib.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\_newlib_version.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\sys\config.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\machine\ieeefp.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\sys\features.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\lib\gcc\arm-none-eabi\11.2.1\include\stdint.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\stdint.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\machine\_default_types.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\sys\_intsup.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\sys\_stdint.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\lib\gcc\arm-none-eabi\11.2.1\include\stddef.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: generated\pico_base\pico\version.h
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico\config.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: generated\pico_base\pico\config_autogen.h
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\boards\include\boards\pico.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\sys\cdefs.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico\types.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico\error.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_adc\include\hardware\adc.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\adc.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\adc.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\iobank0.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\io_bank0.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_irq\include\hardware\irq.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\intctrl.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\m0plus.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_resets\include\hardware\resets.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\resets.h"
+CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\resets.h"
+
+
 CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_claim\claim.c"
 CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_claim\include\hardware\claim.h"
 CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico.h"
@@ -3377,7 +3426,12 @@ CMakeFiles\Firmware_v0.1.dir\main.c.obj: untriggered_digital.pio.h
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_clocks\include\hardware\clocks.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\clocks.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\clocks.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_adc\include\hardware\adc.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\adc.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\adc.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: triggered_digital.pio.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: untriggered_analog.pio.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: triggered_analog.pio.h
 
 
 CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: ..\sampling.c
@@ -3474,6 +3528,9 @@ CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: untriggered_digital.pio.h
 CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_clocks\include\hardware\clocks.h"
 CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\clocks.h"
 CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\clocks.h"
+CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_adc\include\hardware\adc.h"
+CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\adc.h"
+CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\adc.h"
 
 
 
@@ -3602,6 +3659,8 @@ generated\pico_base\pico\version.h:
 "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\sys\stdio.h":
 
 "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\sys\cdefs.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\adc.h":
 
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_base\include\pico\error.h":
 
@@ -3793,6 +3852,30 @@ generated\pico_base\pico\version.h:
 
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_util\include\pico\util\queue.h":
 
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_adc\adc.c":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_adc\include\hardware\adc.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_binary_info\include\pico\binary_info\structure.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\adc.h":
+
+untriggered_analog.pio.h:
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\pico_float\float_math.c":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\vreg_and_chip_reset.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h":
+
+"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h":
+
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_claim\claim.c":
 
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_claim\include\hardware\claim.h":
@@ -3820,20 +3903,6 @@ generated\pico_base\pico\version.h:
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pll.h":
 
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\xosc.h":
-
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h":
-
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\pico_float\float_math.c":
-
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\vreg_and_chip_reset.h":
-
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h":
-
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h":
-
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h":
-
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h":
 
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h":
 
@@ -3935,8 +4004,6 @@ generated\pico_base\pico\version.h:
 
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_binary_info\include\pico\binary_info.h":
 
-"C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\common\pico_binary_info\include\pico\binary_info\structure.h":
-
 "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\c++\11.2.1\cstdlib":
 
 "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\11.2 2022.02\arm-none-eabi\include\c++\11.2.1\arm-none-eabi\thumb\v6-m\nofp\bits\c++config.h":
@@ -3970,6 +4037,8 @@ generated\pico_base\pico\version.h:
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c":
 
 ..\communication.c:
+
+triggered_analog.pio.h:
 
 ..\communication.h:
 

@@ -9,6 +9,7 @@
 
 #define USB_INPUT_BUFFER_SIZE 12
 #define USB_INPUT_BUFFER_DEFAULT "-----------"
+#define USB_INPUT_TIMEOUT_MS 2000 
 
 #define DAC_SPI_RX_PIN 16
 #define DAC_SPI_CS_PIN 17
@@ -17,6 +18,7 @@
 
 volatile bool inputTimedOut = false;
 
+// Used when command is not completed with ';' in USB_INPUT_TIMEOUT_MS
 int64_t input_timeout_alarm_callback(alarm_id_t id, void *userData)
 {
     inputTimedOut = true;
@@ -41,7 +43,7 @@ void getInputString(USBInput* usbInput)
         usbInput->keepReading = true;
         inputTimedOut = false;
         // set alarm
-        timeoutAlarm = add_alarm_in_ms(2000, input_timeout_alarm_callback, (&usbInput), true);
+        timeoutAlarm = add_alarm_in_ms(USB_INPUT_TIMEOUT_MS, input_timeout_alarm_callback, (&usbInput), true);
         if(timeoutAlarm == -1)
         {
             printf(CMD_ERROR);
@@ -63,7 +65,6 @@ void getInputString(USBInput* usbInput)
                     while(usbInput->lastInput != 255)
                     {
                         usbInput->lastInput = getchar_timeout_us(50); // empty buffer
-                        
                     }
                     return;
                 } 
@@ -88,7 +89,6 @@ void getInputString(USBInput* usbInput)
             strcpy(usbInput->buffer, USB_INPUT_BUFFER_DEFAULT);
             printf(CMD_TIMEOUT);
         }
-        
     }
     else if(usbInput->lastInput == 255) // ignore
     {
@@ -101,15 +101,13 @@ void getInputString(USBInput* usbInput)
     {
         while(usbInput->lastInput != 255)
         {
-            usbInput->lastInput = getchar_timeout_us(50); // empty buffer
-            
+            usbInput->lastInput = getchar_timeout_us(50); // empty buffer 
         }
         usbInput->keepReading = false; 
         usbInput->position = 0;
         strcpy(usbInput->buffer, USB_INPUT_BUFFER_DEFAULT);
         printf(CMD_ERROR);
     }
-
 }
 
 
@@ -125,7 +123,7 @@ static inline void CSDeselect() {
     asm volatile("nop \n nop \n nop");
 }
 
-
+// Used to interface with MCP4821 DAC, check datasheet to understand what is written into CALC
 void writeDACVoltage(float value) {
     uint16_t calc = 0; // B15=B14=0
 	uint8_t buffer[2];
@@ -146,7 +144,6 @@ void writeDACVoltage(float value) {
 		calc = calc + (uint16_t) (value*(4096/(2.048*2)));
 	}
 
-	//printf("%d\n", calc);
 	buffer[1] = (uint8_t)calc;
 	buffer[0] = (uint8_t)(calc >> 8);
 	

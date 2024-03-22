@@ -10,7 +10,6 @@ This function verifies the syntax of a command recieved through usb.
 If verification is passed, it will load settings in the appropiate structure.
 Ii verification is not passed, it will disregard the command and send a BAD COMMAND message.
 */
-// HAY QUE PONERLE AMOR A ESTA FUNCI[ON]
 void getSettingsFromInput(USBInput* usbInput, SamplingSettings* samplingSettings)
 {
     bool badCommand = false;
@@ -182,7 +181,7 @@ void getSettingsFromInput(USBInput* usbInput, SamplingSettings* samplingSettings
             if(usbInput->buffer[2] == 'V')
             {
                 temp.compareVoltage = (1*(usbInput->buffer[3]-'0'))+((0.1)*(usbInput->buffer[4]-'0'))+((0.01)*(usbInput->buffer[5]-'0'));
-                temp.configVoltage = true;
+                temp.order = Voltage;
                 if(temp.compareVoltage < 0 || temp.compareVoltage > 3.3)
                 {
                     badCommand = true;id=17;
@@ -192,6 +191,7 @@ void getSettingsFromInput(USBInput* usbInput, SamplingSettings* samplingSettings
             else if (usbInput->buffer[2] == 'T')
             {
                 temp.timeout = (10*(usbInput->buffer[3]-'0'))+(1*(usbInput->buffer[4]-'0'))+(0.1*(usbInput->buffer[5]-'0'))+(0.01*(usbInput->buffer[6]-'0'));
+                temp.order = Timeout;
                 if(temp.timeout < 0 || temp.timeout > 100)
                 {
                     badCommand = true;id=18;
@@ -209,13 +209,18 @@ void getSettingsFromInput(USBInput* usbInput, SamplingSettings* samplingSettings
         printf("%d", id);
         return;
     }
-    else if(temp.configVoltage)
+    if(temp.order == Timeout)
+    {
+        temp.order = None;
+        (*samplingSettings) = temp;
+    }
+    else if(temp.order == Voltage )
     {
         (*samplingSettings) = temp;
     }
     else
     {
-        temp.sample = true;
+        temp.order = Sample;
         (*samplingSettings) = temp;
     }
         

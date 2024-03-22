@@ -145,6 +145,32 @@ Firmware_v0.1_triggered_digital_pio_h\fast:
 .PHONY : Firmware_v0.1_triggered_digital_pio_h\fast
 
 #=============================================================================
+# Target rules for targets named Firmware_v0.1_untriggered_analog_pio_h
+
+# Build rule for target.
+Firmware_v0.1_untriggered_analog_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Firmware_v0.1_untriggered_analog_pio_h
+.PHONY : Firmware_v0.1_untriggered_analog_pio_h
+
+# fast build rule for target.
+Firmware_v0.1_untriggered_analog_pio_h\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Firmware_v0.1_untriggered_analog_pio_h.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Firmware_v0.1_untriggered_analog_pio_h.dir\build
+.PHONY : Firmware_v0.1_untriggered_analog_pio_h\fast
+
+#=============================================================================
+# Target rules for targets named Firmware_v0.1_triggered_analog_pio_h
+
+# Build rule for target.
+Firmware_v0.1_triggered_analog_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Firmware_v0.1_triggered_analog_pio_h
+.PHONY : Firmware_v0.1_triggered_analog_pio_h
+
+# fast build rule for target.
+Firmware_v0.1_triggered_analog_pio_h\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Firmware_v0.1_triggered_analog_pio_h.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Firmware_v0.1_triggered_analog_pio_h.dir\build
+.PHONY : Firmware_v0.1_triggered_analog_pio_h\fast
+
+#=============================================================================
 # Target rules for targets named ELF2UF2Build
 
 # Build rule for target.
@@ -869,6 +895,30 @@ C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\common\pico_util\queue.s: C_\
 C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\common\pico_util\queue.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Firmware_v0.1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\common\pico_util\queue.c.s
 .PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\common\pico_util\queue.c.s
+
+C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.obj: C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj
+.PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.obj
+
+# target to build an object file
+C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Firmware_v0.1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj
+.PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj
+
+C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.i: C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.i
+.PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.i
+
+# target to preprocess a source file
+C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Firmware_v0.1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.i
+.PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.i
+
+C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.s: C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.s
+.PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.s
+
+# target to generate assembly for a file
+C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Firmware_v0.1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Firmware_v0.1.dir\C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.s
+.PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_adc\adc.c.s
 
 C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_claim\claim.obj: C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj
 .PHONY : C_\Users\karim\Desktop\Proyecto_Final\pico-sdk\src\rp2_common\hardware_claim\claim.obj
@@ -1855,7 +1905,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ELF2UF2Build
+	@echo ... Firmware_v0.1_triggered_analog_pio_h
 	@echo ... Firmware_v0.1_triggered_digital_pio_h
+	@echo ... Firmware_v0.1_untriggered_analog_pio_h
 	@echo ... Firmware_v0.1_untriggered_digital_pio_h
 	@echo ... PioasmBuild
 	@echo ... bs2_default_bin
@@ -1944,6 +1996,9 @@ help:
 	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/queue.obj
 	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/queue.i
 	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/queue.s
+	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.obj
+	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.i
+	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.s
 	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.obj
 	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.i
 	@echo ... C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.s

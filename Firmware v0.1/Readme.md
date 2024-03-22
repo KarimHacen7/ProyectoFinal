@@ -1,3 +1,43 @@
+<h1> Proyecto Final </h1>
+<p>This repository contains the RP2040's firmware.</p>
+
+<h3> COMANDOS Interfaz con PC </h3>
+<h4> Muestreo Digital </h4>
+<p>
+    #ABCDEFGHI; 
+        Donde:
+            A: D, Muestreo Digital
+            B: 0-4, Modo de Gatillado, 0 para no gatillado
+            C: Canal de gatillado 1-8
+            D: Numero de canales: 8, 4, 2, 1
+            EF: 00-16, Frecuencia de Muestreo, ver tabla de verdad
+            GHI: 000-192, Profundidad de Muestreo, en KiB
+</p>
+<h4>Muestreo Analógico</h4>
+<p>
+    #ABCDEFGHI; 
+        Donde:
+            A: A, Muestreo Analógico
+            B: 0-4, Modo de Gatillado, 0 para no gatillado
+            C: Canal de gatillado 8
+            D: Numero de canales: 1
+            EF: 00-13, Frecuencia de Muestreo, ver tabla de verdad
+            GHI: 000-192, Profundidad de Muestreo, en KiB
+</p>
+<h3>Configurar</h3>
+<h4>Voltaje Referencia</h4>
+        #ABCDE; //sin \n
+            Donde:
+                A: C, Configurar
+                B: V, Voltaje DAC
+                CDE: Voltaje, Formato "C.DE" [V]
+<h4>Temporizador Gatillados</h4>        
+        #ABCDEF; //sin \n
+            Donde:
+                A: C, Configurar
+                B: T, Timeout
+                CDE: Tiempo, Formato "CDEF"x10 [ms]
+
 /* TODO:
 	Profundidad de muestreo:
 		en bytes 1-192, con paso de 1
@@ -75,39 +115,7 @@
 			Timeout Triggers
 	
 	
-COMANDOS Interfaz con PC
-Desde PC:
-    Muestreo Digital
-    #ABCDEFGHI; //sin \n
-        Donde:
-            A: D, Muestreo Digital
-            B: 0-4, Modo de Gatillado, 0 para no gatillado
-            C: Canal de gatillado 1-8
-            D: 8, 4, 2, 1, Canales 
-            EF: 00-16, Frecuencia de Muestreo, ver tabla de verdad
-            GHI: 000-192, Profundidad de Muestreo, en KiB
-    Muestreo Analógico
-    #ABCDEFGHI; //sin \n
-        Donde:
-            A: A, Muestreo Analógico
-            B: 0-4, Modo de Gatillado, 0 para no gatillado
-            C: Canal de gatillado 8
-            D: 1, Canal
-            EF: 00-13, Frecuencia de Muestreo, ver tabla de verdad
-            GHI: 000-192, Profundidad de Muestreo, en KiB
-    Configurar
-        Voltaje Referencia
-        #ABCDE; //sin \n
-            Donde:
-                A: C, Configurar
-                B: V, Voltaje DAC
-                CDE: Voltaje, Formato "C.DE" [V]
-        Temporizador Gatillados
-        #ABCDEF; //sin \n
-            Donde:
-                A: C, Configurar
-                B: T, Timeout
-                CDE: Tiempo, Formato "CDEF"x10 [ms]
+
 
 Futuras mejoras firmware:
 	Poner para poder editar el tiempo en alto y el tiempo en bajo de los flancos.

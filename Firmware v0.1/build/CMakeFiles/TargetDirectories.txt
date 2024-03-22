@@ -1,6 +1,8 @@
 C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/Firmware_v0.1.dir
 C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/Firmware_v0.1_untriggered_digital_pio_h.dir
 C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/Firmware_v0.1_triggered_digital_pio_h.dir
+C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/Firmware_v0.1_untriggered_analog_pio_h.dir
+C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/Firmware_v0.1_triggered_analog_pio_h.dir
 C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/ELF2UF2Build.dir
 C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/edit_cache.dir
 C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/CMakeFiles/rebuild_cache.dir

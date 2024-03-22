@@ -7,12 +7,10 @@
 #include "hardware/dma.h"
 #include "untriggered_digital.pio.h"
 
-
 #ifndef SAMPLING_H
 #define SAMPLING_H
 
 #define SAMPLING_BUFFER_SIZE (1024*192) // array size, equivalent to 3 internal SRAM banks
-
 
 typedef struct
 {
@@ -25,10 +23,14 @@ typedef struct
     float frequencyDivider;
 }DataTransferHardware;
 
-void setBasicSamplingHardware(DataTransferHardware* dth);
-void resetBasicSamplingHardware(DataTransferHardware* dth, SamplingSettings* samplingSettings);
+void setPIOSamplingHardware(DataTransferHardware* dth);
+void resetPIOSamplingHardware(DataTransferHardware* dth, SamplingSettings* samplingSettings);
+void setSlowADCSamplingHardware(DataTransferHardware* dth, SamplingSettings* samplingSettings);
+void resetSlowADCSamplingHardware(DataTransferHardware* dth, SamplingSettings* samplingSettings);
 
-
+int64_t triggeredTimeoutAlarmCallback(alarm_id_t id, void *userData);
+void slowADCTriggerCallback();
+void stopTriggerTimeoutAlarm();
 
 
 #endif
