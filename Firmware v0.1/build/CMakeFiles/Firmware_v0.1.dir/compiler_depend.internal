@@ -3411,28 +3411,30 @@ CMakeFiles/Firmware_v0.1.dir/main.c.obj
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
- C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/configuration.h
- C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/communication.h
- C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/sampling.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/bus_ctrl.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/busctrl.h
- C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h
- C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h
- C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
- C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
- C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h
- C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h
- C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h
- C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/untriggered_digital.pio.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
  C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
+ C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/untriggered_digital.pio.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
  C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/triggered_digital.pio.h
  C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/untriggered_analog.pio.h
  C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/build/triggered_analog.pio.h
+ C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/configuration.h
+ C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/communication.h
+ C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/sampling.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h
+ C:/Users/karim/Desktop/Proyecto Final/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h
 
 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
  C:/Users/karim/Desktop/Proyecto Final/Firmware v0.1/sampling.c

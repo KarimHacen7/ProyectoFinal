@@ -79,6 +79,8 @@ CMakeFiles\Firmware_v0.1.dir\main.c.obj: \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\PI24F1~1\include/pico/stdio_usb.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/bus_ctrl.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/busctrl.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/vreg_and_chip_reset.h \
+ C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/vreg_and_chip_reset.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\RP2_CO~1\HARDWA~4\include/hardware/clocks.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~2\include/hardware/structs/clocks.h \
  C:\Users\karim\Desktop\PROYEC~1\pico-sdk\src\rp2040\HARDWA~1\include/hardware/regs/clocks.h \

@@ -4,6 +4,7 @@
 #include "pico/stdlib.h"
 // Required to use RP2040's various hardware modules
 #include "hardware/structs/bus_ctrl.h"
+#include "hardware/structs/vreg_and_chip_reset.h"
 #include "hardware/clocks.h"
 #include "hardware/adc.h"
 #include "hardware/gpio.h"
@@ -32,6 +33,7 @@ int main(void)
     // Check their definitions for more information about them, in their respective header files
     // samplingBuffer is where the samples will be stored after capture
     uint32_t i = 0;
+    uint32_t TEMPSKERE = 0;
     USBInput usbInput = { .position = 0, .lastInput = 0, .keepReading = true};
     strcpy(usbInput.buffer, USB_INPUT_BUFFER_DEFAULT);
     SamplingSettings samplingSettings = {.mode = Digital, .triggerMode=0, .frequency = 0, .depth = 1, .compareVoltage = 1.65, .timeout=1,.order = None };
@@ -39,6 +41,11 @@ int main(void)
     uint8_t samplingBuffer[SAMPLING_BUFFER_SIZE] = {'$'};
     // Begin USB comms
     stdio_init_all();
+    // Check if reset cause was reset button (used for halting sampling)
+    if(vreg_and_chip_reset_hw->chip_reset & (1 << 16))
+    {
+        printf(CMD_HARD_RESET);
+    }
     // LED Indicator
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
@@ -226,10 +233,12 @@ int main(void)
             }
             else
             {   // Print results
+                //printf(CMD_BEGIN);
                 for(i = 0; i < (samplingSettings.depth)*1024; i++)
                 {
-                    printf("%d\n", samplingBuffer[i]);
+                    printf("%c", *(samplingBuffer+i));
                 }
+                printf(CMD_END);
                 stdio_flush();   
             }
             sleep_ms(100);

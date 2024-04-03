@@ -3410,28 +3410,30 @@ CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\uart.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dreq.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\pico_stdio_usb\include\pico\stdio_usb.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: ..\configuration.h
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: ..\communication.h
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: ..\sampling.h
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\bus_ctrl.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\busctrl.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_pio\include\hardware\pio.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\pio.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pio.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_pio\include\hardware\pio_instructions.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_dma\include\hardware\dma.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dma.h"
-CMakeFiles\Firmware_v0.1.dir\main.c.obj: untriggered_digital.pio.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\vreg_and_chip_reset.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\vreg_and_chip_reset.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_clocks\include\hardware\clocks.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\clocks.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\clocks.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_adc\include\hardware\adc.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\adc.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\adc.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: untriggered_digital.pio.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_pio\include\hardware\pio.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\pio.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pio.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_pio\include\hardware\pio_instructions.h"
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: triggered_digital.pio.h
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: untriggered_analog.pio.h
 CMakeFiles\Firmware_v0.1.dir\main.c.obj: triggered_analog.pio.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: ..\configuration.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: ..\communication.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: ..\sampling.h
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2_common\hardware_dma\include\hardware\dma.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\dma.h"
+CMakeFiles\Firmware_v0.1.dir\main.c.obj: "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\dma.h"
 
 
 CMakeFiles\Firmware_v0.1.dir\sampling.c.obj: ..\sampling.c
@@ -4044,12 +4046,12 @@ triggered_analog.pio.h:
 
 ..\main.c:
 
-..\sampling.h:
-
 "C:\Users\karim\Desktop\Proyecto Final\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\busctrl.h":
 
 untriggered_digital.pio.h:
 
 triggered_digital.pio.h:
+
+..\sampling.h:
 
 ..\sampling.c:
