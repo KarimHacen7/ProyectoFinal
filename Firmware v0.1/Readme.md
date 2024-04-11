@@ -58,7 +58,7 @@
 			25 KHz	04
 			10 KHz	03
 			5 KHz	02
-			2 KHz	01
+			2.5 KHz	01
 			1 KHz	00
 		Analógico
 			25 MHz	13
