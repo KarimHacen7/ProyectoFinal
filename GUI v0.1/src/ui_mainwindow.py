@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(901, 606)
+        MainWindow.resize(821, 606)
         font = QFont()
         font.setFamilies([u"Consolas"])
         font.setPointSize(10)
@@ -77,48 +77,59 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.channelVisualizationLabel = QLabel(self.channelVisualizationFrame)
         self.channelVisualizationLabel.setObjectName(u"channelVisualizationLabel")
+        self.channelVisualizationLabel.setMinimumSize(QSize(0, 20))
+        self.channelVisualizationLabel.setMaximumSize(QSize(16777215, 20))
         self.channelVisualizationLabel.setFont(font)
         self.channelVisualizationLabel.setStyleSheet(u"*{padding-right: 5px;}")
+        self.channelVisualizationLabel.setWordWrap(True)
 
         self.horizontalLayout_14.addWidget(self.channelVisualizationLabel)
 
         self.channel1VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel1VBox.setObjectName(u"channel1VBox")
+        self.channel1VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel1VBox)
 
         self.channel2VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel2VBox.setObjectName(u"channel2VBox")
+        self.channel2VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel2VBox)
 
         self.channel3VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel3VBox.setObjectName(u"channel3VBox")
+        self.channel3VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel3VBox)
 
         self.channel8VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel8VBox.setObjectName(u"channel8VBox")
+        self.channel8VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel8VBox)
 
         self.channel7VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel7VBox.setObjectName(u"channel7VBox")
+        self.channel7VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel7VBox)
 
         self.channel6VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel6VBox.setObjectName(u"channel6VBox")
+        self.channel6VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel6VBox)
 
         self.channel5VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel5VBox.setObjectName(u"channel5VBox")
+        self.channel5VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel5VBox)
 
         self.channel4VBox = QCheckBox(self.channelVisualizationFrame)
         self.channel4VBox.setObjectName(u"channel4VBox")
+        self.channel4VBox.setChecked(True)
 
         self.horizontalLayout_14.addWidget(self.channel4VBox)
 
@@ -174,7 +185,7 @@ class Ui_MainWindow(object):
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 656, 605))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 576, 605))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(3)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -490,10 +501,21 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setSpacing(0)
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
-        self.statusLabel = QLabel(self.footerMainFrame)
-        self.statusLabel.setObjectName(u"statusLabel")
+        self.connectionStatusLabel = QLabel(self.footerMainFrame)
+        self.connectionStatusLabel.setObjectName(u"connectionStatusLabel")
+        self.connectionStatusLabel.setStyleSheet(u"*\n"
+"{\n"
+"background-color: #ff4a4a;\n"
+"font-family: consolas;\n"
+"border: 1px solid rgb(109, 109, 109);\n"
+"border-radius: 5px;\n"
+"}")
 
-        self.horizontalLayout_12.addWidget(self.statusLabel)
+        self.horizontalLayout_12.addWidget(self.connectionStatusLabel)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_12.addItem(self.horizontalSpacer_2)
 
 
         self.verticalLayout_19.addWidget(self.footerMainFrame)
@@ -516,7 +538,7 @@ class Ui_MainWindow(object):
         self.slideTabWidget.setStyleSheet(u"QFrame#samplingChannelsFrame,\n"
 "QFrame#samplingDepthFrame,\n"
 "QFrame#samplingFrequencyFrame,\n"
-"QFrame#samplingModeFrame,\n"
+"QFrame#samplingModeFrame\n"
 "{\n"
 "border: 1px solid rgb(109, 109, 109);\n"
 "border-radius: 7px;\n"
@@ -540,7 +562,7 @@ class Ui_MainWindow(object):
 "QFrame#samplingDepthFrame,\n"
 "QFrame#samplingFrequencyFrame,\n"
 "QFrame#samplingModeFrame,\n"
-"q\n"
+"QFrame#estimatedSamplingTimeFrame\n"
 "{\n"
 "border: 1px solid rgb(109, 109, 109);\n"
 "border-radius: 7px;\n"
@@ -723,6 +745,31 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.samplingChannelsFrame)
 
+        self.estimatedSamplingTimeFrame = QFrame(self.samplingFrame)
+        self.estimatedSamplingTimeFrame.setObjectName(u"estimatedSamplingTimeFrame")
+        self.estimatedSamplingTimeFrame.setFrameShape(QFrame.StyledPanel)
+        self.estimatedSamplingTimeFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_3 = QVBoxLayout(self.estimatedSamplingTimeFrame)
+        self.verticalLayout_3.setSpacing(5)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.estimatedSamplingTimeTitleLabel = QLabel(self.estimatedSamplingTimeFrame)
+        self.estimatedSamplingTimeTitleLabel.setObjectName(u"estimatedSamplingTimeTitleLabel")
+        self.estimatedSamplingTimeTitleLabel.setFont(font)
+        self.estimatedSamplingTimeTitleLabel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.estimatedSamplingTimeTitleLabel)
+
+        self.estimatedSamplingTimeValueLabel = QLabel(self.estimatedSamplingTimeFrame)
+        self.estimatedSamplingTimeValueLabel.setObjectName(u"estimatedSamplingTimeValueLabel")
+        self.estimatedSamplingTimeValueLabel.setFont(font)
+        self.estimatedSamplingTimeValueLabel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.estimatedSamplingTimeValueLabel)
+
+
+        self.verticalLayout_2.addWidget(self.estimatedSamplingTimeFrame)
+
         self.slideFrameVerticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_2.addItem(self.slideFrameVerticalSpacer)
@@ -799,17 +846,20 @@ class Ui_MainWindow(object):
 
         self.triggerModeComboBox = QComboBox(self.triggerChannelButtonsFrame)
         icon6 = QIcon()
-        icon6.addFile(u":/ButtonIcons/ico/RISING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u":/ButtonIcons/ico/UNTRIGGERED.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon6, "")
         icon7 = QIcon()
-        icon7.addFile(u":/ButtonIcons/ico/FALLING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u":/ButtonIcons/ico/RISING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon7, "")
         icon8 = QIcon()
-        icon8.addFile(u":/ButtonIcons/ico/HIGH LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u":/ButtonIcons/ico/FALLING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon8, "")
         icon9 = QIcon()
         icon9.addFile(u":/ButtonIcons/ico/LOW LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon9, "")
+        icon10 = QIcon()
+        icon10.addFile(u":/ButtonIcons/ico/HIGH LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerModeComboBox.addItem(icon10, "")
         self.triggerModeComboBox.setObjectName(u"triggerModeComboBox")
         self.triggerModeComboBox.setMinimumSize(QSize(0, 25))
         self.triggerModeComboBox.setFont(font)
@@ -927,7 +977,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.slideTabWidget.setCurrentIndex(0)
+        self.slideTabWidget.setCurrentIndex(1)
         self.samplingFrequencyComboBox.setCurrentIndex(16)
         self.samplingChannelsComboBox.setCurrentIndex(3)
 
@@ -965,7 +1015,7 @@ class Ui_MainWindow(object):
         self.channel7ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.channel8IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 8", None))
         self.channel8ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.statusLabel.setText(QCoreApplication.translate("MainWindow", u"Estado: Desconectado", None))
+        self.connectionStatusLabel.setText(QCoreApplication.translate("MainWindow", u"Estado: Desconectado", None))
 #if QT_CONFIG(accessibility)
         self.samplingConfigTab.setAccessibleName(QCoreApplication.translate("MainWindow", u"Muestreo", None))
 #endif // QT_CONFIG(accessibility)
@@ -999,6 +1049,8 @@ class Ui_MainWindow(object):
         self.samplingChannelsComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"1-4", None))
         self.samplingChannelsComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"1-8", None))
 
+        self.estimatedSamplingTimeTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Tiempo de Muestreo", None))
+        self.estimatedSamplingTimeValueLabel.setText(QCoreApplication.translate("MainWindow", u"Placeholder", None))
         self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.samplingConfigTab), QCoreApplication.translate("MainWindow", u"Muestreo", None))
         self.triggerChannelTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Canal y Evento", None))
         self.triggerChannelComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"1", None))
@@ -1010,10 +1062,11 @@ class Ui_MainWindow(object):
         self.triggerChannelComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"7", None))
         self.triggerChannelComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"8", None))
 
-        self.triggerModeComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Flanco Subida", None))
-        self.triggerModeComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Flanco Bajada", None))
-        self.triggerModeComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Nivel Alto", None))
+        self.triggerModeComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Inmediato", None))
+        self.triggerModeComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Flanco Subida", None))
+        self.triggerModeComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Flanco Bajada", None))
         self.triggerModeComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Nivel Bajo", None))
+        self.triggerModeComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Nivel Alto", None))
 
         self.triggerTimeoutLabel.setText(QCoreApplication.translate("MainWindow", u"Tiempo de Espera", None))
         self.triggerTimeoutDoubleSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" [s]", None))

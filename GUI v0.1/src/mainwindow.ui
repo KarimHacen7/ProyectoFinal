@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>901</width>
+    <width>821</width>
     <height>606</height>
    </rect>
   </property>
@@ -357,7 +357,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>656</width>
+            <width>576</width>
             <height>605</height>
            </rect>
           </property>
@@ -989,11 +989,33 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QLabel" name="statusLabel">
+           <widget class="QLabel" name="connectionStatusLabel">
+            <property name="styleSheet">
+             <string notr="true">*
+{
+background-color: #ff4a4a;
+font-family: consolas;
+border: 1px solid rgb(109, 109, 109);
+border-radius: 5px;
+}</string>
+            </property>
             <property name="text">
              <string>Estado: Desconectado</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -1040,7 +1062,7 @@
           <string notr="true">QFrame#samplingChannelsFrame,
 QFrame#samplingDepthFrame,
 QFrame#samplingFrequencyFrame,
-QFrame#samplingModeFrame,
+QFrame#samplingModeFrame
 {
 border: 1px solid rgb(109, 109, 109);
 border-radius: 7px;
@@ -1049,7 +1071,7 @@ padding-bottom:8px
 }</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="samplingConfigTab">
           <property name="accessibleName">
@@ -1087,7 +1109,7 @@ padding-bottom:8px
 QFrame#samplingDepthFrame,
 QFrame#samplingFrequencyFrame,
 QFrame#samplingModeFrame,
-q
+QFrame#estimatedSamplingTimeFrame
 {
 border: 1px solid rgb(109, 109, 109);
 border-radius: 7px;
@@ -1563,6 +1585,65 @@ border-radius: 5px;
                </widget>
               </item>
               <item>
+               <widget class="QFrame" name="estimatedSamplingTimeFrame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="estimatedSamplingTimeTitleLabel">
+                   <property name="font">
+                    <font>
+                     <family>Consolas</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Tiempo de Muestreo</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="estimatedSamplingTimeValueLabel">
+                   <property name="font">
+                    <font>
+                     <family>Consolas</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Placeholder</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
                <spacer name="slideFrameVerticalSpacer">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
@@ -1789,6 +1870,15 @@ padding-bottom:8px
                       </property>
                       <item>
                        <property name="text">
+                        <string>Inmediato</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="Icons.qrc">
+                         <normaloff>:/ButtonIcons/ico/UNTRIGGERED.png</normaloff>:/ButtonIcons/ico/UNTRIGGERED.png</iconset>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
                         <string>Flanco Subida</string>
                        </property>
                        <property name="icon">
@@ -1807,20 +1897,20 @@ padding-bottom:8px
                       </item>
                       <item>
                        <property name="text">
-                        <string>Nivel Alto</string>
-                       </property>
-                       <property name="icon">
-                        <iconset resource="Icons.qrc">
-                         <normaloff>:/ButtonIcons/ico/HIGH LEVEL.png</normaloff>:/ButtonIcons/ico/HIGH LEVEL.png</iconset>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
                         <string>Nivel Bajo</string>
                        </property>
                        <property name="icon">
                         <iconset resource="Icons.qrc">
                          <normaloff>:/ButtonIcons/ico/LOW LEVEL.png</normaloff>:/ButtonIcons/ico/LOW LEVEL.png</iconset>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Nivel Alto</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="Icons.qrc">
+                         <normaloff>:/ButtonIcons/ico/HIGH LEVEL.png</normaloff>:/ButtonIcons/ico/HIGH LEVEL.png</iconset>
                        </property>
                       </item>
                      </widget>
