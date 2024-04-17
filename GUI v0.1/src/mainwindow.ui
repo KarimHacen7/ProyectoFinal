@@ -990,6 +990,11 @@
           </property>
           <item>
            <widget class="QLabel" name="connectionStatusLabel">
+            <property name="font">
+             <font>
+              <family>consolas</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">*
 {
@@ -1071,7 +1076,7 @@ padding-bottom:8px
 }</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="samplingConfigTab">
           <property name="accessibleName">

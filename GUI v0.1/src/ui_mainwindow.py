@@ -503,6 +503,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.connectionStatusLabel = QLabel(self.footerMainFrame)
         self.connectionStatusLabel.setObjectName(u"connectionStatusLabel")
+        font2 = QFont()
+        font2.setFamilies([u"consolas"])
+        self.connectionStatusLabel.setFont(font2)
         self.connectionStatusLabel.setStyleSheet(u"*\n"
 "{\n"
 "background-color: #ff4a4a;\n"
@@ -960,12 +963,12 @@ class Ui_MainWindow(object):
         sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.versionLabel.sizePolicy().hasHeightForWidth())
         self.versionLabel.setSizePolicy(sizePolicy4)
-        font2 = QFont()
-        font2.setFamilies([u"Consolas"])
-        font2.setPointSize(10)
-        font2.setBold(False)
-        font2.setUnderline(False)
-        self.versionLabel.setFont(font2)
+        font3 = QFont()
+        font3.setFamilies([u"Consolas"])
+        font3.setPointSize(10)
+        font3.setBold(False)
+        font3.setUnderline(False)
+        self.versionLabel.setFont(font3)
         self.versionLabel.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
 
         self.verticalLayout.addWidget(self.slideFrameFooter, 0, Qt.AlignVCenter)
@@ -977,7 +980,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.slideTabWidget.setCurrentIndex(1)
+        self.slideTabWidget.setCurrentIndex(0)
         self.samplingFrequencyComboBox.setCurrentIndex(16)
         self.samplingChannelsComboBox.setCurrentIndex(3)
 

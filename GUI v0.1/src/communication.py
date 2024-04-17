@@ -9,7 +9,7 @@ class CommunicationModule():
         # Connect to the WMI service
         c = wmi.WMI()
         # Define the WQL query to retrieve USB devices
-        query = "SELECT * FROM Win32_USBHub"
+        query = "SELECT DeviceID FROM Win32_USBHub"
         # Execute the query
         usb_devices_DeviceIDs = c.query(query)
 
@@ -46,32 +46,32 @@ class CommunicationModule():
                     usb_input_buffer = usb_input_buffer.removesuffix(b'#END;')
                     return_bytearray.extend(usb_input_buffer)
                     port_handler.close()
-                    return return_bytearray
+                    return 0, return_bytearray
                 # Else, keep waiting for disconnection (reset), data, or trigger timeout 
                 while keep_reading_usb:
                     sleep(0.01)
                     if self.checkConnected("VID_2E8A&PID_000A"):
                         usb_input_buffer = port_handler.read()
                     else:
-                        return -1
+                        return -1, bytearray()
                     if usb_input_buffer.endswith(b'#HARDRESET;'):
                         port_handler.close()
-                        return -2
+                        return -2, bytearray()
                     elif usb_input_buffer is None:
                         continue
                     elif usb_input_buffer.endswith(b'#TRIGTIMEOUT;'):
                         port_handler.close()
-                        return -3
+                        return -3, bytearray()
                     elif usb_input_buffer.endswith(b'#END;'):
                         return_bytearray.extend(usb_input_buffer)
                         port_handler.close()
                         usb_input_buffer.removesuffix(b'#END;')
-                        return return_bytearray
+                        return 0, return_bytearray
                     else:
                         return_bytearray.extend(usb_input_buffer)
                         keep_reading_usb = True
         else:
-            return -1
+            return -1, bytearray()
 
     # This function configures a reference voltage or trigger timeout  
     # Returns 1 if successful, or -1 if failed

@@ -25,8 +25,16 @@ class SamplingSettings():
             commandString += "D"
         else:
             commandString += "A"
-        commandString += str(self.triggerMode) + str(self.triggerChannel) + str(self.channels) + str(self.frequency)
+        commandString += str(self.triggerMode) + str(self.triggerChannel) + str(self.channels)
         
+
+        if self.frequency < 10:
+            temp = "0" + str(self.frequency)
+        else:
+            temp = str(self.frequency)
+        
+        commandString += temp
+
         if self.depth < 100:
             if self.depth < 10:
                 temp = "00" + str(self.depth)
