@@ -1,28 +1,9 @@
-from time import sleep
 from settings import SamplingSettings, SamplingMode
-from communication import CommunicationModule
+from communication import CommunicationModule, SamplingWorker
 from PySide6.QtWidgets import  QMainWindow, QMessageBox
-from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QObject, Signal, QThread
+from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, QMutex
 from ui_mainwindow import Ui_MainWindow
 
-
-class SamplingWorker(QObject):
-    
-    communicationModule = CommunicationModule() 
-    finished = Signal()
-    progress = Signal(int, bytearray)
-    
-    def __init__(self):
-        super().__init__()
-        print("Arrancando") #remove later
-        
-    def sample(self):
-        # if needed, put a lock here
-        ret = self.communicationModule.sendSamplingCommand("#D01805192;")
-        # and return it here
-        self.progress.emit(0, ret)
-        self.finished.emit()
-    
 
 class MainWindow(QMainWindow):
     statusLabelTimer = QTimer()
@@ -52,23 +33,72 @@ class MainWindow(QMainWindow):
         self.calculateSamplingTime()
 
         self.statusLabelTimer.start(500)
-        
-
-    def samplingIsFinished(self, code, data):
-        print(code, data)
     
-    def runSamplingThread(self): #change name
+
+    def startSamplingThread(self):
         self.samplingThread = QThread() 
         self.samplingWorker = SamplingWorker()
         self.samplingWorker.moveToThread(self.samplingThread)
         
+        self.getConfigurationFromGUI()
+        self.samplingWorker.samplingQueue.put(self.samplingSettings.parseSamplingStringFromConfig(), block=True, timeout=None)
+        self.samplingWorker.timeoutQueue.put(self.samplingSettings.parseTimeoutStringFromConfig(), block=True, timeout=None)
+        self.samplingWorker.voltageQueue.put(self.samplingSettings.parseVoltageStringFromConfig(), block=True, timeout=None)
+
         self.samplingThread.started.connect(self.samplingWorker.sample)         # When thread is created, start sampling
         self.samplingWorker.finished.connect(self.samplingThread.quit)          # When the job is finished, stop the thread
         self.samplingWorker.finished.connect(self.samplingWorker.deleteLater)   # Then, delete the object
         self.samplingThread.finished.connect(self.samplingThread.deleteLater)   # And the thread
-        self.samplingWorker.progress.connect(self.samplingIsFinished)           # When samples are ready, go to callback
-
+        self.samplingWorker.samplingFinished.connect(self.samplingIsFinished)   # When samples are ready, go to callback
+        self.samplingWorker.commandAcknowledged.connect(self.commandIsAcknowledged)
+        self.samplingWorker.dataIncoming.connect(self.dataIsIncoming)
+        self.samplingWorker.timeoutFinished.connect(self.timeoutIsFinished)
+        self.samplingWorker.voltageFinished.connect(self.voltageIsFinished)
+        
+        self.samplingWorker.finished.connect(self.threadFinished)
         self.samplingThread.start()                                             # Get to work, when done, it should stop automatically
+
+    def voltageIsFinished(self, code):
+        if code == 1:
+            self.ui.connectionStatusLabel.setText("Estado: Configurando")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f6f7da; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.samplingProgressBar.setValue(5)
+        else:
+            QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
+    
+    def timeoutIsFinished(self, code):
+        if code == 1:
+            self.ui.connectionStatusLabel.setText("Estado: Configurando")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f2f5bc; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.samplingProgressBar.setValue(10)
+        else:
+            QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
+
+    def commandIsAcknowledged(self):
+        self.ui.connectionStatusLabel.setText("Estado: Muestreando...")
+        self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f1f5a2; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+        self.ui.samplingProgressBar.setValue(15)
+
+    def dataIsIncoming(self):
+        self.ui.connectionStatusLabel.setText("Estado: Recibiendo Datos")
+        self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f1f5a2; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+        self.ui.samplingProgressBar.setValue(20)
+
+    def samplingIsFinished(self, code, data):
+        if code == -1 or code == -2:
+            self.ui.connectionStatusLabel.setText("Estado: Desconectado")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #ff4a4a; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            QMessageBox.warning(self, "Desconexión", "Se ha reiniciado o desconectado el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
+        elif code == -3:
+            QMessageBox.information(self, "Timeout", "Se ha excedido el tiempo de espera indicado", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
+        else:
+            self.ui.connectionStatusLabel.setText("Estado: Conectado")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #4af792; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.graphChannels()
+    
+    def threadFinished(self):
+        self.statusLabelTimer.start()
+        self.ui.samplingProgressBar.setValue(0)
     
     def checkConnectedStatusAndShowInLabel(self):
         isConnected = self.communicationModule.checkConnected("VID_2E8A&PID_000A")
@@ -174,38 +204,14 @@ class MainWindow(QMainWindow):
             self.samplingSettings.triggerChannel = self.ui.triggerChannelComboBox.currentIndex() + 1
 
     def sample(self):
+        self.statusLabelTimer.stop()
         
-        self.ui.connectionStatusLabel.setText("Estado: Muestreando")
-        self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #ffea5e; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-
-        self.getConfigurationFromGUI()
+        self.ui.samplingProgressBar.setValue(0)
         
-        if self.communicationModule.sendConfigCommand(self.samplingSettings.parseTimeoutStringFromConfig()) != 1:
-            QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
-            return
-        
-        if self.communicationModule.sendConfigCommand(self.samplingSettings.parseVoltageStringFromConfig()) != 1:
-            QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
-            return
+        self.startSamplingThread()
             
-
-        self.runSamplingThread()
-        #print(self.samplingSettings.parseSamplingStringFromConfig())
-        #self.threadQueue.put(self.samplingSettings.parseSamplingStringFromConfig(), block=True, timeout=None)
-        
-        #self.initialBuffer = self.threadQueue.get(block=True, timeout=None)
-        
         return
-        if self.initialBuffer == -1 or self.initialBuffer == -2:
-            self.ui.connectionStatusLabel.setText("Estado: Desconectado")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #ff4a4a; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-            QMessageBox.warning(self, "Desconexión", "Se ha reiniciado o desconectado el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
-        elif self.initialBuffer == -3:
-            QMessageBox.information(self, "Timeout", "Se ha excedido el tiempo de espera indicado", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
-        else:
-            self.ui.connectionStatusLabel.setText("Estado: Conectado")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #4af792; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-            self.graphChannels()
+        
 
     def graphChannels(self):
         print("Graficar")

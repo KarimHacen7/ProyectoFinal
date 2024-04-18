@@ -17,9 +17,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDoubleSpinBox,
     QFrame, QGraphicsView, QHBoxLayout, QLabel,
-    QMainWindow, QPushButton, QScrollArea, QSizePolicy,
-    QSlider, QSpacerItem, QTabWidget, QVBoxLayout,
-    QWidget)
+    QMainWindow, QProgressBar, QPushButton, QScrollArea,
+    QSizePolicy, QSlider, QSpacerItem, QTabWidget,
+    QVBoxLayout, QWidget)
 import Icons_rc
 
 class Ui_MainWindow(object):
@@ -81,7 +81,7 @@ class Ui_MainWindow(object):
         self.channelVisualizationLabel.setMaximumSize(QSize(16777215, 20))
         self.channelVisualizationLabel.setFont(font)
         self.channelVisualizationLabel.setStyleSheet(u"*{padding-right: 5px;}")
-        self.channelVisualizationLabel.setWordWrap(True)
+        self.channelVisualizationLabel.setWordWrap(False)
 
         self.horizontalLayout_14.addWidget(self.channelVisualizationLabel)
 
@@ -500,11 +500,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12 = QHBoxLayout(self.footerMainFrame)
         self.horizontalLayout_12.setSpacing(0)
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
-        self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_12.setContentsMargins(0, 5, 0, 0)
         self.connectionStatusLabel = QLabel(self.footerMainFrame)
         self.connectionStatusLabel.setObjectName(u"connectionStatusLabel")
         font2 = QFont()
         font2.setFamilies([u"consolas"])
+        font2.setPointSize(9)
         self.connectionStatusLabel.setFont(font2)
         self.connectionStatusLabel.setStyleSheet(u"*\n"
 "{\n"
@@ -519,6 +520,18 @@ class Ui_MainWindow(object):
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_12.addItem(self.horizontalSpacer_2)
+
+        self.samplingProgressBar = QProgressBar(self.footerMainFrame)
+        self.samplingProgressBar.setObjectName(u"samplingProgressBar")
+        sizePolicy1.setHeightForWidth(self.samplingProgressBar.sizePolicy().hasHeightForWidth())
+        self.samplingProgressBar.setSizePolicy(sizePolicy1)
+        self.samplingProgressBar.setMinimumSize(QSize(300, 0))
+        self.samplingProgressBar.setMaximumSize(QSize(300, 16777215))
+        self.samplingProgressBar.setLayoutDirection(Qt.RightToLeft)
+        self.samplingProgressBar.setValue(0)
+        self.samplingProgressBar.setInvertedAppearance(True)
+
+        self.horizontalLayout_12.addWidget(self.samplingProgressBar)
 
 
         self.verticalLayout_19.addWidget(self.footerMainFrame)
@@ -699,7 +712,7 @@ class Ui_MainWindow(object):
         self.samplingDepthHorizontalSlider.setObjectName(u"samplingDepthHorizontalSlider")
         self.samplingDepthHorizontalSlider.setMinimum(1)
         self.samplingDepthHorizontalSlider.setMaximum(192)
-        self.samplingDepthHorizontalSlider.setValue(192)
+        self.samplingDepthHorizontalSlider.setValue(20)
         self.samplingDepthHorizontalSlider.setOrientation(Qt.Horizontal)
 
         self.verticalLayout_6.addWidget(self.samplingDepthHorizontalSlider)
@@ -1045,7 +1058,7 @@ class Ui_MainWindow(object):
         self.samplingFrequencyComboBox.setItemText(16, QCoreApplication.translate("MainWindow", u"125 [MHz]", None))
 
         self.samplingDepthTilteLabel.setText(QCoreApplication.translate("MainWindow", u"Profundidad de Muestreo", None))
-        self.samplingDepthValueLabel.setText(QCoreApplication.translate("MainWindow", u"192 [KiB]", None))
+        self.samplingDepthValueLabel.setText(QCoreApplication.translate("MainWindow", u"20 [KiB]", None))
         self.samplingChannelsLabel.setText(QCoreApplication.translate("MainWindow", u"Canales Muestreados", None))
         self.samplingChannelsComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"1", None))
         self.samplingChannelsComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"1-2", None))

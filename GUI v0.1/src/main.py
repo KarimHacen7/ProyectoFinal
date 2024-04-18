@@ -4,8 +4,8 @@ from PySide6.QtWidgets import QApplication
 
 '''
 TODO:
-    poner algo para indicar que se esta muestreando
-    proba pasar el thread de
+    Reportar progreso en barra de progreso
+    
 '''
 
 if __name__ == "__main__":
