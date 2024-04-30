@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>821</width>
-    <height>606</height>
+    <width>1065</width>
+    <height>748</height>
    </rect>
   </property>
   <property name="font">
@@ -21,7 +21,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Icons.qrc">
-    <normaloff>:/Logos/ico/UTN-Paraná.png</normaloff>:/Logos/ico/UTN-Paraná.png</iconset>
+    <normaloff>:/ButtonIcons/ico/square-wave.svg</normaloff>:/ButtonIcons/ico/square-wave.svg</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -162,7 +162,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel1VBox">
+              <widget class="QCheckBox" name="channel1CheckBox">
                <property name="text">
                 <string>1</string>
                </property>
@@ -172,7 +172,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel2VBox">
+              <widget class="QCheckBox" name="channel2CheckBox">
                <property name="text">
                 <string>2</string>
                </property>
@@ -182,7 +182,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel3VBox">
+              <widget class="QCheckBox" name="channel3CheckBox">
                <property name="text">
                 <string>3</string>
                </property>
@@ -192,7 +192,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel8VBox">
+              <widget class="QCheckBox" name="channel4CheckBox">
                <property name="text">
                 <string>4</string>
                </property>
@@ -202,7 +202,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel7VBox">
+              <widget class="QCheckBox" name="channel5CheckBox">
                <property name="text">
                 <string>5</string>
                </property>
@@ -212,7 +212,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel6VBox">
+              <widget class="QCheckBox" name="channel6CheckBox">
                <property name="text">
                 <string>6</string>
                </property>
@@ -222,7 +222,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel5VBox">
+              <widget class="QCheckBox" name="channel7CheckBox">
                <property name="text">
                 <string>7</string>
                </property>
@@ -232,7 +232,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QCheckBox" name="channel4VBox">
+              <widget class="QCheckBox" name="channel8CheckBox">
                <property name="text">
                 <string>8</string>
                </property>
@@ -256,6 +256,29 @@
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/ButtonIcons/ico/Gear-icon.png</normaloff>:/ButtonIcons/ico/Gear-icon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QPushButton" name="startSamplingPushButton">
@@ -283,29 +306,6 @@
             <property name="icon">
              <iconset resource="Icons.qrc">
               <normaloff>:/ButtonIcons/ico/play.png</normaloff>:/ButtonIcons/ico/play.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton">
-            <property name="minimumSize">
-             <size>
-              <width>30</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="Icons.qrc">
-              <normaloff>:/ButtonIcons/ico/Gear-icon.png</normaloff>:/ButtonIcons/ico/Gear-icon.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -357,13 +357,13 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>576</width>
-            <height>605</height>
+            <width>837</width>
+            <height>667</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_17">
            <property name="spacing">
-            <number>3</number>
+            <number>0</number>
            </property>
            <property name="leftMargin">
             <number>0</number>
@@ -378,7 +378,75 @@
             <number>0</number>
            </property>
            <item>
+            <widget class="QFrame" name="axisFrame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="axisLabel">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGraphicsView" name="graphicsView">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <widget class="QFrame" name="channel1Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -403,6 +471,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel1LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -455,13 +529,32 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel1GraphicsView"/>
+               <widget class="QGraphicsView" name="channel1GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QFrame" name="channel2Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -486,6 +579,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel2LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -497,6 +596,9 @@
                   <number>0</number>
                  </property>
                  <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
                   <number>0</number>
                  </property>
                  <property name="rightMargin">
@@ -523,13 +625,32 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel2GraphicsView"/>
+               <widget class="QGraphicsView" name="channel2GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QFrame" name="channel3Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -554,6 +675,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel3LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -594,13 +721,32 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel3GraphicsView"/>
+               <widget class="QGraphicsView" name="channel3GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QFrame" name="channel4Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -625,6 +771,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel4LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -665,13 +817,32 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel4GraphicsView"/>
+               <widget class="QGraphicsView" name="channel4GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QFrame" name="channel5Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -696,6 +867,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel5LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -736,13 +913,32 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel5GraphicsView"/>
+               <widget class="QGraphicsView" name="channel5GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QFrame" name="channel6Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -767,6 +963,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel6LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -807,13 +1009,32 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel6GraphicsView"/>
+               <widget class="QGraphicsView" name="channel6GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QFrame" name="channel7Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -838,6 +1059,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel7LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -878,13 +1105,32 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel7GraphicsView"/>
+               <widget class="QGraphicsView" name="channel7GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="channel8Frame8">
+            <widget class="QFrame" name="channel8Frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -909,6 +1155,12 @@
               </property>
               <item>
                <widget class="QFrame" name="channel8LabelFrame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -949,10 +1201,30 @@
                </widget>
               </item>
               <item>
-               <widget class="QGraphicsView" name="channel8GraphicsView"/>
+               <widget class="QGraphicsView" name="channel8GraphicsView">
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -2025,13 +2297,13 @@ padding-bottom:8px
                     <string> [s]</string>
                    </property>
                    <property name="minimum">
-                    <double>0.010000000000000</double>
+                    <double>0.300000000000000</double>
                    </property>
                    <property name="singleStep">
                     <double>0.100000000000000</double>
                    </property>
                    <property name="value">
-                    <double>0.100000000000000</double>
+                    <double>0.300000000000000</double>
                    </property>
                   </widget>
                  </item>
@@ -2114,7 +2386,7 @@ padding-bottom:8px
                     <double>0.010000000000000</double>
                    </property>
                    <property name="value">
-                    <double>1.650000000000000</double>
+                    <double>2.600000000000000</double>
                    </property>
                   </widget>
                  </item>

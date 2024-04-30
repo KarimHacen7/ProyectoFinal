@@ -1,7 +1,8 @@
 from settings import SamplingSettings, SamplingMode
 from communication import CommunicationModule, SamplingWorker
-from PySide6.QtWidgets import  QMainWindow, QMessageBox
-from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, QMutex
+from plotting import Plotter
+from PySide6.QtWidgets import  QMainWindow, QMessageBox, QGraphicsScene, QGraphicsView, QCheckBox
+from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, QSize, Signal
 from ui_mainwindow import Ui_MainWindow
 
 
@@ -9,13 +10,24 @@ class MainWindow(QMainWindow):
     statusLabelTimer = QTimer()
     communicationModule = CommunicationModule()
     samplingSettings = SamplingSettings()
+    plotter = Plotter()
     initialBuffer = bytearray()
-
+    QGVReferenceList = [] # QGraphicsViewReferenceList
+    resizeSignal = Signal()
+    visualizedChannels = [1,2,3,4,5,6,7,8]
+    dataBuffer = []
+    resizeCount = 10
+                        
     def __init__(self):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        self.configSlideAnimation = QPropertyAnimation(self.ui.slideFrameContainer, b"maximumWidth")#Animate minimumWidht
+        
+        self.configSlideAnimation.finished.connect(self.resizeHandler)
+        self.resizeSignal.connect(self.resizeHandler)
+        
         self.ui.configSliderPushButton.clicked.connect(self.sidePanelSlideAnimation)
         self.ui.samplingDepthHorizontalSlider.valueChanged.connect(self.updateSamplingDepthLabel)
         self.ui.digitalModePushButton.clicked.connect(self.restrictSettingsDigitalMode)
@@ -27,13 +39,32 @@ class MainWindow(QMainWindow):
         self.ui.samplingChannelsComboBox.currentIndexChanged.connect(self.restrictTriggerChannels)
         
         self.ui.startSamplingPushButton.clicked.connect(self.sample)
+        
+        self.ui.channel1CheckBox.stateChanged.connect(self.hideChannels)
+        self.ui.channel2CheckBox.stateChanged.connect(self.hideChannels)
+        self.ui.channel3CheckBox.stateChanged.connect(self.hideChannels)
+        self.ui.channel4CheckBox.stateChanged.connect(self.hideChannels)
+        self.ui.channel5CheckBox.stateChanged.connect(self.hideChannels)
+        self.ui.channel6CheckBox.stateChanged.connect(self.hideChannels)
+        self.ui.channel7CheckBox.stateChanged.connect(self.hideChannels)
+        self.ui.channel8CheckBox.stateChanged.connect(self.hideChannels)
+
+
         self.statusLabelTimer.timeout.connect(self.checkConnectedStatusAndShowInLabel)
 
         self.ui.digitalModePushButton.animateClick()
         self.calculateSamplingTime()
 
         self.statusLabelTimer.start(500)
+
+        for item in dir(self.ui):
+            ref = getattr(self.ui, item)
+            if isinstance(ref, QGraphicsView):
+                self.QGVReferenceList.append(ref)
     
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self.resizeSignal.emit()
 
     def startSamplingThread(self):
         self.samplingThread = QThread() 
@@ -60,7 +91,7 @@ class MainWindow(QMainWindow):
 
     def voltageIsFinished(self, code):
         if code == 1:
-            self.ui.connectionStatusLabel.setText("Estado: Configurando")
+            self.ui.connectionStatusLabel.setText("Estado: Configurando...")
             self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f6f7da; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
             self.ui.samplingProgressBar.setValue(5)
         else:
@@ -68,21 +99,22 @@ class MainWindow(QMainWindow):
     
     def timeoutIsFinished(self, code):
         if code == 1:
-            self.ui.connectionStatusLabel.setText("Estado: Configurando")
+            self.ui.connectionStatusLabel.setText("Estado: Configurado!")
             self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f2f5bc; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-            self.ui.samplingProgressBar.setValue(10)
+            self.ui.samplingProgressBar.setValue(15)
         else:
             QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
 
     def commandIsAcknowledged(self):
         self.ui.connectionStatusLabel.setText("Estado: Muestreando...")
         self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f1f5a2; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-        self.ui.samplingProgressBar.setValue(15)
+        self.ui.samplingProgressBar.setValue(25)
 
-    def dataIsIncoming(self):
+    def dataIsIncoming(self, length:int):
         self.ui.connectionStatusLabel.setText("Estado: Recibiendo Datos")
         self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f1f5a2; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-        self.ui.samplingProgressBar.setValue(20)
+        progress = 25 + int(0.75*length/(1024*self.samplingSettings.depth))
+        self.ui.samplingProgressBar.setValue(progress)
 
     def samplingIsFinished(self, code, data):
         if code == -1 or code == -2:
@@ -94,7 +126,7 @@ class MainWindow(QMainWindow):
         else:
             self.ui.connectionStatusLabel.setText("Estado: Conectado")
             self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #4af792; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-            self.graphChannels()
+            self.graphChannels(data)
     
     def threadFinished(self):
         self.statusLabelTimer.start()
@@ -116,11 +148,12 @@ class MainWindow(QMainWindow):
         else:
             newWidth = 0
 
-        self.configSlideAnimation = QPropertyAnimation(self.ui.slideFrameContainer, b"maximumWidth")#Animate minimumWidht
+
         self.configSlideAnimation.setDuration(250)
         self.configSlideAnimation.setStartValue(width)
         self.configSlideAnimation.setEndValue(newWidth)
         self.configSlideAnimation.setEasingCurve(QEasingCurve.InOutQuart)
+        self.resizeCount = 10
         self.configSlideAnimation.start()
 
     def updateSamplingDepthLabel(self):
@@ -205,17 +238,65 @@ class MainWindow(QMainWindow):
 
     def sample(self):
         self.statusLabelTimer.stop()
-        
         self.ui.samplingProgressBar.setValue(0)
-        
         self.startSamplingThread()
-            
         return
         
 
-    def graphChannels(self):
-        print("Graficar")
-        pass
+    def graphChannels(self, data):
+        self.dataBuffer = self.plotter.treatData(rawData=data, channelNumber=self.samplingSettings.channels)
+        height = 75
+        width = self.ui.channel1GraphicsView.size().width()
+        for index, channel in enumerate(self.dataBuffer):
+            temp = self.plotter.plotChannel(data=channel, size=(width/100, height/100), color="#FF0000")
+            tempScene = QGraphicsScene()
+            tempScene.addWidget(temp)
+            self.QGVReferenceList[index].setScene(tempScene)
+
+        for channelNumber in range(1, 9):
+            ref = getattr(self.ui, "channel" + str(channelNumber) + "CheckBox")
+            if channelNumber in range(1, self.samplingSettings.channels+1):
+                ref.setChecked(True)
+                ref.setEnabled(True)
+            else:
+                ref.setChecked(False)
+                ref.setEnabled(False)
+    
+    def resizeHandler(self):
+        if self.resizeCount < 10:
+            self.resizeCount += 1
+            return
+        else:
+            self.resizeCount = 0
+            height = 75
+            width = self.ui.channel1GraphicsView.size().width()
+            if (len(self.dataBuffer) != 0):
+                for index, channel in enumerate(self.dataBuffer):
+                    temp = self.plotter.plotChannel(data=channel, size=(width/100, height/100), color="#FF0000")
+                    tempScene = QGraphicsScene()
+                    tempScene.addWidget(temp)
+                    self.QGVReferenceList[index].setScene(tempScene)
+            else:
+                return
+        
+    def hideChannels(self):
+        self.visualizedChannels.clear()
+        for item in dir(self.ui):
+            ref = getattr(self.ui, item)
+            if (item.find("channel") != -1) and (isinstance(ref, QCheckBox)) and (ref.isChecked()):
+                try:
+                    self.visualizedChannels.append(int(ref.text()))
+                except:
+                    print("No le cambies el nombre o el texto a los checkbox!")
+                    return
+        for channelNumber in range(1, 9):
+            ref = getattr(self.ui, "channel" + str(channelNumber) + "Frame")
+            if channelNumber in self.visualizedChannels:
+                ref.setMaximumHeight(75)
+            else:
+                ref.setMaximumHeight(0)
+
+
 
 
 

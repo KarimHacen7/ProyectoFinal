@@ -22,7 +22,7 @@ class CommunicationModule():
             else:
                 continue
         return False
-
+'''
     # This function orders a type of sampling
     # Returns a bytearray (truncating control messages) containing the sampled data
     # If an error occured, returns -1. For disconnected or unavailable, -2. For hardreset, -3
@@ -43,7 +43,7 @@ class CommunicationModule():
             # And check if response acknowledged
             usb_input_buffer = port_handler.read()
             if usb_input_buffer.startswith(b'#ACK;'):
-                usb_input_buffer = usb_input_buffer.removeprefix(b'#ACK;')
+                usb_input_buffer = usb_input_buffer.removeFefix(b'#ACK;')
                 # If we got an immediate response...
                 if usb_input_buffer.endswith(b'#END;'):
                     usb_input_buffer = usb_input_buffer.removesuffix(b'#END;')
@@ -93,11 +93,11 @@ class CommunicationModule():
             else:
                 return -1
         else:
-            return -1
+            return -1'''
 
 class SamplingWorker(QObject):
     commandAcknowledged = Signal()
-    dataIncoming = Signal()
+    dataIncoming = Signal(int)
     samplingFinished = Signal(int, bytearray)
     timeoutFinished = Signal(int)
     voltageFinished = Signal(int)
@@ -108,8 +108,7 @@ class SamplingWorker(QObject):
     
     def __init__(self):
         super().__init__()
-        print("Arrancando") #remove later
-        
+
     def sample(self):
 
         temp = self.sendConfigCommand(self.voltageQueue.get(block=True, timeout=None))
@@ -193,10 +192,9 @@ class SamplingWorker(QObject):
                     port_handler.close()
                     return 0, return_bytearray
                 # Else, keep waiting for disconnection (reset), data, or trigger timeout 
-                else:
-                    self.dataIncoming.emit()
+                self.dataIncoming.emit(len(usb_input_buffer))
+                sleep(0.1)
                 while keep_reading_usb:
-                    sleep(0.01)
                     if self.checkConnected("VID_2E8A&PID_000A"):
                         usb_input_buffer = port_handler.read()
                     else:

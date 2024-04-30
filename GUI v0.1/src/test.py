@@ -1,34 +1,34 @@
-import time
-import wmi
+import matplotlib.pyplot as plt
 
-from communication import CommunicationModule
+# Create empty lists for x and y values
+x_values = []
+y_values = []
 
-def checkConnected(device_ID_check: str):
-        # Connect to the WMI service
-        c = wmi.WMI()
-        # Define the WQL query to retrieve USB devices
-        query = "SELECT DeviceID FROM Win32_USBHub"
-        # Execute the query
-        usb_devices_DeviceIDs = c.query(query)
+plt.figure(figsize=(10, 0.4), layout='constrained')
 
-        for device in usb_devices_DeviceIDs:
-            if device.ole_object.DeviceID.find(device_ID_check) >= 0:
-                return True
-            else:
-                continue
-        return False
+# Plot an empty line with no y-values
+plt.plot(x_values, y_values)
+
+# Set x-axis limits
+plt.xlim(0, 100)
+plt.ylim(0, 0.1)
 
 
-#cm = CommunicationModule()
-start = time.monotonic_ns()
-checkConnected("VID_2E8A&PID_000A")
+# Hide y-axis
+plt.gca().axes.get_yaxis().set_visible(False)
 
-end = time.monotonic_ns()
-diff = end-start
-print(start)
-print(end)
-
-print(str((end-start)/1e6) + " milisegundos")
+plt.tick_params(axis='x', which='both', bottom=False, top=True, labelbottom=False, labeltop=True)
 
 
+# Remove the frame (hide all spines)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.gca().spines['bottom'].set_visible(False)
+plt.gca().spines['left'].set_visible(False)
+
+
+plt.gcf().set_size_inches(8, 4)
+
+# Show the plot
+plt.show()
 
