@@ -12,9 +12,13 @@ TODO:
 
     Poner un buscador de flancos de subida y de bajada por canal
 
-    Crear un eje de tiempo que se mueva con el zoom
+    Cambiar la paleta de colores por una oscura
 
-    Cambiar paleta de colores, CAMBIAR COLORES DE LOS PLOT
+DOING:
+    
+    Crear un eje de tiempo 
+    
+
 '''
 
 if __name__ == "__main__":

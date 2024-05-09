@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
     visualizedChannels = [1,2,3,4,5,6,7,8]
     dataBuffer = []
     resizeCount = 10
-                        
+    plotColors = ['#ff0000', '#ff8000', '#e6e600', '#33cc33', '#0033cc', '#660066', '#669999', '#e6e6e6', '']
     def __init__(self):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
@@ -62,10 +62,8 @@ class MainWindow(QMainWindow):
             if isinstance(ref, QGraphicsView):
                 self.QGVReferenceList.append(ref)
     
-    def resizeEvent(self, event):
-        super().resizeEvent(event)
-        self.resizeSignal.emit()
-
+    
+    # ---------- THREADING -- START SAMPLING ----------
     def startSamplingThread(self):
         self.samplingThread = QThread() 
         self.samplingWorker = SamplingWorker()
@@ -89,6 +87,7 @@ class MainWindow(QMainWindow):
         self.samplingWorker.finished.connect(self.threadFinished)
         self.samplingThread.start()                                             # Get to work, when done, it should stop automatically
 
+    # ---------- THREADING -- CALLBACKS ----------
     def voltageIsFinished(self, code):
         if code == 1:
             self.ui.connectionStatusLabel.setText("Estado: Configurando...")
@@ -96,7 +95,7 @@ class MainWindow(QMainWindow):
             self.ui.samplingProgressBar.setValue(5)
         else:
             QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
-    
+
     def timeoutIsFinished(self, code):
         if code == 1:
             self.ui.connectionStatusLabel.setText("Estado: Configurado!")
@@ -127,11 +126,12 @@ class MainWindow(QMainWindow):
             self.ui.connectionStatusLabel.setText("Estado: Conectado")
             self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #4af792; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
             self.graphChannels(data)
-    
+
     def threadFinished(self):
         self.statusLabelTimer.start()
         self.ui.samplingProgressBar.setValue(0)
     
+    # ---------- GUI HOUSEKEEPING ----------
     def checkConnectedStatusAndShowInLabel(self):
         isConnected = self.communicationModule.checkConnected("VID_2E8A&PID_000A")
         if isConnected:
@@ -140,22 +140,7 @@ class MainWindow(QMainWindow):
         else:
             self.ui.connectionStatusLabel.setText("Estado: Desconectado")
             self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #ff4a4a; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-
-    def sidePanelSlideAnimation(self):
-        width = self.ui.slideFrameContainer.width()
-        if width == 0:
-            newWidth = 200
-        else:
-            newWidth = 0
-
-
-        self.configSlideAnimation.setDuration(250)
-        self.configSlideAnimation.setStartValue(width)
-        self.configSlideAnimation.setEndValue(newWidth)
-        self.configSlideAnimation.setEasingCurve(QEasingCurve.InOutQuart)
-        self.resizeCount = 10
-        self.configSlideAnimation.start()
-
+    
     def updateSamplingDepthLabel(self):
         value = self.ui.samplingDepthHorizontalSlider.value()
         self.ui.samplingDepthValueLabel.setText(str(value)+" [KiB]")
@@ -203,7 +188,7 @@ class MainWindow(QMainWindow):
                 self.ui.triggerChannelComboBox.addItem(str(i+1))
         if self.samplingSettings.mode == SamplingMode.ANALOG:
             self.ui.triggerChannelComboBox.addItem("8")
-
+    
     def calculateSamplingTime(self):
         # (8[bit/B] * 1024[B/KiB]  * depth [KiB])[bit] /(frecuencia [muestra/seg] * canales [bits/muestra]) [bit/seg]  
         bits = 8*1024*self.ui.samplingDepthHorizontalSlider.value()
@@ -235,50 +220,27 @@ class MainWindow(QMainWindow):
             self.samplingSettings.triggerChannel = 8
         else:
             self.samplingSettings.triggerChannel = self.ui.triggerChannelComboBox.currentIndex() + 1
-
+    
+    # ---------- USER INPUT -- START SAMPLING ----------
     def sample(self):
         self.statusLabelTimer.stop()
         self.ui.samplingProgressBar.setValue(0)
         self.startSamplingThread()
         return
-        
 
-    def graphChannels(self, data):
-        self.dataBuffer = self.plotter.treatData(rawData=data, channelNumber=self.samplingSettings.channels)
-        height = 75
-        width = self.ui.channel1GraphicsView.size().width()
-        for index, channel in enumerate(self.dataBuffer):
-            temp = self.plotter.plotChannel(data=channel, size=(width/100, height/100), color="#FF0000")
-            tempScene = QGraphicsScene()
-            tempScene.addWidget(temp)
-            self.QGVReferenceList[index].setScene(tempScene)
-
-        for channelNumber in range(1, 9):
-            ref = getattr(self.ui, "channel" + str(channelNumber) + "CheckBox")
-            if channelNumber in range(1, self.samplingSettings.channels+1):
-                ref.setChecked(True)
-                ref.setEnabled(True)
-            else:
-                ref.setChecked(False)
-                ref.setEnabled(False)
-    
-    def resizeHandler(self):
-        if self.resizeCount < 10:
-            self.resizeCount += 1
-            return
+    def sidePanelSlideAnimation(self):
+        width = self.ui.slideFrameContainer.width()
+        if width == 0:
+            newWidth = 200
         else:
-            self.resizeCount = 0
-            height = 75
-            width = self.ui.channel1GraphicsView.size().width()
-            if (len(self.dataBuffer) != 0):
-                for index, channel in enumerate(self.dataBuffer):
-                    temp = self.plotter.plotChannel(data=channel, size=(width/100, height/100), color="#FF0000")
-                    tempScene = QGraphicsScene()
-                    tempScene.addWidget(temp)
-                    self.QGVReferenceList[index].setScene(tempScene)
-            else:
-                return
-        
+            newWidth = 0
+        self.configSlideAnimation.setDuration(250)
+        self.configSlideAnimation.setStartValue(width)
+        self.configSlideAnimation.setEndValue(newWidth)
+        self.configSlideAnimation.setEasingCurve(QEasingCurve.InOutQuart)
+        self.resizeCount = 10
+        self.configSlideAnimation.start()
+
     def hideChannels(self):
         self.visualizedChannels.clear()
         for item in dir(self.ui):
@@ -295,12 +257,57 @@ class MainWindow(QMainWindow):
                 ref.setMaximumHeight(75)
             else:
                 ref.setMaximumHeight(0)
+    
+    #  ---------- PLOTTING  ----------
+    def graphChannels(self, data):
+        self.dataBuffer = self.plotter.treatData(rawData=data, channelNumber=self.samplingSettings.channels)
+        self.ui.axisLabel.setText(self.plotter.setAxisMultiplier(samplingTime=self.samplingSettings.getSamplingTime()))
 
+        height = 75
+        width = self.ui.channel1GraphicsView.size().width()
+        for index, channel in enumerate(self.dataBuffer):
+            temp = self.plotter.plotChannel(data=channel, size=(width/100, height/100), color=self.plotColors[index])
+            tempScene = QGraphicsScene()
+            tempScene.addWidget(temp)
+            self.QGVReferenceList[index].setScene(tempScene)
 
-
-
-
-
-
-
+        for channelNumber in range(1, 9):
+            ref = getattr(self.ui, "channel" + str(channelNumber) + "CheckBox")
+            if channelNumber in range(1, self.samplingSettings.channels+1):
+                ref.setChecked(True)
+                ref.setEnabled(True)
+            else:
+                ref.setChecked(False)
+                ref.setEnabled(False)
+        
+        temp = self.plotter.plotAxis(data=channel, size=(width/100, 50/100), freq=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
+        tempScene = QGraphicsScene()
+        tempScene.addWidget(temp)
+        self.ui.axisGraphicsView.setScene(tempScene)
+    
+    
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self.resizeSignal.emit()
+    
+    def resizeHandler(self):
+        if self.resizeCount < 10:
+            self.resizeCount += 1
+            return
+        else:
+            self.resizeCount = 0
+            height = 75
+            width = self.ui.channel1GraphicsView.size().width()
+            if (len(self.dataBuffer) != 0):
+                for index, channel in enumerate(self.dataBuffer):
+                    temp = self.plotter.plotChannel(data=channel, size=(width/100, height/100), color=self.plotColors[index])
+                    tempScene = QGraphicsScene()
+                    tempScene.addWidget(temp)
+                    self.QGVReferenceList[index].setScene(tempScene)
+                temp = self.plotter.plotAxis(data=channel, size=(width/100, 50/100), freq=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
+                tempScene = QGraphicsScene()
+                tempScene.addWidget(temp)
+                self.ui.axisGraphicsView.setScene(tempScene)
+            else:
+                return
 

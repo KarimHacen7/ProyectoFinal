@@ -17,7 +17,11 @@ class SamplingSettings():
         self.depth = 192
         self.timeout = 0.1
         self.compareVoltage = 1.65
+        self.samplingTime = self.getSamplingTime()
 
+    def getSamplingTime(self):
+        return (8*1024*self.depth)/(self.channels * self.samplingFrequenciesLUT[self.frequency])
+    
     def parseSamplingStringFromConfig(self):
         commandString = "#"
         
