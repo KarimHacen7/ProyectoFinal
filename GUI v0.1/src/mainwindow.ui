@@ -349,6 +349,12 @@
        </item>
        <item>
         <widget class="QScrollArea" name="logicAnalyzersScrollArea">
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -357,8 +363,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>837</width>
-            <height>667</height>
+            <width>820</width>
+            <height>669</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -554,6 +560,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel1GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 1</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -650,6 +659,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel2GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 2</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -746,6 +758,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel3GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 3</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -842,6 +857,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel4GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 4</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -938,6 +956,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel5GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 5</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1034,6 +1055,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel6GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 6</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1130,6 +1154,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel7GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 7</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1226,6 +1253,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel8GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 8</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1249,6 +1279,16 @@
               </size>
              </property>
             </spacer>
+           </item>
+           <item>
+            <widget class="QScrollBar" name="channelHorizontalScrollBar">
+             <property name="maximum">
+              <number>1999</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>

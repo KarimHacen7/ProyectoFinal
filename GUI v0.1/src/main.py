@@ -1,23 +1,24 @@
 import sys
 from GUI import MainWindow
 from PySide6.QtWidgets import QApplication
-
+from PySide6.QtGui import QResizeEvent
 '''
 TODO:
+
+
+# MIRA ESTO https://matplotlib.org/stable/users/explain/axes/axes_ticks.html#sphx-glr-users-explain-axes-axes-ticks-py
+
     HAY QUE HACER TODA LA GILADA DE LOS CANALES PARA EL CANAL ANALOGICO DIOSSSS
-
-    Cambiar como hacemo el responsiveness de las graficas, un timer que controle el tiempo desde el ultimo resize
-
-    Crear un scrollbar o ver si se puede hacer algo con la rueda del mouse
 
     Poner un buscador de flancos de subida y de bajada por canal
 
     Cambiar la paleta de colores por una oscura
 
+    CORREGIR EJE DE TIEMPO, VALORES Y EL MARGEN DE LA IZQUIERDA
+
 DOING:
     
-    Crear un eje de tiempo 
-    
+    Poner cursor de tiempo
 
 '''
 
@@ -29,5 +30,6 @@ if __name__ == "__main__":
     
     window = MainWindow()
     window.show()
+    app.postEvent(window,QResizeEvent(window.ui.centralWidget.size(), window.ui.centralWidget.size()))
 
     sys.exit(app.exec())

@@ -18,8 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDoubleSpinBox,
     QFrame, QGraphicsView, QHBoxLayout, QLabel,
     QMainWindow, QProgressBar, QPushButton, QScrollArea,
-    QSizePolicy, QSlider, QSpacerItem, QTabWidget,
-    QVBoxLayout, QWidget)
+    QScrollBar, QSizePolicy, QSlider, QSpacerItem,
+    QTabWidget, QVBoxLayout, QWidget)
 import Icons_rc
 
 class Ui_MainWindow(object):
@@ -182,10 +182,12 @@ class Ui_MainWindow(object):
 
         self.logicAnalyzersScrollArea = QScrollArea(self.mainFrame)
         self.logicAnalyzersScrollArea.setObjectName(u"logicAnalyzersScrollArea")
+        self.logicAnalyzersScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.logicAnalyzersScrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 837, 667))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 820, 669))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -587,6 +589,13 @@ class Ui_MainWindow(object):
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_17.addItem(self.verticalSpacer)
+
+        self.channelHorizontalScrollBar = QScrollBar(self.scrollAreaWidgetContents)
+        self.channelHorizontalScrollBar.setObjectName(u"channelHorizontalScrollBar")
+        self.channelHorizontalScrollBar.setMaximum(1999)
+        self.channelHorizontalScrollBar.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_17.addWidget(self.channelHorizontalScrollBar)
 
         self.logicAnalyzersScrollArea.setWidget(self.scrollAreaWidgetContents)
 
