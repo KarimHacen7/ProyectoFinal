@@ -258,8 +258,14 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="cursorPushButton">
             <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
              <size>
               <width>30</width>
               <height>30</height>
@@ -270,12 +276,12 @@
             </property>
             <property name="icon">
              <iconset resource="Icons.qrc">
-              <normaloff>:/ButtonIcons/ico/Gear-icon.png</normaloff>:/ButtonIcons/ico/Gear-icon.png</iconset>
+              <normaloff>:/ButtonIcons/ico/mouse-crosshair-icon.svg</normaloff>:/ButtonIcons/ico/mouse-crosshair-icon.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>20</width>
-              <height>20</height>
+              <width>25</width>
+              <height>25</height>
              </size>
             </property>
            </widget>

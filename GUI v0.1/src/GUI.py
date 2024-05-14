@@ -15,8 +15,11 @@ class MainWindow(QMainWindow):
     QGVChannelsList = [] # QGraphicsView Reference List
     QCBChannelsList = [] # QCheckBox Reference List
     QFrChannelsList = [] # QFrame Reference List
+    cursorCallbackIDs = []
     resizeSignal = Signal()
     firstResizeDone = False
+    cursorIsActive = False
+    lastCursorIndex = 0
     channelScenes = []
     axisScene = QGraphicsScene()
     def __init__(self):
@@ -44,13 +47,17 @@ class MainWindow(QMainWindow):
             self.channelScenes[index].addWidget(self.plotter.canvases[index])
         self.ui.axisGraphicsView.setScene(self.axisScene)
         self.axisScene.addWidget(self.plotter.axisCanvas)
+        # Zoom in and out signals
         for fig in self.plotter.figures:
             fig.canvas.mpl_connect('scroll_event', self.digitalZoomInOut)
+        
         # Slide Animation, with signals for responsiveness
         self.configSlideAnimation = QPropertyAnimation(self.ui.slideFrameContainer, b"maximumWidth")#Animate minimumWidht
         self.configSlideAnimation.finished.connect(self.resizeHandler)
         self.resizeSignal.connect(self.resizeHandler)
         self.ui.configSliderPushButton.clicked.connect(self.sidePanelSlideAnimation)
+        # Cursor selector
+        self.ui.cursorPushButton.clicked.connect(self.startStopCursor)
         # Housekeeping signals
         self.ui.samplingDepthHorizontalSlider.valueChanged.connect(self.updateSamplingDepthLabel)
         self.ui.digitalModePushButton.clicked.connect(self.restrictSettingsDigitalMode)
@@ -256,7 +263,7 @@ class MainWindow(QMainWindow):
         self.configSlideAnimation.setEasingCurve(QEasingCurve.InOutQuart)
         self.configSlideAnimation.start()
 
-    def hideAndShowChannels(self):        
+    def hideAndShowChannels(self):
         for index, channelCheckBox in enumerate(self.QCBChannelsList):
             if channelCheckBox.isChecked():
                 self.QFrChannelsList[index].setVisible(True)
@@ -264,8 +271,28 @@ class MainWindow(QMainWindow):
                 self.plotter.canvases[index].draw()
             else:
                 self.QFrChannelsList[index].setVisible(False)
-        
 
+    def startStopCursor(self):
+        if not self.cursorIsActive:
+            self.cursorIsActive = True
+            for fig in self.plotter.figures:
+                self.cursorCallbackIDs.append(fig.canvas.mpl_connect('motion_notify_event', self.cursorDrawAndCalculate))
+            self.ui.cursorPushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #f6f7fa, stop: 1 #50b0fa); }")
+        else:
+            self.cursorIsActive = False
+            for index, fig in enumerate(self.plotter.figures):
+                fig.canvas.mpl_disconnect(self.cursorCallbackIDs[index])
+            self.cursorCallbackIDs = []
+            for line in self.plotter.cursorLines:
+                line.set_xdata([0])
+                line.set_visible(False)
+            self.plotter.axisCursorLines.set_xdata([0])
+            self.plotter.axisCursorLines.set_visible(False)
+            for canvas in self.plotter.canvases:
+                canvas.draw()
+            self.plotter.axisCanvas.draw()
+            self.ui.cursorPushButton.setStyleSheet("")
+    
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
         self.plotter.treatData(rawData=data, channelNumber=self.samplingSettings.channels)
@@ -289,7 +316,6 @@ class MainWindow(QMainWindow):
         self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
 
-    
     def resizeEvent(self, event):
         self.resizeSignal.emit()
     
@@ -302,7 +328,6 @@ class MainWindow(QMainWindow):
             self.plotter.axisCanvas.setGeometry(0, 0, self.ui.axisGraphicsView.width(), self.ui.axisGraphicsView.height())
         else:
             self.firstResizeDone = True
-
 
     def digitalZoomInOut(self, event):
         if self.plotter.dataBuffer == []:
@@ -336,7 +361,7 @@ class MainWindow(QMainWindow):
         if rightLim > upperBound:
             rightLim = upperBound
 
-        if abs(leftLim-rightLim) < (upperBound/1000):
+        if abs(leftLim-rightLim) < (10*(self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])):
             return
 
         for axes in self.plotter.axs:
@@ -378,3 +403,23 @@ class MainWindow(QMainWindow):
         for canvas in self.plotter.canvases:
             canvas.draw()
         self.plotter.axisCanvas.draw()
+
+    def cursorDrawAndCalculate(self, event):
+        if self.plotter.dataBuffer == []:
+            return
+        scrolledChannel = 0
+        for arrayIndex, canvas in enumerate(self.plotter.canvases):
+            if canvas == event.canvas:
+                scrolledChannel = arrayIndex 
+        if event.inaxes:
+            index = min(np.searchsorted(self.plotter.xAxisData, event.xdata), len(self.plotter.dataBuffer[scrolledChannel]) - 1)
+            if index != self.lastCursorIndex:
+                self.lastCursorIndex = index
+                for line in self.plotter.cursorLines:
+                    line.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]]) #cambiar a self.plotter.xAxisData[self.lastCursorIndex]
+                    line.set_visible(True)
+                self.plotter.axisCursorLines.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]])
+                self.plotter.axisCursorLines.set_visible(True)
+                for canvas in self.plotter.canvases:
+                    canvas.draw()
+                self.plotter.axisCanvas.draw()
