@@ -1,27 +1,45 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
-from matplotlib.backend_tools import Cursors
+x = np.linspace(0, 2 * np.pi, 100)
 
-fig, axs = plt.subplots(len(Cursors), figsize=(6, len(Cursors) + 0.5),
-                        gridspec_kw={'hspace': 0})
-fig.suptitle('Hover over an Axes to see alternate Cursors')
+fig, ax = plt.subplots()
 
-for cursor, ax in zip(Cursors, axs):
-    ax.cursor_to_use = cursor
-    ax.text(0.5, 0.5, cursor.name,
-            horizontalalignment='center', verticalalignment='center')
-    ax.set(xticks=[], yticks=[])
+# animated=True tells matplotlib to only draw the artist when we
+# explicitly request it
+(ln,) = ax.plot(x, np.sin(x), animated=True)
 
+# make sure the window is raised, but the script keeps going
+plt.show(block=False)
 
-def hover(event):
-    if fig.canvas.widgetlock.locked():
-        # Don't do anything if the zoom/pan tools have been enabled.
-        return
+# stop to admire our empty window axes and ensure it is rendered at
+# least once.
+#
+# We need to fully draw the figure at its final size on the screen
+# before we continue on so that :
+#  a) we have the correctly sized and drawn background to grab
+#  b) we have a cached renderer so that ``ax.draw_artist`` works
+# so we spin the event loop to let the backend process any pending operations
+plt.pause(2.5)
 
-    fig.canvas.set_cursor(
-        event.inaxes.cursor_to_use if event.inaxes else Cursors.POINTER)
+# get copy of entire figure (everything inside fig.bbox) sans animated artist
+bg = fig.canvas.copy_from_bbox(fig.bbox)
+# draw the animated artist, this uses a cached renderer
+ax.draw_artist(ln)
+# show the result to the screen, this pushes the updated RGBA buffer from the
+# renderer to the GUI framework so you can see it
+fig.canvas.blit(fig.bbox)
 
-
-fig.canvas.mpl_connect('motion_notify_event', hover)
-
-plt.show()
+for j in range(100):
+    # reset the background back in the canvas state, screen unchanged
+    fig.canvas.restore_region(bg)
+    # update the artist, neither the canvas state nor the screen have changed
+    ln.set_ydata(np.sin(x + (j / 100) * np.pi))
+    # re-render the artist, updating the canvas state, but not the screen
+    ax.draw_artist(ln)
+    # copy the image to the GUI state, but screen might not be changed yet
+    fig.canvas.blit(fig.bbox)
+    # flush any pending GUI events, re-painting the screen if needed
+    fig.canvas.flush_events()
+    # you can put a pause in if you want to slow things down
+    plt.pause(.1)

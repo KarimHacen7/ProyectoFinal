@@ -5,6 +5,7 @@ from PySide6.QtWidgets import  QMainWindow, QMessageBox, QGraphicsScene, QGraphi
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
 import numpy as np
+import time
 
 class MainWindow(QMainWindow):
     statusLabelTimer = QTimer()
@@ -78,13 +79,14 @@ class MainWindow(QMainWindow):
         self.ui.channel7CheckBox.stateChanged.connect(self.hideAndShowChannels)
         self.ui.channel8CheckBox.stateChanged.connect(self.hideAndShowChannels)
         # Scroll Bar navigation
-        self.ui.channelHorizontalScrollBar.valueChanged.connect(self.horizontalSliderChanged)
+        self.ui.channelHorizontalScrollBar.sliderMoved.connect(self.horizontalSliderChanged)
         # Digital mode, by default
         self.ui.digitalModePushButton.animateClick()
         self.calculateSamplingTime()
         # Status informing label
         self.statusLabelTimer.timeout.connect(self.checkConnectedStatusAndShowInLabel)
         self.statusLabelTimer.start(500)
+        self.ui.cursorInfoLabel.setVisible(False)
 
     # ---------- THREADING -- START SAMPLING ----------
     def startSamplingThread(self):
@@ -278,6 +280,7 @@ class MainWindow(QMainWindow):
             for fig in self.plotter.figures:
                 self.cursorCallbackIDs.append(fig.canvas.mpl_connect('motion_notify_event', self.cursorDrawAndCalculate))
             self.ui.cursorPushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #f6f7fa, stop: 1 #50b0fa); }")
+            self.ui.cursorInfoLabel.setVisible(True)
         else:
             self.cursorIsActive = False
             for index, fig in enumerate(self.plotter.figures):
@@ -292,6 +295,7 @@ class MainWindow(QMainWindow):
                 canvas.draw()
             self.plotter.axisCanvas.draw()
             self.ui.cursorPushButton.setStyleSheet("")
+            self.ui.cursorInfoLabel.setVisible(False)
     
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
@@ -307,17 +311,18 @@ class MainWindow(QMainWindow):
             else:
                 ref.setChecked(False)
                 ref.setEnabled(False)
-        self.ui.channelHorizontalScrollBar.setMaximum(len(self.plotter.dataBuffer[0]))
+        self.ui.channelHorizontalScrollBar.setMaximum(self.plotter.channelLength)
         self.ui.channelHorizontalScrollBar.setValue(0)
 
         leftLim, rightLim = self.plotter.axs[0].get_xlim()
-        upperBound = len(self.plotter.dataBuffer[0])*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
+        upperBound = self.plotter.channelLength*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
         rangeLimDivs = (abs(leftLim-rightLim)/upperBound)*(len(self.plotter.dataBuffer[0]))
         self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
 
     def resizeEvent(self, event):
         self.resizeSignal.emit()
+    
     
     def resizeHandler(self):
         if self.firstResizeDone:
@@ -330,9 +335,11 @@ class MainWindow(QMainWindow):
             self.firstResizeDone = True
 
     def digitalZoomInOut(self, event):
+
         if self.plotter.dataBuffer == []:
             return
         scrolledChannel = 0
+
         for index, canvas in enumerate(self.plotter.canvases):
             if canvas == event.canvas:
                 scrolledChannel = index 
@@ -344,7 +351,7 @@ class MainWindow(QMainWindow):
         
         leftLim, rightLim = self.plotter.axs[scrolledChannel].get_xlim()
         
-        upperBound = len(self.plotter.dataBuffer[0])*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
+        upperBound = self.plotter.channelLength*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
 
         if event.button == "up":
             leftLim = centerLim - ((centerLim-leftLim)*0.5)
@@ -364,26 +371,28 @@ class MainWindow(QMainWindow):
         if abs(leftLim-rightLim) < (10*(self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])):
             return
 
+        # Tarda 1 ms
         for axes in self.plotter.axs:
             axes.set_xlim(left=leftLim, right=rightLim)
         self.plotter.axisAxs.set_xlim(left=leftLim, right=rightLim)
+        # Hasta Aca
+        rangeLimDivs = (abs(leftLim-rightLim)/upperBound)*(self.plotter.channelLength)
+        self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
+        self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
+        
+        self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/upperBound)*self.ui.channelHorizontalScrollBar.maximum()))
         
         for canvas in self.plotter.canvases:
             canvas.draw()
         self.plotter.axisCanvas.draw()
 
-        rangeLimDivs = (abs(leftLim-rightLim)/upperBound)*(len(self.plotter.dataBuffer[0]))
-        self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
-        self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
-        self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/upperBound)*self.ui.channelHorizontalScrollBar.maximum()))
-
     def horizontalSliderChanged(self):
         if self.plotter.dataBuffer == []:
             return
-        upperBound = len(self.plotter.dataBuffer[0])*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
+        upperBound = self.plotter.channelLength*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
         leftLim, rightLim = self.plotter.axs[0].get_xlim()
         rangeLim = abs(rightLim-leftLim)
-
+        
         centerValue = (self.ui.channelHorizontalScrollBar.value()/self.ui.channelHorizontalScrollBar.maximum())*upperBound
         
         leftLim=centerValue-(rangeLim/2)
@@ -403,6 +412,8 @@ class MainWindow(QMainWindow):
         for canvas in self.plotter.canvases:
             canvas.draw()
         self.plotter.axisCanvas.draw()
+        
+        
 
     def cursorDrawAndCalculate(self, event):
         if self.plotter.dataBuffer == []:
@@ -412,14 +423,71 @@ class MainWindow(QMainWindow):
             if canvas == event.canvas:
                 scrolledChannel = arrayIndex 
         if event.inaxes:
+            
             index = min(np.searchsorted(self.plotter.xAxisData, event.xdata), len(self.plotter.dataBuffer[scrolledChannel]) - 1)
+            
             if index != self.lastCursorIndex:
                 self.lastCursorIndex = index
+                
                 for line in self.plotter.cursorLines:
-                    line.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]]) #cambiar a self.plotter.xAxisData[self.lastCursorIndex]
+                    line.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]]) 
                     line.set_visible(True)
                 self.plotter.axisCursorLines.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]])
                 self.plotter.axisCursorLines.set_visible(True)
                 for canvas in self.plotter.canvases:
                     canvas.draw()
                 self.plotter.axisCanvas.draw()
+                
+                
+                value = self.plotter.dataBuffer[scrolledChannel][index]
+                leftEdge = index-1
+                rightEdge = index+1
+                
+                # 5ms o mas este while
+
+                while (self.plotter.dataBuffer[scrolledChannel][leftEdge] == value) and leftEdge >= 0:
+                    leftEdge -= 1
+                
+                
+                # set text es barato
+                if leftEdge == 0:
+                    self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.axisUnitString, "?", self.plotter.axisUnitString, "?", "Hz"))
+                    #return
+                    
+
+                #120 ms
+                while (self.plotter.dataBuffer[scrolledChannel][rightEdge] == value) and rightEdge < len(self.plotter.dataBuffer[scrolledChannel])-1:
+                    rightEdge += 1
+
+
+                if rightEdge == len(self.plotter.dataBuffer[scrolledChannel])-1:
+                    self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.axisUnitString, "?", self.plotter.axisUnitString, "?", "Hz"))
+                    #return
+                
+                period = (rightEdge - leftEdge)*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
+                frequency = (self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]/(rightEdge - leftEdge))
+                
+                
+                if frequency > 1e6:
+                    frequency /= 1e6
+                    tempUnit = "MHz"
+                elif frequency > 1e3:
+                    frequency /= 1e3
+                    tempUnit = "KHz"
+                elif frequency > 1:
+                    tempUnit = "Hz"
+                elif frequency > 1e-3:
+                    frequency *= 1e3
+                    tempUnit = "mHz"
+
+                
+                self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.axisUnitString, str(np.round(period, 3)), self.plotter.axisUnitString, str(np.round(frequency, 3)), tempUnit))
+                
+
+
+        ''' 
+        timer1 = time.perf_counter()
+        timer2 = time.perf_counter()
+        timer3 = time.perf_counter()
+        print(str((timer2-timer1)*1000) + " milliseconds procesado")
+        print(str((timer3-timer2)*1000) + " milliseconds dibujado")'''

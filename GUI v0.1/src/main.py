@@ -16,13 +16,12 @@ TODO:
 
     CORREGIR EJE DE TIEMPO, VALORES Y EL MARGEN DE LA IZQUIERDA
 
-    USE BLITTING WHERE APPLICABLE
-DOING:
-    
-    Poner cursor de tiempo, incluir calculo de frecuencia, periodo y tiempo actual
-    
     poner para hacer drag and drop con el mouse
 
+    axes.redraw()?
+DOING:
+    
+    USE BLITTING WHERE APPLICABLE
 
 '''
 

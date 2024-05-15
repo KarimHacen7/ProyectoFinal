@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1065, 748)
+        MainWindow.resize(1078, 569)
         font = QFont()
         font.setFamilies([u"Consolas"])
         font.setPointSize(10)
@@ -188,7 +188,7 @@ class Ui_MainWindow(object):
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 820, 669))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -143, 833, 669))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -630,6 +630,17 @@ class Ui_MainWindow(object):
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_12.addItem(self.horizontalSpacer_2)
+
+        self.cursorInfoLabel = QLabel(self.footerMainFrame)
+        self.cursorInfoLabel.setObjectName(u"cursorInfoLabel")
+        self.cursorInfoLabel.setStyleSheet(u"*\n"
+"{\n"
+"font-family: consolas;\n"
+"border: 1px solid rgb(109, 109, 109);\n"
+"border-radius: 5px;\n"
+"}")
+
+        self.horizontalLayout_12.addWidget(self.cursorInfoLabel)
 
         self.samplingProgressBar = QProgressBar(self.footerMainFrame)
         self.samplingProgressBar.setObjectName(u"samplingProgressBar")
@@ -1165,6 +1176,7 @@ class Ui_MainWindow(object):
         self.channel8GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 8", None))
 #endif // QT_CONFIG(accessibility)
         self.connectionStatusLabel.setText(QCoreApplication.translate("MainWindow", u"Estado: Desconectado", None))
+        self.cursorInfoLabel.setText(QCoreApplication.translate("MainWindow", u"t: [], \u0394t: [], 1/\u0394t: []", None))
 #if QT_CONFIG(accessibility)
         self.samplingConfigTab.setAccessibleName(QCoreApplication.translate("MainWindow", u"Muestreo", None))
 #endif // QT_CONFIG(accessibility)

@@ -8,6 +8,7 @@ import matplotlib.style as mplstyle
 
 class Plotter():
     plotColors = ['#ff0000', '#ff8000', '#e6e600', '#33cc33', '#0033cc', '#660066', '#669999', '#e6e6e6', '']
+    channelLength = 1
     figures = []
     axs = []
     canvases = []
@@ -20,6 +21,7 @@ class Plotter():
         canvases.append(0)
         cursorLines.append(0)
     axisMultiplier = 1
+    axisUnitString = str()
 
     def __init__(self) -> None:
         mplstyle.use(['dark_background','fast'])
@@ -31,36 +33,34 @@ class Plotter():
             self.canvases[i] = FigureCanvasQTAgg(self.figures[i])
             self.canvases[i].set_cursor(Cursors.SELECT_REGION)
             self.axs[i].set_axis_off()
-            self.cursorLines[i] = self.axs[i].axvline(color='#ffffff', lw=1, ls='--')
-            self.cursorLines[i].set_visible(False)
+            
 
         self.axisFigure, self.axisAxs = plt.subplots(layout='constrained')
         self.axisCanvas = FigureCanvasQTAgg(self.axisFigure)
         self.axisCanvas.set_cursor(Cursors.SELECT_REGION)
         self.axisAxs.set_axis_off()
 
-        self.axisCursorLines= self.axisAxs.axvline(color='#ffffff', lw=1, ls='--')
-        self.axisCursorLines.set_visible(False)
     # This method should get the sampling time as a float
     # It will return the string to be put in the time label 
     def setAxisMultiplier(self, samplingTime) -> str:
-        if samplingTime < 1e-9:
-            self.axisMultiplier = 1e12
-            return "Tiempo[ps]"
-        elif samplingTime < 1e-6:
+        if samplingTime < 1e-6:
             self.axisMultiplier = 1e9
-            return "Tiempo[ns]" 
+            self.axisUnitString = "ns"
         elif samplingTime < 1e-3:
             self.axisMultiplier = 1e6
-            return "Tiempo[μs]" 
+            self.axisUnitString = "μs" 
         elif samplingTime < 1:
             self.axisMultiplier = 1e3
-            return "Tiempo[ms]" 
+            self.axisUnitString = "ms" 
         else:
             self.axisMultiplier = 1
-            return "Tiempo[s]"
+            self.axisUnitString = "s" 
+        return "Tiempo[%s]" %self.axisUnitString
         
     def plotDigitalAxis(self, freq:int):
+        self.axisAxs.clear()
+        self.axisCursorLines= self.axisAxs.axvline(color='#ffffff', lw=1, ls='--')
+        self.axisCursorLines.set_visible(False)
         self.axisAxs.set_axis_on()
         self.axisAxs.set_xlim(0,len(self.dataBuffer[0])*self.axisMultiplier/(10*freq))
         self.axisAxs.plot([], [])
@@ -72,17 +72,29 @@ class Plotter():
         self.axisAxs.spines['left'].set_visible(False)
         #self.axis.xaxis.set_major_formatter(ticker.FormatStrFormatter("%d"))
         self.axisCanvas.draw()
-        #print((self.axisAxs.get_xticklabels(which='major'))[0].set_pad(10))
     
     # This method should get the raw data for the channel to draw as a list (2D Array)
     # It will update the canvas automatically
     def plotDigitalChannels(self, freq:int) -> None:
-        self.xAxisData = np.linspace(start=0, stop=(len(self.dataBuffer[0])*self.axisMultiplier/freq), num=len(self.dataBuffer[0]))
+        self.channelLength = len(self.dataBuffer[0])
+
+        for ax in self.axs:
+            ax.clear()
+        self.cursorLines = []
+        for _ in self.dataBuffer:
+            self.cursorLines.append(0) 
+        
+        self.xAxisData = np.linspace(start=0, stop=self.channelLength*self.axisMultiplier/freq, num=self.channelLength)
+        
         for index, channel in enumerate(self.dataBuffer):
             self.axs[index].step(self.xAxisData, channel, color=self.plotColors[index], linewidth=5)
             self.axs[index].set_xlim(0,len(channel)*self.axisMultiplier/(10*freq))
             self.axs[index].set_ylim(0,1)
+            self.axs[index].set_axis_off()
+            self.cursorLines[index] = self.axs[index].axvline(color='#ffffff', lw=1, ls='--')
+            self.cursorLines[index].set_visible(False)
             self.canvases[index].draw()
+        
     
     # This method should get the raw data as a bytearray and the number of channels sampled
     # It will return the data as a list (2D Array) of height channelNumber     

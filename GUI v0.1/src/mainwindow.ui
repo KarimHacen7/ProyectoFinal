@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1065</width>
-    <height>748</height>
+    <width>1078</width>
+    <height>569</height>
    </rect>
   </property>
   <property name="font">
@@ -368,8 +368,8 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
-            <width>820</width>
+            <y>-143</y>
+            <width>833</width>
             <height>669</height>
            </rect>
           </property>
@@ -1364,6 +1364,21 @@ border-radius: 5px;
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="cursorInfoLabel">
+            <property name="styleSheet">
+             <string notr="true">*
+{
+font-family: consolas;
+border: 1px solid rgb(109, 109, 109);
+border-radius: 5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>t: [], Δt: [], 1/Δt: []</string>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QProgressBar" name="samplingProgressBar">
