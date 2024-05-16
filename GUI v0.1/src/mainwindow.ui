@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1065</width>
-    <height>748</height>
+    <width>1078</width>
+    <height>569</height>
    </rect>
   </property>
   <property name="font">
@@ -258,8 +258,14 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="cursorPushButton">
             <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
              <size>
               <width>30</width>
               <height>30</height>
@@ -270,12 +276,12 @@
             </property>
             <property name="icon">
              <iconset resource="Icons.qrc">
-              <normaloff>:/ButtonIcons/ico/Gear-icon.png</normaloff>:/ButtonIcons/ico/Gear-icon.png</iconset>
+              <normaloff>:/ButtonIcons/ico/mouse-crosshair-icon.svg</normaloff>:/ButtonIcons/ico/mouse-crosshair-icon.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>20</width>
-              <height>20</height>
+              <width>25</width>
+              <height>25</height>
              </size>
             </property>
            </widget>
@@ -349,6 +355,12 @@
        </item>
        <item>
         <widget class="QScrollArea" name="logicAnalyzersScrollArea">
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -356,9 +368,9 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
-            <width>837</width>
-            <height>667</height>
+            <y>-143</y>
+            <width>833</width>
+            <height>669</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -554,6 +566,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel1GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 1</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -650,6 +665,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel2GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 2</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -746,6 +764,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel3GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 3</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -842,6 +863,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel4GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 4</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -938,6 +962,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel5GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 5</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1034,6 +1061,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel6GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 6</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1130,6 +1160,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel7GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 7</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1226,6 +1259,9 @@
               </item>
               <item>
                <widget class="QGraphicsView" name="channel8GraphicsView">
+                <property name="accessibleName">
+                 <string>Canal 8</string>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1249,6 +1285,16 @@
               </size>
              </property>
             </spacer>
+           </item>
+           <item>
+            <widget class="QScrollBar" name="channelHorizontalScrollBar">
+             <property name="maximum">
+              <number>1999</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -1318,6 +1364,21 @@ border-radius: 5px;
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="cursorInfoLabel">
+            <property name="styleSheet">
+             <string notr="true">*
+{
+font-family: consolas;
+border: 1px solid rgb(109, 109, 109);
+border-radius: 5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>t: [], Δt: [], 1/Δt: []</string>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QProgressBar" name="samplingProgressBar">

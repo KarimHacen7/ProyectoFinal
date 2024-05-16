@@ -18,15 +18,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDoubleSpinBox,
     QFrame, QGraphicsView, QHBoxLayout, QLabel,
     QMainWindow, QProgressBar, QPushButton, QScrollArea,
-    QSizePolicy, QSlider, QSpacerItem, QTabWidget,
-    QVBoxLayout, QWidget)
+    QScrollBar, QSizePolicy, QSlider, QSpacerItem,
+    QTabWidget, QVBoxLayout, QWidget)
 import Icons_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1065, 748)
+        MainWindow.resize(1078, 569)
         font = QFont()
         font.setFamilies([u"Consolas"])
         font.setPointSize(10)
@@ -140,15 +140,16 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13.addItem(self.horizontalSpacer)
 
-        self.pushButton = QPushButton(self.headerMainFrame)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(30, 30))
+        self.cursorPushButton = QPushButton(self.headerMainFrame)
+        self.cursorPushButton.setObjectName(u"cursorPushButton")
+        self.cursorPushButton.setMinimumSize(QSize(30, 30))
+        self.cursorPushButton.setMaximumSize(QSize(30, 30))
         icon1 = QIcon()
-        icon1.addFile(u":/ButtonIcons/ico/Gear-icon.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon1)
-        self.pushButton.setIconSize(QSize(20, 20))
+        icon1.addFile(u":/ButtonIcons/ico/mouse-crosshair-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.cursorPushButton.setIcon(icon1)
+        self.cursorPushButton.setIconSize(QSize(25, 25))
 
-        self.horizontalLayout_13.addWidget(self.pushButton)
+        self.horizontalLayout_13.addWidget(self.cursorPushButton)
 
         self.startSamplingPushButton = QPushButton(self.headerMainFrame)
         self.startSamplingPushButton.setObjectName(u"startSamplingPushButton")
@@ -182,10 +183,12 @@ class Ui_MainWindow(object):
 
         self.logicAnalyzersScrollArea = QScrollArea(self.mainFrame)
         self.logicAnalyzersScrollArea.setObjectName(u"logicAnalyzersScrollArea")
+        self.logicAnalyzersScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.logicAnalyzersScrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 837, 667))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -143, 833, 669))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -588,6 +591,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addItem(self.verticalSpacer)
 
+        self.channelHorizontalScrollBar = QScrollBar(self.scrollAreaWidgetContents)
+        self.channelHorizontalScrollBar.setObjectName(u"channelHorizontalScrollBar")
+        self.channelHorizontalScrollBar.setMaximum(1999)
+        self.channelHorizontalScrollBar.setOrientation(Qt.Horizontal)
+
+        self.verticalLayout_17.addWidget(self.channelHorizontalScrollBar)
+
         self.logicAnalyzersScrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.verticalLayout_19.addWidget(self.logicAnalyzersScrollArea)
@@ -620,6 +630,17 @@ class Ui_MainWindow(object):
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_12.addItem(self.horizontalSpacer_2)
+
+        self.cursorInfoLabel = QLabel(self.footerMainFrame)
+        self.cursorInfoLabel.setObjectName(u"cursorInfoLabel")
+        self.cursorInfoLabel.setStyleSheet(u"*\n"
+"{\n"
+"font-family: consolas;\n"
+"border: 1px solid rgb(109, 109, 109);\n"
+"border-radius: 5px;\n"
+"}")
+
+        self.horizontalLayout_12.addWidget(self.cursorInfoLabel)
 
         self.samplingProgressBar = QProgressBar(self.footerMainFrame)
         self.samplingProgressBar.setObjectName(u"samplingProgressBar")
@@ -1110,27 +1131,52 @@ class Ui_MainWindow(object):
         self.channel6CheckBox.setText(QCoreApplication.translate("MainWindow", u"6", None))
         self.channel7CheckBox.setText(QCoreApplication.translate("MainWindow", u"7", None))
         self.channel8CheckBox.setText(QCoreApplication.translate("MainWindow", u"8", None))
-        self.pushButton.setText("")
+        self.cursorPushButton.setText("")
         self.startSamplingPushButton.setText("")
         self.configSliderPushButton.setText("")
         self.axisLabel.setText(QCoreApplication.translate("MainWindow", u"Tiempo:", None))
         self.channel1IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 1", None))
         self.channel1ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel1GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 1", None))
+#endif // QT_CONFIG(accessibility)
         self.channel2IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 2", None))
         self.channel2ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel2GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 2", None))
+#endif // QT_CONFIG(accessibility)
         self.channel3IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 3", None))
         self.channel3ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel3GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 3", None))
+#endif // QT_CONFIG(accessibility)
         self.channel4IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 4", None))
         self.channel4ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel4GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 4", None))
+#endif // QT_CONFIG(accessibility)
         self.channel5IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 5", None))
         self.channel5ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel5GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 5", None))
+#endif // QT_CONFIG(accessibility)
         self.channel6IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 6", None))
         self.channel6ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel6GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 6", None))
+#endif // QT_CONFIG(accessibility)
         self.channel7IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 7", None))
         self.channel7ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel7GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 7", None))
+#endif // QT_CONFIG(accessibility)
         self.channel8IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 8", None))
         self.channel8ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+#if QT_CONFIG(accessibility)
+        self.channel8GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 8", None))
+#endif // QT_CONFIG(accessibility)
         self.connectionStatusLabel.setText(QCoreApplication.translate("MainWindow", u"Estado: Desconectado", None))
+        self.cursorInfoLabel.setText(QCoreApplication.translate("MainWindow", u"t: [], \u0394t: [], 1/\u0394t: []", None))
 #if QT_CONFIG(accessibility)
         self.samplingConfigTab.setAccessibleName(QCoreApplication.translate("MainWindow", u"Muestreo", None))
 #endif // QT_CONFIG(accessibility)

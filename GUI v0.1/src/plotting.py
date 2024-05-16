@@ -1,66 +1,103 @@
-from matplotlib.backends.backend_qtagg import FigureCanvas
-from matplotlib.figure import Figure
-from matplotlib import ticker
+from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
+from matplotlib.backend_tools import Cursors
 import matplotlib.pyplot as plt
-import numpy
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+import matplotlib.style as mplstyle
 
 class Plotter():
-    # This method should get:
-    #   the raw data for the channel to draw as a list
-    #   the desired size of the canvas as a tuple (sizeX, sizeY) 
-    #   the color in hex format as a string
-    # And will return the canvas to be added as a widget in the GUI, through a QGraphicsScene 
+    plotColors = ['#ff0000', '#ff8000', '#e6e600', '#33cc33', '#0033cc', '#660066', '#669999', '#e6e6e6', '']
+    channelLength = 1
+    figures = []
+    axs = []
+    canvases = []
+    cursorLines = []
+    dataBuffer = []
+    xAxisData = []
+    for i in range(8):
+        figures.append(0)
+        axs.append(0)
+        canvases.append(0)
+        cursorLines.append(0)
     axisMultiplier = 1
+    axisUnitString = str()
+
+    def __init__(self) -> None:
+        mplstyle.use(['dark_background','fast'])
+        matplotlib.rcParams['path.simplify'] = True
+        matplotlib.rcParams['path.simplify_threshold'] = 1
+        matplotlib.rcParams['agg.path.chunksize'] = 1000
+        for i in range(8):
+            self.figures[i], self.axs[i] = plt.subplots(layout='constrained')
+            self.canvases[i] = FigureCanvasQTAgg(self.figures[i])
+            self.canvases[i].set_cursor(Cursors.SELECT_REGION)
+            self.axs[i].set_axis_off()
+            
+
+        self.axisFigure, self.axisAxs = plt.subplots(layout='constrained')
+        self.axisCanvas = FigureCanvasQTAgg(self.axisFigure)
+        self.axisCanvas.set_cursor(Cursors.SELECT_REGION)
+        self.axisAxs.set_axis_off()
+
+    # This method should get the sampling time as a float
+    # It will return the string to be put in the time label 
     def setAxisMultiplier(self, samplingTime) -> str:
-        if samplingTime < 1e-9:
-            self.axisMultiplier = 1e12
-            return "Tiempo[ps]"
-        elif samplingTime < 1e-6:
-            #infoString =  str(round(samplingTime*1e9, 2)) +" [ns]"
+        if samplingTime < 1e-6:
             self.axisMultiplier = 1e9
-            return "Tiempo[ns]" 
+            self.axisUnitString = "ns"
         elif samplingTime < 1e-3:
             self.axisMultiplier = 1e6
-            return "Tiempo[μs]" 
+            self.axisUnitString = "μs" 
         elif samplingTime < 1:
             self.axisMultiplier = 1e3
-            return "Tiempo[ms]" 
+            self.axisUnitString = "ms" 
         else:
             self.axisMultiplier = 1
-            return "Tiempo[s]"
+            self.axisUnitString = "s" 
+        return "Tiempo[%s]" %self.axisUnitString
         
-    def plotAxis(self, data:list, size:tuple, freq:int) -> FigureCanvas:
-        self.canvas = FigureCanvas(Figure(figsize=size, layout='constrained'))
-        self.axis = self.canvas.figure.subplots()
-        self.axis.set_xlim(0,len(data)*(self.axisMultiplier/freq))
-        self.axis.set_ylim(-0.01,0)
-        self.axis.plot([], [])
-        self.axis.get_yaxis().set_visible(False)                                                   #????????
-        self.axis.tick_params(axis='x', which='both', bottom=False, top=True, labelbottom=False, labeltop=True)
-        self.axis.spines['top'].set_visible(True)
-        self.axis.spines['right'].set_visible(False)
-        self.axis.spines['bottom'].set_visible(False)
-        self.axis.spines['left'].set_visible(False)
+    def plotDigitalAxis(self, freq:int):
+        self.axisAxs.clear()
+        self.axisCursorLines= self.axisAxs.axvline(color='#ffffff', lw=1, ls='--')
+        self.axisCursorLines.set_visible(False)
+        self.axisAxs.set_axis_on()
+        self.axisAxs.set_xlim(0,len(self.dataBuffer[0])*self.axisMultiplier/(10*freq))
+        self.axisAxs.plot([], [])
+        self.axisAxs.get_yaxis().set_visible(False)                                                   
+        self.axisAxs.tick_params(axis='x', which='both', bottom=False, top=True, labelbottom=False, labeltop=True)
+        self.axisAxs.spines['top'].set_visible(True)
+        self.axisAxs.spines['right'].set_visible(False)
+        self.axisAxs.spines['bottom'].set_visible(False)
+        self.axisAxs.spines['left'].set_visible(False)
         #self.axis.xaxis.set_major_formatter(ticker.FormatStrFormatter("%d"))
-        self.axis.set_xmargin(0)
-        return self.canvas
-    # This method should get:
-    #   the raw data for the channel to draw as a list
-    #   the desired size of the canvas as a tuple (sizeX, sizeY) 
-    #   the color in hex format as a string
-    # And will return the canvas to be added as a widget in the GUI, through a QGraphicsScene 
-    def plotChannel(self, data:list, size:tuple, color:str) -> FigureCanvas:
-        self.canvas = FigureCanvas(Figure(figsize=size, layout='constrained'))
-        self.axis = self.canvas.figure.subplots()
-        self.axis.set_xlim(0,len(data))
-        self.axis.set_ylim(0,1)
-        self.axis.plot(numpy.linspace(start=0, stop=len(data), num=len(data)), data, color=color, drawstyle='steps')
-        self.axis.set_axis_off()
-        return self.canvas
+        self.axisCanvas.draw()
     
-    # This method should get:
-    #   the raw data as a bytearray and the number of channels sampled
-    # And will return the data as a 2D array (using lists) of height channelNumber     
+    # This method should get the raw data for the channel to draw as a list (2D Array)
+    # It will update the canvas automatically
+    def plotDigitalChannels(self, freq:int) -> None:
+        self.channelLength = len(self.dataBuffer[0])
+
+        for ax in self.axs:
+            ax.clear()
+        self.cursorLines = []
+        for _ in self.dataBuffer:
+            self.cursorLines.append(0) 
+        
+        self.xAxisData = np.linspace(start=0, stop=self.channelLength*self.axisMultiplier/freq, num=self.channelLength)
+        
+        for index, channel in enumerate(self.dataBuffer):
+            self.axs[index].step(self.xAxisData, channel, color=self.plotColors[index], linewidth=5)
+            self.axs[index].set_xlim(0,len(channel)*self.axisMultiplier/(10*freq))
+            self.axs[index].set_ylim(0,1)
+            self.axs[index].set_axis_off()
+            self.cursorLines[index] = self.axs[index].axvline(color='#ffffff', lw=1, ls='--')
+            self.cursorLines[index].set_visible(False)
+            self.canvases[index].draw()
+        
+    
+    # This method should get the raw data as a bytearray and the number of channels sampled
+    # It will return the data as a list (2D Array) of height channelNumber     
     def treatData(self, rawData:bytearray, channelNumber:int) -> list:
         tempBuffer = []
         for _ in range(channelNumber):
@@ -83,5 +120,6 @@ class Plotter():
             if channelNumber == 1:
                 for bit in bits:
                     tempBuffer[0].append(bit)
-        return tempBuffer
+        self.dataBuffer = tempBuffer
+
     
