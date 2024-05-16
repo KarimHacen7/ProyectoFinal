@@ -8,6 +8,7 @@ import matplotlib.style as mplstyle
 
 class Plotter():
     plotColors = ['#ff0000', '#ff8000', '#e6e600', '#33cc33', '#0033cc', '#660066', '#669999', '#e6e6e6', '']
+    visibleChannels = [1,2,3,4,5,6,7,8]
     channelLength = 1
     figures = []
     axs = []

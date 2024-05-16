@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1078, 569)
+        MainWindow.resize(1078, 782)
         font = QFont()
         font.setFamilies([u"Consolas"])
         font.setPointSize(10)
@@ -188,7 +188,7 @@ class Ui_MainWindow(object):
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -143, 833, 669))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 833, 684))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -591,16 +591,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addItem(self.verticalSpacer)
 
-        self.channelHorizontalScrollBar = QScrollBar(self.scrollAreaWidgetContents)
+        self.logicAnalyzersScrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout_19.addWidget(self.logicAnalyzersScrollArea)
+
+        self.channelHorizontalScrollBar = QScrollBar(self.mainFrame)
         self.channelHorizontalScrollBar.setObjectName(u"channelHorizontalScrollBar")
         self.channelHorizontalScrollBar.setMaximum(1999)
         self.channelHorizontalScrollBar.setOrientation(Qt.Horizontal)
 
-        self.verticalLayout_17.addWidget(self.channelHorizontalScrollBar)
-
-        self.logicAnalyzersScrollArea.setWidget(self.scrollAreaWidgetContents)
-
-        self.verticalLayout_19.addWidget(self.logicAnalyzersScrollArea)
+        self.verticalLayout_19.addWidget(self.channelHorizontalScrollBar)
 
         self.footerMainFrame = QFrame(self.mainFrame)
         self.footerMainFrame.setObjectName(u"footerMainFrame")

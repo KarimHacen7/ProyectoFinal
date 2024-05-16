@@ -5,7 +5,7 @@ from PySide6.QtWidgets import  QMainWindow, QMessageBox, QGraphicsScene, QGraphi
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
 import numpy as np
-import time
+import time 
 
 class MainWindow(QMainWindow):
     statusLabelTimer = QTimer()
@@ -20,6 +20,7 @@ class MainWindow(QMainWindow):
     resizeSignal = Signal()
     firstResizeDone = False
     cursorIsActive = False
+    samplingOngoing = False 
     lastCursorIndex = 0
     channelScenes = []
     axisScene = QGraphicsScene()
@@ -51,7 +52,8 @@ class MainWindow(QMainWindow):
         # Zoom in and out signals
         for fig in self.plotter.figures:
             fig.canvas.mpl_connect('scroll_event', self.digitalZoomInOut)
-        
+            fig.canvas.mpl_connect('button_press_event', self.displaceOnClick)
+
         # Slide Animation, with signals for responsiveness
         self.configSlideAnimation = QPropertyAnimation(self.ui.slideFrameContainer, b"maximumWidth")#Animate minimumWidht
         self.configSlideAnimation.finished.connect(self.resizeHandler)
@@ -90,6 +92,7 @@ class MainWindow(QMainWindow):
 
     # ---------- THREADING -- START SAMPLING ----------
     def startSamplingThread(self):
+        self.samplingOngoing = True
         self.samplingThread = QThread() 
         self.samplingWorker = SamplingWorker()
         self.samplingWorker.moveToThread(self.samplingThread)
@@ -153,6 +156,7 @@ class MainWindow(QMainWindow):
             self.graphChannels(data)
 
     def threadFinished(self):
+        self.samplingOngoing = False
         self.statusLabelTimer.start()
         self.ui.samplingProgressBar.setValue(0)
     
@@ -246,11 +250,23 @@ class MainWindow(QMainWindow):
         else:
             self.samplingSettings.triggerChannel = self.ui.triggerChannelComboBox.currentIndex() + 1
     
+    def drawCanvasesAndAxes(self, flush=bool):
+        for visibleChannel in self.plotter.visibleChannels:
+            self.plotter.canvases[visibleChannel-1].draw()
+        self.plotter.axisCanvas.draw()
+        if flush:
+            for visibleChannel in self.plotter.visibleChannels:
+                self.plotter.canvases[visibleChannel-1].flush_events()
+            self.plotter.axisCanvas.flush_events()
+
     # ---------- USER INPUT ----------
     def sample(self):
         self.statusLabelTimer.stop()
         self.ui.samplingProgressBar.setValue(0)
-        self.startSamplingThread()
+        if not self.samplingOngoing:
+            self.startSamplingThread()
+        else:
+            QMessageBox.information(self, "Información", "Ya hay una orden de muestreo en proceso!", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
         return
 
     def sidePanelSlideAnimation(self):
@@ -266,11 +282,13 @@ class MainWindow(QMainWindow):
         self.configSlideAnimation.start()
 
     def hideAndShowChannels(self):
+        self.plotter.visibleChannels.clear()
         for index, channelCheckBox in enumerate(self.QCBChannelsList):
             if channelCheckBox.isChecked():
                 self.QFrChannelsList[index].setVisible(True)
+                self.plotter.visibleChannels.append(index+1)
                 self.plotter.canvases[index].setGeometry(0, 0, self.QGVChannelsList[index].width(), self.QGVChannelsList[index].height())
-                self.plotter.canvases[index].draw()
+                self.drawCanvasesAndAxes(flush=False)
             else:
                 self.QFrChannelsList[index].setVisible(False)
 
@@ -294,6 +312,7 @@ class MainWindow(QMainWindow):
             for canvas in self.plotter.canvases:
                 canvas.draw()
             self.plotter.axisCanvas.draw()
+            
             self.ui.cursorPushButton.setStyleSheet("")
             self.ui.cursorInfoLabel.setVisible(False)
     
@@ -326,11 +345,10 @@ class MainWindow(QMainWindow):
     
     def resizeHandler(self):
         if self.firstResizeDone:
-            for index, QGV in enumerate(self.QGVChannelsList):
-                if self.QFrChannelsList[index].maximumHeight() > 0:
-                    self.plotter.canvases[index].setGeometry(0, 0, QGV.width(), QGV.height())
-                    self.plotter.canvases[index].draw()
+            for visibleChannel in self.plotter.visibleChannels:
+                self.plotter.canvases[visibleChannel-1].setGeometry(0, 0, self.QGVChannelsList[visibleChannel-1].width(), self.QGVChannelsList[visibleChannel-1].height())
             self.plotter.axisCanvas.setGeometry(0, 0, self.ui.axisGraphicsView.width(), self.ui.axisGraphicsView.height())
+            self.drawCanvasesAndAxes(flush=False)
         else:
             self.firstResizeDone = True
 
@@ -379,12 +397,9 @@ class MainWindow(QMainWindow):
         rangeLimDivs = (abs(leftLim-rightLim)/upperBound)*(self.plotter.channelLength)
         self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
-        
         self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/upperBound)*self.ui.channelHorizontalScrollBar.maximum()))
         
-        for canvas in self.plotter.canvases:
-            canvas.draw()
-        self.plotter.axisCanvas.draw()
+        self.drawCanvasesAndAxes(flush=True)
 
     def horizontalSliderChanged(self):
         if self.plotter.dataBuffer == []:
@@ -409,11 +424,7 @@ class MainWindow(QMainWindow):
             axes.set_xlim(left=leftLim, right=rightLim)
         self.plotter.axisAxs.set_xlim(left=leftLim, right=rightLim)
 
-        for canvas in self.plotter.canvases:
-            canvas.draw()
-        self.plotter.axisCanvas.draw()
-        
-        
+        self.drawCanvasesAndAxes(flush=False)
 
     def cursorDrawAndCalculate(self, event):
         if self.plotter.dataBuffer == []:
@@ -434,10 +445,14 @@ class MainWindow(QMainWindow):
                     line.set_visible(True)
                 self.plotter.axisCursorLines.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]])
                 self.plotter.axisCursorLines.set_visible(True)
-                for canvas in self.plotter.canvases:
-                    canvas.draw()
-                self.plotter.axisCanvas.draw()
                 
+                
+                self.drawCanvasesAndAxes(flush=True)
+                # Esto hace que no se ejecute el resto de la rutina hasta que dejes quieto el cursor
+                '''for canvas in self.plotter.canvases:
+                    canvas.flush_events()
+                self.plotter.axisCanvas.flush_events()'''
+                # Tener en cuenta  a la hora de incorporarlo
                 
                 value = self.plotter.dataBuffer[scrolledChannel][index]
                 leftEdge = index-1
@@ -491,3 +506,31 @@ class MainWindow(QMainWindow):
         timer3 = time.perf_counter()
         print(str((timer2-timer1)*1000) + " milliseconds procesado")
         print(str((timer3-timer2)*1000) + " milliseconds dibujado")'''
+
+    def displaceOnClick(self, event):
+        if self.plotter.dataBuffer == [] or not event.inaxes:
+            return
+        
+        upperBound = self.plotter.channelLength*self.plotter.axisMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]
+        leftLim, rightLim = self.plotter.axs[0].get_xlim()
+        rangeLim = abs(rightLim-leftLim)
+        
+        centerValue = event.xdata
+        leftLim=centerValue-(rangeLim/2)
+        rightLim=centerValue+(rangeLim/2)
+        
+        if leftLim < 0:
+            leftLim = 0
+            rightLim = rangeLim
+        elif rightLim > upperBound:
+            leftLim = upperBound - rangeLim
+            rightLim = upperBound
+        
+        for axes in self.plotter.axs:
+            axes.set_xlim(left=leftLim, right=rightLim)
+        self.plotter.axisAxs.set_xlim(left=leftLim, right=rightLim)
+
+        self.drawCanvasesAndAxes(flush=True)
+
+        self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerValue/upperBound)*self.ui.channelHorizontalScrollBar.maximum()))
+        

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1078</width>
-    <height>569</height>
+    <height>782</height>
    </rect>
   </property>
   <property name="font">
@@ -368,9 +368,9 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-143</y>
+            <y>0</y>
             <width>833</width>
-            <height>669</height>
+            <height>684</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -1286,18 +1286,18 @@
              </property>
             </spacer>
            </item>
-           <item>
-            <widget class="QScrollBar" name="channelHorizontalScrollBar">
-             <property name="maximum">
-              <number>1999</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
           </layout>
          </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollBar" name="channelHorizontalScrollBar">
+         <property name="maximum">
+          <number>1999</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
         </widget>
        </item>
        <item>

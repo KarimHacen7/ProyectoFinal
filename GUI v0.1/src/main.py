@@ -16,13 +16,20 @@ TODO:
 
     CORREGIR EJE DE TIEMPO, VALORES Y EL MARGEN DE LA IZQUIERDA
 
-    poner para hacer drag and drop con el mouse
+    correct margins for scrollbar
 
-    axes.redraw()?
-DOING:
+    general cleanup of boilerplate
+
+    Preprocess flancos en todos los canales
+
+    cambiar procesado de cursores cuando no se encuentran dos flancos
     
     USE BLITTING WHERE APPLICABLE
 
+DOING:
+
+    PROGRAM BREAKS IF CURSORS ARE USED EXCESIVELLY
+    draw visible channels only
 '''
 
 if __name__ == "__main__":
