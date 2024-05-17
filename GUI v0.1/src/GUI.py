@@ -5,26 +5,26 @@ from PySide6.QtWidgets import  QMainWindow, QMessageBox, QGraphicsScene, QGraphi
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
 import numpy as np
-
+import time
 
 class MainWindow(QMainWindow):
+    initialBuffer = bytearray()
     statusLabelTimer = QTimer()
     communicationModule = CommunicationModule()
     samplingSettings = SamplingSettings()
     plotter = Plotter()
-    initialBuffer = bytearray()
+    resizeSignal = Signal()
     QGVChannelsList = [] # QGraphicsView Reference List
     QCBChannelsList = [] # QCheckBox Reference List
     QFrChannelsList = [] # QFrame Reference List
     QGSChannelsList = [] # QGraphicsView Reference List
     cursorCallbackIDs = []
-    resizeSignal = Signal()
     firstResizeDone = False
     cursorIsActive = False
     samplingOngoing = False
     scrollbarValueChangedAutomatically = False
     lastCursorIndex = 0
-    # Could not put it in plotting.py without silent crashing
+    # Could not put it in plotting.py without silently crashing
     for i in range(8):
         QGSChannelsList.append(QGraphicsScene())
     QGSAxis = QGraphicsScene()
@@ -165,7 +165,7 @@ class MainWindow(QMainWindow):
         self.samplingOngoing = False
         self.statusLabelTimer.start()
         self.ui.samplingProgressBar.setValue(0)
-    
+
     # ---------- GUI HOUSEKEEPING ----------
     def checkConnectedStatusAndShowInLabel(self):
         isConnected = self.communicationModule.checkConnected("VID_2E8A&PID_000A")
@@ -175,7 +175,7 @@ class MainWindow(QMainWindow):
         else:
             self.ui.connectionStatusLabel.setText("Estado: Desconectado")
             self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #ff4a4a; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
-    
+
     def updateSamplingDepthLabel(self):
         value = self.ui.samplingDepthHorizontalSlider.value()
         self.ui.samplingDepthValueLabel.setText(str(value)+" [KiB]")
@@ -223,7 +223,7 @@ class MainWindow(QMainWindow):
                 self.ui.triggerChannelComboBox.addItem(str(i+1))
         if self.samplingSettings.mode == SamplingMode.ANALOG:
             self.ui.triggerChannelComboBox.addItem("8")
-    
+
     def calculateSamplingTime(self):
         # (8[bit/B] * 1024[B/KiB]  * depth [KiB])[bit] /(frecuencia [muestra/seg] * canales [bits/muestra]) [bit/seg]  
         bits = 8*1024*self.ui.samplingDepthHorizontalSlider.value()
@@ -255,21 +255,7 @@ class MainWindow(QMainWindow):
             self.samplingSettings.triggerChannel = 8
         else:
             self.samplingSettings.triggerChannel = self.ui.triggerChannelComboBox.currentIndex() + 1
-    
-    def drawCanvasesAndAxes(self, flush=bool):
-        for channel in self.plotter.channelPlots:
-            if channel.isVisible:
-                channel.canvas.draw()
-        self.plotter.axisPlot.canvas.draw()
-        if flush:
-            for channel in self.plotter.channelPlots:
-                channel.canvas.flush_events()
-            self.plotter.axisPlot.canvas.flush_events()
-        '''print("Majors:")
-        print(self.plotter.axisPlot.axes.get_xticks(minor=False))
-        print("Minors:")
-        print(self.plotter.axisPlot.axes.get_xticks(minor=True))
-'''
+
     # ---------- USER INPUT ----------
     def sample(self):
         self.statusLabelTimer.stop()
@@ -295,13 +281,12 @@ class MainWindow(QMainWindow):
     def hideAndShowChannels(self):
         for index, channelCheckBox in enumerate(self.QCBChannelsList):
             if channelCheckBox.isChecked():
+                self.plotter.channelPlots[index].isVisible = True
                 self.QFrChannelsList[index].setVisible(True)
-                #necessary?
-                self.plotter.channelPlots[index].canvas.setGeometry(0, 0, self.QGVChannelsList[index].width(), self.QGVChannelsList[index].height())
-                #changed->
-                self.plotter.channelPlots[index].canvas.draw()
             else:
+                self.plotter.channelPlots[index].isVisible = False
                 self.QFrChannelsList[index].setVisible(False)
+        self.drawCanvasesAndAxes(False)
 
     def startStopCursor(self):
         if not self.cursorIsActive:
@@ -330,6 +315,7 @@ class MainWindow(QMainWindow):
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
         self.plotter.processAndPlot(rawdata=data, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency], channelNumber=self.samplingSettings.channels)
+        self.drawCanvasesAndAxes(flush=False)
         self.ui.axisLabel.setText("Tiempo[%s]" %self.plotter.timeUnitString)
         
         # CAMBIAR ESTA WEA POR QGBCHANNELLIST
@@ -353,13 +339,11 @@ class MainWindow(QMainWindow):
 
     def resizeEvent(self, event):
         self.resizeSignal.emit()
-    
-    
+
     def resizeHandler(self):
         if self.firstResizeDone:
             for index, channel in enumerate(self.plotter.channelPlots):
-                if channel.isVisible:
-                    channel.canvas.setGeometry(0, 0, self.QGVChannelsList[index-1].width(), self.QGVChannelsList[index-1].height())
+                channel.canvas.setGeometry(0, 0, self.QGVChannelsList[index].width(), self.QGVChannelsList[index].height())
             self.plotter.axisPlot.canvas.setGeometry(0, 0, self.ui.axisGraphicsView.width(), self.ui.axisGraphicsView.height())
             self.drawCanvasesAndAxes(flush=False)
         else:
@@ -397,7 +381,7 @@ class MainWindow(QMainWindow):
             rightLim = self.plotter.channelLengthInUnit
 
         # hacer esto mas claro
-        if abs(leftLim-rightLim) < (10*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])):
+        if abs(leftLim-rightLim) < (15*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])):
             return
 
         # Tarda 1 ms
@@ -512,15 +496,6 @@ class MainWindow(QMainWindow):
 
                 
                 self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, str(np.round(period, 3)), self.plotter.timeUnitString, str(np.round(frequency, 3)), tempUnit))
-                
-
-
-        ''' 
-        timer1 = time.perf_counter()
-        timer2 = time.perf_counter()
-        timer3 = time.perf_counter()
-        print(str((timer2-timer1)*1000) + " milliseconds procesado")
-        print(str((timer3-timer2)*1000) + " milliseconds dibujado")'''
 
     def displaceOnClick(self, event):
         if self.plotter.dataBuffer == [] or not event.inaxes:
@@ -548,3 +523,36 @@ class MainWindow(QMainWindow):
 
         self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerValue/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
         self.scrollbarValueChangedAutomatically = True
+
+    def drawCanvasesAndAxes(self, flush=bool):
+        leftLim, rightLim = self.plotter.axisPlot.axes.get_xlim()
+        rangeLim = abs(rightLim-leftLim)
+        
+        increment = 1
+        for item in self.plotter.axisIncrements:
+            if (rangeLim/item) >= 3 and (rangeLim/item) <= 8:
+                increment = item
+
+        if rangeLim > 5:
+            decimals = 0
+        elif rangeLim > 0.5:
+            decimals = 1
+        elif rangeLim > 0.05:
+            decimals = 2
+        begin = np.round(a=leftLim+(0.075*rangeLim), decimals=decimals)
+
+        majorTicks = np.arange(start=begin, stop=rightLim-(0.075*rangeLim), step=increment)
+        majorTicks = np.round(a=majorTicks, decimals=decimals)
+        self.plotter.axisPlot.axes.set_xticks(majorTicks, minor=False)
+        
+        minorTicks = np.add(majorTicks, increment/2)
+        self.plotter.axisPlot.axes.set_xticks(minorTicks, minor=True)
+
+        for channel in self.plotter.channelPlots:
+            if channel.isVisible:
+                channel.canvas.draw()
+        self.plotter.axisPlot.canvas.draw()
+        if flush:
+            for channel in self.plotter.channelPlots:
+                channel.canvas.flush_events()
+            self.plotter.axisPlot.canvas.flush_events()

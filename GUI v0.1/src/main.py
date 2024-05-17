@@ -10,23 +10,20 @@ TODO:
 
     HAY QUE HACER TODA LA GILADA DE LOS CANALES PARA EL CANAL ANALOGICO DIOSSSS
 
-    Poner un buscador de flancos de subida y de bajada por canal
-
-
-    CORREGIR EJE DE TIEMPO, VALORES Y EL MARGEN DE LA IZQUIERDA
+    Poner un buscador de flancos de subida y de bajada por canal    
 
     correct margins for scrollbar
 
     Cambiar la paleta de colores por una oscura
-    
 
     cambiar procesado de cursores cuando no se encuentran dos flancos
     
     Preprocess flancos en todos los canales
     
-    USE BLITTING WHERE APPLICABLE for cursors
 
 DOING:
+
+    USE BLITTING for cursors
 
 HOTFIX:
     PROGRAM BREAKS IF CURSORS ARE USED EXCESIVELLY

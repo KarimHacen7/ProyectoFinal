@@ -9,6 +9,7 @@ import matplotlib.style as mplstyle
 
 class Plotter():
     plotColors = ['#ff0000', '#ff8000', '#e6e600', '#33cc33', '#0033cc', '#660066', '#669999', '#e6e6e6', '']
+    axisIncrements = [2e-4,5e-4,10e-4, 2e-3,5e-3,10e-3 ,2e-2,5e-2,10e-2, 2e-1,5e-1,10e-1,2,5,10,20,25,30,50,60,70,100]
     dataBuffer = []
     channelLengthInSamples = 0
     channelLengthInUnit = 0
@@ -67,14 +68,12 @@ class Plotter():
         self.axisPlot.axes.set_xlim(0,self.channelLengthInUnit/10)
         self.axisPlot.plottedLine = self.axisPlot.axes.plot([], [])
         self.axisPlot.axes.get_yaxis().set_visible(False)                                                   
-        self.axisPlot.axes.tick_params(axis='x', which='both', bottom=False, top=True, labelbottom=False, labeltop=True)
+        self.axisPlot.axes.tick_params(axis='x', which='both', bottom=False, top=True, labelbottom=False, labeltop=True, length=4)
         self.axisPlot.axes.spines['top'].set_visible(True)
         self.axisPlot.axes.spines['right'].set_visible(False)
         self.axisPlot.axes.spines['bottom'].set_visible(False)
         self.axisPlot.axes.spines['left'].set_visible(False)
-        self.axisPlot.canvas.draw()
-        #self.axis.xaxis.set_major_formatter(ticker.FormatStrFormatter("%d"))
-    
+        
     '''
     Needs documentation
     '''
@@ -96,8 +95,7 @@ class Plotter():
             self.channelPlots[index].axes.set_axis_off()
             self.channelPlots[index].cursorLine = self.channelPlots[index].axes.axvline(color='#ffffff', lw=1, ls='--')
             self.channelPlots[index].cursorLine.set_visible(False)
-            self.channelPlots[index].canvas.draw()
-        
+            
     
     ''' 
     This method should get the raw data as a bytearray and the number of channels sampled
@@ -126,15 +124,6 @@ class Plotter():
                 for bit in bits:
                     tempBuffer[0].append(bit)
         self.dataBuffer = tempBuffer
-
-# moved channel length, figures, axes, canvas, cursorLines from plotter to channel
-# renamed axisMultiplier to timeUnitMultiplier
-# renamed channelLength to channelLengthInSamples
-# renamed plotter method from setAxisMultiplier to calculateTimeMultiplier
-# moved QGraphicsScene from GUI to Plot
-# Created Flag for channel activeness
-# created Plotter variables dataLengthInUnit, dataLengthInSeconds
-# renamed treatData to processRawData
 
 
 class Plot():

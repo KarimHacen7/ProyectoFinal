@@ -26,7 +26,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1078, 782)
+        MainWindow.resize(950, 782)
+        MainWindow.setMinimumSize(QSize(950, 0))
         font = QFont()
         font.setFamilies([u"Consolas"])
         font.setPointSize(10)
@@ -188,7 +189,7 @@ class Ui_MainWindow(object):
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 833, 684))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 705, 684))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
