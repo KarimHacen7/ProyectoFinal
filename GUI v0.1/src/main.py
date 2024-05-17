@@ -12,24 +12,24 @@ TODO:
 
     Poner un buscador de flancos de subida y de bajada por canal
 
-    Cambiar la paleta de colores por una oscura
 
     CORREGIR EJE DE TIEMPO, VALORES Y EL MARGEN DE LA IZQUIERDA
 
     correct margins for scrollbar
 
-    general cleanup of boilerplate
-
-    Preprocess flancos en todos los canales
+    Cambiar la paleta de colores por una oscura
+    
 
     cambiar procesado de cursores cuando no se encuentran dos flancos
     
-    USE BLITTING WHERE APPLICABLE
+    Preprocess flancos en todos los canales
+    
+    USE BLITTING WHERE APPLICABLE for cursors
 
 DOING:
 
+HOTFIX:
     PROGRAM BREAKS IF CURSORS ARE USED EXCESIVELLY
-    draw visible channels only
 '''
 
 if __name__ == "__main__":
