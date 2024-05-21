@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1063</width>
+    <width>981</width>
     <height>782</height>
    </rect>
   </property>
@@ -160,7 +160,7 @@
                 <string notr="true">*{padding-right: 5px;}</string>
                </property>
                <property name="text">
-                <string>Visualizar Canales</string>
+                <string>Canales:</string>
                </property>
                <property name="wordWrap">
                 <bool>false</bool>
@@ -375,7 +375,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>818</width>
+            <width>736</width>
             <height>684</height>
            </rect>
           </property>
@@ -1462,7 +1462,9 @@ border-radius: 5px;
           <string notr="true">QFrame#samplingChannelsFrame,
 QFrame#samplingDepthFrame,
 QFrame#samplingFrequencyFrame,
-QFrame#samplingModeFrame
+QFrame#samplingModeFrame, 
+QFrame#samplingModeFrame,
+QFrame#samplingModeFrame,
 {
 border: 1px solid rgb(109, 109, 109);
 border-radius: 7px;
@@ -1471,14 +1473,14 @@ padding-bottom:8px
 }</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="samplingConfigTab">
           <property name="accessibleName">
            <string>Muestreo</string>
           </property>
           <attribute name="title">
-           <string>Muestreo</string>
+           <string>Configuración</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_9">
            <property name="spacing">
@@ -1509,7 +1511,10 @@ padding-bottom:8px
 QFrame#samplingDepthFrame,
 QFrame#samplingFrequencyFrame,
 QFrame#samplingModeFrame,
-QFrame#estimatedSamplingTimeFrame
+QFrame#estimatedSamplingTimeFrame,
+QFrame#triggerChannelFrame,
+QFrame#triggerTimeoutFrame,
+QFrame#voltageThresholdFrame
 {
 border: 1px solid rgb(109, 109, 109);
 border-radius: 7px;
@@ -1525,9 +1530,6 @@ padding-bottom:8px
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_2">
-              <property name="spacing">
-               <number>5</number>
-              </property>
               <property name="leftMargin">
                <number>0</number>
               </property>
@@ -2044,79 +2046,6 @@ border-radius: 5px;
                </widget>
               </item>
               <item>
-               <spacer name="slideFrameVerticalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="triggerTab">
-          <attribute name="title">
-           <string>Gatillado</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_23">
-           <property name="spacing">
-            <number>5</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QFrame" name="triggerFrame">
-             <property name="styleSheet">
-              <string notr="true">QFrame#triggerChannelFrame,
-QFrame#triggerTimeoutFrame,
-QFrame#voltageThresholdFrame
-{
-border: 1px solid rgb(109, 109, 109);
-border-radius: 7px;
-padding:5px;
-padding-bottom:8px
-}</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_7">
-              <property name="spacing">
-               <number>5</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
                <widget class="QFrame" name="triggerChannelFrame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -2479,6 +2408,340 @@ padding-bottom:8px
                    <property name="value">
                     <double>2.600000000000000</double>
                    </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="slideFrameVerticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="triggerTab">
+          <attribute name="title">
+           <string>Análisis</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_23">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="triggerFrame">
+             <property name="styleSheet">
+              <string notr="true">QFrame#triggerAnalysisFrame,
+{
+border: 1px solid rgb(109, 109, 109);
+border-radius: 7px;
+padding:5px;
+padding-bottom:8px
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="triggerAnalysisFrame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_21">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="triggerAnalysisTitleLabel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Consolas</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Buscar Evento por Canal</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="triggerAnalysisButtonsFrame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_19">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QComboBox" name="triggerAnalysisChannelComboBox">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>25</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>50</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Consolas</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>2</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>3</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>4</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>5</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>6</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>7</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>8</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="triggerAnalysisModeComboBox">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Consolas</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>Flanco Subida</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="Icons.qrc">
+                         <normaloff>:/ButtonIcons/ico/RISING EDGE.png</normaloff>:/ButtonIcons/ico/RISING EDGE.png</iconset>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Flanco Bajada</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="Icons.qrc">
+                         <normaloff>:/ButtonIcons/ico/FALLING EDGE.png</normaloff>:/ButtonIcons/ico/FALLING EDGE.png</iconset>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Nivel Bajo</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="Icons.qrc">
+                         <normaloff>:/ButtonIcons/ico/LOW LEVEL.png</normaloff>:/ButtonIcons/ico/LOW LEVEL.png</iconset>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Nivel Alto</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="Icons.qrc">
+                         <normaloff>:/ButtonIcons/ico/HIGH LEVEL.png</normaloff>:/ButtonIcons/ico/HIGH LEVEL.png</iconset>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="triggerAnalysisButtonsFrame_2">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_20">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="triggerAnalysisGoLeftButton">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="Icons.qrc">
+                        <normaloff>:/ButtonIcons/ico/ArrowLeft.png</normaloff>:/ButtonIcons/ico/ArrowLeft.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>25</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="triggerAnalysisGoRightButton">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="Icons.qrc">
+                        <normaloff>:/ButtonIcons/ico/ArrowRight.png</normaloff>:/ButtonIcons/ico/ArrowRight.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>25</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>

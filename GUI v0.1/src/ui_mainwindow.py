@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(950, 782)
+        MainWindow.resize(981, 782)
         MainWindow.setMinimumSize(QSize(950, 0))
         font = QFont()
         font.setFamilies([u"Consolas"])
@@ -189,7 +189,7 @@ class Ui_MainWindow(object):
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 705, 684))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 736, 684))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -676,7 +676,9 @@ class Ui_MainWindow(object):
         self.slideTabWidget.setStyleSheet(u"QFrame#samplingChannelsFrame,\n"
 "QFrame#samplingDepthFrame,\n"
 "QFrame#samplingFrequencyFrame,\n"
-"QFrame#samplingModeFrame\n"
+"QFrame#samplingModeFrame, \n"
+"QFrame#samplingModeFrame,\n"
+"QFrame#samplingModeFrame,\n"
 "{\n"
 "border: 1px solid rgb(109, 109, 109);\n"
 "border-radius: 7px;\n"
@@ -700,7 +702,10 @@ class Ui_MainWindow(object):
 "QFrame#samplingDepthFrame,\n"
 "QFrame#samplingFrequencyFrame,\n"
 "QFrame#samplingModeFrame,\n"
-"QFrame#estimatedSamplingTimeFrame\n"
+"QFrame#estimatedSamplingTimeFrame,\n"
+"QFrame#triggerChannelFrame,\n"
+"QFrame#triggerTimeoutFrame,\n"
+"QFrame#voltageThresholdFrame\n"
 "{\n"
 "border: 1px solid rgb(109, 109, 109);\n"
 "border-radius: 7px;\n"
@@ -711,7 +716,6 @@ class Ui_MainWindow(object):
         self.samplingFrame.setFrameShape(QFrame.StyledPanel)
         self.samplingFrame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.samplingFrame)
-        self.verticalLayout_2.setSpacing(5)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.samplingModeFrame = QFrame(self.samplingFrame)
@@ -906,38 +910,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.estimatedSamplingTimeFrame)
 
-        self.slideFrameVerticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.verticalLayout_2.addItem(self.slideFrameVerticalSpacer)
-
-
-        self.verticalLayout_9.addWidget(self.samplingFrame)
-
-        self.slideTabWidget.addTab(self.samplingConfigTab, "")
-        self.triggerTab = QWidget()
-        self.triggerTab.setObjectName(u"triggerTab")
-        self.verticalLayout_23 = QVBoxLayout(self.triggerTab)
-        self.verticalLayout_23.setSpacing(5)
-        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
-        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
-        self.triggerFrame = QFrame(self.triggerTab)
-        self.triggerFrame.setObjectName(u"triggerFrame")
-        self.triggerFrame.setStyleSheet(u"QFrame#triggerChannelFrame,\n"
-"QFrame#triggerTimeoutFrame,\n"
-"QFrame#voltageThresholdFrame\n"
-"{\n"
-"border: 1px solid rgb(109, 109, 109);\n"
-"border-radius: 7px;\n"
-"padding:5px;\n"
-"padding-bottom:8px\n"
-"}")
-        self.triggerFrame.setFrameShape(QFrame.StyledPanel)
-        self.triggerFrame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_7 = QVBoxLayout(self.triggerFrame)
-        self.verticalLayout_7.setSpacing(5)
-        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.triggerChannelFrame = QFrame(self.triggerFrame)
+        self.triggerChannelFrame = QFrame(self.samplingFrame)
         self.triggerChannelFrame.setObjectName(u"triggerChannelFrame")
         self.triggerChannelFrame.setFrameShape(QFrame.StyledPanel)
         self.triggerChannelFrame.setFrameShadow(QFrame.Raised)
@@ -1006,9 +979,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_20.addWidget(self.triggerChannelButtonsFrame)
 
 
-        self.verticalLayout_7.addWidget(self.triggerChannelFrame)
+        self.verticalLayout_2.addWidget(self.triggerChannelFrame)
 
-        self.triggerTimeoutFrame = QFrame(self.triggerFrame)
+        self.triggerTimeoutFrame = QFrame(self.samplingFrame)
         self.triggerTimeoutFrame.setObjectName(u"triggerTimeoutFrame")
         self.triggerTimeoutFrame.setFrameShape(QFrame.StyledPanel)
         self.triggerTimeoutFrame.setFrameShadow(QFrame.Raised)
@@ -1036,9 +1009,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.addWidget(self.triggerTimeoutDoubleSpinBox)
 
 
-        self.verticalLayout_7.addWidget(self.triggerTimeoutFrame)
+        self.verticalLayout_2.addWidget(self.triggerTimeoutFrame)
 
-        self.voltageThresholdFrame = QFrame(self.triggerFrame)
+        self.voltageThresholdFrame = QFrame(self.samplingFrame)
         self.voltageThresholdFrame.setObjectName(u"voltageThresholdFrame")
         self.voltageThresholdFrame.setFrameShape(QFrame.StyledPanel)
         self.voltageThresholdFrame.setFrameShadow(QFrame.Raised)
@@ -1067,11 +1040,129 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.voltageThresholdDoubleSpinBox)
 
 
-        self.verticalLayout_7.addWidget(self.voltageThresholdFrame)
+        self.verticalLayout_2.addWidget(self.voltageThresholdFrame)
+
+        self.slideFrameVerticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_2.addItem(self.slideFrameVerticalSpacer)
+
+
+        self.verticalLayout_9.addWidget(self.samplingFrame)
+
+        self.slideTabWidget.addTab(self.samplingConfigTab, "")
+        self.triggerTab = QWidget()
+        self.triggerTab.setObjectName(u"triggerTab")
+        self.verticalLayout_23 = QVBoxLayout(self.triggerTab)
+        self.verticalLayout_23.setSpacing(5)
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
+        self.triggerFrame = QFrame(self.triggerTab)
+        self.triggerFrame.setObjectName(u"triggerFrame")
+        self.triggerFrame.setStyleSheet(u"QFrame#triggerAnalysisFrame,\n"
+"{\n"
+"border: 1px solid rgb(109, 109, 109);\n"
+"border-radius: 7px;\n"
+"padding:5px;\n"
+"padding-bottom:8px\n"
+"}")
+        self.triggerFrame.setFrameShape(QFrame.StyledPanel)
+        self.triggerFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_4 = QVBoxLayout(self.triggerFrame)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.triggerAnalysisFrame = QFrame(self.triggerFrame)
+        self.triggerAnalysisFrame.setObjectName(u"triggerAnalysisFrame")
+        self.triggerAnalysisFrame.setFrameShape(QFrame.StyledPanel)
+        self.triggerAnalysisFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_21 = QVBoxLayout(self.triggerAnalysisFrame)
+        self.verticalLayout_21.setSpacing(5)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
+        self.triggerAnalysisTitleLabel = QLabel(self.triggerAnalysisFrame)
+        self.triggerAnalysisTitleLabel.setObjectName(u"triggerAnalysisTitleLabel")
+        sizePolicy5.setHeightForWidth(self.triggerAnalysisTitleLabel.sizePolicy().hasHeightForWidth())
+        self.triggerAnalysisTitleLabel.setSizePolicy(sizePolicy5)
+        self.triggerAnalysisTitleLabel.setFont(font)
+        self.triggerAnalysisTitleLabel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_21.addWidget(self.triggerAnalysisTitleLabel)
+
+        self.triggerAnalysisButtonsFrame = QFrame(self.triggerAnalysisFrame)
+        self.triggerAnalysisButtonsFrame.setObjectName(u"triggerAnalysisButtonsFrame")
+        self.triggerAnalysisButtonsFrame.setFrameShape(QFrame.StyledPanel)
+        self.triggerAnalysisButtonsFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_19 = QHBoxLayout(self.triggerAnalysisButtonsFrame)
+        self.horizontalLayout_19.setSpacing(5)
+        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
+        self.horizontalLayout_19.setContentsMargins(0, 0, 0, 0)
+        self.triggerAnalysisChannelComboBox = QComboBox(self.triggerAnalysisButtonsFrame)
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.addItem("")
+        self.triggerAnalysisChannelComboBox.setObjectName(u"triggerAnalysisChannelComboBox")
+        sizePolicy1.setHeightForWidth(self.triggerAnalysisChannelComboBox.sizePolicy().hasHeightForWidth())
+        self.triggerAnalysisChannelComboBox.setSizePolicy(sizePolicy1)
+        self.triggerAnalysisChannelComboBox.setMinimumSize(QSize(25, 25))
+        self.triggerAnalysisChannelComboBox.setMaximumSize(QSize(50, 16777215))
+        self.triggerAnalysisChannelComboBox.setFont(font)
+
+        self.horizontalLayout_19.addWidget(self.triggerAnalysisChannelComboBox)
+
+        self.triggerAnalysisModeComboBox = QComboBox(self.triggerAnalysisButtonsFrame)
+        self.triggerAnalysisModeComboBox.addItem(icon6, "")
+        self.triggerAnalysisModeComboBox.addItem(icon7, "")
+        self.triggerAnalysisModeComboBox.addItem(icon8, "")
+        self.triggerAnalysisModeComboBox.addItem(icon9, "")
+        self.triggerAnalysisModeComboBox.setObjectName(u"triggerAnalysisModeComboBox")
+        self.triggerAnalysisModeComboBox.setMinimumSize(QSize(0, 25))
+        self.triggerAnalysisModeComboBox.setFont(font)
+
+        self.horizontalLayout_19.addWidget(self.triggerAnalysisModeComboBox)
+
+
+        self.verticalLayout_21.addWidget(self.triggerAnalysisButtonsFrame)
+
+        self.triggerAnalysisButtonsFrame_2 = QFrame(self.triggerAnalysisFrame)
+        self.triggerAnalysisButtonsFrame_2.setObjectName(u"triggerAnalysisButtonsFrame_2")
+        self.triggerAnalysisButtonsFrame_2.setFrameShape(QFrame.StyledPanel)
+        self.triggerAnalysisButtonsFrame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_20 = QHBoxLayout(self.triggerAnalysisButtonsFrame_2)
+        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
+        self.horizontalLayout_20.setContentsMargins(0, 0, 0, 0)
+        self.triggerAnalysisGoLeftButton = QPushButton(self.triggerAnalysisButtonsFrame_2)
+        self.triggerAnalysisGoLeftButton.setObjectName(u"triggerAnalysisGoLeftButton")
+        self.triggerAnalysisGoLeftButton.setMinimumSize(QSize(0, 30))
+        icon10 = QIcon()
+        icon10.addFile(u":/ButtonIcons/ico/ArrowLeft.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerAnalysisGoLeftButton.setIcon(icon10)
+        self.triggerAnalysisGoLeftButton.setIconSize(QSize(25, 25))
+
+        self.horizontalLayout_20.addWidget(self.triggerAnalysisGoLeftButton)
+
+        self.triggerAnalysisGoRightButton = QPushButton(self.triggerAnalysisButtonsFrame_2)
+        self.triggerAnalysisGoRightButton.setObjectName(u"triggerAnalysisGoRightButton")
+        self.triggerAnalysisGoRightButton.setMinimumSize(QSize(0, 30))
+        icon11 = QIcon()
+        icon11.addFile(u":/ButtonIcons/ico/ArrowRight.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerAnalysisGoRightButton.setIcon(icon11)
+        self.triggerAnalysisGoRightButton.setIconSize(QSize(25, 25))
+
+        self.horizontalLayout_20.addWidget(self.triggerAnalysisGoRightButton)
+
+
+        self.verticalLayout_21.addWidget(self.triggerAnalysisButtonsFrame_2)
+
+
+        self.verticalLayout_4.addWidget(self.triggerAnalysisFrame)
 
         self.triggerVerticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.verticalLayout_7.addItem(self.triggerVerticalSpacer)
+        self.verticalLayout_4.addItem(self.triggerVerticalSpacer)
 
 
         self.verticalLayout_23.addWidget(self.triggerFrame)
@@ -1113,7 +1204,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.slideTabWidget.setCurrentIndex(0)
+        self.slideTabWidget.setCurrentIndex(1)
         self.samplingFrequencyComboBox.setCurrentIndex(16)
         self.samplingChannelsComboBox.setCurrentIndex(3)
 
@@ -1123,7 +1214,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Proyecto Final", None))
-        self.channelVisualizationLabel.setText(QCoreApplication.translate("MainWindow", u"Visualizar Canales", None))
+        self.channelVisualizationLabel.setText(QCoreApplication.translate("MainWindow", u"Canales:", None))
         self.channel1CheckBox.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.channel2CheckBox.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.channel3CheckBox.setText(QCoreApplication.translate("MainWindow", u"3", None))
@@ -1213,7 +1304,6 @@ class Ui_MainWindow(object):
 
         self.estimatedSamplingTimeTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Tiempo de Muestreo", None))
         self.estimatedSamplingTimeValueLabel.setText(QCoreApplication.translate("MainWindow", u"Placeholder", None))
-        self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.samplingConfigTab), QCoreApplication.translate("MainWindow", u"Muestreo", None))
         self.triggerChannelTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Canal y Evento", None))
         self.triggerChannelComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"1", None))
         self.triggerChannelComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"2", None))
@@ -1234,7 +1324,25 @@ class Ui_MainWindow(object):
         self.triggerTimeoutDoubleSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" [s]", None))
         self.voltageThresholdLabel.setText(QCoreApplication.translate("MainWindow", u"Umbral de Voltaje", None))
         self.voltageThresholdDoubleSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" [V]", None))
-        self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.triggerTab), QCoreApplication.translate("MainWindow", u"Gatillado", None))
+        self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.samplingConfigTab), QCoreApplication.translate("MainWindow", u"Configuraci\u00f3n", None))
+        self.triggerAnalysisTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Buscar Evento por Canal", None))
+        self.triggerAnalysisChannelComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"1", None))
+        self.triggerAnalysisChannelComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"2", None))
+        self.triggerAnalysisChannelComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"3", None))
+        self.triggerAnalysisChannelComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"4", None))
+        self.triggerAnalysisChannelComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"5", None))
+        self.triggerAnalysisChannelComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"6", None))
+        self.triggerAnalysisChannelComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"7", None))
+        self.triggerAnalysisChannelComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"8", None))
+
+        self.triggerAnalysisModeComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Flanco Subida", None))
+        self.triggerAnalysisModeComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Flanco Bajada", None))
+        self.triggerAnalysisModeComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Nivel Bajo", None))
+        self.triggerAnalysisModeComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Nivel Alto", None))
+
+        self.triggerAnalysisGoLeftButton.setText("")
+        self.triggerAnalysisGoRightButton.setText("")
+        self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.triggerTab), QCoreApplication.translate("MainWindow", u"An\u00e1lisis", None))
         self.versionLabel.setText(QCoreApplication.translate("MainWindow", u"ALyP GUI v0.1", None))
     # retranslateUi
 

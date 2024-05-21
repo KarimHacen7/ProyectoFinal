@@ -4,29 +4,25 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QResizeEvent
 '''
 TODO:
-
-
-# MIRA ESTO https://matplotlib.org/stable/users/explain/axes/axes_ticks.html#sphx-glr-users-explain-axes-axes-ticks-py
-
     HAY QUE HACER TODA LA GILADA DE LOS CANALES PARA EL CANAL ANALOGICO DIOSSSS
-
-    Poner un buscador de flancos de subida y de bajada por canal    
-
-    correct margins for scrollbar
 
     Cambiar la paleta de colores por una oscura
 
-    cambiar procesado de cursores cuando no se encuentran dos flancos
-    
-    Preprocess flancos en todos los canales
-    
-
 DOING:
 
-    USE BLITTING for cursors
+    Poner un buscador de flancos de subida y de bajada por canal    
 
 HOTFIX:
-    PROGRAM BREAKS IF CURSORS ARE USED EXCESIVELLY
+    AL ENVIAR UNA SEGUNDA ORDEN A VECES REPITE LA ANTERIOR
+
+    FILTRAR CANALES DE GATILLADO SEGUN CANALES MUESTREADOS
+
+    A veces se muestra igual el Cero en el eje de tiempo
+
+    FULL ZOOM SOMETIMES BREAKS THE AXES: UserWarning: constrained_layout not applied because axes 
+sizes collapsed to zero.  Try making figure larger or axes decorations smaller.
+
+    correct margins for scrollbar
 '''
 
 if __name__ == "__main__":
