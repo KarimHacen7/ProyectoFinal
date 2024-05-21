@@ -124,7 +124,7 @@ class Plotter():
                     tempBuffer[i].append(int(bits[1-i]))
             if channelNumber == 1:
                 for bit in bits:
-                    tempBuffer[0].append(bit)
+                    tempBuffer[0].append(int(bit))
         self.dataBuffer = tempBuffer
         for _ in range(channelNumber):
             self.edgesBuffer.append([])
@@ -140,7 +140,6 @@ class Plotter():
                     self.edgesBuffer[i].append(tempDict)
                 else:
                     continue
-        print(self.edgesBuffer)
 
 
 

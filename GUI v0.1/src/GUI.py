@@ -4,6 +4,7 @@ from plotting import Plotter
 from PySide6.QtWidgets import  QMainWindow, QMessageBox, QGraphicsScene, QGraphicsView,  QCheckBox
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
+from matplotlib.backend_bases import MouseEvent, FigureCanvasBase
 import numpy as np
 import time
 
@@ -101,12 +102,12 @@ class MainWindow(QMainWindow):
 
     # ---------- THREADING -- START SAMPLING ----------
     def startSamplingThread(self):
+        self.getConfigurationFromGUI() # do not move further as it creates a race condition
         self.samplingOngoing = True
         self.samplingThread = QThread() 
         self.samplingWorker = SamplingWorker()
         self.samplingWorker.moveToThread(self.samplingThread)
         
-        self.getConfigurationFromGUI()
         self.samplingWorker.samplingQueue.put(self.samplingSettings.parseSamplingStringFromConfig(), block=True, timeout=None)
         self.samplingWorker.timeoutQueue.put(self.samplingSettings.parseTimeoutStringFromConfig(), block=True, timeout=None)
         self.samplingWorker.voltageQueue.put(self.samplingSettings.parseVoltageStringFromConfig(), block=True, timeout=None)
@@ -147,7 +148,7 @@ class MainWindow(QMainWindow):
         self.ui.samplingProgressBar.setValue(25)
 
     def dataIsIncoming(self, length:int):
-        self.ui.connectionStatusLabel.setText("Estado: Recibiendo Datos")
+        self.ui.connectionStatusLabel.setText("Estado: Muestreando...")
         self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f1f5a2; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
         progress = 25 + int(0.75*length/(1024*self.samplingSettings.depth))
         self.ui.samplingProgressBar.setValue(progress)
@@ -258,6 +259,16 @@ class MainWindow(QMainWindow):
             self.samplingSettings.triggerChannel = 8
         else:
             self.samplingSettings.triggerChannel = self.ui.triggerChannelComboBox.currentIndex() + 1
+    
+    def restrictAnalysisOptions(self):
+        self.ui.triggerAnalysisChannelComboBox.setMaxCount(0)
+        self.ui.triggerAnalysisChannelComboBox.setMaxCount(8)
+        if self.samplingSettings.mode == SamplingMode.DIGITAL:
+            for i in range(self.samplingSettings.channels):
+                self.ui.triggerAnalysisChannelComboBox.addItem(str(i+1))
+        if self.samplingSettings.mode == SamplingMode.ANALOG:
+            self.ui.triggerChannelComboBox.addItem("8")
+
 
     # ---------- USER INPUT ----------
     def sample(self):
@@ -337,6 +348,7 @@ class MainWindow(QMainWindow):
         rangeLimDivs = (abs(leftLim-rightLim)/self.plotter.channelLengthInUnit)*self.plotter.channelLengthInSamples
         self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
+        self.restrictAnalysisOptions()
 
     def resizeEvent(self, event):
         self.resizeSignal.emit()
@@ -405,6 +417,7 @@ class MainWindow(QMainWindow):
         if self.plotter.dataBuffer == []:
             return
         if self.scrollbarValueChangedAutomatically:
+
             self.scrollbarValueChangedAutomatically=False
             return
         
@@ -536,9 +549,9 @@ class MainWindow(QMainWindow):
         else:
             decimals = 2
         
-        begin = np.round(a=leftLim+(0.075*rangeLim), decimals=decimals)
+        begin = np.round(a=leftLim+(0.1*rangeLim), decimals=decimals)
 
-        majorTicks = np.arange(start=begin, stop=rightLim-(0.075*rangeLim), step=increment)
+        majorTicks = np.arange(start=begin, stop=rightLim-(0.1*rangeLim), step=increment)
         majorTicks = np.round(a=majorTicks, decimals=decimals)
         self.plotter.axisPlot.axes.set_xticks(majorTicks, minor=False)
         
@@ -587,7 +600,7 @@ class MainWindow(QMainWindow):
                     result = edge["2"]
                     break
         elif event == 0 and direction == "left":
-            for edge in self.plotter.edgesBuffer[channel].reverse():
+            for edge in reversed(self.plotter.edgesBuffer[channel]):
                 if edge["1"] < index and edge["type"] == "R":
                     result = edge["1"]
                     break
@@ -597,7 +610,7 @@ class MainWindow(QMainWindow):
                     result = edge["2"]
                     break
         elif event == 1 and direction == "left":
-            for edge in self.plotter.edgesBuffer[channel].reverse():
+            for edge in reversed(self.plotter.edgesBuffer[channel]):
                 if edge["1"] < index and edge["type"] == "F":
                     result = edge["1"]
                     break
@@ -607,7 +620,7 @@ class MainWindow(QMainWindow):
                     result = j
                     break
         elif event == 2 and direction == "left":
-            for j, value in enumerate(list(self.plotter.dataBuffer[channel].reverse())): # no funca
+            for j, value in reversed(list(enumerate(self.plotter.dataBuffer[channel]))): # no funca
                 if (value == 0) and (j < index):
                     result = j
                     break
@@ -617,7 +630,7 @@ class MainWindow(QMainWindow):
                     result = j
                     break
         elif event == 3 and direction == "left":
-            for j, value in enumerate(list(self.plotter.dataBuffer[channel].reverse())):
+            for j, value in reversed(list(enumerate(self.plotter.dataBuffer[channel]))):
                 if (value == 1) and (j < index):
                     result = j
                     break
@@ -634,15 +647,19 @@ class MainWindow(QMainWindow):
             elif rightLim > self.plotter.channelLengthInUnit:
                 leftLim = self.plotter.channelLengthInUnit - rangeLim
                 rightLim = self.plotter.channelLengthInUnit
-            
-        for channel in self.plotter.channelPlots:
-            channel.axes.set_xlim(left=leftLim, right=rightLim)
-        self.plotter.axisPlot.axes.set_xlim(left=leftLim, right=rightLim)
 
-        self.drawCanvasesAndAxes(flush=True)
+            for channelPlot in self.plotter.channelPlots:
+                channelPlot.axes.set_xlim(left=leftLim, right=rightLim)
+            self.plotter.axisPlot.axes.set_xlim(left=leftLim, right=rightLim)
 
-        self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
-        self.scrollbarValueChangedAutomatically = True
+            self.drawCanvasesAndAxes(flush=True)
 
+            self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
+            self.scrollbarValueChangedAutomatically = True
 
-
+            fakeEvent = MouseEvent(name = 'motion_notify_event', canvas=self.plotter.channelPlots[channel].canvas, x=0, y=0)
+            fakeEvent.xdata = centerLim
+            fakeEvent.inaxes = self.plotter.channelPlots[channel].axes
+            if not self.cursorIsActive:
+                self.startStopCursor()
+            self.cursorDrawAndCalculate(fakeEvent)

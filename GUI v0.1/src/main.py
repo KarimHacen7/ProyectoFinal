@@ -8,14 +8,10 @@ TODO:
 
     Cambiar la paleta de colores por una oscura
 
-DOING:
-
-    Poner un buscador de flancos de subida y de bajada por canal    
+DOING:  
 
 HOTFIX:
-    AL ENVIAR UNA SEGUNDA ORDEN A VECES REPITE LA ANTERIOR
-
-    FILTRAR CANALES DE GATILLADO SEGUN CANALES MUESTREADOS
+    cambiar lo que usa el buscador para determinar la posicion inicial, el centro del viewport no es lo mas efectivo
 
     A veces se muestra igual el Cero en el eje de tiempo
 
