@@ -1204,7 +1204,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.slideTabWidget.setCurrentIndex(1)
+        self.slideTabWidget.setCurrentIndex(0)
         self.samplingFrequencyComboBox.setCurrentIndex(16)
         self.samplingChannelsComboBox.setCurrentIndex(3)
 

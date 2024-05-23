@@ -535,29 +535,36 @@ class MainWindow(QMainWindow):
         leftLim, rightLim = self.plotter.axisPlot.axes.get_xlim()
         rangeLim = abs(rightLim-leftLim)
         
-        increment = 1
-        for item in self.plotter.axisIncrements:
-            if (rangeLim/item) >= 3 and (rangeLim/item) <= 8:
-                increment = item
+        index = np.searchsorted(self.plotter.axisIncrements, rangeLim/25)
+        step = self.plotter.axisIncrements[index]
+        stringStep=str(step)
+        stepDecimals = stringStep[::-1].find('.') if stringStep[::-1].find('.') != -1 else 0
 
-        if rangeLim > 5:
-            decimals = 0
-        elif rangeLim > 0.5:
-            decimals = 1
-        elif rangeLim > 0.05:
-            decimals = 2
-        else:
-            decimals = 2
+        tickStart = np.round(leftLim, decimals=(stepDecimals-1)) if stepDecimals > 0 else np.round(leftLim, decimals=(stepDecimals))
+        newTicks = np.arange(start=tickStart, stop=np.round(rightLim, decimals=stepDecimals), step=step)
+        newTicks = np.round(newTicks, decimals=stepDecimals)
+        newTicks = np.insert(arr=newTicks, obj=0, values=(tickStart-step))
+        newTicks = np.insert(arr=newTicks, obj=0, values=(tickStart-(2*step)))
+
+        majorTicks = []
+        minorTicks = []
+        for index, newTick in enumerate(newTicks):
+            if (index % 3 == 0) and (newTick >= leftLim+(0.05*rangeLim)) and (newTick <= leftLim+(0.95*rangeLim)):
+                majorTicks.append(newTick)
+            elif (newTick >= leftLim+(0.01*rangeLim)) and (newTick <= leftLim+(0.99*rangeLim)):
+                minorTicks.append(newTick)
+            else:
+                pass
         
-        begin = np.round(a=leftLim+(0.1*rangeLim), decimals=decimals)
-
-        majorTicks = np.arange(start=begin, stop=rightLim-(0.1*rangeLim), step=increment)
-        majorTicks = np.round(a=majorTicks, decimals=decimals)
         self.plotter.axisPlot.axes.set_xticks(majorTicks, minor=False)
-        
-        minorTicks = np.add(majorTicks, increment/2)
         self.plotter.axisPlot.axes.set_xticks(minorTicks, minor=True)
 
+        for channel in self.plotter.channelPlots:
+            if channel.isVisible:
+                channel.axes.set_xticks(majorTicks, minor=False)
+                channel.axes.grid(visible=True, which='major', axis='x')
+
+        self.plotter.axisPlot.axes.grid(visible=True, which='major', axis='x')
         self.plotter.plottingInProcess = True    
         for channel in self.plotter.channelPlots:
             if channel.isVisible:

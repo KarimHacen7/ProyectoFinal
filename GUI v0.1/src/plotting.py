@@ -9,7 +9,7 @@ import matplotlib.style as mplstyle
 
 class Plotter():
     plotColors = ['#ff0000', '#ff8000', '#e6e600', '#33cc33', '#0033cc', '#c339fa', '#669999', '#e6e6e6', '']
-    axisIncrements = [2e-4,5e-4,10e-4, 2e-3,5e-3,10e-3 ,2e-2,5e-2,10e-2, 2e-1,5e-1,10e-1,2,5,10,20,25,30,50,60,70,100]
+    axisIncrements = [2e-3,5e-3,10e-3 ,2e-2,5e-2,10e-2, 2e-1,5e-1,1,2,5,10,20,25,30,50,60,70,100]
     dataBuffer = []
     edgesBuffer = []
     channelLengthInSamples = 0
@@ -93,7 +93,7 @@ class Plotter():
             self.channelPlots[index].plottedLine = self.channelPlots[index].axes.step(self.xAxisData, channelData, color=self.plotColors[index], linewidth=3, where='mid')
             self.channelPlots[index].axes.set_xlim(0,self.channelLengthInUnit/10)
             self.channelPlots[index].axes.set_ylim(0,1)
-            self.channelPlots[index].axes.set_axis_off()
+            #self.channelPlots[index].axes.set_axis_off()
             self.channelPlots[index].cursorLine = self.channelPlots[index].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
             self.channelPlots[index].cursorLine.set_visible(False)
             
@@ -148,7 +148,13 @@ class Plot():
         self.figure, self.axes = plt.subplots(layout='constrained')
         self.canvas = FigureCanvasQTAgg(self.figure)
         self.canvas.set_cursor(Cursors.SELECT_REGION)
-        self.axes.set_axis_off()
+        #self.axes.set_axis_off()
+        self.axes.spines['top'].set_visible(False)
+        self.axes.spines['right'].set_visible(False)
+        self.axes.spines['left'].set_visible(False)
+        self.axes.spines['bottom'].set_visible(False)
+        self.axes.tick_params(which='both', bottom=False, top=False, left=False, right=False, labelbottom=False, labelleft=False)
+
         self.cursorLine = self.axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
         self.cursorLine.set_visible(False)
         self.isVisible = True

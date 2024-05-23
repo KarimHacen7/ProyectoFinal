@@ -10,10 +10,14 @@ TODO:
 
 DOING:  
 
-HOTFIX:
-    cambiar lo que usa el buscador para determinar la posicion inicial, el centro del viewport no es lo mas efectivo
+    make grid optional and the lines more discrete
 
-    A veces se muestra igual el Cero en el eje de tiempo
+
+HOTFIX:
+
+    Al cambiar de  gatillado, se repite la orden anterior
+
+    cambiar lo que usa el buscador para determinar la posicion inicial, el centro del viewport no es lo mas efectivo
 
     FULL ZOOM SOMETIMES BREAKS THE AXES: UserWarning: constrained_layout not applied because axes 
 sizes collapsed to zero.  Try making figure larger or axes decorations smaller.
