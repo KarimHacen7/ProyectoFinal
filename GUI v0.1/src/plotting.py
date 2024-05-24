@@ -1,3 +1,4 @@
+from settings import *
 from PySide6.QtWidgets import QGraphicsScene
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 from matplotlib.backend_tools import Cursors
@@ -35,10 +36,15 @@ class Plotter():
     '''
     Convinience method for ensuring data is processed in the right order
     '''
-    def processAndPlot(self, rawdata:bytearray, samplingFrequency:int, channelNumber:int) -> None:
-        self.processRawData(rawData=rawdata, channelNumber=channelNumber)
-        self.plotDigitalChannels(samplingFrequency=samplingFrequency)
-        self.plotDigitalAxis()
+    def processAndPlot(self, rawdata:bytearray, samplingSettings:SamplingSettings) -> None:
+        if samplingSettings.mode == SamplingMode.DIGITAL:
+            self.processRawDigitalData(rawData=rawdata, channelNumber=samplingSettings.channels)
+            self.plotDigitalChannels(samplingFrequency=samplingSettings.samplingFrequenciesLUT[samplingSettings.frequency])
+            self.plotDigitalAxis()
+        else:
+            self.processRawAnalogData(rawData=rawdata, samplingFrequency=samplingSettings.samplingFrequenciesLUT[samplingSettings.frequency])
+            self.plotAnalogChannel(samplingFrequency=samplingSettings.samplingFrequenciesLUT[samplingSettings.frequency])
+
     
     '''
     This method should get the sampling time as a float
@@ -94,16 +100,33 @@ class Plotter():
             self.channelPlots[index].plottedLine = self.channelPlots[index].axes.step(self.xAxisData, channelData, color=self.plotColors[index], linewidth=3, where='mid')
             self.channelPlots[index].axes.set_xlim(0,self.channelLengthInUnit/10)
             self.channelPlots[index].axes.set_ylim(0,1)
-            #self.channelPlots[index].axes.set_axis_off()
+            self.channelPlots[index].axes.set_axis_off()
             self.channelPlots[index].cursorLine = self.channelPlots[index].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
             self.channelPlots[index].cursorLine.set_visible(False)
             
-    
+    def plotAnalogChannel(self, samplingFrequency:int) -> None:
+        self.channelLengthInSamples = len(self.dataBuffer[0])
+        self.channelLengthInSeconds = self.channelLengthInSamples*(1/samplingFrequency)
+        self.calculateTimeUnitMultiplier()
+        self.channelLengthInUnit = self.channelLengthInSeconds*self.timeUnitMultiplier
+
+        for channel in self.channelPlots:
+            channel.axes.clear()
+
+        self.xAxisData = np.linspace(start=0, stop=self.channelLengthInUnit, num=self.channelLengthInSamples)
+        
+        self.channelPlots[0].plottedLine = self.channelPlots[0].axes.plot(self.xAxisData, self.dataBuffer[0], color=self.plotColors[0], linewidth=3)
+        self.channelPlots[0].axes.set_xlim(0,self.channelLengthInUnit/10)
+        self.channelPlots[0].axes.set_ylim(0,5)
+
+        self.channelPlots[0].cursorLine = self.channelPlots[0].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
+        self.channelPlots[0].cursorLine.set_visible(False)
+
     ''' 
     This method should get the raw data as a bytearray and the number of channels sampled
     It will return the data as a list (2D Array) of height channelNumber
     '''   
-    def processRawData(self, rawData:bytearray, channelNumber:int) -> list:
+    def processRawDigitalData(self, rawData:bytearray, channelNumber:int) -> None:
         tempBuffer = []
         self.edgesBuffer = []
         for _ in range(channelNumber):
@@ -142,6 +165,18 @@ class Plotter():
                 else:
                     continue
 
+    def processRawAnalogData(self, rawData:bytearray, samplingFrequency: int) -> None:
+        tempBuffer = []
+        tempBuffer.append([])
+        if samplingFrequency <= 500e3:
+            for byte in rawData:
+                tempBuffer[0].append(np.round(a=(byte/255)*3.3*2, decimals=3))
+        else:
+            for byte in rawData:
+                tempBuffer[0].append(np.round(a=(byte/255)*2.5*2, decimals=3))
+        self.dataBuffer = tempBuffer
+
+    
 
 
 class Plot():
@@ -149,13 +184,8 @@ class Plot():
         self.figure, self.axes = plt.subplots(layout='constrained')
         self.canvas = FigureCanvasQTAgg(self.figure)
         self.canvas.set_cursor(Cursors.SELECT_REGION)
-        #self.axes.set_axis_off()
-        self.axes.spines['top'].set_visible(False)
-        self.axes.spines['right'].set_visible(False)
-        self.axes.spines['left'].set_visible(False)
-        self.axes.spines['bottom'].set_visible(False)
-        self.axes.tick_params(which='both', bottom=False, top=False, left=False, right=False, labelbottom=False, labelleft=False)
-
+        self.axes.set_axis_off()
+        
         self.cursorLine = self.axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
         self.cursorLine.set_visible(False)
         self.isVisible = True

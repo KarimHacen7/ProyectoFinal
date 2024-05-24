@@ -144,6 +144,12 @@ QScrollArea QScrollBar::handle:disabled
           </property>
           <item>
            <widget class="QFrame" name="channelVisualizationFrame">
+            <property name="styleSheet">
+             <string notr="true">QCheckBox:disabled
+{
+	color: rgba(255, 255, 255, 90);
+}</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -296,35 +302,6 @@ QScrollArea QScrollBar::handle:disabled
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="gridPushButton">
-            <property name="minimumSize">
-             <size>
-              <width>30</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>30</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="Icons.qrc">
-              <normaloff>:/ButtonIcons/ico/grid.png</normaloff>:/ButtonIcons/ico/grid.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>23</width>
-              <height>23</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="cursorPushButton">
             <property name="minimumSize">
              <size>
@@ -403,8 +380,7 @@ QScrollArea QScrollBar::handle:disabled
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string/>
@@ -541,6 +517,9 @@ font: 8pt &quot;Consolas&quot;;
                   <height>50</height>
                  </size>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -652,6 +631,9 @@ font: 8pt &quot;Consolas&quot;;
                 <property name="accessibleName">
                  <string>Canal 1</string>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -750,6 +732,9 @@ font: 8pt &quot;Consolas&quot;;
                <widget class="QGraphicsView" name="channel2GraphicsView">
                 <property name="accessibleName">
                  <string>Canal 2</string>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
                 </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -850,6 +835,9 @@ font: 8pt &quot;Consolas&quot;;
                 <property name="accessibleName">
                  <string>Canal 3</string>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -948,6 +936,9 @@ font: 8pt &quot;Consolas&quot;;
                <widget class="QGraphicsView" name="channel4GraphicsView">
                 <property name="accessibleName">
                  <string>Canal 4</string>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
                 </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -1048,6 +1039,9 @@ font: 8pt &quot;Consolas&quot;;
                 <property name="accessibleName">
                  <string>Canal 5</string>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1146,6 +1140,9 @@ font: 8pt &quot;Consolas&quot;;
                <widget class="QGraphicsView" name="channel6GraphicsView">
                 <property name="accessibleName">
                  <string>Canal 6</string>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
                 </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -1246,6 +1243,9 @@ font: 8pt &quot;Consolas&quot;;
                 <property name="accessibleName">
                  <string>Canal 7</string>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
@@ -1344,6 +1344,9 @@ font: 8pt &quot;Consolas&quot;;
                <widget class="QGraphicsView" name="channel8GraphicsView">
                 <property name="accessibleName">
                  <string>Canal 8</string>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
                 </property>
                 <property name="verticalScrollBarPolicy">
                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -1557,7 +1560,7 @@ QTabWidget#slideTabWidget::pane
 </string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="samplingConfigTab">
           <property name="accessibleName">
@@ -2579,6 +2582,13 @@ border: 1px solid rgb(109, 109, 109);
 border-radius: 7px;
 padding:5px;
 padding-bottom:8px
+}
+QFrame#analogYLimEditFrame
+{
+border: 1px solid rgb(109, 109, 109);
+border-radius: 7px;
+padding:5px;
+padding-bottom:8px
 }</string>
              </property>
              <property name="frameShape">
@@ -2589,9 +2599,6 @@ padding-bottom:8px
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
               <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
                <number>0</number>
               </property>
               <property name="rightMargin">
@@ -2649,7 +2656,7 @@ padding-bottom:8px
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="triggerAnalysisButtonsFrame">
+                  <widget class="QFrame" name="triggerAnalysisSelectorFrame">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -2800,7 +2807,7 @@ padding-bottom:8px
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="triggerAnalysisButtonsFrame_2">
+                  <widget class="QFrame" name="triggerAnalysisButtonsFrame">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -2875,6 +2882,229 @@ padding-bottom:8px
                         <width>25</width>
                         <height>25</height>
                        </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="triggerAnalysisReferenceLabel">
+                   <property name="text">
+                    <string>Referencia:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="lastCursorRadioButton">
+                   <property name="text">
+                    <string>Último Cursor</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="visorCenterRadioButton">
+                   <property name="text">
+                    <string>Centro del Visor</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="analogYLimEditFrame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_22">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="analogYLimEditTitleLabel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Consolas</family>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Ajustar Eje Y</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="topYLimFrame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_23">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="topYLimLabel">
+                      <property name="text">
+                       <string>Límite Sup.</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="topYLimDoubleSpinBox">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>80</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>80</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="suffix">
+                       <string> [V]</string>
+                      </property>
+                      <property name="minimum">
+                       <double>0.010000000000000</double>
+                      </property>
+                      <property name="maximum">
+                       <double>5.000000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>0.100000000000000</double>
+                      </property>
+                      <property name="value">
+                       <double>5.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="botYLimFrame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_24">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="bitYLimLabel">
+                      <property name="text">
+                       <string>Límite Inf.</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="botYLimDoubleSpinBox">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>80</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>80</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="suffix">
+                       <string> [V]</string>
+                      </property>
+                      <property name="minimum">
+                       <double>0.000000000000000</double>
+                      </property>
+                      <property name="maximum">
+                       <double>4.990000000000000</double>
+                      </property>
+                      <property name="singleStep">
+                       <double>0.100000000000000</double>
+                      </property>
+                      <property name="value">
+                       <double>0.000000000000000</double>
                       </property>
                      </widget>
                     </item>

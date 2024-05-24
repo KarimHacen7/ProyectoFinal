@@ -4,19 +4,18 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QResizeEvent
 '''
 TODO:
-    HAY QUE HACER TODA LA GILADA DE LOS CANALES PARA EL CANAL ANALOGICO DIOSSSS
-
+    Poner UNIDADES en los MAJOR TICKS en vez del string tiempo
 
 DOING:  
-    
-    Terminar detalles esteticos
+    Pause cursor with buttom or key
 
-    Sacar a la mierda el grid
-    
-    
 HOTFIX:
 
-    Al cambiar de gatillado, se repite la orden anterior # THIS SEEMS TO BE A FIRMWARE ISSUE
+    triggerchannelcombobox muestra 2 veces el canal 8 en modo analogico
+    Hacer invisibles los textlabel de los canales
+    Cambiar comportamiento del cursor en los extremos (buscador de flancos), donde ya no se desplaza el eje, mover solo el cursor
+    Al cambiar de gatillado, se repite la orden anterior    # THIS SEEMS TO BE A FIRMWARE ISSUE
+                                                            # ANALOG MODE IS NOT AFFECTED BY THIS
 
 '''
 

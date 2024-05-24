@@ -19,11 +19,11 @@ class MainWindow(QMainWindow):
     QCBChannelsList = [] # QCheckBox Reference List
     QFrChannelsList = [] # QFrame Reference List
     QGSChannelsList = [] # QGraphicsView Reference List
+    selectedSamplingMode = SamplingMode.DIGITAL
     cursorCallbackIDs = []
     firstResizeDone = False
     cursorIsActive = False
     samplingOngoing = False
-    scrollbarValueChangedAutomatically = False
     lastCursorIndex = 0
     # Could not put it in plotting.py without silently crashing
     for i in range(8):
@@ -56,7 +56,7 @@ class MainWindow(QMainWindow):
         
         # Zoom in and out signals
         for channel in self.plotter.channelPlots:
-            channel.canvas.mpl_connect('scroll_event', self.digitalZoomInOut)
+            channel.canvas.mpl_connect('scroll_event', self.zoomInOut)
             channel.canvas.mpl_connect('button_press_event', self.displaceOnClick)
 
         # Slide Animation, with signals for responsiveness
@@ -66,7 +66,6 @@ class MainWindow(QMainWindow):
         self.ui.configSliderPushButton.clicked.connect(self.sidePanelSlideAnimation)
         # Cursor selector
         self.ui.cursorPushButton.clicked.connect(self.startStopCursor)
-        self.ui.gridPushButton.clicked.connect(self.startStopGrid)
         # Housekeeping signals
         self.ui.samplingDepthHorizontalSlider.valueChanged.connect(self.updateSamplingDepthLabel)
         self.ui.digitalModePushButton.clicked.connect(self.restrictSettingsDigitalMode)
@@ -93,13 +92,17 @@ class MainWindow(QMainWindow):
         # Signal Analysis
         self.ui.triggerAnalysisGoLeftButton.clicked.connect(lambda: self.searchAndFocusOnEdges("left"))
         self.ui.triggerAnalysisGoRightButton.clicked.connect(lambda: self.searchAndFocusOnEdges("right"))
+        self.ui.botYLimDoubleSpinBox.valueChanged.connect(lambda: self.changeAnalogYLims("bot"))
+        self.ui.topYLimDoubleSpinBox.valueChanged.connect(lambda: self.changeAnalogYLims("top"))
         # Digital mode, by default
         self.ui.digitalModePushButton.animateClick()
+        self.ui.lastCursorRadioButton.setChecked(True)
         self.calculateSamplingTime()
         # Status informing label
         self.statusLabelTimer.timeout.connect(self.checkConnectedStatusAndShowInLabel)
         self.statusLabelTimer.start(500)
         self.ui.cursorInfoLabel.setVisible(False)
+        
 
     # ---------- THREADING -- START SAMPLING ----------
     def startSamplingThread(self):
@@ -187,7 +190,7 @@ class MainWindow(QMainWindow):
         return
 
     def restrictSettingsAnalogMode(self):
-        self.samplingSettings.mode = SamplingMode.ANALOG
+        self.selectedSamplingMode = SamplingMode.ANALOG
         self.ui.digitalModePushButton.setStyleSheet("QPushButton { background-color: #b3b3b3; color: #525151;}")
         self.ui.analogModePushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc); }")
         if self.ui.samplingFrequencyComboBox.count() == 17:
@@ -204,7 +207,7 @@ class MainWindow(QMainWindow):
             self.ui.triggerChannelComboBox.setItemText(0, "8")
 
     def restrictSettingsDigitalMode(self):
-        self.samplingSettings.mode = SamplingMode.DIGITAL
+        self.selectedSamplingMode  = SamplingMode.DIGITAL
         self.ui.digitalModePushButton.setStyleSheet("QPushButton {  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc);}")
         self.ui.analogModePushButton.setStyleSheet("QPushButton { background-color: #b3b3b3; color: #525151; }")
         if self.ui.samplingFrequencyComboBox.count() == 14:
@@ -223,10 +226,10 @@ class MainWindow(QMainWindow):
     def restrictTriggerChannels(self):
         self.ui.triggerChannelComboBox.setMaxCount(0) 
         self.ui.triggerChannelComboBox.setMaxCount(8)
-        if self.samplingSettings.mode == SamplingMode.DIGITAL:
+        if self.selectedSamplingMode == SamplingMode.DIGITAL:
             for i in range(pow(2, self.ui.samplingChannelsComboBox.currentIndex())):
                 self.ui.triggerChannelComboBox.addItem(str(i+1))
-        if self.samplingSettings.mode == SamplingMode.ANALOG:
+        if self.selectedSamplingMode == SamplingMode.ANALOG:
             self.ui.triggerChannelComboBox.addItem("8")
 
     def calculateSamplingTime(self):
@@ -234,6 +237,8 @@ class MainWindow(QMainWindow):
         bits = 8*1024*self.ui.samplingDepthHorizontalSlider.value()
         bitrate = pow(2, self.ui.samplingChannelsComboBox.currentIndex()) * self.samplingSettings.samplingFrequenciesLUT[self.ui.samplingFrequencyComboBox.currentIndex()]
         samplingTime = bits/bitrate
+        if self.samplingSettings.mode == SamplingMode.ANALOG:
+            samplingTime /= 8 
         infoString = ""
         if samplingTime < 1e-9:
             infoString = "menor a 1 [ns]"
@@ -249,7 +254,7 @@ class MainWindow(QMainWindow):
         self.ui.estimatedSamplingTimeValueLabel.setText(infoString)
 
     def getConfigurationFromGUI(self):
-        # sampling mode is acquired at button signal callback
+        self.samplingSettings.mode = self.selectedSamplingMode
         self.samplingSettings.frequency = self.ui.samplingFrequencyComboBox.currentIndex()
         self.samplingSettings.depth = self.ui.samplingDepthHorizontalSlider.value()
         self.samplingSettings.channels = pow(2, self.ui.samplingChannelsComboBox.currentIndex())
@@ -267,7 +272,7 @@ class MainWindow(QMainWindow):
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             for i in range(self.samplingSettings.channels):
                 self.ui.triggerAnalysisChannelComboBox.addItem(str(i+1))
-        if self.samplingSettings.mode == SamplingMode.ANALOG:
+        elif self.samplingSettings.mode == SamplingMode.ANALOG:
             self.ui.triggerChannelComboBox.addItem("8")
 
 
@@ -324,24 +329,27 @@ class MainWindow(QMainWindow):
             
             self.ui.cursorPushButton.setStyleSheet("")
             self.ui.cursorInfoLabel.setVisible(False)
-
-    def startStopGrid(self):
-        if self.plotter.edgesBuffer == []:
-            return
-        if self.plotter.isGridOn:
-            self.plotter.isGridOn = False
-            self.ui.gridPushButton.setStyleSheet("")
-            self.drawCanvasesAndAxes(flush=True)
-        else:
-            self.plotter.isGridOn = True
-            self.ui.gridPushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc); }")
-            self.drawCanvasesAndAxes(flush=True)
     
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
-        self.plotter.processAndPlot(rawdata=data, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency], channelNumber=self.samplingSettings.channels)
+        self.plotter.processAndPlot(rawdata=data, samplingSettings=self.samplingSettings)
         self.drawCanvasesAndAxes(flush=False)
         self.ui.axisLabel.setText("Tiempo[%s]" %self.plotter.timeUnitString)
+        
+        if self.samplingSettings.mode == SamplingMode.DIGITAL:
+            self.plotter.axisPlot.isVisible = True
+            self.ui.axisFrame.setVisible(True)
+            self.ui.channel1Frame.setFixedHeight(75)
+            self.resizeSignal.emit()
+            self.ui.triggerAnalysisFrame.setVisible(True)
+            self.ui.analogYLimEditFrame.setVisible(False)
+        elif self.samplingSettings.mode == SamplingMode.ANALOG:
+            self.plotter.axisPlot.isVisible = False
+            self.ui.axisFrame.setVisible(False)
+            self.ui.channel1Frame.setFixedHeight(300)
+            self.resizeSignal.emit()
+            self.ui.triggerAnalysisFrame.setVisible(False)
+            self.ui.analogYLimEditFrame.setVisible(True)
         
         # CAMBIAR ESTA WEA POR QGBCHANNELLIST
         for channelNumber in range(1, 9):
@@ -354,8 +362,9 @@ class MainWindow(QMainWindow):
                 ref.setEnabled(False)
         
         self.ui.channelHorizontalScrollBar.setMaximum(self.plotter.channelLengthInSamples)
+        self.ui.channelHorizontalScrollBar.blockSignals(True)
         self.ui.channelHorizontalScrollBar.setValue(0)
-        self.scrollbarValueChangedAutomatically = True
+        self.ui.channelHorizontalScrollBar.blockSignals(False)
 
         leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
         rangeLimDivs = (abs(leftLim-rightLim)/self.plotter.channelLengthInUnit)*self.plotter.channelLengthInSamples
@@ -375,7 +384,7 @@ class MainWindow(QMainWindow):
         else:
             self.firstResizeDone = True
 
-    def digitalZoomInOut(self, event):
+    def zoomInOut(self, event):
         if self.plotter.plottingInProcess:
             return
         if self.plotter.dataBuffer == []:
@@ -420,18 +429,15 @@ class MainWindow(QMainWindow):
         rangeLimDivs = (abs(leftLim-rightLim)/self.plotter.channelLengthInUnit)*(self.plotter.channelLengthInSamples)
         self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
+        self.ui.channelHorizontalScrollBar.blockSignals(True)
         self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
-        self.scrollbarValueChangedAutomatically = True
+        self.ui.channelHorizontalScrollBar.blockSignals(False)
         self.drawCanvasesAndAxes(flush=True)
 
     def horizontalSliderChanged(self):
         if self.plotter.plottingInProcess:
             return
         if self.plotter.dataBuffer == []:
-            return
-        if self.scrollbarValueChangedAutomatically:
-
-            self.scrollbarValueChangedAutomatically=False
             return
         
         leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
@@ -470,7 +476,7 @@ class MainWindow(QMainWindow):
             
             if index != self.lastCursorIndex:
                 self.lastCursorIndex = index
-                
+                print(self.plotter.xAxisData[self.lastCursorIndex])
                 for channel in self.plotter.channelPlots:
                     channel.cursorLine.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]]) 
                     channel.cursorLine.set_visible(True)
@@ -489,30 +495,33 @@ class MainWindow(QMainWindow):
                 # Esto hace que no se ejecute el resto de la rutina hasta que dejes quieto el cursor
                 # self.drawCanvasesAndAxes(flush=True)
                 # Tener en cuenta  a la hora de incorporarlo
-                
-                if len(self.plotter.edgesBuffer[scrolledChannel]) <= 1:
-                    self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "[Hz]"))
-                elif (index < self.plotter.edgesBuffer[scrolledChannel][0]["1"]) or (index > self.plotter.edgesBuffer[scrolledChannel][-1]["2"]):
-                    self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "[Hz]"))
+
+                if self.samplingSettings.mode == SamplingMode.DIGITAL:
+                    if len(self.plotter.edgesBuffer[scrolledChannel]) <= 1:
+                        self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "Hz"))
+                    elif (index < self.plotter.edgesBuffer[scrolledChannel][0]["1"]) or (index > self.plotter.edgesBuffer[scrolledChannel][-1]["2"]):
+                        self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "Hz"))
+                    else:
+                        for i in range(len(self.plotter.edgesBuffer[scrolledChannel])-1):
+                            pastEdge = self.plotter.edgesBuffer[scrolledChannel][i]
+                            nextEdge = self.plotter.edgesBuffer[scrolledChannel][i+1]
+                            if index > pastEdge["1"] and index < nextEdge["2"]:
+                                periodInUnit = ((nextEdge["2"] - pastEdge["1"])/self.plotter.channelLengthInSamples)*self.plotter.channelLengthInUnit
+                                frequency = 1/(((nextEdge["2"] - pastEdge["1"])/self.plotter.channelLengthInSamples)*self.plotter.channelLengthInSeconds)
+                                if frequency > 1e6:
+                                    frequency /= 1e6
+                                    tempUnit = "MHz"
+                                elif frequency > 1e3:
+                                    frequency /= 1e3
+                                    tempUnit = "KHz"
+                                elif frequency > 1:
+                                    tempUnit = "Hz"
+                                elif frequency > 1e-3:
+                                    frequency *= 1e3
+                                    tempUnit = "mHz"
+                                self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, str(np.round(periodInUnit, 3)), self.plotter.timeUnitString, str(np.round(frequency, 3)), tempUnit))
                 else:
-                    for i in range(len(self.plotter.edgesBuffer[scrolledChannel])-1):
-                        pastEdge = self.plotter.edgesBuffer[scrolledChannel][i]
-                        nextEdge = self.plotter.edgesBuffer[scrolledChannel][i+1]
-                        if index > pastEdge["1"] and index < nextEdge["2"]:
-                            periodInUnit = ((nextEdge["2"] - pastEdge["1"])/self.plotter.channelLengthInSamples)*self.plotter.channelLengthInUnit
-                            frequency = 1/(((nextEdge["2"] - pastEdge["1"])/self.plotter.channelLengthInSamples)*self.plotter.channelLengthInSeconds)
-                            if frequency > 1e6:
-                                frequency /= 1e6
-                                tempUnit = "MHz"
-                            elif frequency > 1e3:
-                                frequency /= 1e3
-                                tempUnit = "KHz"
-                            elif frequency > 1:
-                                tempUnit = "Hz"
-                            elif frequency > 1e-3:
-                                frequency *= 1e3
-                                tempUnit = "mHz"
-                            self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, str(np.round(periodInUnit, 3)), self.plotter.timeUnitString, str(np.round(frequency, 3)), tempUnit))
+                    self.ui.cursorInfoLabel.setText("t: %s[%s], V: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, self.plotter.dataBuffer[0][self.lastCursorIndex], "V"))
 
     def displaceOnClick(self, event):
         if self.plotter.plottingInProcess:
@@ -540,8 +549,9 @@ class MainWindow(QMainWindow):
 
         self.drawCanvasesAndAxes(flush=True)
 
+        self.ui.channelHorizontalScrollBar.blockSignals(True)
         self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerValue/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
-        self.scrollbarValueChangedAutomatically = True
+        self.ui.channelHorizontalScrollBar.blockSignals(False)
 
     def drawCanvasesAndAxes(self, flush=bool):
         leftLim, rightLim = self.plotter.axisPlot.axes.get_xlim()
@@ -571,31 +581,13 @@ class MainWindow(QMainWindow):
         self.plotter.axisPlot.axes.set_xticks(minorTicks, minor=True)
         #hasta aca
 
-        if self.plotter.isGridOn:
-            if not self.plotter.channelPlots[0].axes.axison:
-                for channel in self.plotter.channelPlots:
-                    channel.axes.set_axis_on()
-                    channel.axes.spines['top'].set_visible(False)
-                    channel.axes.spines['right'].set_visible(False)
-                    channel.axes.spines['left'].set_visible(False)
-                    channel.axes.spines['bottom'].set_visible(False)
-                    channel.axes.tick_params(which='both', bottom=False, top=False, left=False, right=False, labelbottom=False, labelleft=False)
-            for channel in self.plotter.channelPlots:
-                if channel.isVisible:
-                    channel.axes.set_xticks(majorTicks, minor=False)
-                    channel.axes.grid(visible=True, which='major', axis='x', color="#c2c0c0")
-            self.plotter.axisPlot.axes.grid(visible=True, which='major', axis='x', color="#c2c0c0")
-        else:
-            for channel in self.plotter.channelPlots:
-                channel.axes.set_axis_off()
-            self.plotter.axisPlot.axes.grid(False)
-
         
         self.plotter.plottingInProcess = True    
         for channel in self.plotter.channelPlots:
             if channel.isVisible:
                 channel.canvas.draw()
-        self.plotter.axisPlot.canvas.draw()
+        if self.plotter.axisPlot.isVisible:
+            self.plotter.axisPlot.canvas.draw()
         
         if flush:
             for channel in self.plotter.channelPlots:
@@ -605,12 +597,30 @@ class MainWindow(QMainWindow):
         for channel in self.plotter.channelPlots:
             if channel.isVisible:
                 channel.background = channel.figure.canvas.copy_from_bbox(channel.axes.bbox)
-        self.plotter.axisPlot.background = self.plotter.axisPlot.figure.canvas.copy_from_bbox(self.plotter.axisPlot.axes.bbox) 
+        if self.plotter.axisPlot.isVisible:
+            self.plotter.axisPlot.background = self.plotter.axisPlot.figure.canvas.copy_from_bbox(self.plotter.axisPlot.axes.bbox) 
+        
         self.plotter.plottingInProcess = False
 
+    def changeAnalogYLims(self, changed:str):
+        if self.plotter.dataBuffer == [] or self.samplingSettings.mode == SamplingMode.DIGITAL:
+            return
+        topLim = self.ui.topYLimDoubleSpinBox.value()
+        botLim = self.ui.botYLimDoubleSpinBox.value()
+        if (botLim >= topLim) and (changed == "top"):
+            self.ui.topYLimDoubleSpinBox.blockSignals(True)
+            self.ui.topYLimDoubleSpinBox.setValue(botLim + 0.1)
+            self.ui.topYLimDoubleSpinBox.blockSignals(False)
+        elif (botLim >= topLim) and (changed == "bot"):
+            self.ui.botYLimDoubleSpinBox.blockSignals(True)
+            self.ui.botYLimDoubleSpinBox.setValue(topLim - 0.1)
+            self.ui.botYLimDoubleSpinBox.blockSignals(False)
+        else:
+            self.plotter.channelPlots[0].axes.set_ylim(top=topLim, bottom=botLim)
+            self.drawCanvasesAndAxes(flush=True)
+            pass
 
     #  ---------- SIGNAL ANALYSIS  ----------
-
     def searchAndFocusOnEdges(self, direction:str):
         self.ui.triggerAnalysisGoLeftButton.setEnabled(False)
         self.ui.triggerAnalysisGoRightButton.setEnabled(False)
@@ -621,9 +631,10 @@ class MainWindow(QMainWindow):
         leftLim, rightLim = self.plotter.channelPlots[channel].axes.get_xlim()
         rangeLim = (rightLim-leftLim)
         centerLim = leftLim+(rangeLim)/2
-        
-        index = min(np.searchsorted(self.plotter.xAxisData, centerLim), len(self.plotter.dataBuffer[channel]) - 1)
-
+        if self.ui.visorCenterRadioButton.isChecked():
+            index = min(np.searchsorted(self.plotter.xAxisData, centerLim), len(self.plotter.dataBuffer[channel]) - 1)
+        else:
+            index = self.lastCursorIndex
         result = None
         event = self.ui.triggerAnalysisModeComboBox.currentIndex()
         if (event == 0 or event == 1) and len(self.plotter.edgesBuffer[channel]) == 0:
@@ -689,11 +700,13 @@ class MainWindow(QMainWindow):
 
             self.drawCanvasesAndAxes(flush=True)
 
+            self.ui.channelHorizontalScrollBar.blockSignals(True)
             self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
-            self.scrollbarValueChangedAutomatically = True
+            self.ui.channelHorizontalScrollBar.blockSignals(False)
 
             fakeEvent = MouseEvent(name = 'motion_notify_event', canvas=self.plotter.channelPlots[channel].canvas, x=0, y=0)
             fakeEvent.xdata = centerLim
+            print(centerLim)
             fakeEvent.inaxes = self.plotter.channelPlots[channel].axes
             if not self.cursorIsActive:
                 self.startStopCursor()
