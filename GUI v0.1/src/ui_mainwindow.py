@@ -26,27 +26,50 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(981, 782)
+        MainWindow.resize(981, 757)
         MainWindow.setMinimumSize(QSize(950, 0))
         font = QFont()
         font.setFamilies([u"Consolas"])
-        font.setPointSize(10)
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setItalic(False)
         MainWindow.setFont(font)
         icon = QIcon()
-        icon.addFile(u":/ButtonIcons/ico/square-wave.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/ButtonIcons/ico/square wave.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet(u"")
+        MainWindow.setStyleSheet(u"*{\n"
+"	color: #EEEEEE;\n"
+"	background-color: #222831;\n"
+"	font: 9pt \"Consolas\";\n"
+"}\n"
+".QPushButton, .QComboBox, QDoubleSpinBox\n"
+"{\n"
+"	background-color: #31363F;\n"
+"	color:#EEEEEE\n"
+"}\n"
+"")
         MainWindow.setIconSize(QSize(100, 24))
         self.centralWidget = QWidget(MainWindow)
         self.centralWidget.setObjectName(u"centralWidget")
-        font1 = QFont()
-        font1.setFamilies([u"Consolas"])
-        font1.setPointSize(9)
-        self.centralWidget.setFont(font1)
+        self.centralWidget.setFont(font)
         self.horizontalLayout = QHBoxLayout(self.centralWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.mainFrame = QFrame(self.centralWidget)
         self.mainFrame.setObjectName(u"mainFrame")
+        self.mainFrame.setStyleSheet(u"QScrollArea QScrollBar::add-page:vertical\n"
+"{\n"
+"		background-color:#31363F;\n"
+"}\n"
+"\n"
+"QScrollArea QScrollBar::sub-page:vertical\n"
+"{\n"
+"		background-color:#31363F;\n"
+"}\n"
+"\n"
+"QScrollArea QScrollBar::handle:disabled\n"
+"{\n"
+"	background-color:#31363F;\n"
+"}")
         self.mainFrame.setFrameShape(QFrame.StyledPanel)
         self.mainFrame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_19 = QVBoxLayout(self.mainFrame)
@@ -141,13 +164,24 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13.addItem(self.horizontalSpacer)
 
+        self.gridPushButton = QPushButton(self.headerMainFrame)
+        self.gridPushButton.setObjectName(u"gridPushButton")
+        self.gridPushButton.setMinimumSize(QSize(30, 30))
+        self.gridPushButton.setMaximumSize(QSize(30, 30))
+        icon1 = QIcon()
+        icon1.addFile(u":/ButtonIcons/ico/grid.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.gridPushButton.setIcon(icon1)
+        self.gridPushButton.setIconSize(QSize(23, 23))
+
+        self.horizontalLayout_13.addWidget(self.gridPushButton)
+
         self.cursorPushButton = QPushButton(self.headerMainFrame)
         self.cursorPushButton.setObjectName(u"cursorPushButton")
         self.cursorPushButton.setMinimumSize(QSize(30, 30))
         self.cursorPushButton.setMaximumSize(QSize(30, 30))
-        icon1 = QIcon()
-        icon1.addFile(u":/ButtonIcons/ico/mouse-crosshair-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.cursorPushButton.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/ButtonIcons/ico/Crosshair.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.cursorPushButton.setIcon(icon2)
         self.cursorPushButton.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_13.addWidget(self.cursorPushButton)
@@ -161,9 +195,9 @@ class Ui_MainWindow(object):
         self.startSamplingPushButton.setSizePolicy(sizePolicy1)
         self.startSamplingPushButton.setMinimumSize(QSize(30, 30))
         self.startSamplingPushButton.setMaximumSize(QSize(30, 30))
-        icon2 = QIcon()
-        icon2.addFile(u":/ButtonIcons/ico/play.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.startSamplingPushButton.setIcon(icon2)
+        icon3 = QIcon()
+        icon3.addFile(u":/ButtonIcons/ico/play.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.startSamplingPushButton.setIcon(icon3)
         self.startSamplingPushButton.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_13.addWidget(self.startSamplingPushButton)
@@ -172,10 +206,11 @@ class Ui_MainWindow(object):
         self.configSliderPushButton.setObjectName(u"configSliderPushButton")
         self.configSliderPushButton.setMinimumSize(QSize(30, 30))
         self.configSliderPushButton.setMaximumSize(QSize(30, 30))
-        icon3 = QIcon()
-        icon3.addFile(u":/ButtonIcons/ico/Three stripes.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.configSliderPushButton.setIcon(icon3)
-        self.configSliderPushButton.setIconSize(QSize(20, 20))
+        self.configSliderPushButton.setStyleSheet(u"")
+        icon4 = QIcon()
+        icon4.addFile(u":/ButtonIcons/ico/Three stripes.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.configSliderPushButton.setIcon(icon4)
+        self.configSliderPushButton.setIconSize(QSize(23, 23))
 
         self.horizontalLayout_13.addWidget(self.configSliderPushButton)
 
@@ -184,12 +219,13 @@ class Ui_MainWindow(object):
 
         self.logicAnalyzersScrollArea = QScrollArea(self.mainFrame)
         self.logicAnalyzersScrollArea.setObjectName(u"logicAnalyzersScrollArea")
+        self.logicAnalyzersScrollArea.setStyleSheet(u"")
         self.logicAnalyzersScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.logicAnalyzersScrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.logicAnalyzersScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 736, 684))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 736, 659))
         self.verticalLayout_17 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -210,10 +246,17 @@ class Ui_MainWindow(object):
         sizePolicy2.setHeightForWidth(self.axisLabel.sizePolicy().hasHeightForWidth())
         self.axisLabel.setSizePolicy(sizePolicy2)
         self.axisLabel.setMinimumSize(QSize(62, 0))
-        font2 = QFont()
-        font2.setFamilies([u"Consolas"])
-        font2.setPointSize(8)
-        self.axisLabel.setFont(font2)
+        font1 = QFont()
+        font1.setFamilies([u"Consolas"])
+        font1.setPointSize(8)
+        font1.setBold(False)
+        font1.setItalic(False)
+        self.axisLabel.setFont(font1)
+        self.axisLabel.setStyleSheet(u"*\n"
+"{\n"
+"\n"
+"font: 8pt \"Consolas\";\n"
+"}")
 
         self.horizontalLayout_18.addWidget(self.axisLabel)
 
@@ -598,6 +641,10 @@ class Ui_MainWindow(object):
 
         self.channelHorizontalScrollBar = QScrollBar(self.mainFrame)
         self.channelHorizontalScrollBar.setObjectName(u"channelHorizontalScrollBar")
+        self.channelHorizontalScrollBar.setStyleSheet(u"QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal\n"
+"{\n"
+"	background:#31363F;\n"
+"}")
         self.channelHorizontalScrollBar.setMaximum(1999)
         self.channelHorizontalScrollBar.setOrientation(Qt.Horizontal)
 
@@ -614,13 +661,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setContentsMargins(0, 5, 0, 0)
         self.connectionStatusLabel = QLabel(self.footerMainFrame)
         self.connectionStatusLabel.setObjectName(u"connectionStatusLabel")
-        font3 = QFont()
-        font3.setFamilies([u"consolas"])
-        font3.setPointSize(9)
-        self.connectionStatusLabel.setFont(font3)
+        font2 = QFont()
+        font2.setFamilies([u"consolas"])
+        font2.setPointSize(9)
+        font2.setBold(False)
+        font2.setItalic(False)
+        self.connectionStatusLabel.setFont(font2)
         self.connectionStatusLabel.setStyleSheet(u"*\n"
 "{\n"
-"background-color: #ff4a4a;\n"
+"background-color: #cd0f0f;\n"
 "font-family: consolas;\n"
 "border: 1px solid rgb(109, 109, 109);\n"
 "border-radius: 5px;\n"
@@ -673,20 +722,20 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.slideTabWidget = QTabWidget(self.slideFrameContainer)
         self.slideTabWidget.setObjectName(u"slideTabWidget")
-        self.slideTabWidget.setStyleSheet(u"QFrame#samplingChannelsFrame,\n"
-"QFrame#samplingDepthFrame,\n"
-"QFrame#samplingFrequencyFrame,\n"
-"QFrame#samplingModeFrame, \n"
-"QFrame#samplingModeFrame,\n"
-"QFrame#samplingModeFrame,\n"
+        self.slideTabWidget.setStyleSheet(u"QTabBar::tab {\n"
+"  background: #222831;\n"
+"} \n"
+"QTabBar::tab:selected { \n"
+"  background: #31363F;\n"
+"}\n"
+"QTabWidget#slideTabWidget::pane\n"
 "{\n"
-"border: 1px solid rgb(109, 109, 109);\n"
-"border-radius: 7px;\n"
-"padding:5px;\n"
-"padding-bottom:8px\n"
-"}")
+"	border: none;\n"
+"}\n"
+"")
         self.samplingConfigTab = QWidget()
         self.samplingConfigTab.setObjectName(u"samplingConfigTab")
+        self.samplingConfigTab.setStyleSheet(u"")
         self.verticalLayout_9 = QVBoxLayout(self.samplingConfigTab)
         self.verticalLayout_9.setSpacing(0)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
@@ -756,9 +805,9 @@ class Ui_MainWindow(object):
         self.analogModePushButton.setObjectName(u"analogModePushButton")
         self.analogModePushButton.setMinimumSize(QSize(0, 25))
         self.analogModePushButton.setStyleSheet(u"")
-        icon4 = QIcon()
-        icon4.addFile(u":/ButtonIcons/ico/Sine-wave.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.analogModePushButton.setIcon(icon4)
+        icon5 = QIcon()
+        icon5.addFile(u":/ButtonIcons/ico/sine wave.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.analogModePushButton.setIcon(icon5)
 
         self.horizontalLayout_3.addWidget(self.analogModePushButton)
 
@@ -954,21 +1003,21 @@ class Ui_MainWindow(object):
         self.horizontalLayout_16.addWidget(self.triggerChannelComboBox)
 
         self.triggerModeComboBox = QComboBox(self.triggerChannelButtonsFrame)
-        icon5 = QIcon()
-        icon5.addFile(u":/ButtonIcons/ico/UNTRIGGERED.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.triggerModeComboBox.addItem(icon5, "")
         icon6 = QIcon()
-        icon6.addFile(u":/ButtonIcons/ico/RISING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u":/ButtonIcons/ico/UNTRIGGERED.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon6, "")
         icon7 = QIcon()
-        icon7.addFile(u":/ButtonIcons/ico/FALLING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u":/ButtonIcons/ico/RISING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon7, "")
         icon8 = QIcon()
-        icon8.addFile(u":/ButtonIcons/ico/LOW LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u":/ButtonIcons/ico/FALLING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon8, "")
         icon9 = QIcon()
-        icon9.addFile(u":/ButtonIcons/ico/HIGH LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon9.addFile(u":/ButtonIcons/ico/LOW LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon9, "")
+        icon10 = QIcon()
+        icon10.addFile(u":/ButtonIcons/ico/HIGH LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerModeComboBox.addItem(icon10, "")
         self.triggerModeComboBox.setObjectName(u"triggerModeComboBox")
         self.triggerModeComboBox.setMinimumSize(QSize(0, 25))
         self.triggerModeComboBox.setFont(font)
@@ -1001,7 +1050,7 @@ class Ui_MainWindow(object):
         self.triggerTimeoutDoubleSpinBox.setObjectName(u"triggerTimeoutDoubleSpinBox")
         self.triggerTimeoutDoubleSpinBox.setMinimumSize(QSize(80, 20))
         self.triggerTimeoutDoubleSpinBox.setMaximumSize(QSize(80, 16777215))
-        self.triggerTimeoutDoubleSpinBox.setFont(font1)
+        self.triggerTimeoutDoubleSpinBox.setFont(font)
         self.triggerTimeoutDoubleSpinBox.setMinimum(0.300000000000000)
         self.triggerTimeoutDoubleSpinBox.setSingleStep(0.100000000000000)
         self.triggerTimeoutDoubleSpinBox.setValue(0.300000000000000)
@@ -1032,7 +1081,7 @@ class Ui_MainWindow(object):
         self.voltageThresholdDoubleSpinBox.setObjectName(u"voltageThresholdDoubleSpinBox")
         self.voltageThresholdDoubleSpinBox.setMinimumSize(QSize(80, 20))
         self.voltageThresholdDoubleSpinBox.setMaximumSize(QSize(80, 16777215))
-        self.voltageThresholdDoubleSpinBox.setFont(font1)
+        self.voltageThresholdDoubleSpinBox.setFont(font)
         self.voltageThresholdDoubleSpinBox.setMaximum(3.300000000000000)
         self.voltageThresholdDoubleSpinBox.setSingleStep(0.010000000000000)
         self.voltageThresholdDoubleSpinBox.setValue(2.600000000000000)
@@ -1058,7 +1107,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
         self.triggerFrame = QFrame(self.triggerTab)
         self.triggerFrame.setObjectName(u"triggerFrame")
-        self.triggerFrame.setStyleSheet(u"QFrame#triggerAnalysisFrame,\n"
+        self.triggerFrame.setStyleSheet(u"QFrame#triggerAnalysisFrame\n"
 "{\n"
 "border: 1px solid rgb(109, 109, 109);\n"
 "border-radius: 7px;\n"
@@ -1114,10 +1163,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_19.addWidget(self.triggerAnalysisChannelComboBox)
 
         self.triggerAnalysisModeComboBox = QComboBox(self.triggerAnalysisButtonsFrame)
-        self.triggerAnalysisModeComboBox.addItem(icon6, "")
         self.triggerAnalysisModeComboBox.addItem(icon7, "")
         self.triggerAnalysisModeComboBox.addItem(icon8, "")
         self.triggerAnalysisModeComboBox.addItem(icon9, "")
+        self.triggerAnalysisModeComboBox.addItem(icon10, "")
         self.triggerAnalysisModeComboBox.setObjectName(u"triggerAnalysisModeComboBox")
         self.triggerAnalysisModeComboBox.setMinimumSize(QSize(0, 25))
         self.triggerAnalysisModeComboBox.setFont(font)
@@ -1136,20 +1185,22 @@ class Ui_MainWindow(object):
         self.horizontalLayout_20.setContentsMargins(0, 0, 0, 0)
         self.triggerAnalysisGoLeftButton = QPushButton(self.triggerAnalysisButtonsFrame_2)
         self.triggerAnalysisGoLeftButton.setObjectName(u"triggerAnalysisGoLeftButton")
-        self.triggerAnalysisGoLeftButton.setMinimumSize(QSize(0, 30))
-        icon10 = QIcon()
-        icon10.addFile(u":/ButtonIcons/ico/ArrowLeft.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.triggerAnalysisGoLeftButton.setIcon(icon10)
+        self.triggerAnalysisGoLeftButton.setMinimumSize(QSize(0, 25))
+        self.triggerAnalysisGoLeftButton.setMaximumSize(QSize(16777215, 25))
+        icon11 = QIcon()
+        icon11.addFile(u":/ButtonIcons/ico/ArrowLeft.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerAnalysisGoLeftButton.setIcon(icon11)
         self.triggerAnalysisGoLeftButton.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_20.addWidget(self.triggerAnalysisGoLeftButton)
 
         self.triggerAnalysisGoRightButton = QPushButton(self.triggerAnalysisButtonsFrame_2)
         self.triggerAnalysisGoRightButton.setObjectName(u"triggerAnalysisGoRightButton")
-        self.triggerAnalysisGoRightButton.setMinimumSize(QSize(0, 30))
-        icon11 = QIcon()
-        icon11.addFile(u":/ButtonIcons/ico/ArrowRight.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.triggerAnalysisGoRightButton.setIcon(icon11)
+        self.triggerAnalysisGoRightButton.setMinimumSize(QSize(0, 25))
+        self.triggerAnalysisGoRightButton.setMaximumSize(QSize(16777215, 25))
+        icon12 = QIcon()
+        icon12.addFile(u":/ButtonIcons/ico/ArrowRight.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerAnalysisGoRightButton.setIcon(icon12)
         self.triggerAnalysisGoRightButton.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_20.addWidget(self.triggerAnalysisGoRightButton)
@@ -1187,12 +1238,13 @@ class Ui_MainWindow(object):
         sizePolicy6.setVerticalStretch(0)
         sizePolicy6.setHeightForWidth(self.versionLabel.sizePolicy().hasHeightForWidth())
         self.versionLabel.setSizePolicy(sizePolicy6)
-        font4 = QFont()
-        font4.setFamilies([u"Consolas"])
-        font4.setPointSize(10)
-        font4.setBold(False)
-        font4.setUnderline(False)
-        self.versionLabel.setFont(font4)
+        font3 = QFont()
+        font3.setFamilies([u"Consolas"])
+        font3.setPointSize(9)
+        font3.setBold(False)
+        font3.setItalic(False)
+        font3.setUnderline(False)
+        self.versionLabel.setFont(font3)
         self.versionLabel.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
 
         self.verticalLayout.addWidget(self.slideFrameFooter, 0, Qt.AlignVCenter)
@@ -1223,6 +1275,7 @@ class Ui_MainWindow(object):
         self.channel6CheckBox.setText(QCoreApplication.translate("MainWindow", u"6", None))
         self.channel7CheckBox.setText(QCoreApplication.translate("MainWindow", u"7", None))
         self.channel8CheckBox.setText(QCoreApplication.translate("MainWindow", u"8", None))
+        self.gridPushButton.setText("")
         self.cursorPushButton.setText("")
         self.startSamplingPushButton.setText("")
         self.configSliderPushButton.setText("")
@@ -1273,8 +1326,8 @@ class Ui_MainWindow(object):
         self.samplingConfigTab.setAccessibleName(QCoreApplication.translate("MainWindow", u"Muestreo", None))
 #endif // QT_CONFIG(accessibility)
         self.samplingTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Modo de Muestreo", None))
-        self.digitalModePushButton.setText(QCoreApplication.translate("MainWindow", u"Digital", None))
-        self.analogModePushButton.setText(QCoreApplication.translate("MainWindow", u"Anal\u00f3gico", None))
+        self.digitalModePushButton.setText(QCoreApplication.translate("MainWindow", u" Digital", None))
+        self.analogModePushButton.setText(QCoreApplication.translate("MainWindow", u" Anal\u00f3gico", None))
         self.samplingFrequencyLabel.setText(QCoreApplication.translate("MainWindow", u"Frecuencia de Muestreo", None))
         self.samplingFrequencyComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"1 [KHz]", None))
         self.samplingFrequencyComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"2.5 [KHz]", None))

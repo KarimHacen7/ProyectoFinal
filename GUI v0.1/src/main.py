@@ -6,23 +6,18 @@ from PySide6.QtGui import QResizeEvent
 TODO:
     HAY QUE HACER TODA LA GILADA DE LOS CANALES PARA EL CANAL ANALOGICO DIOSSSS
 
-    Cambiar la paleta de colores por una oscura
 
 DOING:  
+    
+    Terminar detalles esteticos
 
-    make grid optional and the lines more discrete
-
-
+    Sacar a la mierda el grid
+    
+    
 HOTFIX:
 
-    Al cambiar de  gatillado, se repite la orden anterior
+    Al cambiar de gatillado, se repite la orden anterior # THIS SEEMS TO BE A FIRMWARE ISSUE
 
-    cambiar lo que usa el buscador para determinar la posicion inicial, el centro del viewport no es lo mas efectivo
-
-    FULL ZOOM SOMETIMES BREAKS THE AXES: UserWarning: constrained_layout not applied because axes 
-sizes collapsed to zero.  Try making figure larger or axes decorations smaller.
-
-    correct margins for scrollbar
 '''
 
 if __name__ == "__main__":

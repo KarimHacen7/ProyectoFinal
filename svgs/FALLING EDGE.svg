@@ -15,17 +15,17 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#ffffff"
+     pagecolor="#d4d4d4"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="2.895"
      inkscape:cx="316.58031"
-     inkscape:cy="150.08636"
+     inkscape:cy="177.72021"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -47,34 +47,34 @@
       <g
          id="g2626">
         <path
-           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="M 121.01966,99.239357 H 106.09992"
-           id="path99-0"
-           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#ffffff;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 145.31709,120.43064 -9.90871,0.0323 v -20.09239 l -10.02206,-0.0323"
+           id="path99"
+           sodipodi:nodetypes="cccc"
            inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\FALLING EDGE.png"
            inkscape:export-xdpi="200"
            inkscape:export-ydpi="200" />
         <path
            sodipodi:type="star"
-           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.472441;stroke-linejoin:round;stroke-opacity:1"
-           id="path1962-7"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.472441;stroke-linejoin:round;stroke-opacity:1"
+           id="path1962"
            inkscape:flatsided="true"
            sodipodi:sides="3"
            sodipodi:cx="339.19733"
            sodipodi:cy="391.37213"
-           sodipodi:r1="24.138718"
+           sodipodi:r1="23.602167"
            sodipodi:r2="9.4157095"
            sodipodi:arg1="-1.5707963"
            sodipodi:arg2="-0.52359875"
            inkscape:rounded="0"
            inkscape:randomized="0"
-           transform="matrix(0,-0.26458333,-0.26458333,0,223.20561,188.75124)"
-           inkscape:transform-center-y="-3.8485464e-06"
-           d="m 339.19733,367.23341 20.90474,36.20808 -41.80949,0 z"
+           transform="matrix(0.26458333,0,0,-0.26458333,45.605749,214.02654)"
+           inkscape:transform-center-x="-2.8693423e-06"
+           inkscape:transform-center-y="1.2456254"
            inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\FALLING EDGE.png"
            inkscape:export-xdpi="200"
            inkscape:export-ydpi="200"
-           inkscape:transform-center-x="-1.2456226" />
+           d="m 339.19733,367.76996 20.44007,35.40326 -40.88015,-1e-5 z" />
       </g>
     </g>
   </g>

@@ -18,6 +18,7 @@ class Plotter():
     timeUnitMultiplier = 1
     timeUnitString = "s"
     plottingInProcess = False
+    isGridOn = False
     xAxisData = []
 
     def __init__(self) -> None:

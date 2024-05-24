@@ -66,6 +66,7 @@ class MainWindow(QMainWindow):
         self.ui.configSliderPushButton.clicked.connect(self.sidePanelSlideAnimation)
         # Cursor selector
         self.ui.cursorPushButton.clicked.connect(self.startStopCursor)
+        self.ui.gridPushButton.clicked.connect(self.startStopGrid)
         # Housekeeping signals
         self.ui.samplingDepthHorizontalSlider.valueChanged.connect(self.updateSamplingDepthLabel)
         self.ui.digitalModePushButton.clicked.connect(self.restrictSettingsDigitalMode)
@@ -129,7 +130,7 @@ class MainWindow(QMainWindow):
     def voltageIsFinished(self, code):
         if code == 1:
             self.ui.connectionStatusLabel.setText("Estado: Configurando...")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f6f7da; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #64a832; font-family: consolas; border: 1px solid #31363F; border-radius: 5px;}")
             self.ui.samplingProgressBar.setValue(5)
         else:
             QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
@@ -137,32 +138,32 @@ class MainWindow(QMainWindow):
     def timeoutIsFinished(self, code):
         if code == 1:
             self.ui.connectionStatusLabel.setText("Estado: Configurado!")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f2f5bc; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #8da832; font-family: consolas; border: 1px solid #31363F; border-radius: 5px;}")
             self.ui.samplingProgressBar.setValue(15)
         else:
             QMessageBox.critical(self, "Error", "Hubo un error al comunicarse con el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
 
     def commandIsAcknowledged(self):
         self.ui.connectionStatusLabel.setText("Estado: Muestreando...")
-        self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f1f5a2; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+        self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #a88932; font-family: consolas; border: 1px solid #31363F; border-radius: 5px;}")
         self.ui.samplingProgressBar.setValue(25)
 
     def dataIsIncoming(self, length:int):
         self.ui.connectionStatusLabel.setText("Estado: Muestreando...")
-        self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #f1f5a2; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+        self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #a88932; font-family: consolas; border: 1px solid #31363F; border-radius: 5px;}")
         progress = 25 + int(0.75*length/(1024*self.samplingSettings.depth))
         self.ui.samplingProgressBar.setValue(progress)
 
     def samplingIsFinished(self, code, data):
         if code == -1 or code == -2:
             self.ui.connectionStatusLabel.setText("Estado: Desconectado")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #ff4a4a; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #cd0f0f; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
             QMessageBox.warning(self, "Desconexión", "Se ha reiniciado o desconectado el periférico", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
         elif code == -3:
             QMessageBox.information(self, "Timeout", "Se ha excedido el tiempo de espera indicado", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
         else:
             self.ui.connectionStatusLabel.setText("Estado: Conectado")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #4af792; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #15984c; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
             self.graphChannels(data)
 
     def threadFinished(self):
@@ -175,10 +176,10 @@ class MainWindow(QMainWindow):
         isConnected = self.communicationModule.checkConnected("VID_2E8A&PID_000A")
         if isConnected:
             self.ui.connectionStatusLabel.setText("Estado: Conectado")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #4af792; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #15984c; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
         else:
             self.ui.connectionStatusLabel.setText("Estado: Desconectado")
-            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #ff4a4a; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
+            self.ui.connectionStatusLabel.setStyleSheet(".QLabel{background-color: #cd0f0f; font-family: consolas; border: 1px solid rgb(109, 109, 109); border-radius: 5px;}")
 
     def updateSamplingDepthLabel(self):
         value = self.ui.samplingDepthHorizontalSlider.value()
@@ -188,7 +189,7 @@ class MainWindow(QMainWindow):
     def restrictSettingsAnalogMode(self):
         self.samplingSettings.mode = SamplingMode.ANALOG
         self.ui.digitalModePushButton.setStyleSheet("QPushButton { background-color: #b3b3b3; color: #525151;}")
-        self.ui.analogModePushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #f6f7fa, stop: 1 #50b0fa); }")
+        self.ui.analogModePushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc); }")
         if self.ui.samplingFrequencyComboBox.count() == 17:
             for i in [16,15,14]:
                 self.ui.samplingFrequencyComboBox.removeItem(i)
@@ -204,7 +205,7 @@ class MainWindow(QMainWindow):
 
     def restrictSettingsDigitalMode(self):
         self.samplingSettings.mode = SamplingMode.DIGITAL
-        self.ui.digitalModePushButton.setStyleSheet("QPushButton {  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #f6f7fa, stop: 1 #50b0fa);}")
+        self.ui.digitalModePushButton.setStyleSheet("QPushButton {  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc);}")
         self.ui.analogModePushButton.setStyleSheet("QPushButton { background-color: #b3b3b3; color: #525151; }")
         if self.ui.samplingFrequencyComboBox.count() == 14:
             for i in [50,100,125]:
@@ -307,7 +308,7 @@ class MainWindow(QMainWindow):
             self.cursorIsActive = True
             for channel in self.plotter.channelPlots:
                 self.cursorCallbackIDs.append(channel.canvas.mpl_connect('motion_notify_event', self.cursorDrawAndCalculate))
-            self.ui.cursorPushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #f6f7fa, stop: 1 #50b0fa); }")
+            self.ui.cursorPushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc); }")
             self.ui.cursorInfoLabel.setVisible(True)
         else:
             self.cursorIsActive = False
@@ -323,6 +324,18 @@ class MainWindow(QMainWindow):
             
             self.ui.cursorPushButton.setStyleSheet("")
             self.ui.cursorInfoLabel.setVisible(False)
+
+    def startStopGrid(self):
+        if self.plotter.edgesBuffer == []:
+            return
+        if self.plotter.isGridOn:
+            self.plotter.isGridOn = False
+            self.ui.gridPushButton.setStyleSheet("")
+            self.drawCanvasesAndAxes(flush=True)
+        else:
+            self.plotter.isGridOn = True
+            self.ui.gridPushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc); }")
+            self.drawCanvasesAndAxes(flush=True)
     
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
@@ -453,7 +466,6 @@ class MainWindow(QMainWindow):
                 scrolledChannel = index 
         
         if event.inaxes:
-            
             index = min(np.searchsorted(self.plotter.xAxisData, event.xdata), len(self.plotter.dataBuffer[scrolledChannel]) - 1)
             
             if index != self.lastCursorIndex:
@@ -534,18 +546,17 @@ class MainWindow(QMainWindow):
     def drawCanvasesAndAxes(self, flush=bool):
         leftLim, rightLim = self.plotter.axisPlot.axes.get_xlim()
         rangeLim = abs(rightLim-leftLim)
-        
         index = np.searchsorted(self.plotter.axisIncrements, rangeLim/25)
         step = self.plotter.axisIncrements[index]
         stringStep=str(step)
         stepDecimals = stringStep[::-1].find('.') if stringStep[::-1].find('.') != -1 else 0
-
         tickStart = np.round(leftLim, decimals=(stepDecimals-1)) if stepDecimals > 0 else np.round(leftLim, decimals=(stepDecimals))
         newTicks = np.arange(start=tickStart, stop=np.round(rightLim, decimals=stepDecimals), step=step)
         newTicks = np.round(newTicks, decimals=stepDecimals)
         newTicks = np.insert(arr=newTicks, obj=0, values=(tickStart-step))
         newTicks = np.insert(arr=newTicks, obj=0, values=(tickStart-(2*step)))
 
+        
         majorTicks = []
         minorTicks = []
         for index, newTick in enumerate(newTicks):
@@ -555,16 +566,31 @@ class MainWindow(QMainWindow):
                 minorTicks.append(newTick)
             else:
                 pass
-        
+        #9ms
         self.plotter.axisPlot.axes.set_xticks(majorTicks, minor=False)
         self.plotter.axisPlot.axes.set_xticks(minorTicks, minor=True)
+        #hasta aca
 
-        for channel in self.plotter.channelPlots:
-            if channel.isVisible:
-                channel.axes.set_xticks(majorTicks, minor=False)
-                channel.axes.grid(visible=True, which='major', axis='x')
+        if self.plotter.isGridOn:
+            if not self.plotter.channelPlots[0].axes.axison:
+                for channel in self.plotter.channelPlots:
+                    channel.axes.set_axis_on()
+                    channel.axes.spines['top'].set_visible(False)
+                    channel.axes.spines['right'].set_visible(False)
+                    channel.axes.spines['left'].set_visible(False)
+                    channel.axes.spines['bottom'].set_visible(False)
+                    channel.axes.tick_params(which='both', bottom=False, top=False, left=False, right=False, labelbottom=False, labelleft=False)
+            for channel in self.plotter.channelPlots:
+                if channel.isVisible:
+                    channel.axes.set_xticks(majorTicks, minor=False)
+                    channel.axes.grid(visible=True, which='major', axis='x', color="#c2c0c0")
+            self.plotter.axisPlot.axes.grid(visible=True, which='major', axis='x', color="#c2c0c0")
+        else:
+            for channel in self.plotter.channelPlots:
+                channel.axes.set_axis_off()
+            self.plotter.axisPlot.axes.grid(False)
 
-        self.plotter.axisPlot.axes.grid(visible=True, which='major', axis='x')
+        
         self.plotter.plottingInProcess = True    
         for channel in self.plotter.channelPlots:
             if channel.isVisible:
@@ -582,9 +608,12 @@ class MainWindow(QMainWindow):
         self.plotter.axisPlot.background = self.plotter.axisPlot.figure.canvas.copy_from_bbox(self.plotter.axisPlot.axes.bbox) 
         self.plotter.plottingInProcess = False
 
+
     #  ---------- SIGNAL ANALYSIS  ----------
 
     def searchAndFocusOnEdges(self, direction:str):
+        self.ui.triggerAnalysisGoLeftButton.setEnabled(False)
+        self.ui.triggerAnalysisGoRightButton.setEnabled(False)
         if self.plotter.edgesBuffer == []:
             return
         
@@ -592,7 +621,6 @@ class MainWindow(QMainWindow):
         leftLim, rightLim = self.plotter.channelPlots[channel].axes.get_xlim()
         rangeLim = (rightLim-leftLim)
         centerLim = leftLim+(rangeLim)/2
-        
         
         index = min(np.searchsorted(self.plotter.xAxisData, centerLim), len(self.plotter.dataBuffer[channel]) - 1)
 
@@ -670,3 +698,5 @@ class MainWindow(QMainWindow):
             if not self.cursorIsActive:
                 self.startStopCursor()
             self.cursorDrawAndCalculate(fakeEvent)
+        self.ui.triggerAnalysisGoLeftButton.setEnabled(True)
+        self.ui.triggerAnalysisGoRightButton.setEnabled(True)

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Play.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.36168631"
+     inkscape:cx="673.23532"
+     inkscape:cy="584.76087"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2190"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,28.045833,0,1 @ F,0,0,1,0,28.045833,0,1 @ F,0,0,1,0,28.045833,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="106"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#00d303;fill-opacity:1;stroke:none;stroke-width:5.66929;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="path858"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="442.37228"
+       sodipodi:cy="421.63608"
+       sodipodi:r1="183.49437"
+       sodipodi:r2="73.311508"
+       sodipodi:arg1="-1.9446539"
+       sodipodi:arg2="-0.89745635"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 397.28308,268.30589 204.60558,163.21489 a 16.192269,16.192269 98.579539 0 1 -4.18394,27.732 l -243.65103,95.58618 a 16.192269,16.192269 38.579539 0 1 -21.92464,-17.4894 L 371.1745,278.54849 a 16.192269,16.192269 158.57954 0 1 26.10858,-10.2426 z"
+       transform="matrix(0.26154929,-0.0399538,0.0399538,0.26154929,-15.503791,18.953715)"
+       inkscape:transform-center-x="-12.728516"
+       inkscape:transform-center-y="0.047121179"
+       inkscape:path-effect="#path-effect2190"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\play.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+  </g>
+</svg>

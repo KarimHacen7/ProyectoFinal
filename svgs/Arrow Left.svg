@@ -15,17 +15,17 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#ffffff"
+     pagecolor="#bababa"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4467452"
-     inkscape:cx="386.73015"
-     inkscape:cy="539.48683"
+     inkscape:cx="303.78535"
+     inkscape:cy="539.48684"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -43,9 +43,10 @@
        transform="rotate(180,124.42151,124.30129)"
        inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\ArrowLeft.png"
        inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200">
+       inkscape:export-ydpi="200"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1">
       <path
-         style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#ffffff;stroke:#ffffff;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
          d="M 121.01966,99.239357 H 106.09992"
          id="path99-0"
          sodipodi:nodetypes="cc"
@@ -54,7 +55,7 @@
          inkscape:export-ydpi="200" />
       <path
          sodipodi:type="star"
-         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.472441;stroke-linejoin:round;stroke-opacity:1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.472441;stroke-linejoin:round;stroke-opacity:1"
          id="path1962-7"
          inkscape:flatsided="true"
          sodipodi:sides="3"

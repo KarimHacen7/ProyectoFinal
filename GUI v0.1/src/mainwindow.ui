@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>981</width>
-    <height>782</height>
+    <height>757</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -19,7 +19,9 @@
   <property name="font">
    <font>
     <family>Consolas</family>
-    <pointsize>10</pointsize>
+    <pointsize>9</pointsize>
+    <italic>false</italic>
+    <bold>false</bold>
    </font>
   </property>
   <property name="windowTitle">
@@ -27,10 +29,20 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Icons.qrc">
-    <normaloff>:/ButtonIcons/ico/square-wave.svg</normaloff>:/ButtonIcons/ico/square-wave.svg</iconset>
+    <normaloff>:/ButtonIcons/ico/square wave.png</normaloff>:/ButtonIcons/ico/square wave.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">*{
+	color: #EEEEEE;
+	background-color: #222831;
+	font: 9pt &quot;Consolas&quot;;
+}
+.QPushButton, .QComboBox, QDoubleSpinBox
+{
+	background-color: #31363F;
+	color:#EEEEEE
+}
+</string>
   </property>
   <property name="iconSize">
    <size>
@@ -43,11 +55,29 @@
     <font>
      <family>Consolas</family>
      <pointsize>9</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QFrame" name="mainFrame">
+      <property name="styleSheet">
+       <string notr="true">QScrollArea QScrollBar::add-page:vertical
+{
+		background-color:#31363F;
+}
+
+QScrollArea QScrollBar::sub-page:vertical
+{
+		background-color:#31363F;
+}
+
+QScrollArea QScrollBar::handle:disabled
+{
+	background-color:#31363F;
+}</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -153,7 +183,9 @@
                <property name="font">
                 <font>
                  <family>Consolas</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>9</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -264,6 +296,35 @@
            </spacer>
           </item>
           <item>
+           <widget class="QPushButton" name="gridPushButton">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/ButtonIcons/ico/grid.png</normaloff>:/ButtonIcons/ico/grid.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>23</width>
+              <height>23</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="cursorPushButton">
             <property name="minimumSize">
              <size>
@@ -282,7 +343,7 @@
             </property>
             <property name="icon">
              <iconset resource="Icons.qrc">
-              <normaloff>:/ButtonIcons/ico/mouse-crosshair-icon.svg</normaloff>:/ButtonIcons/ico/mouse-crosshair-icon.svg</iconset>
+              <normaloff>:/ButtonIcons/ico/Crosshair.png</normaloff>:/ButtonIcons/ico/Crosshair.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -341,6 +402,10 @@
               <height>30</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">
+</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -350,8 +415,8 @@
             </property>
             <property name="iconSize">
              <size>
-              <width>20</width>
-              <height>20</height>
+              <width>23</width>
+              <height>23</height>
              </size>
             </property>
            </widget>
@@ -361,6 +426,9 @@
        </item>
        <item>
         <widget class="QScrollArea" name="logicAnalyzersScrollArea">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <property name="verticalScrollBarPolicy">
           <enum>Qt::ScrollBarAlwaysOn</enum>
          </property>
@@ -376,7 +444,7 @@
             <x>0</x>
             <y>0</y>
             <width>736</width>
-            <height>684</height>
+            <height>659</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -437,7 +505,16 @@
                  <font>
                   <family>Consolas</family>
                   <pointsize>8</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">*
+{
+
+font: 8pt &quot;Consolas&quot;;
+}</string>
                 </property>
                 <property name="text">
                  <string>Tiempo:</string>
@@ -1298,6 +1375,12 @@
        </item>
        <item>
         <widget class="QScrollBar" name="channelHorizontalScrollBar">
+         <property name="styleSheet">
+          <string notr="true">QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+	background:#31363F;
+}</string>
+         </property>
          <property name="maximum">
           <number>1999</number>
          </property>
@@ -1342,12 +1425,14 @@
              <font>
               <family>consolas</family>
               <pointsize>9</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
              <string notr="true">*
 {
-background-color: #ff4a4a;
+background-color: #cd0f0f;
 font-family: consolas;
 border: 1px solid rgb(109, 109, 109);
 border-radius: 5px;
@@ -1459,18 +1544,17 @@ border-radius: 5px;
        <item>
         <widget class="QTabWidget" name="slideTabWidget">
          <property name="styleSheet">
-          <string notr="true">QFrame#samplingChannelsFrame,
-QFrame#samplingDepthFrame,
-QFrame#samplingFrequencyFrame,
-QFrame#samplingModeFrame, 
-QFrame#samplingModeFrame,
-QFrame#samplingModeFrame,
+          <string notr="true">QTabBar::tab {
+  background: #222831;
+} 
+QTabBar::tab:selected { 
+  background: #31363F;
+}
+QTabWidget#slideTabWidget::pane
 {
-border: 1px solid rgb(109, 109, 109);
-border-radius: 7px;
-padding:5px;
-padding-bottom:8px
-}</string>
+	border: none;
+}
+</string>
          </property>
          <property name="currentIndex">
           <number>0</number>
@@ -1478,6 +1562,9 @@ padding-bottom:8px
          <widget class="QWidget" name="samplingConfigTab">
           <property name="accessibleName">
            <string>Muestreo</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
           </property>
           <attribute name="title">
            <string>Configuración</string>
@@ -1577,7 +1664,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -1621,11 +1710,11 @@ border-radius: 5px;
                        </size>
                       </property>
                       <property name="text">
-                       <string>Digital</string>
+                       <string> Digital</string>
                       </property>
                       <property name="icon">
                        <iconset resource="Icons.qrc">
-                        <normaloff>:/ButtonIcons/ico/square-wave.svg</normaloff>:/ButtonIcons/ico/square-wave.svg</iconset>
+                        <normaloff>:/ButtonIcons/ico/square wave.png</normaloff>:/ButtonIcons/ico/square wave.png</iconset>
                       </property>
                      </widget>
                     </item>
@@ -1641,11 +1730,11 @@ border-radius: 5px;
                        <string notr="true"/>
                       </property>
                       <property name="text">
-                       <string>Analógico</string>
+                       <string> Analógico</string>
                       </property>
                       <property name="icon">
                        <iconset resource="Icons.qrc">
-                        <normaloff>:/ButtonIcons/ico/Sine-wave.svg</normaloff>:/ButtonIcons/ico/Sine-wave.svg</iconset>
+                        <normaloff>:/ButtonIcons/ico/sine wave.png</normaloff>:/ButtonIcons/ico/sine wave.png</iconset>
                       </property>
                      </widget>
                     </item>
@@ -1690,7 +1779,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -1712,7 +1803,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="currentIndex">
@@ -1843,7 +1936,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -1881,7 +1976,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -1930,7 +2027,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -1955,7 +2054,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="currentIndex">
@@ -2015,7 +2116,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2031,7 +2134,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2080,7 +2185,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2138,7 +2245,9 @@ border-radius: 5px;
                       <property name="font">
                        <font>
                         <family>Consolas</family>
-                        <pointsize>10</pointsize>
+                        <pointsize>9</pointsize>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <item>
@@ -2194,7 +2303,9 @@ border-radius: 5px;
                       <property name="font">
                        <font>
                         <family>Consolas</family>
-                        <pointsize>10</pointsize>
+                        <pointsize>9</pointsize>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <item>
@@ -2279,7 +2390,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2311,6 +2424,8 @@ border-radius: 5px;
                     <font>
                      <family>Consolas</family>
                      <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="suffix">
@@ -2359,7 +2474,9 @@ border-radius: 5px;
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="acceptDrops">
@@ -2394,6 +2511,8 @@ border-radius: 5px;
                     <font>
                      <family>Consolas</family>
                      <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="suffix">
@@ -2454,7 +2573,7 @@ border-radius: 5px;
            <item>
             <widget class="QFrame" name="triggerFrame">
              <property name="styleSheet">
-              <string notr="true">QFrame#triggerAnalysisFrame,
+              <string notr="true">QFrame#triggerAnalysisFrame
 {
 border: 1px solid rgb(109, 109, 109);
 border-radius: 7px;
@@ -2516,7 +2635,9 @@ padding-bottom:8px
                    <property name="font">
                     <font>
                      <family>Consolas</family>
-                     <pointsize>10</pointsize>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2574,7 +2695,9 @@ padding-bottom:8px
                       <property name="font">
                        <font>
                         <family>Consolas</family>
-                        <pointsize>10</pointsize>
+                        <pointsize>9</pointsize>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <item>
@@ -2630,7 +2753,9 @@ padding-bottom:8px
                       <property name="font">
                        <font>
                         <family>Consolas</family>
-                        <pointsize>10</pointsize>
+                        <pointsize>9</pointsize>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <item>
@@ -2700,7 +2825,13 @@ padding-bottom:8px
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>30</height>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>25</height>
                        </size>
                       </property>
                       <property name="text">
@@ -2723,7 +2854,13 @@ padding-bottom:8px
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>30</height>
+                        <height>25</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>25</height>
                        </size>
                       </property>
                       <property name="text">
@@ -2811,7 +2948,8 @@ padding-bottom:8px
           <property name="font">
            <font>
             <family>Consolas</family>
-            <pointsize>10</pointsize>
+            <pointsize>9</pointsize>
+            <italic>false</italic>
             <bold>false</bold>
             <underline>false</underline>
            </font>

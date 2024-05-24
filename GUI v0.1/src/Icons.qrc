@@ -1,21 +1,17 @@
 <RCC>
   <qresource prefix="ButtonIcons">
-    <file>../ico/square-wave.svg</file>
+    <file>../ico/grid.png</file>
+    <file>../ico/square wave.png</file>
     <file>../ico/ArrowLeft.png</file>
     <file>../ico/ArrowRight.png</file>
-    <file>../ico/mouse-crosshair-icon.svg</file>
-    <file>../ico/Sine-wave.svg</file>
+    <file>../ico/Crosshair.png</file>
+    <file>../ico/sine wave.png</file>
     <file>../ico/Three stripes.png</file>
     <file>../ico/FALLING EDGE.png</file>
     <file>../ico/HIGH LEVEL.png</file>
     <file>../ico/UNTRIGGERED.png</file>
     <file>../ico/LOW LEVEL.png</file>
-    <file>../ico/Gear-icon.png</file>
     <file>../ico/RISING EDGE.png</file>
     <file>../ico/play.png</file>
-    <file>../ico/stop.png</file>
-  </qresource>
-  <qresource prefix="Logos">
-    <file>../ico/UTN-Paraná.png</file>
   </qresource>
 </RCC>

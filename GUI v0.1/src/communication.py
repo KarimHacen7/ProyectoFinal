@@ -99,6 +99,7 @@ class SamplingWorker(QObject):
     # Returns a bytearray (truncating control messages) containing the sampled data
     # If an error occured, returns -1. For disconnected or unavailable, -2. For hardreset, -3
     def sendSamplingCommand(self, command: str):
+        print(command)
         keep_reading_usb = True
         if self.checkConnected("VID_2E8A&PID_000A"): 
             port_handler = ComPort(vid=0x2E8A, pid=0x000A)
