@@ -37,6 +37,7 @@ class Plotter():
     Convinience method for ensuring data is processed in the right order
     '''
     def processAndPlot(self, rawdata:bytearray, samplingSettings:SamplingSettings) -> None:
+        # DO NOT CHANGE ORDER OF EXECUTION
         if samplingSettings.mode == SamplingMode.DIGITAL:
             self.processRawDigitalData(rawData=rawdata, channelNumber=samplingSettings.channels)
             self.plotDigitalChannels(samplingFrequency=samplingSettings.samplingFrequenciesLUT[samplingSettings.frequency])
@@ -81,6 +82,8 @@ class Plotter():
         self.axisPlot.axes.spines['right'].set_visible(False)
         self.axisPlot.axes.spines['bottom'].set_visible(False)
         self.axisPlot.axes.spines['left'].set_visible(False)
+        self.axisPlot.axes.xaxis.set_major_formatter('{x} %s' %self.timeUnitString)
+        
         
     '''
     Needs documentation
@@ -118,9 +121,11 @@ class Plotter():
         self.channelPlots[0].plottedLine = self.channelPlots[0].axes.plot(self.xAxisData, self.dataBuffer[0], color=self.plotColors[0], linewidth=3)
         self.channelPlots[0].axes.set_xlim(0,self.channelLengthInUnit/10)
         self.channelPlots[0].axes.set_ylim(0,5)
-
+        
+        
         self.channelPlots[0].cursorLine = self.channelPlots[0].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
         self.channelPlots[0].cursorLine.set_visible(False)
+        
 
     ''' 
     This method should get the raw data as a bytearray and the number of channels sampled

@@ -238,17 +238,13 @@ class Ui_MainWindow(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.axisLabel.sizePolicy().hasHeightForWidth())
         self.axisLabel.setSizePolicy(sizePolicy2)
-        self.axisLabel.setMinimumSize(QSize(62, 0))
-        font1 = QFont()
-        font1.setFamilies([u"Consolas"])
-        font1.setPointSize(8)
-        font1.setBold(False)
-        font1.setItalic(False)
-        self.axisLabel.setFont(font1)
+        self.axisLabel.setMinimumSize(QSize(64, 0))
+        self.axisLabel.setMaximumSize(QSize(62, 16777215))
+        self.axisLabel.setFont(font)
         self.axisLabel.setStyleSheet(u"*\n"
 "{\n"
 "\n"
-"font: 8pt \"Consolas\";\n"
+"font: 9pt \"Consolas\";\n"
 "}")
 
         self.horizontalLayout_18.addWidget(self.axisLabel)
@@ -294,8 +290,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.channel1IDLabel = QLabel(self.channel1LabelFrame)
         self.channel1IDLabel.setObjectName(u"channel1IDLabel")
-        self.channel1IDLabel.setMinimumSize(QSize(25, 0))
-        self.channel1IDLabel.setMaximumSize(QSize(50, 16777215))
+        self.channel1IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel1IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_10.addWidget(self.channel1IDLabel)
 
@@ -323,6 +319,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.channel2Frame.sizePolicy().hasHeightForWidth())
         self.channel2Frame.setSizePolicy(sizePolicy)
         self.channel2Frame.setMaximumSize(QSize(16777215, 75))
+        self.channel2Frame.setFont(font)
         self.channel2Frame.setFrameShape(QFrame.StyledPanel)
         self.channel2Frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.channel2Frame)
@@ -341,6 +338,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.channel2IDLabel = QLabel(self.channel2LabelFrame)
         self.channel2IDLabel.setObjectName(u"channel2IDLabel")
+        self.channel2IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel2IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_11.addWidget(self.channel2IDLabel)
 
@@ -386,6 +385,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.channel3IDLabel = QLabel(self.channel3LabelFrame)
         self.channel3IDLabel.setObjectName(u"channel3IDLabel")
+        self.channel3IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel3IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_12.addWidget(self.channel3IDLabel)
 
@@ -431,6 +432,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.channel4IDLabel = QLabel(self.channel4LabelFrame)
         self.channel4IDLabel.setObjectName(u"channel4IDLabel")
+        self.channel4IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel4IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_13.addWidget(self.channel4IDLabel)
 
@@ -476,6 +479,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.channel5IDLabel = QLabel(self.channel5LabelFrame)
         self.channel5IDLabel.setObjectName(u"channel5IDLabel")
+        self.channel5IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel5IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_14.addWidget(self.channel5IDLabel)
 
@@ -521,6 +526,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_15.setContentsMargins(0, 0, 0, 0)
         self.channel6IDLabel = QLabel(self.channel6LabelFrame)
         self.channel6IDLabel.setObjectName(u"channel6IDLabel")
+        self.channel6IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel6IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_15.addWidget(self.channel6IDLabel)
 
@@ -566,6 +573,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
         self.channel7IDLabel = QLabel(self.channel7LabelFrame)
         self.channel7IDLabel.setObjectName(u"channel7IDLabel")
+        self.channel7IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel7IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_16.addWidget(self.channel7IDLabel)
 
@@ -611,6 +620,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.channel8IDLabel = QLabel(self.channel8LabelFrame)
         self.channel8IDLabel.setObjectName(u"channel8IDLabel")
+        self.channel8IDLabel.setMinimumSize(QSize(62, 0))
+        self.channel8IDLabel.setMaximumSize(QSize(62, 16777215))
 
         self.verticalLayout_18.addWidget(self.channel8IDLabel)
 
@@ -663,12 +674,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setContentsMargins(0, 5, 0, 0)
         self.connectionStatusLabel = QLabel(self.footerMainFrame)
         self.connectionStatusLabel.setObjectName(u"connectionStatusLabel")
-        font2 = QFont()
-        font2.setFamilies([u"consolas"])
-        font2.setPointSize(9)
-        font2.setBold(False)
-        font2.setItalic(False)
-        self.connectionStatusLabel.setFont(font2)
+        font1 = QFont()
+        font1.setFamilies([u"consolas"])
+        font1.setPointSize(9)
+        font1.setBold(False)
+        font1.setItalic(False)
+        self.connectionStatusLabel.setFont(font1)
         self.connectionStatusLabel.setStyleSheet(u"*\n"
 "{\n"
 "background-color: #cd0f0f;\n"
@@ -1222,15 +1233,15 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_21.addWidget(self.triggerAnalysisReferenceLabel)
 
-        self.lastCursorRadioButton = QRadioButton(self.triggerAnalysisFrame)
-        self.lastCursorRadioButton.setObjectName(u"lastCursorRadioButton")
-
-        self.verticalLayout_21.addWidget(self.lastCursorRadioButton)
-
         self.visorCenterRadioButton = QRadioButton(self.triggerAnalysisFrame)
         self.visorCenterRadioButton.setObjectName(u"visorCenterRadioButton")
 
         self.verticalLayout_21.addWidget(self.visorCenterRadioButton)
+
+        self.lastCursorRadioButton = QRadioButton(self.triggerAnalysisFrame)
+        self.lastCursorRadioButton.setObjectName(u"lastCursorRadioButton")
+
+        self.verticalLayout_21.addWidget(self.lastCursorRadioButton)
 
 
         self.verticalLayout_4.addWidget(self.triggerAnalysisFrame)
@@ -1343,13 +1354,13 @@ class Ui_MainWindow(object):
         sizePolicy6.setVerticalStretch(0)
         sizePolicy6.setHeightForWidth(self.versionLabel.sizePolicy().hasHeightForWidth())
         self.versionLabel.setSizePolicy(sizePolicy6)
-        font3 = QFont()
-        font3.setFamilies([u"Consolas"])
-        font3.setPointSize(9)
-        font3.setBold(False)
-        font3.setItalic(False)
-        font3.setUnderline(False)
-        self.versionLabel.setFont(font3)
+        font2 = QFont()
+        font2.setFamilies([u"Consolas"])
+        font2.setPointSize(9)
+        font2.setBold(False)
+        font2.setItalic(False)
+        font2.setUnderline(False)
+        self.versionLabel.setFont(font2)
         self.versionLabel.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
 
         self.verticalLayout.addWidget(self.slideFrameFooter, 0, Qt.AlignVCenter)
@@ -1385,7 +1396,7 @@ class Ui_MainWindow(object):
         self.configSliderPushButton.setText("")
         self.axisLabel.setText(QCoreApplication.translate("MainWindow", u"Tiempo:", None))
         self.channel1IDLabel.setText(QCoreApplication.translate("MainWindow", u"Canal 1", None))
-        self.channel1ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.channel1ProtocolLabel.setText(QCoreApplication.translate("MainWindow", u"asd", None))
 #if QT_CONFIG(accessibility)
         self.channel1GraphicsView.setAccessibleName(QCoreApplication.translate("MainWindow", u"Canal 1", None))
 #endif // QT_CONFIG(accessibility)
@@ -1500,8 +1511,8 @@ class Ui_MainWindow(object):
         self.triggerAnalysisGoLeftButton.setText("")
         self.triggerAnalysisGoRightButton.setText("")
         self.triggerAnalysisReferenceLabel.setText(QCoreApplication.translate("MainWindow", u"Referencia:", None))
-        self.lastCursorRadioButton.setText(QCoreApplication.translate("MainWindow", u"\u00daltimo Cursor", None))
         self.visorCenterRadioButton.setText(QCoreApplication.translate("MainWindow", u"Centro del Visor", None))
+        self.lastCursorRadioButton.setText(QCoreApplication.translate("MainWindow", u"\u00daltimo Cursor", None))
         self.analogYLimEditTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Ajustar Eje Y", None))
         self.topYLimLabel.setText(QCoreApplication.translate("MainWindow", u"L\u00edmite Sup.", None))
         self.topYLimDoubleSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" [V]", None))

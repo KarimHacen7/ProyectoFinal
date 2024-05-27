@@ -1,7 +1,7 @@
 from settings import SamplingSettings, SamplingMode
 from communication import CommunicationModule, SamplingWorker
 from plotting import Plotter
-from PySide6.QtWidgets import  QMainWindow, QMessageBox, QGraphicsScene, QGraphicsView,  QCheckBox
+from PySide6.QtWidgets import  QMainWindow, QLabel, QMessageBox, QGraphicsScene, QGraphicsView,  QCheckBox
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
 from matplotlib.backend_bases import MouseEvent, FigureCanvasBase
@@ -102,6 +102,11 @@ class MainWindow(QMainWindow):
         self.statusLabelTimer.timeout.connect(self.checkConnectedStatusAndShowInLabel)
         self.statusLabelTimer.start(500)
         self.ui.cursorInfoLabel.setVisible(False)
+        for item in dir(self.ui):
+            ref = getattr(self.ui, item)
+            if isinstance(ref, QLabel) and (item.find("Protocol") != -1):
+                ref.setVisible(False)
+        self.ui.triggerFrame.setVisible(False)
         
 
     # ---------- THREADING -- START SAMPLING ----------
@@ -203,6 +208,7 @@ class MainWindow(QMainWindow):
         
         if self.ui.triggerChannelComboBox.count() == 8:
             for i in range(8, 0, -1):
+                print(i)
                 self.ui.triggerChannelComboBox.removeItem(i)
             self.ui.triggerChannelComboBox.setItemText(0, "8")
 
@@ -237,8 +243,9 @@ class MainWindow(QMainWindow):
         bits = 8*1024*self.ui.samplingDepthHorizontalSlider.value()
         bitrate = pow(2, self.ui.samplingChannelsComboBox.currentIndex()) * self.samplingSettings.samplingFrequenciesLUT[self.ui.samplingFrequencyComboBox.currentIndex()]
         samplingTime = bits/bitrate
-        if self.samplingSettings.mode == SamplingMode.ANALOG:
+        if self.selectedSamplingMode == SamplingMode.ANALOG:
             samplingTime /= 8 
+            pass
         infoString = ""
         if samplingTime < 1e-9:
             infoString = "menor a 1 [ns]"
@@ -273,7 +280,7 @@ class MainWindow(QMainWindow):
             for i in range(self.samplingSettings.channels):
                 self.ui.triggerAnalysisChannelComboBox.addItem(str(i+1))
         elif self.samplingSettings.mode == SamplingMode.ANALOG:
-            self.ui.triggerChannelComboBox.addItem("8")
+            self.ui.triggerAnalysisChannelComboBox.addItem("8")
 
 
     # ---------- USER INPUT ----------
@@ -334,7 +341,7 @@ class MainWindow(QMainWindow):
     def graphChannels(self, data):
         self.plotter.processAndPlot(rawdata=data, samplingSettings=self.samplingSettings)
         self.drawCanvasesAndAxes(flush=False)
-        self.ui.axisLabel.setText("Tiempo[%s]" %self.plotter.timeUnitString)
+        self.ui.triggerFrame.setVisible(True)
         
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True
@@ -351,15 +358,14 @@ class MainWindow(QMainWindow):
             self.ui.triggerAnalysisFrame.setVisible(False)
             self.ui.analogYLimEditFrame.setVisible(True)
         
-        # CAMBIAR ESTA WEA POR QGBCHANNELLIST
-        for channelNumber in range(1, 9):
-            ref = getattr(self.ui, "channel" + str(channelNumber) + "CheckBox")
-            if channelNumber in range(1, self.samplingSettings.channels+1):
-                ref.setChecked(True)
-                ref.setEnabled(True)
+
+        for checkbox in self.QCBChannelsList:
+            if int(checkbox.text()) in range(1, self.samplingSettings.channels+1):
+                checkbox.setChecked(True)
+                checkbox.setEnabled(True)
             else:
-                ref.setChecked(False)
-                ref.setEnabled(False)
+                checkbox.setChecked(False)
+                checkbox.setEnabled(False)
         
         self.ui.channelHorizontalScrollBar.setMaximum(self.plotter.channelLengthInSamples)
         self.ui.channelHorizontalScrollBar.blockSignals(True)
@@ -418,7 +424,7 @@ class MainWindow(QMainWindow):
             rightLim = self.plotter.channelLengthInUnit
 
         # hacer esto mas claro
-        if abs(leftLim-rightLim) < (15*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])):
+        if abs(leftLim-rightLim) < (20*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])):
             return
 
         # Tarda 1 ms
@@ -476,7 +482,6 @@ class MainWindow(QMainWindow):
             
             if index != self.lastCursorIndex:
                 self.lastCursorIndex = index
-                print(self.plotter.xAxisData[self.lastCursorIndex])
                 for channel in self.plotter.channelPlots:
                     channel.cursorLine.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]]) 
                     channel.cursorLine.set_visible(True)
@@ -554,7 +559,12 @@ class MainWindow(QMainWindow):
         self.ui.channelHorizontalScrollBar.blockSignals(False)
 
     def drawCanvasesAndAxes(self, flush=bool):
-        leftLim, rightLim = self.plotter.axisPlot.axes.get_xlim()
+        
+        if self.samplingSettings.mode == SamplingMode.ANALOG:
+            leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
+        else:
+            leftLim, rightLim = self.plotter.axisPlot.axes.get_xlim()
+        
         rangeLim = abs(rightLim-leftLim)
         index = np.searchsorted(self.plotter.axisIncrements, rangeLim/25)
         step = self.plotter.axisIncrements[index]
@@ -576,11 +586,15 @@ class MainWindow(QMainWindow):
                 minorTicks.append(newTick)
             else:
                 pass
-        #9ms
-        self.plotter.axisPlot.axes.set_xticks(majorTicks, minor=False)
-        self.plotter.axisPlot.axes.set_xticks(minorTicks, minor=True)
-        #hasta aca
-
+        
+        if self.samplingSettings.mode == SamplingMode.ANALOG:
+            self.plotter.channelPlots[0].axes.set_xticks(majorTicks, minor=False)
+            self.plotter.channelPlots[0].axes.set_xticks(minorTicks, minor=True)
+            self.plotter.channelPlots[0].axes.xaxis.set_major_formatter('{x} %s' %self.plotter.timeUnitString)
+        else:
+            self.plotter.axisPlot.axes.set_xticks(majorTicks, minor=False)
+            self.plotter.axisPlot.axes.set_xticks(minorTicks, minor=True)
+            self.plotter.axisPlot.axes.xaxis.set_major_formatter('{x} %s' %self.plotter.timeUnitString)
         
         self.plotter.plottingInProcess = True    
         for channel in self.plotter.channelPlots:
@@ -706,7 +720,7 @@ class MainWindow(QMainWindow):
 
             fakeEvent = MouseEvent(name = 'motion_notify_event', canvas=self.plotter.channelPlots[channel].canvas, x=0, y=0)
             fakeEvent.xdata = centerLim
-            print(centerLim)
+
             fakeEvent.inaxes = self.plotter.channelPlots[channel].axes
             if not self.cursorIsActive:
                 self.startStopCursor()

@@ -473,14 +473,20 @@ QScrollArea QScrollBar::handle:disabled
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>62</width>
+                  <width>64</width>
                   <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>62</width>
+                  <height>16777215</height>
                  </size>
                 </property>
                 <property name="font">
                  <font>
                   <family>Consolas</family>
-                  <pointsize>8</pointsize>
+                  <pointsize>9</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
                  </font>
@@ -489,7 +495,7 @@ QScrollArea QScrollBar::handle:disabled
                  <string notr="true">*
 {
 
-font: 8pt &quot;Consolas&quot;;
+font: 9pt &quot;Consolas&quot;;
 }</string>
                 </property>
                 <property name="text">
@@ -601,13 +607,13 @@ font: 8pt &quot;Consolas&quot;;
                   <widget class="QLabel" name="channel1IDLabel">
                    <property name="minimumSize">
                     <size>
-                     <width>25</width>
+                     <width>62</width>
                      <height>0</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>50</width>
+                     <width>62</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -619,7 +625,7 @@ font: 8pt &quot;Consolas&quot;;
                  <item>
                   <widget class="QLabel" name="channel1ProtocolLabel">
                    <property name="text">
-                    <string>TextLabel</string>
+                    <string>asd</string>
                    </property>
                   </widget>
                  </item>
@@ -658,6 +664,14 @@ font: 8pt &quot;Consolas&quot;;
                <width>16777215</width>
                <height>75</height>
               </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Consolas</family>
+               <pointsize>9</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
              </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
@@ -713,6 +727,18 @@ font: 8pt &quot;Consolas&quot;;
                  </property>
                  <item>
                   <widget class="QLabel" name="channel2IDLabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>62</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>62</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Canal 2</string>
                    </property>
@@ -815,6 +841,18 @@ font: 8pt &quot;Consolas&quot;;
                  </property>
                  <item>
                   <widget class="QLabel" name="channel3IDLabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>62</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>62</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Canal 3</string>
                    </property>
@@ -917,6 +955,18 @@ font: 8pt &quot;Consolas&quot;;
                  </property>
                  <item>
                   <widget class="QLabel" name="channel4IDLabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>62</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>62</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Canal 4</string>
                    </property>
@@ -1019,6 +1069,18 @@ font: 8pt &quot;Consolas&quot;;
                  </property>
                  <item>
                   <widget class="QLabel" name="channel5IDLabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>62</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>62</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Canal 5</string>
                    </property>
@@ -1121,6 +1183,18 @@ font: 8pt &quot;Consolas&quot;;
                  </property>
                  <item>
                   <widget class="QLabel" name="channel6IDLabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>62</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>62</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Canal 6</string>
                    </property>
@@ -1223,6 +1297,18 @@ font: 8pt &quot;Consolas&quot;;
                  </property>
                  <item>
                   <widget class="QLabel" name="channel7IDLabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>62</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>62</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Canal 7</string>
                    </property>
@@ -1325,6 +1411,18 @@ font: 8pt &quot;Consolas&quot;;
                  </property>
                  <item>
                   <widget class="QLabel" name="channel8IDLabel">
+                   <property name="minimumSize">
+                    <size>
+                     <width>62</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>62</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>Canal 8</string>
                    </property>
@@ -2896,16 +2994,16 @@ padding-bottom:8px
                   </widget>
                  </item>
                  <item>
-                  <widget class="QRadioButton" name="lastCursorRadioButton">
+                  <widget class="QRadioButton" name="visorCenterRadioButton">
                    <property name="text">
-                    <string>Último Cursor</string>
+                    <string>Centro del Visor</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QRadioButton" name="visorCenterRadioButton">
+                  <widget class="QRadioButton" name="lastCursorRadioButton">
                    <property name="text">
-                    <string>Centro del Visor</string>
+                    <string>Último Cursor</string>
                    </property>
                   </widget>
                  </item>
