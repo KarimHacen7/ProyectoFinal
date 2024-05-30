@@ -4,15 +4,23 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QResizeEvent
 '''
 TODO:
-    Poner doble cursor para ver o medir el delta tiempo
+
+    SPI Decode
+
+    UART Decode
+
+    I2C Decode
+
+    simple binary decode (only change on edges)
 
 DOING:  
-    Al cambiar de gatillado, se repite la orden anterior    # THIS SEEMS TO BE A FIRMWARE ISSUE
-                                                            # ANALOG MODE IS NOT AFFECTED BY THIS
+    Poner doble cursor para ver o medir el delta tiempo
 
 HOTFIX:
-    comportamiento barra scroll en los extremos
-    restablecer datos de configuracion al cambiar entre analogico y digital
+
+    Al cambiar de gatillado, se repite la orden anterior    # Firmware race condition for interrupt
+                                                            # Hardware noise/parasitic capacitance
+                                                            # ANALOG MODE IS NOT AFFECTED BY THIS, either is digital mode if first untriggered sampling is at or below 25mhz
 '''
 
 if __name__ == "__main__":

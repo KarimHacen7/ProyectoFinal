@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
 
-include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
-include($ENV{PICO_SDK_PATH}/tools/CMakeLists.txt)
+include($ENV{PICO_SDK_PATH}\\external\\pico_sdk_import.cmake)
+include($ENV{PICO_SDK_PATH}\\tools\\CMakeLists.txt)
 
 # set the project name
 project(Firmware_v0.1 C CXX ASM)

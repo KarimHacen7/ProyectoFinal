@@ -33,7 +33,6 @@ int main(void)
     // Check their definitions for more information about them, in their respective header files
     // samplingBuffer is where the samples will be stored after capture
     uint32_t i = 0;
-    uint32_t TEMPSKERE = 0;
     USBInput usbInput = { .position = 0, .lastInput = 0, .keepReading = true};
     strcpy(usbInput.buffer, USB_INPUT_BUFFER_DEFAULT);
     SamplingSettings samplingSettings = {.mode = Digital, .triggerMode=0, .frequency = 0, .depth = 1, .compareVoltage = 1.65, .timeout=1,.order = None };
@@ -44,7 +43,7 @@ int main(void)
     // Check if reset cause was reset button (used for halting sampling)
     if(vreg_and_chip_reset_hw->chip_reset & (1 << 16))
     {
-        printf(CMD_HARD_RESET);
+    //    printf(CMD_HARD_RESET);
     }
     // LED Indicator
     gpio_init(LED_PIN);
@@ -78,6 +77,7 @@ int main(void)
         // Sample
         else if(samplingSettings.order == Sample)
         {
+            
             // Check if sampling is made through On-Board ADC or PIO
             if(samplingSettings.mode == Analog && samplingSettings.frequency <=8)
             {
@@ -191,7 +191,7 @@ int main(void)
                 else 
                 {
                     dth.programOffset = pio_add_program(dth.PIOPeripheral, &triggered_analog_program);
-                    gpio_put(25,1);
+                    
                     switch (samplingSettings.triggerMode)
                     {
                         case 1:
@@ -241,11 +241,9 @@ int main(void)
                 printf(CMD_END);
                 stdio_flush();   
             }
-            sleep_ms(100);
         }
         strcpy(usbInput.buffer, USB_INPUT_BUFFER_DEFAULT);
         gpio_put(LED_PIN, 0);
         cancel_alarm(triggerTimeoutAlarm); // Just in case
-        sleep_ms(100);
     }
 }

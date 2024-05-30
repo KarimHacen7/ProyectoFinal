@@ -105,7 +105,7 @@ class SamplingWorker(QObject):
             port_handler.open()
         else:
             return -1, bytearray()
-        
+        usb_input_buffer = bytes()
         return_bytearray = bytearray()
         
         if port_handler.is_open:
@@ -127,6 +127,7 @@ class SamplingWorker(QObject):
                 self.dataIncoming.emit(len(usb_input_buffer))
                 sleep(0.1)
                 while keep_reading_usb:
+                    usb_input_buffer = bytes()  
                     if self.checkConnected("VID_2E8A&PID_000A"):
                         usb_input_buffer = port_handler.read()
                     else:

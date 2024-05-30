@@ -1,45 +1,73 @@
-import matplotlib.pyplot as plt
-import numpy as np
+import wmi
+from winusbcdc import ComPort
+from time import sleep
 
-x = np.linspace(0, 2 * np.pi, 100)
+def checkConnected(device_ID_check: str):
+        # Connect to the WMI service
+        c = wmi.WMI()
+        # Define the WQL query to retrieve USB devices
+        query = "SELECT DeviceID FROM Win32_USBHub"
+        # Execute the query
+        usb_devices_DeviceIDs = c.query(query)
 
-fig, ax = plt.subplots()
+        for device in usb_devices_DeviceIDs:
+            if device.ole_object.DeviceID.find(device_ID_check) >= 0:
+                return True
+            else:
+                continue
+        return False
 
-# animated=True tells matplotlib to only draw the artist when we
-# explicitly request it
-(ln,) = ax.plot(x, np.sin(x), animated=True)
+def sendSamplingCommand(command: str):
+    keep_reading_usb = True
+    if checkConnected("VID_2E8A&PID_000A"): 
+        port_handler = ComPort(vid=0x2E8A, pid=0x000A)
+        port_handler.open()
+    else:
+        return -1, bytearray()
+    
+    return_bytearray = bytearray()
+    
+    if port_handler.is_open:
+        # Send command
+        port_handler.write(command.encode(encoding="ascii"))
+        sleep(0.01)
+        # And check if response acknowledged
+        usb_input_buffer = port_handler.read()
+        if usb_input_buffer.startswith(b'#ACK;'):
 
-# make sure the window is raised, but the script keeps going
-plt.show(block=False)
+            usb_input_buffer = usb_input_buffer.removeprefix(b'#ACK;')
+            # If we got an immediate response...
+            if usb_input_buffer.endswith(b'#END;'):
+                usb_input_buffer = usb_input_buffer.removesuffix(b'#END;')
+                return_bytearray.extend(usb_input_buffer)
+                port_handler.close()
+                return 0, return_bytearray
+            
+            sleep(0.1)
+            while keep_reading_usb:
+                if checkConnected("VID_2E8A&PID_000A"):
+                    usb_input_buffer = port_handler.read()
+                else:
+                    return -1, bytearray()
+                if usb_input_buffer.endswith(b'#HARDRESET;'):
+                    port_handler.close()
+                    return -2, bytearray()
+                elif usb_input_buffer is None:
+                    continue
+                elif usb_input_buffer.endswith(b'#TRIGTIMEOUT;'):
+                    port_handler.close()
+                    return -3, bytearray()
+                elif usb_input_buffer.endswith(b'#END;'):
+                    
+                    port_handler.close()
+                    usb_input_buffer.removesuffix(b'#END;')
+                    return 0, return_bytearray
+                else:
+                    print(usb_input_buffer)
+                    return_bytearray.extend(usb_input_buffer)
+                    keep_reading_usb = True
+    else:
+        return -1, bytearray()
 
-# stop to admire our empty window axes and ensure it is rendered at
-# least once.
-#
-# We need to fully draw the figure at its final size on the screen
-# before we continue on so that :
-#  a) we have the correctly sized and drawn background to grab
-#  b) we have a cached renderer so that ``ax.draw_artist`` works
-# so we spin the event loop to let the backend process any pending operations
-plt.pause(2.5)
 
-# get copy of entire figure (everything inside fig.bbox) sans animated artist
-bg = fig.canvas.copy_from_bbox(fig.bbox)
-# draw the animated artist, this uses a cached renderer
-ax.draw_artist(ln)
-# show the result to the screen, this pushes the updated RGBA buffer from the
-# renderer to the GUI framework so you can see it
-fig.canvas.blit(fig.bbox)
-
-for j in range(100):
-    # reset the background back in the canvas state, screen unchanged
-    fig.canvas.restore_region(bg)
-    # update the artist, neither the canvas state nor the screen have changed
-    ln.set_ydata(np.sin(x + (j / 100) * np.pi))
-    # re-render the artist, updating the canvas state, but not the screen
-    ax.draw_artist(ln)
-    # copy the image to the GUI state, but screen might not be changed yet
-    fig.canvas.blit(fig.bbox)
-    # flush any pending GUI events, re-painting the screen if needed
-    fig.canvas.flush_events()
-    # you can put a pause in if you want to slow things down
-    plt.pause(.1)
+print(sendSamplingCommand("#D31810020;"))

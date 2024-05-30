@@ -4,9 +4,10 @@ from plotting import Plotter
 from PySide6.QtWidgets import  QMainWindow, QLabel, QMessageBox, QGraphicsScene, QGraphicsView,  QCheckBox
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
+from protocolAnalyzerUI import analyzerUI
 from matplotlib.backend_bases import MouseEvent, FigureCanvasBase
 import numpy as np
-import time
+
 
 class MainWindow(QMainWindow):
     initialBuffer = bytearray()
@@ -29,10 +30,13 @@ class MainWindow(QMainWindow):
     for i in range(8):
         QGSChannelsList.append(QGraphicsScene())
     QGSAxis = QGraphicsScene()
+    
     def __init__(self):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.analyzerUI = analyzerUI()
+        self.analyzerUI.show()
         # Get a list of QGraphicsView for the channels
         for item in dir(self.ui):
             ref = getattr(self.ui, item)
@@ -208,7 +212,6 @@ class MainWindow(QMainWindow):
         
         if self.ui.triggerChannelComboBox.count() == 8:
             for i in range(8, 0, -1):
-                print(i)
                 self.ui.triggerChannelComboBox.removeItem(i)
             self.ui.triggerChannelComboBox.setItemText(0, "8")
 
@@ -342,6 +345,8 @@ class MainWindow(QMainWindow):
         self.plotter.processAndPlot(rawdata=data, samplingSettings=self.samplingSettings)
         self.drawCanvasesAndAxes(flush=False)
         self.ui.triggerFrame.setVisible(True)
+
+        self.binaryDecoder(self.plotter.dataBuffer)
         
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True
@@ -377,6 +382,8 @@ class MainWindow(QMainWindow):
         self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
         self.restrictAnalysisOptions()
+
+        
 
     def resizeEvent(self, event):
         self.resizeSignal.emit()
@@ -727,3 +734,6 @@ class MainWindow(QMainWindow):
             self.cursorDrawAndCalculate(fakeEvent)
         self.ui.triggerAnalysisGoLeftButton.setEnabled(True)
         self.ui.triggerAnalysisGoRightButton.setEnabled(True)
+
+    
+            

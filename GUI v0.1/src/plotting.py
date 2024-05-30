@@ -10,7 +10,7 @@ import matplotlib.style as mplstyle
 
 class Plotter():
     plotColors = ['#ff0000', '#ff8000', '#e6e600', '#33cc33', '#0033cc', '#c339fa', '#669999', '#e6e6e6', '']
-    axisIncrements = [2e-3,5e-3,10e-3 ,2e-2,5e-2,10e-2, 2e-1,5e-1,1,2,5,10,20,25,30,50,60,70,100]
+    axisIncrements = [2e-4,5e-4,10e-4,2e-3,5e-3,10e-3 ,2e-2,5e-2,10e-2, 2e-1,5e-1,1,2,5,10,20,25,30,50,60,70,100]
     dataBuffer = []
     edgesBuffer = []
     channelLengthInSamples = 0

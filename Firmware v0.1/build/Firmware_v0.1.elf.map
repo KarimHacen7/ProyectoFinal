@@ -1182,9 +1182,9 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .data          0x00000000        0x0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .text          0x00000000        0x0 C:\Users\karim\AppData\Local\Temp\ccEgYPpc.o
- .data          0x00000000        0x0 C:\Users\karim\AppData\Local\Temp\ccEgYPpc.o
- .bss           0x00000000        0x0 C:\Users\karim\AppData\Local\Temp\ccEgYPpc.o
+ .text          0x00000000        0x0 C:\Users\karim\AppData\Local\Temp\ccMLe7Rv.o
+ .data          0x00000000        0x0 C:\Users\karim\AppData\Local\Temp\ccMLe7Rv.o
+ .bss           0x00000000        0x0 C:\Users\karim\AppData\Local\Temp\ccMLe7Rv.o
  .data          0x00000000        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libc.a(lib_a-calloc.o)
@@ -1503,11 +1503,11 @@ LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\karim\AppData\Local\Temp\ccEgYPpc.o
+ .boot2         0x10000000      0x100 C:\Users\karim\AppData\Local\Temp\ccMLe7Rv.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x8ba0
+.text           0x10000100     0x8b70
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1574,722 +1574,722 @@ LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/
  .text.set_sys_clock_khz.constprop.0.isra.0
                 0x10000308       0x34 CMakeFiles/Firmware_v0.1.dir/main.c.obj
  .text.startup.main
-                0x1000033c      0xaac CMakeFiles/Firmware_v0.1.dir/main.c.obj
+                0x1000033c      0xa7c CMakeFiles/Firmware_v0.1.dir/main.c.obj
                 0x1000033c                main
  .text.getSettingsFromInput
-                0x10000de8      0x420 CMakeFiles/Firmware_v0.1.dir/configuration.c.obj
-                0x10000de8                getSettingsFromInput
+                0x10000db8      0x420 CMakeFiles/Firmware_v0.1.dir/configuration.c.obj
+                0x10000db8                getSettingsFromInput
  .text.input_timeout_alarm_callback
-                0x10001208       0x10 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
-                0x10001208                input_timeout_alarm_callback
+                0x100011d8       0x10 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
+                0x100011d8                input_timeout_alarm_callback
  .text.getInputString
-                0x10001218      0x178 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
-                0x10001218                getInputString
+                0x100011e8      0x178 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
+                0x100011e8                getInputString
  .text.writeDACVoltage
-                0x10001390       0xd0 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
-                0x10001390                writeDACVoltage
+                0x10001360       0xd0 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
+                0x10001360                writeDACVoltage
  .text.initialiseDAC
-                0x10001460       0x40 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
-                0x10001460                initialiseDAC
+                0x10001430       0x40 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
+                0x10001430                initialiseDAC
  .text.setPIOSamplingHardware
-                0x100014a0       0x5c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x100014a0                setPIOSamplingHardware
+                0x10001470       0x5c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x10001470                setPIOSamplingHardware
  .text.resetPIOSamplingHardware
-                0x100014fc       0x50 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x100014fc                resetPIOSamplingHardware
+                0x100014cc       0x50 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x100014cc                resetPIOSamplingHardware
  .text.setSlowADCSamplingHardware
-                0x1000154c       0xb4 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x1000154c                setSlowADCSamplingHardware
+                0x1000151c       0xb4 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x1000151c                setSlowADCSamplingHardware
  .text.resetSlowADCSamplingHardware
-                0x10001600       0x74 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x10001600                resetSlowADCSamplingHardware
+                0x100015d0       0x74 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x100015d0                resetSlowADCSamplingHardware
  .text.triggeredTimeoutAlarmCallback
-                0x10001674       0x5c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x10001674                triggeredTimeoutAlarmCallback
+                0x10001644       0x5c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x10001644                triggeredTimeoutAlarmCallback
  .text.slowADCTriggerCallback
-                0x100016d0       0x2c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x100016d0                slowADCTriggerCallback
+                0x100016a0       0x2c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x100016a0                slowADCTriggerCallback
  .text.stopTriggerTimeoutAlarm
-                0x100016fc       0x2c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x100016fc                stopTriggerTimeoutAlarm
+                0x100016cc       0x2c CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x100016cc                stopTriggerTimeoutAlarm
  .text.set_sys_clock_pll
-                0x10001728       0x78 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x10001728                set_sys_clock_pll
+                0x100016f8       0x78 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x100016f8                set_sys_clock_pll
  .text.check_sys_clock_khz
-                0x100017a0      0x17c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x100017a0                check_sys_clock_khz
+                0x10001770      0x17c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x10001770                check_sys_clock_khz
  .text.gpio_default_irq_handler
-                0x1000191c      0x244 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100018ec      0x244 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_set_function
-                0x10001b60       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001b60                gpio_set_function
+                0x10001b30       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001b30                gpio_set_function
  .text.gpio_set_pulls
-                0x10001b90       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001b90                gpio_set_pulls
+                0x10001b60       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001b60                gpio_set_pulls
  .text.gpio_set_irq_enabled
-                0x10001bb4       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001bb4                gpio_set_irq_enabled
+                0x10001b84       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001b84                gpio_set_irq_enabled
  .text.gpio_set_irq_enabled_with_callback
-                0x10001c08       0xb8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001c08                gpio_set_irq_enabled_with_callback
+                0x10001bd8       0xb8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001bd8                gpio_set_irq_enabled_with_callback
  .text.gpio_set_input_enabled
-                0x10001cc0       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001cc0                gpio_set_input_enabled
+                0x10001c90       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001c90                gpio_set_input_enabled
  .text.gpio_init
-                0x10001ce8       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10001ce8                gpio_init
+                0x10001cb8       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10001cb8                gpio_init
  .text.running_on_fpga
-                0x10001d24       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10001d24                running_on_fpga
+                0x10001cf4       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10001cf4                running_on_fpga
  .text.hw_claim_lock
-                0x10001d34       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001d34                hw_claim_lock
+                0x10001d04       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001d04                hw_claim_lock
  .text.hw_claim_unlock
-                0x10001d4c       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001d4c                hw_claim_unlock
+                0x10001d1c       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001d1c                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x10001d60       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001d60                hw_claim_or_assert
+                0x10001d30       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001d30                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x10001da4       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001da4                hw_claim_unused_from_range
+                0x10001d74       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001d74                hw_claim_unused_from_range
  .text.hw_claim_clear
-                0x10001e40       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001e40                hw_claim_clear
+                0x10001e10       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001e10                hw_claim_clear
  .text.spin_locks_reset
-                0x10001e78       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001e78                spin_locks_reset
+                0x10001e48       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10001e48                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10001e94       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001e94                next_striped_spin_lock_num
+                0x10001e64       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10001e64                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x10001eac       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001eac                spin_lock_claim_unused
+                0x10001e7c       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10001e7c                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x10001ed0       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001ed0                irq_set_enabled
+                0x10001ea0       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001ea0                irq_set_enabled
  .text.irq_set_pending
-                0x10001ef4       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001ef4                irq_set_pending
+                0x10001ec4       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001ec4                irq_set_pending
  .text.irq_has_shared_handler
-                0x10001f04       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001f04                irq_has_shared_handler
+                0x10001ed4       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001ed4                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x10001f30       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001f30                irq_get_vtable_handler
+                0x10001f00       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001f00                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10001f40       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001f40                irq_set_exclusive_handler
+                0x10001f10       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001f10                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x10001f94      0x1e4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001f94                irq_add_shared_handler
+                0x10001f64      0x1e4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001f64                irq_add_shared_handler
  .text.irq_remove_handler
-                0x10002178      0x1b0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002178                irq_remove_handler
+                0x10002148      0x1b0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002148                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10002328       0xb4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002328                irq_add_tail_to_free_list
+                0x100022f8       0xb4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100022f8                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x100023dc       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100023dc                irq_init_priorities
+                0x100023ac       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100023ac                irq_init_priorities
  .text.user_irq_claim_unused
-                0x10002400       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002400                user_irq_claim_unused
+                0x100023d0       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100023d0                user_irq_claim_unused
  .text.lock_init
-                0x1000242c       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x1000242c                lock_init
+                0x100023fc       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x100023fc                lock_init
  .text.mutex_init
-                0x1000243c       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x1000243c                mutex_init
+                0x1000240c       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x1000240c                mutex_init
  .text.recursive_mutex_init
-                0x10002458       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10002458                recursive_mutex_init
+                0x10002428       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10002428                recursive_mutex_init
  .text.critical_section_init
-                0x10002474       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10002474                critical_section_init
+                0x10002444       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10002444                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x10002494       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x10002494                critical_section_init_with_lock_num
+                0x10002464       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x10002464                critical_section_init_with_lock_num
  .text.timer_pool_entry_comparator
-                0x100024a8       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x100024a8                timer_pool_entry_comparator
+                0x10002478       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002478                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x100024dc       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x100024ac       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x1000250c      0x104 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x100024dc      0x104 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10002610      0x1c4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x100025e0      0x1c4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x100027d4       0x6c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x100027d4                alarm_pool_init_default
+                0x100027a4       0x6c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x100027a4                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10002840        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002840                alarm_pool_get_default
+                0x10002810        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002810                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10002848      0x184 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002848                alarm_pool_add_alarm_at
+                0x10002818      0x184 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002818                alarm_pool_add_alarm_at
  .text.alarm_pool_cancel_alarm
-                0x100029cc       0x74 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x100029cc                alarm_pool_cancel_alarm
+                0x1000299c       0x74 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000299c                alarm_pool_cancel_alarm
  .text.alarm_pool_core_num
-                0x10002a40        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002a40                alarm_pool_core_num
+                0x10002a10        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002a10                alarm_pool_core_num
  .text.sleep_until
-                0x10002a44       0xc4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002a44                sleep_until
+                0x10002a14       0xc4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002a14                sleep_until
  .text.sleep_ms
-                0x10002b08       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002b08                sleep_ms
+                0x10002ad8       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002ad8                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10002b40       0xd4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
-                0x10002b40                best_effort_wfe_or_timeout
+                0x10002b10       0xd4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_time/time.c.obj
+                0x10002b10                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x10002c14       0xbc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002be4       0xbc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10002cd0       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002cd0                hardware_alarm_claim
+                0x10002ca0       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002ca0                hardware_alarm_claim
  .text.time_us_64
-                0x10002ce8       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002ce8                time_us_64
+                0x10002cb8       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002cb8                time_us_64
  .text.busy_wait_us
-                0x10002cfc       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002cfc                busy_wait_us
+                0x10002ccc       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002ccc                busy_wait_us
  .text.busy_wait_until
-                0x10002d50       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002d50                busy_wait_until
+                0x10002d20       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002d20                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x10002d70       0x8c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002d70                hardware_alarm_set_callback
+                0x10002d40       0x8c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002d40                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10002dfc       0xd4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002dfc                hardware_alarm_set_target
+                0x10002dcc       0xd4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002dcc                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10002ed0       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002ed0                hardware_alarm_cancel
+                0x10002ea0       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002ea0                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x10002f0c       0x68 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002edc       0x68 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x10002f74       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002f74                ph_post_alloc_init
+                0x10002f44       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002f44                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x10002fb0       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10002fb0                ph_merge_two_pass
+                0x10002f80       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002f80                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x1000304c      0x100 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000301c      0x100 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x1000314c      0x104 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000314c                ph_remove_head
+                0x1000311c      0x104 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000311c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x10003250       0x7c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10003250                ph_remove_and_free_node
+                0x10003220       0x7c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10003220                ph_remove_and_free_node
  .text.clock_configure
-                0x100032cc      0x118 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100032cc                clock_configure
+                0x1000329c      0x118 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000329c                clock_configure
  .text.clocks_init
-                0x100033e4      0x2c4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100033e4                clocks_init
+                0x100033b4      0x2c4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100033b4                clocks_init
  .text.clock_get_hz
-                0x100036a8        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100036a8                clock_get_hz
+                0x10003678        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10003678                clock_get_hz
  .text.pll_init
-                0x100036b4       0xa0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x100036b4                pll_init
+                0x10003684       0xa0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10003684                pll_init
  .text.watchdog_start_tick
-                0x10003754       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10003754                watchdog_start_tick
+                0x10003724       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10003724                watchdog_start_tick
  .text.watchdog_reboot
-                0x10003764       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10003764                watchdog_reboot
+                0x10003734       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10003734                watchdog_reboot
  .text.xosc_init
-                0x10003800       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10003800                xosc_init
+                0x100037d0       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x100037d0                xosc_init
  .text.runtime_init
-                0x10003828       0xf0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10003828                runtime_init
- .text._exit    0x10003918        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10003918                _exit
- .text.exit     0x1000391c        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000391c                exit
- .text.panic    0x10003924       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10003924                panic
+                0x100037f8       0xf0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100037f8                runtime_init
+ .text._exit    0x100038e8        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100038e8                _exit
+ .text.exit     0x100038ec        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100038ec                exit
+ .text.panic    0x100038f4       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100038f4                panic
  .text.hard_assertion_failure
-                0x10003954        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10003954                hard_assertion_failure
+                0x10003924        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10003924                hard_assertion_failure
  .text._out_null
-                0x10003960        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003930        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x10003964       0x90 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003934       0x90 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x100039f4      0x1cc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100039c4      0x1cc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x10003bc0       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003b90       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x10003bd0       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x10003be0      0x44c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x1000402c      0x3d0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003ba0       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x10003bb0      0x44c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x10003ffc      0x3d0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x100043fc      0xabc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100043cc      0xabc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x10004eb8       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10004eb8                vfctprintf
+                0x10004e88       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10004e88                vfctprintf
  .text.weak_raw_vprintf
-                0x10004ed8       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10004ed8                weak_raw_vprintf
- .text          0x10004f08       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x10004ea8       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10004ea8                weak_raw_vprintf
+ .text          0x10004ed8       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10004f18       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10004f18                rom_func_lookup
+                0x10004ee8       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10004ee8                rom_func_lookup
  .text.rom_data_lookup
-                0x10004f28       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10004f28                rom_data_lookup
+                0x10004ef8       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10004ef8                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10004f38       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10004f38                rom_funcs_lookup
+                0x10004f08       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10004f08                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x10004f7c       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10004f7c                __wrap___aeabi_idivmod
-                0x10004f7c                divmod_s32s32
-                0x10004f7c                div_s32s32
-                0x10004f7c                __wrap___aeabi_idiv
-                0x10004f84                divmod_s32s32_unsafe
-                0x10004fb0                divmod_s32s32_savestate
+                0x10004f4c       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10004f4c                __wrap___aeabi_idivmod
+                0x10004f4c                divmod_s32s32
+                0x10004f4c                div_s32s32
+                0x10004f4c                __wrap___aeabi_idiv
+                0x10004f54                divmod_s32s32_unsafe
+                0x10004f80                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x10004fcc       0x4c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10004fcc                __wrap___aeabi_uidiv
-                0x10004fcc                __wrap___aeabi_uidivmod
-                0x10004fcc                div_u32u32
-                0x10004fcc                divmod_u32u32
-                0x10004fd4                divmod_u32u32_unsafe
-                0x10004ffc                divmod_u32u32_savestate
+                0x10004f9c       0x4c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10004f9c                __wrap___aeabi_uidiv
+                0x10004f9c                __wrap___aeabi_uidivmod
+                0x10004f9c                div_u32u32
+                0x10004f9c                divmod_u32u32
+                0x10004fa4                divmod_u32u32_unsafe
+                0x10004fcc                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x10005018      0x424 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10005018                div_s64s64
-                0x10005018                divmod_s64s64
-                0x10005018                __wrap___aeabi_ldivmod
-                0x10005048                divmod_u64u64
-                0x10005048                div_u64u64
-                0x10005048                __wrap___aeabi_uldivmod
-                0x10005058                divmod_u64u64_savestate
-                0x10005078                divmod_s64s64_unsafe
-                0x10005100                divmod_u64u64_unsafe
+                0x10004fe8      0x424 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10004fe8                div_s64s64
+                0x10004fe8                divmod_s64s64
+                0x10004fe8                __wrap___aeabi_ldivmod
+                0x10005018                divmod_u64u64
+                0x10005018                div_u64u64
+                0x10005018                __wrap___aeabi_uldivmod
+                0x10005028                divmod_u64u64_savestate
+                0x10005048                divmod_s64s64_unsafe
+                0x100050d0                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x1000543c       0x80 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000543c                __wrap___aeabi_drsub
-                0x10005442                __wrap___aeabi_dsub
-                0x10005454                __wrap___aeabi_dadd
-                0x10005466                __wrap___aeabi_ddiv
-                0x100054a2                __wrap___aeabi_dmul
+                0x1000540c       0x80 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x1000540c                __wrap___aeabi_drsub
+                0x10005412                __wrap___aeabi_dsub
+                0x10005424                __wrap___aeabi_dadd
+                0x10005436                __wrap___aeabi_ddiv
+                0x10005472                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x100054bc       0x6c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100054bc                __wrap___aeabi_cdrcmple
-                0x100054cc                __wrap___aeabi_cdcmpeq
-                0x100054cc                __wrap___aeabi_cdcmple
+                0x1000548c       0x6c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x1000548c                __wrap___aeabi_cdrcmple
+                0x1000549c                __wrap___aeabi_cdcmpeq
+                0x1000549c                __wrap___aeabi_cdcmple
  .text.__wrap___aeabi_dcmplt
-                0x10005528        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005528                __wrap___aeabi_dcmplt
+                0x100054f8        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100054f8                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x10005534       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005534                __wrap___aeabi_dcmple
+                0x10005504       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005504                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x10005544       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005544                __wrap___aeabi_dcmpge
+                0x10005514       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005514                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x10005554        0xa CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005554                __wrap___aeabi_dcmpgt
+                0x10005524        0xa CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005524                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x1000555e       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000555e                __wrap___aeabi_dcmpun
- *fill*         0x1000557a        0x2 
+                0x1000552e       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x1000552e                __wrap___aeabi_dcmpun
+ *fill*         0x1000554a        0x2 
  .text.__wrap___aeabi_i2d
-                0x1000557c       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000557c                __wrap___aeabi_ui2d
-                0x10005584                __wrap___aeabi_i2d
+                0x1000554c       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x1000554c                __wrap___aeabi_ui2d
+                0x10005554                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x100055b4       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100055b4                double2int_z
-                0x100055b4                __wrap___aeabi_d2iz
+                0x10005584       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005584                double2int_z
+                0x10005584                __wrap___aeabi_d2iz
  .text.__wrap___aeabi_d2uiz
-                0x100055fc       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100055fc                __wrap___aeabi_d2uiz
-                0x100055fc                double2uint
+                0x100055cc       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100055cc                __wrap___aeabi_d2uiz
+                0x100055cc                double2uint
  .text.__wrap___aeabi_d2f
-                0x10005614       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005614                __wrap___aeabi_d2f
+                0x100055e4       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100055e4                __wrap___aeabi_d2f
  .text.__aeabi_double_init
-                0x1000562c       0x94 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x1000562c                __aeabi_double_init
+                0x100055fc       0x94 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x100055fc                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x100056c0       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100056c0                double_table_shim_on_use_helper
+                0x10005690       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005690                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x100056ec       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100056ec                drsub_shim
-                0x100056f2                dsub_shim
+                0x100056bc       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100056bc                drsub_shim
+                0x100056c2                dsub_shim
  .text.dadd_shim
-                0x100056fc      0x15c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100056fc                dadd_shim
+                0x100056cc      0x15c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100056cc                dadd_shim
  .text.dmul_shim
-                0x10005858      0x15c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005858                dmul_shim
+                0x10005828      0x15c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005828                dmul_shim
  .text.ddiv_shim
-                0x100059b4      0x1b0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100059b4                ddiv_shim
+                0x10005984      0x1b0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005984                ddiv_shim
  .text.double2uint_shim
-                0x10005b64        0xe CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005b64                double2uint_shim
-                0x10005b66                double2ufix_shim
- *fill*         0x10005b72        0x2 
+                0x10005b34        0xe CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005b34                double2uint_shim
+                0x10005b36                double2ufix_shim
+ *fill*         0x10005b42        0x2 
  .text.double2uint64_shim
-                0x10005b74       0x70 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005b74                double2uint64_shim
-                0x10005b76                double2ufix64_shim
-                0x10005b96                d2fix_a
+                0x10005b44       0x70 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005b44                double2uint64_shim
+                0x10005b46                double2ufix64_shim
+                0x10005b66                d2fix_a
  .text.double2float_shim
-                0x10005be4       0x5c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005be4                double2float_shim
+                0x10005bb4       0x5c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005bb4                double2float_shim
  .text.dunpacks
-                0x10005c40       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005c40                dunpacks
+                0x10005c10       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005c10                dunpacks
  .text.__aeabi_lmul
-                0x10005c7c       0x32 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10005c7c                __wrap___aeabi_lmul
- *fill*         0x10005cae        0x2 
+                0x10005c4c       0x32 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10005c4c                __wrap___aeabi_lmul
+ *fill*         0x10005c7e        0x2 
  .text.__wrap___aeabi_farithmetic
-                0x10005cb0       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005cb0                __wrap___aeabi_frsub
-                0x10005cb6                __wrap___aeabi_fsub
-                0x10005cbc                __wrap___aeabi_fadd
-                0x10005cc2                __wrap___aeabi_fdiv
-                0x10005cea                __wrap___aeabi_fmul
+                0x10005c80       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005c80                __wrap___aeabi_frsub
+                0x10005c86                __wrap___aeabi_fsub
+                0x10005c8c                __wrap___aeabi_fadd
+                0x10005c92                __wrap___aeabi_fdiv
+                0x10005cba                __wrap___aeabi_fmul
  .text.__wrap___aeabi_cfcmple
-                0x10005cf8       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005cf8                __wrap___aeabi_cfrcmple
-                0x10005d04                __wrap___aeabi_cfcmple
-                0x10005d04                __wrap___aeabi_cfcmpeq
+                0x10005cc8       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005cc8                __wrap___aeabi_cfrcmple
+                0x10005cd4                __wrap___aeabi_cfcmple
+                0x10005cd4                __wrap___aeabi_cfcmpeq
  .text.__wrap___aeabi_fcmplt
-                0x10005d48        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005d48                __wrap___aeabi_fcmplt
+                0x10005d18        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005d18                __wrap___aeabi_fcmplt
  .text.__wrap___aeabi_fcmpgt
-                0x10005d54        0xa CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005d54                __wrap___aeabi_fcmpgt
+                0x10005d24        0xa CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005d24                __wrap___aeabi_fcmpgt
  .text.__wrap___aeabi_ui2f
-                0x10005d5e        0xa CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005d5e                __wrap___aeabi_ui2f
+                0x10005d2e        0xa CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005d2e                __wrap___aeabi_ui2f
  .text.__wrap___aeabi_i2f
-                0x10005d68       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005d68                __wrap___aeabi_i2f
+                0x10005d38       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005d38                __wrap___aeabi_i2f
  .text.__wrap___aeabi_f2uiz
-                0x10005dac        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005dac                __wrap___aeabi_f2uiz
+                0x10005d7c        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005d7c                __wrap___aeabi_f2uiz
  .text.__wrap___aeabi_f2d
-                0x10005db8       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10005db8                __wrap___aeabi_f2d
+                0x10005d88       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10005d88                __wrap___aeabi_f2d
  .text.__aeabi_float_init
-                0x10005dcc       0x64 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10005dcc                __aeabi_float_init
+                0x10005d9c       0x64 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10005d9c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10005e30       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10005e30                float_table_shim_on_use_helper
+                0x10005e00       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10005e00                float_table_shim_on_use_helper
  .text.float2double_shim
-                0x10005e5c       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10005e5c                float2double_shim
- .text          0x10005e8c       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10005e8c                __aeabi_mem_init
- .text.memset   0x10005e9c        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10005e9c                __wrap_memset
- .text.memcpy   0x10005ea8        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10005ea8                __wrap_memcpy
-                0x10005ea8                __wrap___aeabi_memcpy
+                0x10005e2c       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10005e2c                float2double_shim
+ .text          0x10005e5c       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10005e5c                __aeabi_mem_init
+ .text.memset   0x10005e6c        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10005e6c                __wrap_memset
+ .text.memcpy   0x10005e78        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10005e78                __wrap_memcpy
+                0x10005e78                __wrap___aeabi_memcpy
  .text.stdio_out_chars_no_crlf
-                0x10005eb4       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005e84       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x10005ec4       0xb4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005e94       0xb4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x10005f78       0x64 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005f48       0x64 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string.isra.0
-                0x10005fdc      0x100 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005fac      0x100 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x100060dc       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100060dc                __wrap_putchar
+                0x100060ac       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100060ac                __wrap_putchar
  .text.__wrap_puts
-                0x10006174       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10006174                __wrap_puts
+                0x10006144       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10006144                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x100061b0       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100061b0                stdio_set_driver_enabled
+                0x10006180       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10006180                stdio_set_driver_enabled
  .text.stdio_flush
-                0x100061e0       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100061e0                stdio_flush
+                0x100061b0       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100061b0                stdio_flush
  .text.__wrap_vprintf
-                0x10006208       0xd4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10006208                __wrap_vprintf
+                0x100061d8       0xd4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100061d8                __wrap_vprintf
  .text.__wrap_printf
-                0x100062dc       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100062dc                __wrap_printf
+                0x100062ac       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100062ac                __wrap_printf
  .text.stdio_init_all
-                0x100062f4        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100062f4                stdio_init_all
+                0x100062c4        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100062c4                stdio_init_all
  .text.getchar_timeout_us
-                0x100062fc       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100062fc                getchar_timeout_us
+                0x100062cc       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100062cc                getchar_timeout_us
  .text.resetd_init
-                0x10006394        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10006364        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x10006398        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10006368        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x100063a4       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10006374       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x100063cc        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x1000639c        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x100063d0       0x64 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x100063a0       0x64 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x10006434        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x10006434                usbd_app_driver_get_cb
+                0x10006404        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10006404                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x10006440       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x10006440                tud_cdc_line_coding_cb
+                0x10006410       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x10006410                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x10006474       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10006474                stdio_usb_set_chars_available_callback
- .text.usb_irq  0x10006488       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10006444       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10006444                stdio_usb_set_chars_available_callback
+ .text.usb_irq  0x10006458       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x10006498       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10006468       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_in_chars
-                0x100064ec       0x94 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x100064ec                stdio_usb_in_chars
+                0x100064bc       0x94 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100064bc                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x10006580      0x104 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10006550      0x104 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x10006684       0xa8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10006654       0xa8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.tud_cdc_rx_cb
-                0x1000672c       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x1000672c                tud_cdc_rx_cb
+                0x100066fc       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100066fc                tud_cdc_rx_cb
  .text.stdio_usb_init
-                0x1000674c       0xe0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x1000674c                stdio_usb_init
+                0x1000671c       0xe0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1000671c                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x1000682c        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x1000682c                tud_descriptor_device_cb
+                0x100067fc        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x100067fc                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x10006834        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x10006834                tud_descriptor_configuration_cb
+                0x10006804        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10006804                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x1000683c       0x74 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x1000683c                tud_descriptor_string_cb
+                0x1000680c       0x74 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000680c                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x100068b0       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x10006880       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x100068c0      0x1a8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x100068c0                pico_get_unique_board_id_string
+                0x10006890      0x1a8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x10006890                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x10006a68       0x40 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x10006a68                flash_get_unique_id
+                0x10006a38       0x40 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x10006a38                flash_get_unique_id
  .text.dcd_int_enable
-                0x10006aa8        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006aa8                dcd_int_enable
+                0x10006a78        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006a78                dcd_int_enable
  .text.dcd_set_address
-                0x10006ab4       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006ab4                dcd_set_address
+                0x10006a84       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006a84                dcd_set_address
  .text.dcd_connect
-                0x10006ac8       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006ac8                dcd_connect
+                0x10006a98       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006a98                dcd_connect
  .text.dcd_init
-                0x10006ad8       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006ad8                dcd_init
+                0x10006aa8       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006aa8                dcd_init
  .text.dcd_edpt0_status_complete
-                0x10006b70       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006b70                dcd_edpt0_status_complete
+                0x10006b40       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006b40                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x10006b8c      0x108 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006b8c                dcd_edpt_open
+                0x10006b5c      0x108 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006b5c                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x10006c94        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006c94                dcd_edpt_close_all
+                0x10006c64        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006c64                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x10006c9c       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006c9c                dcd_edpt_xfer
+                0x10006c6c       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006c6c                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x10006cc0       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006cc0                dcd_edpt_stall
+                0x10006c90       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006c90                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x10006cf8       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x10006cf8                dcd_edpt_clear_stall
+                0x10006cc8       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10006cc8                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x10006d28       0x4c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10006d28                rp2040_usb_init
+                0x10006cf8       0x4c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10006cf8                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x10006d74       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x10006d74                hw_endpoint_xfer_start
+                0x10006d44       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10006d44                hw_endpoint_xfer_start
  .text.tud_mounted
-                0x10006dc4       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006dc4                tud_mounted
+                0x10006d94       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006d94                tud_mounted
  .text.tud_suspended
-                0x10006dd4       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006dd4                tud_suspended
+                0x10006da4       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006da4                tud_suspended
  .text.tud_inited
-                0x10006de4       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006de4                tud_inited
+                0x10006db4       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006db4                tud_inited
  .text.tud_init
-                0x10006df8       0xe0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006df8                tud_init
+                0x10006dc8       0xe0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006dc8                tud_init
  .text.tud_task_ext
-                0x10006ed8      0x8a8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10006ed8                tud_task_ext
+                0x10006ea8      0x8a8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10006ea8                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x10007780       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10007780                usbd_open_edpt_pair
+                0x10007750       0x9c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10007750                usbd_open_edpt_pair
  .text.usbd_defer_func
-                0x1000781c       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x1000781c                usbd_defer_func
+                0x100077ec       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100077ec                usbd_defer_func
  .text.usbd_edpt_open
-                0x10007864       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10007864                usbd_edpt_open
+                0x10007834       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10007834                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x10007898       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x10007898                usbd_edpt_claim
+                0x10007868       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10007868                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x100078c0       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x100078c0                usbd_edpt_release
+                0x10007890       0x28 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10007890                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x100078e8       0x4c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x100078e8                usbd_edpt_xfer
+                0x100078b8       0x4c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100078b8                usbd_edpt_xfer
  .text.tud_control_status
-                0x10007934       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10007934                tud_control_status
+                0x10007904       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10007904                tud_control_status
  .text.tud_control_xfer
-                0x10007960       0xac CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10007960                tud_control_xfer
+                0x10007930       0xac CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10007930                tud_control_xfer
  .text.usbd_control_reset
-                0x10007a0c       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10007a0c                usbd_control_reset
+                0x100079dc       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x100079dc                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x10007a20        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10007a20                usbd_control_set_complete_callback
+                0x100079f0        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x100079f0                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x10007a2c       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10007a2c                usbd_control_set_request
+                0x100079fc       0x1c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x100079fc                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x10007a48       0xf4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x10007a48                usbd_control_xfer_cb
+                0x10007a18       0xf4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x10007a18                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x10007b3c       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007b3c                tud_cdc_n_connected
+                0x10007b0c       0x30 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007b0c                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x10007b6c       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007b6c                tud_cdc_n_available
+                0x10007b3c       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007b3c                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x10007b84       0x70 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007b84                tud_cdc_n_read
+                0x10007b54       0x70 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007b54                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x10007bf4       0x78 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007bf4                tud_cdc_n_write_flush
+                0x10007bc4       0x78 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007bc4                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x10007c6c       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007c6c                tud_cdc_n_write
+                0x10007c3c       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007c3c                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x10007ca0       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007ca0                tud_cdc_n_write_available
+                0x10007c70       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007c70                tud_cdc_n_write_available
  .text.cdcd_init
-                0x10007cb8       0x7c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007cb8                cdcd_init
+                0x10007c88       0x7c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007c88                cdcd_init
  .text.cdcd_reset
-                0x10007d34       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007d34                cdcd_reset
+                0x10007d04       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007d04                cdcd_reset
  .text.cdcd_open
-                0x10007d60       0xe8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007d60                cdcd_open
+                0x10007d30       0xe8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007d30                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x10007e48       0xe4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007e48                cdcd_control_xfer_cb
+                0x10007e18       0xe4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007e18                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x10007f2c      0x148 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x10007f2c                cdcd_xfer_cb
+                0x10007efc      0x148 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x10007efc                cdcd_xfer_cb
  .text.tusb_init
-                0x10008074        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10008074                tusb_init
+                0x10008044        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10008044                tusb_init
  .text.tusb_inited
-                0x10008080        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10008080                tusb_inited
+                0x10008050        0x8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10008050                tusb_inited
  .text.tu_edpt_claim
-                0x10008088       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10008088                tu_edpt_claim
+                0x10008058       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10008058                tu_edpt_claim
  .text.tu_edpt_release
-                0x100080d8       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x100080d8                tu_edpt_release
+                0x100080a8       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x100080a8                tu_edpt_release
  .text.tu_edpt_validate
-                0x10008110       0x74 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10008110                tu_edpt_validate
+                0x100080e0       0x74 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x100080e0                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x10008184       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x10008184                tu_edpt_bind_driver
+                0x10008154       0x34 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x10008154                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x100081b8       0x70 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100081b8                tu_fifo_config
+                0x10008188       0x70 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10008188                tu_fifo_config
  .text.tu_fifo_count
-                0x10008228       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008228                tu_fifo_count
+                0x100081f8       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100081f8                tu_fifo_count
  .text.tu_fifo_empty
-                0x10008254       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008254                tu_fifo_empty
+                0x10008224       0x10 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10008224                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x10008264       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008264                tu_fifo_remaining
+                0x10008234       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10008234                tu_fifo_remaining
  .text.tu_fifo_read
-                0x10008290       0xa0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008290                tu_fifo_read
+                0x10008260       0xa0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10008260                tu_fifo_read
  .text.tu_fifo_read_n
-                0x10008330       0xe8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008330                tu_fifo_read_n
+                0x10008300       0xe8 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10008300                tu_fifo_read_n
  .text.tu_fifo_write
-                0x10008418       0x88 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008418                tu_fifo_write
+                0x100083e8       0x88 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100083e8                tu_fifo_write
  .text.tu_fifo_write_n
-                0x100084a0      0x160 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x100084a0                tu_fifo_write_n
+                0x10008470      0x160 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10008470                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x10008600       0x40 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008600                tu_fifo_clear
+                0x100085d0       0x40 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x100085d0                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x10008640       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x10008640                tu_fifo_set_overwritable
+                0x10008610       0x48 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x10008610                tu_fifo_set_overwritable
  .text.pio_sm_unclaim
-                0x10008688       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x10008688                pio_sm_unclaim
+                0x10008658       0x20 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10008658                pio_sm_unclaim
  .text.pio_claim_unused_sm
-                0x100086a8       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100086a8                pio_claim_unused_sm
+                0x10008678       0x3c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10008678                pio_claim_unused_sm
  .text.pio_add_program
-                0x100086e4       0xcc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100086e4                pio_add_program
+                0x100086b4       0xcc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x100086b4                pio_add_program
  .text.pio_clear_instruction_memory
-                0x100087b0       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100087b0                pio_clear_instruction_memory
+                0x10008780       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10008780                pio_clear_instruction_memory
  .text.pio_sm_set_consecutive_pindirs
-                0x100087e8       0xb0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x100087e8                pio_sm_set_consecutive_pindirs
+                0x100087b8       0xb0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x100087b8                pio_sm_set_consecutive_pindirs
  .text.pio_sm_init
-                0x10008898       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-                0x10008898                pio_sm_init
+                0x10008868       0x98 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10008868                pio_sm_init
  .text.dma_channel_unclaim
-                0x10008930       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-                0x10008930                dma_channel_unclaim
+                0x10008900       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+                0x10008900                dma_channel_unclaim
  .text.dma_claim_unused_channel
-                0x10008944       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-                0x10008944                dma_claim_unused_channel
+                0x10008914       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+                0x10008914                dma_claim_unused_channel
  .text.spi_init
-                0x10008968      0x138 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-                0x10008968                spi_init
+                0x10008938      0x138 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+                0x10008938                spi_init
  .text.adc_init
-                0x10008aa0       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-                0x10008aa0                adc_init
- .text          0x10008ad8       0x88 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
-                0x10008ad8                strcmp
- .text.strlen   0x10008b60       0x5c c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
-                0x10008b60                strlen
+                0x10008a70       0x38 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+                0x10008a70                adc_init
+ .text          0x10008aa8       0x88 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libc.a(lib_a-strcmp.o)
+                0x10008aa8                strcmp
+ .text.strlen   0x10008b30       0x5c c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+                0x10008b30                strlen
  *(.fini)
- .fini          0x10008bbc        0x4 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crti.o
-                0x10008bbc                _fini
- .fini.__stub   0x10008bc0       0xe0 linker stubs
+ .fini          0x10008b8c        0x4 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crti.o
+                0x10008b8c                _fini
+ .fini.__stub   0x10008b90       0xe0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2301,170 +2301,171 @@ LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10008ca0        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10008ca0                . = ALIGN (0x4)
+ .eh_frame      0x10008c70        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10008c70                . = ALIGN (0x4)
 
-.glue_7         0x10008ca0        0x0
- .glue_7        0x10008ca0        0x0 linker stubs
+.glue_7         0x10008c70        0x0
+ .glue_7        0x10008c70        0x0 linker stubs
 
-.glue_7t        0x10008ca0        0x0
- .glue_7t       0x10008ca0        0x0 linker stubs
+.glue_7t        0x10008c70        0x0
+ .glue_7t       0x10008c70        0x0 linker stubs
 
-.vfp11_veneer   0x10008ca0        0x0
- .vfp11_veneer  0x10008ca0        0x0 linker stubs
+.vfp11_veneer   0x10008c70        0x0
+ .vfp11_veneer  0x10008c70        0x0 linker stubs
 
-.v4_bx          0x10008ca0        0x0
- .v4_bx         0x10008ca0        0x0 linker stubs
+.v4_bx          0x10008c70        0x0
+ .v4_bx         0x10008c70        0x0 linker stubs
 
-.iplt           0x10008ca0        0x0
- .iplt          0x10008ca0        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10008c70        0x0
+ .iplt          0x10008c70        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10008ca0      0x684
+.rodata         0x10008c70      0x67c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.set_sys_clock_khz.constprop.0.isra.0.str1.4
-                0x10008ca0       0x32 CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008cd2        0x2 
+                0x10008c70       0x32 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008ca2        0x2 
  .rodata.main.str1.4
-                0x10008cd4       0x2e CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008d02        0x2 
+                0x10008ca4       0x22 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008cc6        0x2 
  .rodata.triggered_analog_program
-                0x10008d04        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008d0a        0x2 
+                0x10008cc8        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008cce        0x2 
  .rodata.triggered_analog_program_instructions
-                0x10008d0c        0xa CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008d16        0x2 
+                0x10008cd0        0xa CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008cda        0x2 
  .rodata.triggered_digital_program
-                0x10008d18        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008d1e        0x2 
+                0x10008cdc        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008ce2        0x2 
  .rodata.triggered_digital_program_instructions
-                0x10008d20        0x8 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+                0x10008ce4        0x8 CMakeFiles/Firmware_v0.1.dir/main.c.obj
  .rodata.untriggered_analog_program
-                0x10008d28        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008d2e        0x2 
+                0x10008cec        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008cf2        0x2 
  .rodata.untriggered_analog_program_instructions
-                0x10008d30        0x4 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+                0x10008cf4        0x4 CMakeFiles/Firmware_v0.1.dir/main.c.obj
  .rodata.untriggered_digital_program
-                0x10008d34        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008d3a        0x2 
+                0x10008cf8        0x6 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008cfe        0x2 
  .rodata.untriggered_digital_program_instructions
-                0x10008d3c        0x2 CMakeFiles/Firmware_v0.1.dir/main.c.obj
- *fill*         0x10008d3e        0x2 
+                0x10008d00        0x2 CMakeFiles/Firmware_v0.1.dir/main.c.obj
+ *fill*         0x10008d02        0x2 
  .rodata.getSettingsFromInput.str1.4
-                0x10008d40       0x13 CMakeFiles/Firmware_v0.1.dir/configuration.c.obj
- *fill*         0x10008d53        0x1 
+                0x10008d04       0x13 CMakeFiles/Firmware_v0.1.dir/configuration.c.obj
+ *fill*         0x10008d17        0x1 
  .rodata.getInputString.str1.4
-                0x10008d54       0x56 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
+                0x10008d18       0x56 CMakeFiles/Firmware_v0.1.dir/communication.c.obj
                                  0x62 (size before relaxing)
  .rodata.resetPIOSamplingHardware.str1.4
-                0x10008daa       0x32 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
- *fill*         0x10008daa        0x2 
+                0x10008d6e       0x32 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+ *fill*         0x10008d6e        0x2 
  .rodata.samplingFrequenciesLUT
-                0x10008dac       0x44 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
-                0x10008dac                samplingFrequenciesLUT
+                0x10008d70       0x44 CMakeFiles/Firmware_v0.1.dir/sampling.c.obj
+                0x10008d70                samplingFrequenciesLUT
  .rodata.spin_lock_claim_unused.str1.4
-                0x10008df0       0x1b CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x10008e0b        0x1 
+                0x10008db4       0x1b CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x10008dcf        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x10008e0c       0x1b CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10008e27        0x1 
+                0x10008dd0       0x1b CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10008deb        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x10008e28       0x22 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10008e4a        0x2 
+                0x10008dec       0x22 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10008e0e        0x2 
  .rodata.panic.str1.4
-                0x10008e4c       0x12 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10008e5e        0x2 
+                0x10008e10       0x12 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10008e22        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x10008e60        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10008e24        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x10008e6c       0x15 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10008e81        0x3 
+                0x10008e30       0x15 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10008e45        0x3 
  .rodata._vsnprintf
-                0x10008e84      0x19c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10008e48      0x19c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10008fe4        0x4 
  .rodata.pow10.0
-                0x10009020       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10008fe8       0x50 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.str1.4
-                0x10009070       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10009038       0x44 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x100090b4        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000907c        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x100090c0        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10009088        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x100090cc        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10009094        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x100090d8        0x2 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100090da        0x2 
+                0x100090a0        0x2 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x100090a2        0x2 
  .rodata._resetd_driver
-                0x100090dc       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x100090a4       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x100090f4       0x13 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x10009107        0x1 
+                0x100090bc       0x13 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x100090cf        0x1 
  .rodata.__bi_182.0
-                0x10009108        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x100090d0        0xc CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x10009114       0x2a CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x1000913e        0x2 
+                0x100090dc       0x2a CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x10009106        0x2 
  .rodata.usbd_desc_cfg
-                0x10009140       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10009108       0x54 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x10009194       0x12 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x100091a6        0x2 
+                0x1000915c       0x12 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x1000916e        0x2 
  .rodata.usbd_desc_str
-                0x100091a8       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x10009170       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x100091c0       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10009188       0x14 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x100091d4       0x53 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x10009227        0x1 
+                0x1000919c       0x53 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x100091ef        0x1 
  .rodata.tud_task_ext
-                0x10009228       0x8c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100091f0       0x8c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x100092b4       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000927c       0x18 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.pio_claim_unused_sm.str1.4
-                0x100092cc       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10009294       0x24 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .rodata.pio_add_program.str1.4
-                0x100092f0       0x11 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- *fill*         0x10009301        0x3 
+                0x100092b8       0x11 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ *fill*         0x100092c9        0x3 
  .rodata.dma_claim_unused_channel.str1.4
-                0x10009304       0x1e CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-                0x10009324                . = ALIGN (0x4)
- *fill*         0x10009322        0x2 
+                0x100092cc       0x1e CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+                0x100092ec                . = ALIGN (0x4)
+ *fill*         0x100092ea        0x2 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10009324                . = ALIGN (0x4)
+                0x100092ec                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10009324                __exidx_start = .
+                0x100092ec                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10009324                __exidx_end = .
-                0x10009324                . = ALIGN (0x4)
-                0x10009324                __binary_info_start = .
+                0x100092ec                __exidx_end = .
+                0x100092ec                . = ALIGN (0x4)
+                0x100092ec                __binary_info_start = .
 
-.binary_info    0x10009324       0x20
+.binary_info    0x100092ec       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x10009324        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100092ec        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10009328        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100092f0        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x1000932c        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100092f4        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10009330        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100092f8        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10009334        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100092fc        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10009338        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10009300        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x1000933c        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10009304        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr182
-                0x10009340        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10009344                __binary_info_end = .
+                0x10009308        0x4 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1000930c                __binary_info_end = .
 
-.rel.dyn        0x10009344        0x0
- .rel.iplt      0x10009344        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10009344                . = ALIGN (0x4)
+.rel.dyn        0x1000930c        0x0
+ .rel.iplt      0x1000930c        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x1000930c                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2473,7 +2474,7 @@ LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/
                 0x20000000       0xc0 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0xe60 load address 0x10009344
+.data           0x200000c0      0xe60 load address 0x1000930c
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2610,36 +2611,36 @@ LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/
  *(.jcr)
                 0x20000f20                . = ALIGN (0x4)
                 0x20000f20                __data_end__ = .
-                0x10009344                __etext = LOADADDR (.data)
+                0x1000930c                __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x20000f20        0x0 load address 0x1000a1a4
+                0x20000f20        0x0 load address 0x1000a16c
  .tm_clone_table
                 0x20000f20        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000f20        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x20000f20        0x0 load address 0x1000a1a4
+.igot.plt       0x20000f20        0x0 load address 0x1000a16c
  .igot.plt      0x20000f20        0x0 c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20000f20        0x0 load address 0x1000a1a4
+                0x20000f20        0x0 load address 0x1000a16c
                 0x20000f20                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x1000a1a4
+.scratch_x      0x20040000        0x0 load address 0x1000a16c
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x1000a1a4                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x1000a16c                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x1000a1a4
+.scratch_y      0x20041000        0x0 load address 0x1000a16c
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x1000a1a4                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x1000a16c                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20000f20      0xda4
                 0x20000f20                . = ALIGN (0x4)
@@ -2770,8 +2771,8 @@ LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x1000a1a4        0x0
-                0x1000a1a4                PROVIDE (__flash_binary_end = .)
+.flash_end      0x1000a16c        0x0
+                0x1000a16c                PROVIDE (__flash_binary_end = .)
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2856,7 +2857,7 @@ LOAD CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk
 LOAD CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
 LOAD CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 LOAD CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-LOAD C:\Users\karim\AppData\Local\Temp\ccEgYPpc.o
+LOAD C:\Users\karim\AppData\Local\Temp\ccMLe7Rv.o
 LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libstdc++.a
 LOAD c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -2986,7 +2987,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000008d6       0x2c CMakeFiles/Firmware_v0.1.dir/C_/Users/karim/Desktop/Proyecto_Final/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .ARM.attributes
-                0x00000902       0x22 C:\Users\karim\AppData\Local\Temp\ccEgYPpc.o
+                0x00000902       0x22 C:\Users\karim\AppData\Local\Temp\ccMLe7Rv.o
  .ARM.attributes
                 0x00000924       0x1e c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
