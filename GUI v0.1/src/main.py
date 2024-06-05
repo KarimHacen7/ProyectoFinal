@@ -4,20 +4,27 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QResizeEvent
 '''
 TODO:
+    show decoded messages in other window, possibly in a qlistview
+
+    double click on decoded message should focus on plots
+
+    should be able to add multiple decoders at the same time
 
     SPI Decode
 
-    UART Decode
 
     I2C Decode
 
-    simple binary decode (only change on edges)
+    Emprolijado y paquetizado de la gui
 
 DOING:  
-    Poner doble cursor para ver o medir el delta tiempo
+
 
 HOTFIX:
 
+    extremos navigation scrollbar
+
+    UART CAPTURE WITH TRIGGER IS DISASTROUS, LOW IMPEDANCE WITH TRIGGER PROGRAM???
     Al cambiar de gatillado, se repite la orden anterior    # Firmware race condition for interrupt
                                                             # Hardware noise/parasitic capacitance
                                                             # ANALOG MODE IS NOT AFFECTED BY THIS, either is digital mode if first untriggered sampling is at or below 25mhz

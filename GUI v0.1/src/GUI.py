@@ -4,8 +4,8 @@ from plotting import Plotter
 from PySide6.QtWidgets import  QMainWindow, QLabel, QMessageBox, QGraphicsScene, QGraphicsView,  QCheckBox
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
-from protocolAnalyzerUI import analyzerUI
-from matplotlib.backend_bases import MouseEvent, FigureCanvasBase
+from protocolAnalyzerUI import *
+from matplotlib.backend_bases import MouseEvent
 import numpy as np
 
 
@@ -16,16 +16,22 @@ class MainWindow(QMainWindow):
     samplingSettings = SamplingSettings()
     plotter = Plotter()
     resizeSignal = Signal()
+
+    plainBinaryAnalyzer = PlainBinaryAnalyzer()
+    uartAnalyzer = UARTAnalyzer()
     QGVChannelsList = [] # QGraphicsView Reference List
     QCBChannelsList = [] # QCheckBox Reference List
     QFrChannelsList = [] # QFrame Reference List
     QGSChannelsList = [] # QGraphicsView Reference List
     selectedSamplingMode = SamplingMode.DIGITAL
     cursorCallbackIDs = []
+    fixedCursorsCallbackIDs = []
     firstResizeDone = False
     cursorIsActive = False
+    fixedCursorsAreActive = False
     samplingOngoing = False
     lastCursorIndex = 0
+    lastCursorChannel = 0
     # Could not put it in plotting.py without silently crashing
     for i in range(8):
         QGSChannelsList.append(QGraphicsScene())
@@ -70,6 +76,7 @@ class MainWindow(QMainWindow):
         self.ui.configSliderPushButton.clicked.connect(self.sidePanelSlideAnimation)
         # Cursor selector
         self.ui.cursorPushButton.clicked.connect(self.startStopCursor)
+        self.ui.fixedCursorsPushButton.clicked.connect(lambda: self.startStopFixedCursors(forceState=None))
         # Housekeeping signals
         self.ui.samplingDepthHorizontalSlider.valueChanged.connect(self.updateSamplingDepthLabel)
         self.ui.digitalModePushButton.clicked.connect(self.restrictSettingsDigitalMode)
@@ -110,7 +117,7 @@ class MainWindow(QMainWindow):
             ref = getattr(self.ui, item)
             if isinstance(ref, QLabel) and (item.find("Protocol") != -1):
                 ref.setVisible(False)
-        self.ui.triggerFrame.setVisible(False)
+        self.ui.analysisFrame.setVisible(False)
         
 
     # ---------- THREADING -- START SAMPLING ----------
@@ -285,7 +292,6 @@ class MainWindow(QMainWindow):
         elif self.samplingSettings.mode == SamplingMode.ANALOG:
             self.ui.triggerAnalysisChannelComboBox.addItem("8")
 
-
     # ---------- USER INPUT ----------
     def sample(self):
         self.statusLabelTimer.stop()
@@ -340,13 +346,53 @@ class MainWindow(QMainWindow):
             self.ui.cursorPushButton.setStyleSheet("")
             self.ui.cursorInfoLabel.setVisible(False)
     
+    def startStopFixedCursors(self, forceState):
+        activate = False
+        if forceState is None:
+            if not self.fixedCursorsAreActive:
+                activate = True
+            else:
+                activate = False
+        else:
+            activate = forceState
+
+        if activate:
+            self.fixedCursorsAreActive = True
+            for channel in self.plotter.channelPlots:
+                self.fixedCursorsCallbackIDs.append(channel.canvas.mpl_connect('button_press_event', self.timeMeasurements))
+            self.ui.fixedCursorsPushButton.setStyleSheet("QPushButton { background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #222831, stop: 1 #0081cc); }")
+            self.ui.fixedMeasurementFrame.setVisible(True)
+        else:
+            self.fixedCursorsAreActive = False
+            if self.fixedCursorsCallbackIDs != []:
+                for index, channel in enumerate(self.plotter.channelPlots):
+                    channel.canvas.mpl_disconnect(self.fixedCursorsCallbackIDs[index])
+                    channel.fixedCursor1.set_xdata([0])
+                    channel.fixedCursor1.set_visible(False)
+                    channel.fixedCursor2.set_xdata([0])
+                    channel.fixedCursor2.set_visible(False)
+                self.fixedCursorsCallbackIDs = []
+                self.plotter.axisPlot.fixedCursor1.set_xdata([0])
+                self.plotter.axisPlot.fixedCursor1.set_visible(False)
+                self.plotter.axisPlot.fixedCursor2.set_xdata([0])
+                self.plotter.axisPlot.fixedCursor2.set_visible(False)
+            self.ui.fixedMeasurementTime1Label.setText("t1: []")
+            self.ui.fixedMeasurementTime2Label.setText("t2: []")
+            self.ui.fixedMeasurementPeriodLabel.setText("Δt: []")
+            self.ui.fixedMeasurementFrequencyLabel.setText("1/Δt: []")
+            self.ui.fixedMeasurementSamplesLabel.setText("Muestras:")
+            self.drawCanvasesAndAxes(flush=False)
+            self.ui.fixedCursorsPushButton.setStyleSheet("")
+            self.ui.fixedMeasurementFrame.setVisible(False)
+
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
         self.plotter.processAndPlot(rawdata=data, samplingSettings=self.samplingSettings)
         self.drawCanvasesAndAxes(flush=False)
-        self.ui.triggerFrame.setVisible(True)
+        self.ui.analysisFrame.setVisible(True)
 
-        self.binaryDecoder(self.plotter.dataBuffer)
+        #print(self.plainBinaryAnalyzer.decode(data=self.plotter.dataBuffer, format='dec', reverse=True))
+        self.uartAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, txLine=0, baudRate=250000, dataBits=8, parityBits=None, stopBits=1, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
         
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True
@@ -379,11 +425,12 @@ class MainWindow(QMainWindow):
 
         leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
         rangeLimDivs = (abs(leftLim-rightLim)/self.plotter.channelLengthInUnit)*self.plotter.channelLengthInSamples
+        
+        
         self.ui.channelHorizontalScrollBar.setSingleStep(np.ceil(rangeLimDivs/10) if np.ceil(rangeLimDivs/10) > 2 else 2)
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
         self.restrictAnalysisOptions()
-
-        
+        self.startStopFixedCursors(forceState=False)
 
     def resizeEvent(self, event):
         self.resizeSignal.emit()
@@ -479,15 +526,17 @@ class MainWindow(QMainWindow):
             return
         if self.plotter.dataBuffer == []:
             return
-        scrolledChannel = 0
-        for index, channel in enumerate(self.plotter.channelPlots):
-            if channel.canvas == event.canvas:
-                scrolledChannel = index 
         
+        for i, channel in enumerate(self.plotter.channelPlots):
+            if channel.canvas == event.canvas:
+                scrolledChannel = i
+        
+
         if event.inaxes:
             index = min(np.searchsorted(self.plotter.xAxisData, event.xdata), len(self.plotter.dataBuffer[scrolledChannel]) - 1)
             
-            if index != self.lastCursorIndex:
+            if index != self.lastCursorIndex or scrolledChannel != self.lastCursorChannel:
+                self.lastCursorChannel = scrolledChannel
                 self.lastCursorIndex = index
                 for channel in self.plotter.channelPlots:
                     channel.cursorLine.set_xdata([self.plotter.xAxisData[self.lastCursorIndex]]) 
@@ -510,9 +559,9 @@ class MainWindow(QMainWindow):
 
                 if self.samplingSettings.mode == SamplingMode.DIGITAL:
                     if len(self.plotter.edgesBuffer[scrolledChannel]) <= 1:
-                        self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "Hz"))
+                        self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 4)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "Hz"))
                     elif (index < self.plotter.edgesBuffer[scrolledChannel][0]["1"]) or (index > self.plotter.edgesBuffer[scrolledChannel][-1]["2"]):
-                        self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "Hz"))
+                        self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 4)), self.plotter.timeUnitString, "?", self.plotter.timeUnitString, "?", "Hz"))
                     else:
                         for i in range(len(self.plotter.edgesBuffer[scrolledChannel])-1):
                             pastEdge = self.plotter.edgesBuffer[scrolledChannel][i]
@@ -531,14 +580,14 @@ class MainWindow(QMainWindow):
                                 elif frequency > 1e-3:
                                     frequency *= 1e3
                                     tempUnit = "mHz"
-                                self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, str(np.round(periodInUnit, 3)), self.plotter.timeUnitString, str(np.round(frequency, 3)), tempUnit))
+                                self.ui.cursorInfoLabel.setText("t: %s[%s], Δt: %s[%s], 1/Δt: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 4)), self.plotter.timeUnitString, str(np.round(periodInUnit, 4)), self.plotter.timeUnitString, str(np.round(frequency, 4)), tempUnit))
                 else:
                     self.ui.cursorInfoLabel.setText("t: %s[%s], V: %s[%s]" %(str(np.round(self.plotter.xAxisData[self.lastCursorIndex], 3)), self.plotter.timeUnitString, self.plotter.dataBuffer[0][self.lastCursorIndex], "V"))
 
     def displaceOnClick(self, event):
         if self.plotter.plottingInProcess:
             return
-        if self.plotter.dataBuffer == [] or not event.inaxes:
+        if (self.plotter.dataBuffer == []) or not event.inaxes or (event.button != 1):
             return
         
         leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
@@ -641,6 +690,71 @@ class MainWindow(QMainWindow):
             self.drawCanvasesAndAxes(flush=True)
             pass
 
+    def timeMeasurements(self, event):
+        if self.plotter.plottingInProcess or self.plotter.dataBuffer == [] or event.button != 3:
+            return
+        scrolledChannel = 0
+        for index, channel in enumerate(self.plotter.channelPlots):
+            if channel.canvas == event.canvas:
+                scrolledChannel = index 
+        
+        if event.inaxes:
+            index = min(np.searchsorted(self.plotter.xAxisData, event.xdata), len(self.plotter.dataBuffer[scrolledChannel]) - 1)
+
+            if self.plotter.cursor1PositionSample == None and self.plotter.cursor2PositionSample == None:
+                self.plotter.cursor1PositionSample = index
+                for channel in self.plotter.channelPlots:
+                    channel.fixedCursor1.set_xdata([self.plotter.xAxisData[index]]) 
+                    channel.fixedCursor1.set_visible(True)
+                self.plotter.axisPlot.fixedCursor1.set_xdata([self.plotter.xAxisData[index]]) 
+                self.plotter.axisPlot.fixedCursor1.set_visible(True)
+                self.drawCanvasesAndAxes(flush=True)
+                self.ui.fixedMeasurementTime1Label.setText("t1: "+str(np.round(a=self.plotter.xAxisData[index], decimals=4))+(" [%s]"%self.plotter.timeUnitString))
+            
+            elif self.plotter.cursor1PositionSample != None and self.plotter.cursor2PositionSample == None:
+                self.plotter.cursor2PositionSample = index
+                for channel in self.plotter.channelPlots:
+                    channel.fixedCursor2.set_xdata([self.plotter.xAxisData[index]]) 
+                    channel.fixedCursor2.set_visible(True)
+                self.plotter.axisPlot.fixedCursor2.set_xdata([self.plotter.xAxisData[index]]) 
+                self.plotter.axisPlot.fixedCursor2.set_visible(True)
+                self.drawCanvasesAndAxes(flush=True)
+                self.ui.fixedMeasurementTime2Label.setText("t2: "+str(np.round(a=self.plotter.xAxisData[index], decimals=4))+(" [%s]"%self.plotter.timeUnitString))
+                period = str(np.round(a=np.abs(self.plotter.xAxisData[self.plotter.cursor2PositionSample]-self.plotter.xAxisData[self.plotter.cursor1PositionSample]), decimals=4))
+                self.ui.fixedMeasurementPeriodLabel.setText("Δt: "+period+(" [%s]"%self.plotter.timeUnitString))
+                frequency = 1/(np.round(a=np.abs(self.plotter.xAxisData[self.plotter.cursor2PositionSample]-self.plotter.xAxisData[self.plotter.cursor1PositionSample]), decimals=4)/self.plotter.timeUnitMultiplier)
+                if frequency > 1e6:
+                    frequency /= 1e6
+                    tempUnit = "MHz"
+                elif frequency > 1e3:
+                    frequency /= 1e3
+                    tempUnit = "KHz"
+                elif frequency > 1:
+                    tempUnit = "Hz"
+                elif frequency > 1e-3:
+                    frequency *= 1e3
+                    tempUnit = "mHz"
+                self.ui.fixedMeasurementFrequencyLabel.setText("1/Δt: %s [%s]" %(np.round(a=frequency, decimals=3), tempUnit))
+                self.ui.fixedMeasurementSamplesLabel.setText("Muestras: %s" %np.abs(self.plotter.cursor2PositionSample-self.plotter.cursor1PositionSample))
+            
+            elif self.plotter.cursor1PositionSample != None and self.plotter.cursor2PositionSample != None:
+                self.plotter.cursor1PositionSample, self.plotter.cursor2PositionSample = None, None
+                for channel in self.plotter.channelPlots:
+                    channel.fixedCursor1.set_xdata(0) 
+                    channel.fixedCursor1.set_visible(False)
+                    channel.fixedCursor2.set_xdata(0) 
+                    channel.fixedCursor2.set_visible(False)
+                self.plotter.axisPlot.fixedCursor1.set_xdata(0) 
+                self.plotter.axisPlot.fixedCursor1.set_visible(False)
+                self.plotter.axisPlot.fixedCursor2.set_xdata(0) 
+                self.plotter.axisPlot.fixedCursor2.set_visible(False)
+                self.drawCanvasesAndAxes(flush=True)
+                self.ui.fixedMeasurementTime1Label.setText("t1: []")
+                self.ui.fixedMeasurementTime2Label.setText("t2: []")
+                self.ui.fixedMeasurementPeriodLabel.setText("Δt: []")
+                self.ui.fixedMeasurementFrequencyLabel.setText("1/Δt: []")
+                self.ui.fixedMeasurementSamplesLabel.setText("Muestras:")
+    
     #  ---------- SIGNAL ANALYSIS  ----------
     def searchAndFocusOnEdges(self, direction:str):
         self.ui.triggerAnalysisGoLeftButton.setEnabled(False)

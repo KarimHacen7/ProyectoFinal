@@ -21,6 +21,8 @@ class Plotter():
     plottingInProcess = False
     isGridOn = False
     xAxisData = []
+    cursor1PositionSample = None
+    cursor2PositionSample = None
 
     def __init__(self) -> None:
         mplstyle.use(['dark_background','fast'])
@@ -72,6 +74,10 @@ class Plotter():
         self.axisPlot.axes.clear()
         self.axisPlot.cursorLine = self.axisPlot.axes.axvline(color='#ffffff', lw=1, ls='--' , animated=True)
         self.axisPlot.cursorLine.set_visible(False)
+        self.axisPlot.fixedCursor1 = self.axisPlot.axes.axvline(color='#3affff', lw=1.5, ls='--')
+        self.axisPlot.fixedCursor1.set_visible(False)
+        self.axisPlot.fixedCursor2 = self.axisPlot.axes.axvline(color='#ff88ff', lw=1.5, ls='--')
+        self.axisPlot.fixedCursor2.set_visible(False)
         self.axisPlot.axes.set_visible(True)
         self.axisPlot.axes.set_axis_on()
         self.axisPlot.axes.set_xlim(0,self.channelLengthInUnit/10)
@@ -106,6 +112,10 @@ class Plotter():
             self.channelPlots[index].axes.set_axis_off()
             self.channelPlots[index].cursorLine = self.channelPlots[index].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
             self.channelPlots[index].cursorLine.set_visible(False)
+            self.channelPlots[index].fixedCursor1 = self.channelPlots[index].axes.axvline(color='#3affff', lw=1.5, ls='--')
+            self.channelPlots[index].fixedCursor1.set_visible(False)
+            self.channelPlots[index].fixedCursor2 = self.channelPlots[index].axes.axvline(color='#ff88ff', lw=1.5, ls='--')
+            self.channelPlots[index].fixedCursor2.set_visible(False)
             
     def plotAnalogChannel(self, samplingFrequency:int) -> None:
         self.channelLengthInSamples = len(self.dataBuffer[0])
@@ -119,12 +129,18 @@ class Plotter():
         self.xAxisData = np.linspace(start=0, stop=self.channelLengthInUnit, num=self.channelLengthInSamples)
         
         self.channelPlots[0].plottedLine = self.channelPlots[0].axes.plot(self.xAxisData, self.dataBuffer[0], color=self.plotColors[0], linewidth=3)
+        self.channelPlots[0].cursorLine = self.channelPlots[0].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
+        self.channelPlots[0].cursorLine.set_visible(False)
+        
+        self.channelPlots[0].fixedCursor1 = self.channelPlots[0].axes.axvline(color='#3affff', lw=1.5, ls='--')
+        self.channelPlots[0].fixedCursor1.set_visible(False)
+        self.channelPlots[0].fixedCursor2 = self.channelPlots[0].axes.axvline(color='#ff88ff', lw=1.5, ls='--')
+        self.channelPlots[0].fixedCursor2.set_visible(False)
+        
         self.channelPlots[0].axes.set_xlim(0,self.channelLengthInUnit/10)
         self.channelPlots[0].axes.set_ylim(0,5)
         
         
-        self.channelPlots[0].cursorLine = self.channelPlots[0].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
-        self.channelPlots[0].cursorLine.set_visible(False)
         
 
     ''' 
@@ -193,6 +209,10 @@ class Plot():
         
         self.cursorLine = self.axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
         self.cursorLine.set_visible(False)
+        self.fixedCursor1 = self.axes.axvline(color='#3affff', lw=1.5, ls='--')
+        self.fixedCursor1.set_visible(False)
+        self.fixedCursor2 = self.axes.axvline(color='#ff88ff', lw=1.5, ls='--')
+        self.fixedCursor2.set_visible(False)
         self.isVisible = True
         self.plottedLine = Line2D([], [])
         self.background = None

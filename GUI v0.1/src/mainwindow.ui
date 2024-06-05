@@ -302,6 +302,41 @@ QScrollArea QScrollBar::handle:disabled
            </spacer>
           </item>
           <item>
+           <widget class="QPushButton" name="fixedCursorsPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/ButtonIcons/ico/Fixed Measurements.png</normaloff>:/ButtonIcons/ico/Fixed Measurements.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="cursorPushButton">
             <property name="minimumSize">
              <size>
@@ -1658,7 +1693,7 @@ QTabWidget#slideTabWidget::pane
 </string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="samplingConfigTab">
           <property name="accessibleName">
@@ -2651,7 +2686,7 @@ border-radius: 5px;
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="triggerTab">
+         <widget class="QWidget" name="analysisTab">
           <attribute name="title">
            <string>Análisis</string>
           </attribute>
@@ -2672,16 +2707,11 @@ border-radius: 5px;
             <number>0</number>
            </property>
            <item>
-            <widget class="QFrame" name="triggerFrame">
+            <widget class="QFrame" name="analysisFrame">
              <property name="styleSheet">
-              <string notr="true">QFrame#triggerAnalysisFrame
-{
-border: 1px solid rgb(109, 109, 109);
-border-radius: 7px;
-padding:5px;
-padding-bottom:8px
-}
-QFrame#analogYLimEditFrame
+              <string notr="true">QFrame#triggerAnalysisFrame,
+QFrame#analogYLimEditFrame, 
+QFrame#fixedMeasurementFrame
 {
 border: 1px solid rgb(109, 109, 109);
 border-radius: 7px;
@@ -2696,15 +2726,113 @@ padding-bottom:8px
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
+              <item>
+               <widget class="QFrame" name="fixedMeasurementFrame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_24">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="fixedMeasurementTitleLabel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Consolas</family>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Mediciones Fijas</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="fixedMeasurementTime1Label">
+                   <property name="text">
+                    <string>t1: []</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="fixedMeasurementTime2Label">
+                   <property name="text">
+                    <string>t2: []</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="fixedMeasurementPeriodLabel">
+                   <property name="text">
+                    <string>Δt: []</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="fixedMeasurementFrequencyLabel">
+                   <property name="text">
+                    <string>1/Δt: []</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="fixedMeasurementSamplesLabel">
+                   <property name="text">
+                    <string>Muestras:</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
               <item>
                <widget class="QFrame" name="triggerAnalysisFrame">
                 <property name="frameShape">
@@ -2787,7 +2915,7 @@ padding-bottom:8px
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>25</width>
+                        <width>30</width>
                         <height>25</height>
                        </size>
                       </property>

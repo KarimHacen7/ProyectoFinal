@@ -1,21 +1,13 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Create some data
-x = [0, 1, 2, 3, 4, 5]
-y = [0, 1, 4, 9, 16, 25]
+fig, ax = plt.subplots()
+ax.plot(np.random.rand(10))
 
-# Create the plot
-plt.plot(x, y)
+def onclick(event):
+    print('%s click: button=%d, x=%d, y=%d, xdata=%f, ydata=%f' %
+          ('double' if event.dblclick else 'single', event.button,
+           event.x, event.y, event.xdata, event.ydata))
 
-# Enable the grid
-plt.grid(True)
-
-# Hide the axes by setting their color to none and removing ticks
-plt.gca().spines['top'].set_visible(False)
-plt.gca().spines['right'].set_visible(False)
-plt.gca().spines['left'].set_visible(False)
-plt.gca().spines['bottom'].set_visible(False)
-plt.gca().tick_params(which='both', bottom=False, top=False, left=False, right=False, labelbottom=False, labelleft=False)
-
-# Show the plot
+cid = fig.canvas.mpl_connect('button_press_event', onclick)
 plt.show()
