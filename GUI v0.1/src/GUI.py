@@ -19,6 +19,7 @@ class MainWindow(QMainWindow):
 
     plainBinaryAnalyzer = PlainBinaryAnalyzer()
     uartAnalyzer = UARTAnalyzer()
+    spiAnalyzer = SPIAnalyzer()
     QGVChannelsList = [] # QGraphicsView Reference List
     QCBChannelsList = [] # QCheckBox Reference List
     QFrChannelsList = [] # QFrame Reference List
@@ -42,7 +43,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.analyzerUI = analyzerUI()
-        self.analyzerUI.show()
+        #self.analyzerUI.show()
         # Get a list of QGraphicsView for the channels
         for item in dir(self.ui):
             ref = getattr(self.ui, item)
@@ -392,7 +393,8 @@ class MainWindow(QMainWindow):
         self.ui.analysisFrame.setVisible(True)
 
         #print(self.plainBinaryAnalyzer.decode(data=self.plotter.dataBuffer, format='dec', reverse=True))
-        self.uartAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, txLine=0, baudRate=250000, dataBits=8, parityBits=None, stopBits=1, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
+        #self.uartAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, txLine=0, baudRate=250000, dataBits=8, parityBits=None, stopBits=1, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
+        self.spiAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, MOSI=1, MISO=None, CS=None, spiMode=0, reverseBits=False)
         
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True

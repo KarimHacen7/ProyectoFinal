@@ -10,21 +10,23 @@ TODO:
 
     should be able to add multiple decoders at the same time
 
-    SPI Decode
-
 
     I2C Decode
 
     Emprolijado y paquetizado de la gui
 
+
 DOING:  
+    UART Decode
+        Add support for reversing bit order
+
 
 
 HOTFIX:
 
     extremos navigation scrollbar
 
-    UART CAPTURE WITH TRIGGER IS DISASTROUS, LOW IMPEDANCE WITH TRIGGER PROGRAM???
+    SPI, UART CAPTURE WITH TRIGGER are DISASTROUS, LOW IMPEDANCE WITH TRIGGER PROGRAM???
     Al cambiar de gatillado, se repite la orden anterior    # Firmware race condition for interrupt
                                                             # Hardware noise/parasitic capacitance
                                                             # ANALOG MODE IS NOT AFFECTED BY THIS, either is digital mode if first untriggered sampling is at or below 25mhz

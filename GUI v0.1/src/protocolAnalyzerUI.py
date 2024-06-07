@@ -8,6 +8,102 @@ class analyzerUI(QMainWindow):
         self.ui = Ui_mainWindow()
         self.ui.setupUi(self)
 
+class SPIAnalyzer():
+    def decode(self, data:list[list[int]], edges:list[list[dict]], SCK:int, MOSI:int, MISO:int, CS:int, spiMode:int, reverseBits:bool):
+        usedChannels = []
+        for role in [SCK, MOSI, MISO, CS]:
+            if role is not None:
+                usedChannels.append(role)
+        if len(data) == 0 or data == []:
+            raise AnalyzerError("No data to analyze!")
+        if spiMode not in [0,1,2,3]:
+            raise AnalyzerError("spiMode must be 0,1,2 or 3!")
+        if not all(((0 <= value < len(data))) for value in usedChannels):
+            raise AnalyzerError("decoded channels must be sampled channels!")
+        if not (len(usedChannels) == len(set(usedChannels))):
+            raise AnalyzerError("multiple roles assigned to the same channel!")
+        
+
+        distances = np.array([])
+        numberOfEdges = len(edges[SCK])
+        if numberOfEdges == 0:
+            return []
+        
+        samplingEdgeType = "R" if spiMode in [0,3] else "F"
+        frameBeginEdgeType = "R" if spiMode in [0,1] else "F"
+
+
+        for index in range(1, numberOfEdges):
+            distanceBetweenEdges = edges[SCK][index]["1"] - edges[SCK][index-1]["1"]
+            distances = np.append(arr=distances, values=distanceBetweenEdges)
+
+        unique, counts = np.unique(distances, return_counts=True)
+        indexMostRepetitions = np.argmax(counts)
+        edgeDistance = unique[indexMostRepetitions]
+        print(list(zip(unique, counts)))
+        print("La frecuencia entre flancos mas común es %s muestras con %s ocurrencias" %(unique[indexMostRepetitions], counts[indexMostRepetitions]))
+        lowerToleranceDistance = np.floor(0.9*edgeDistance)
+        upperToleranceDistance = np.ceil(1.1*edgeDistance)
+        print("Voy a considerar parte de un mensaje si el proximo flanco está a al menos %s y no mas de %s" %(lowerToleranceDistance, upperToleranceDistance))
+        frameStartEdgesCandidates = [0]
+        
+        if CS is None:
+            for index in range(1, numberOfEdges):
+                distanceBetweenEdges = edges[SCK][index]["1"] - edges[SCK][index-1]["1"]
+                if (abs(distanceBetweenEdges) > upperToleranceDistance) and (edges[SCK][index]["type"] == frameBeginEdgeType):
+                    frameStartEdgesCandidates.append(index)
+        else:
+            for index in range(1, numberOfEdges):
+                distanceBetweenEdges = edges[SCK][index]["1"] - edges[SCK][index-1]["1"]
+                if (abs(distanceBetweenEdges) > upperToleranceDistance) and (edges[SCK][index]["type"] == frameBeginEdgeType) and (data[CS][edges[SCK][index]["1"]] == 0):
+                    frameStartEdgesCandidates.append(index)
+        
+        frameStarts = []
+        addEdge = False
+        for edgeIndex in frameStartEdgesCandidates:
+            if edgeIndex+15 >= len(edges[SCK]):
+                break
+            for i in range(1, 16):
+                newDistance = abs(edges[SCK][edgeIndex+i]["1"] - edges[SCK][edgeIndex+i-1]["1"])
+                if ((newDistance > lowerToleranceDistance) and (newDistance < upperToleranceDistance)):
+                    addEdge = True
+                    continue
+                else:
+                    addEdge = False
+                    break
+            if addEdge:
+                frameStarts.append(edgeIndex)
+        
+        SPIMsg = ""
+        messages = []
+        if MOSI:
+            for frameStart in frameStarts:
+                SPIMsg = ""
+                if frameStart+15 >= len(edges[SCK]):
+                    break
+                for i in range(1, 16):
+                    if edges[SCK][frameStart+i]["type"] == samplingEdgeType:
+                        SPIMsg += str(data[MOSI][edges[SCK][frameStart+i]["1"]])
+                if reverseBits:
+                    messages = messages[::-1]
+                messages.append(SPIMsg)
+        if MISO:
+            for frameStart in frameStarts:
+                SPIMsg = ""
+                if frameStart+15 >= len(edges[SCK]):
+                    break
+                for i in range(1, 16):
+                    if edges[SCK][frameStart+i]["type"] == samplingEdgeType:
+                        SPIMsg += str(data[MISO][edges[SCK][frameStart+i]["1"]])
+                if reverseBits:
+                    messages = messages[::-1]
+                messages.append(SPIMsg)
+        
+        print("Decode: ",end="")
+        for msg in messages:
+            print(("%s" %chr((int(msg, 2)))), end="")
+        print("\n")
+
 class UARTAnalyzer():
     allowedBaudRates = [300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 250000]
     allowedDataBits = [5, 6, 7, 8, 9]
