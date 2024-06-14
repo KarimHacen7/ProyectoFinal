@@ -1,13 +1,30 @@
 import matplotlib.pyplot as plt
-import numpy as np
+import matplotlib.patches as patches
 
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 25, 30, 40]
+
+# Create a plot
 fig, ax = plt.subplots()
-ax.plot(np.random.rand(10))
+ax.plot(x, y, marker='o')
 
-def onclick(event):
-    print('%s click: button=%d, x=%d, y=%d, xdata=%f, ydata=%f' %
-          ('double' if event.dblclick else 'single', event.button,
-           event.x, event.y, event.xdata, event.ydata))
+# Annotate the point with maximum y value
+max_y = max(y)
+max_y_index = y.index(max_y)
+max_x = x[max_y_index]
 
-cid = fig.canvas.mpl_connect('button_press_event', onclick)
+# Add a rectangle that spans from (1, 35) to (2, 40)
+rect = patches.Rectangle((1, 35), 1, 5, linewidth=1, edgecolor='black', facecolor='none')
+ax.add_patch(rect)
+
+# Add text inside the rectangle
+ax.text(1.5, 37.5, 'Range: 1-2\n, 35-40', horizontalalignment='center', verticalalignment='center')
+
+# Add labels and title
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
+ax.set_title('Example of a rectangle annotation in matplotlib')
+
+# Show the plot
 plt.show()

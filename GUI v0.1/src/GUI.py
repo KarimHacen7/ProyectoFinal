@@ -20,6 +20,8 @@ class MainWindow(QMainWindow):
     plainBinaryAnalyzer = PlainBinaryAnalyzer()
     uartAnalyzer = UARTAnalyzer()
     spiAnalyzer = SPIAnalyzer()
+    i2cAnalyzer = I2CAnalyzer()
+
     QGVChannelsList = [] # QGraphicsView Reference List
     QCBChannelsList = [] # QCheckBox Reference List
     QFrChannelsList = [] # QFrame Reference List
@@ -394,7 +396,8 @@ class MainWindow(QMainWindow):
 
         #print(self.plainBinaryAnalyzer.decode(data=self.plotter.dataBuffer, format='dec', reverse=True))
         #self.uartAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, txLine=0, baudRate=250000, dataBits=8, parityBits=None, stopBits=1, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
-        self.spiAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, MOSI=1, MISO=None, CS=None, spiMode=0, reverseBits=False)
+        #self.spiAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, MOSI=1, MISO=2, CS=3, spiMode=0, reverseBits=False)
+        self.i2cAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, SDA=1, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
         
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True

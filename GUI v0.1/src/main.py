@@ -10,17 +10,15 @@ TODO:
 
     should be able to add multiple decoders at the same time
 
-
-    I2C Decode
+    sacar el scroll de los qgrapichsview
 
     Emprolijado y paquetizado de la gui
 
-
-DOING:  
     UART Decode
         Add support for reversing bit order
 
-
+DOING:  
+    I2C Decode needs a little more love
 
 HOTFIX:
 
