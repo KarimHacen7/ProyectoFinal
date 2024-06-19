@@ -17,15 +17,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFormLayout,
     QFrame, QGridLayout, QHBoxLayout, QLabel,
-    QLayout, QMainWindow, QPushButton, QRadioButton,
-    QSizePolicy, QSpacerItem, QTabWidget, QVBoxLayout,
-    QWidget)
+    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
+    QTabWidget, QVBoxLayout, QWidget)
 
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         if not mainWindow.objectName():
             mainWindow.setObjectName(u"mainWindow")
-        mainWindow.resize(351, 290)
+        mainWindow.resize(408, 291)
         mainWindow.setStyleSheet(u"*{\n"
 "	color: #EEEEEE;\n"
 "	background-color: #222831;\n"
@@ -42,41 +41,59 @@ class Ui_mainWindow(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.frame = QFrame(self.centralwidget)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout = QVBoxLayout(self.frame)
+        self.mainVerticalFrame = QFrame(self.centralwidget)
+        self.mainVerticalFrame.setObjectName(u"mainVerticalFrame")
+        self.mainVerticalFrame.setFrameShape(QFrame.StyledPanel)
+        self.mainVerticalFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.mainVerticalFrame)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.label = QLabel(self.frame)
-        self.label.setObjectName(u"label")
+        self.titleLabel = QLabel(self.mainVerticalFrame)
+        self.titleLabel.setObjectName(u"titleLabel")
         font = QFont()
         font.setFamilies([u"Consolas"])
         font.setPointSize(15)
         font.setBold(True)
         font.setItalic(False)
-        self.label.setFont(font)
-        self.label.setStyleSheet(u"QLabel\n"
+        self.titleLabel.setFont(font)
+        self.titleLabel.setStyleSheet(u"QLabel\n"
 "{\n"
 "	font: 700 15pt \"Consolas\";\n"
 "}")
-        self.label.setAlignment(Qt.AlignCenter)
+        self.titleLabel.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout.addWidget(self.label)
+        self.verticalLayout.addWidget(self.titleLabel)
 
-        self.protocolAnalyzerWidget = QTabWidget(self.frame)
+        self.centralHorizontalFrame = QFrame(self.mainVerticalFrame)
+        self.centralHorizontalFrame.setObjectName(u"centralHorizontalFrame")
+        self.centralHorizontalFrame.setStyleSheet(u"QFrame#bitInterpretationFrame\n"
+"{\n"
+"border: 1px solid rgb(109, 109, 109);\n"
+"border-radius: 5px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.centralHorizontalFrame.setFrameShape(QFrame.StyledPanel)
+        self.centralHorizontalFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.centralHorizontalFrame)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.protocolAnalyzerWidget = QTabWidget(self.centralHorizontalFrame)
         self.protocolAnalyzerWidget.setObjectName(u"protocolAnalyzerWidget")
         self.protocolAnalyzerWidget.setStyleSheet(u"QTabBar::tab {\n"
 "  background: #222831;\n"
+"\n"
 "} \n"
 "QTabBar::tab:selected { \n"
 "  background: #31363F;\n"
 "}\n"
 "QTabWidget::pane\n"
 "{\n"
-"	border: none;\n"
+"	border: 1px solid rgb(109, 109, 109);\n"
+"	border-radius: 5px;\n"
 "	background: #222831;\n"
 "}\n"
+"\n"
 "\n"
 "\n"
 "")
@@ -84,72 +101,6 @@ class Ui_mainWindow(object):
         self.simpleBinaryTab.setObjectName(u"simpleBinaryTab")
         self.gridLayout = QGridLayout(self.simpleBinaryTab)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.bitPonderationFrame = QFrame(self.simpleBinaryTab)
-        self.bitPonderationFrame.setObjectName(u"bitPonderationFrame")
-        self.bitPonderationFrame.setFrameShape(QFrame.StyledPanel)
-        self.bitPonderationFrame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_3 = QVBoxLayout(self.bitPonderationFrame)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.bitPonderationLabel = QLabel(self.bitPonderationFrame)
-        self.bitPonderationLabel.setObjectName(u"bitPonderationLabel")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.bitPonderationLabel.sizePolicy().hasHeightForWidth())
-        self.bitPonderationLabel.setSizePolicy(sizePolicy)
-
-        self.verticalLayout_3.addWidget(self.bitPonderationLabel)
-
-        self.channel1MSBRadioButton = QRadioButton(self.bitPonderationFrame)
-        self.channel1MSBRadioButton.setObjectName(u"channel1MSBRadioButton")
-        self.channel1MSBRadioButton.setChecked(True)
-
-        self.verticalLayout_3.addWidget(self.channel1MSBRadioButton)
-
-        self.channel1LSBRadioButton = QRadioButton(self.bitPonderationFrame)
-        self.channel1LSBRadioButton.setObjectName(u"channel1LSBRadioButton")
-        self.channel1LSBRadioButton.setChecked(False)
-
-        self.verticalLayout_3.addWidget(self.channel1LSBRadioButton)
-
-
-        self.gridLayout.addWidget(self.bitPonderationFrame, 1, 1, 1, 1)
-
-        self.bitInterpretationFrame = QFrame(self.simpleBinaryTab)
-        self.bitInterpretationFrame.setObjectName(u"bitInterpretationFrame")
-        self.bitInterpretationFrame.setFrameShape(QFrame.StyledPanel)
-        self.bitInterpretationFrame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_4 = QVBoxLayout(self.bitInterpretationFrame)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.interpretationLabel = QLabel(self.bitInterpretationFrame)
-        self.interpretationLabel.setObjectName(u"interpretationLabel")
-
-        self.verticalLayout_4.addWidget(self.interpretationLabel)
-
-        self.binaryInterpretationRadioButton = QRadioButton(self.bitInterpretationFrame)
-        self.binaryInterpretationRadioButton.setObjectName(u"binaryInterpretationRadioButton")
-        self.binaryInterpretationRadioButton.setChecked(True)
-
-        self.verticalLayout_4.addWidget(self.binaryInterpretationRadioButton)
-
-        self.decimalInterpretationRadioButton = QRadioButton(self.bitInterpretationFrame)
-        self.decimalInterpretationRadioButton.setObjectName(u"decimalInterpretationRadioButton")
-
-        self.verticalLayout_4.addWidget(self.decimalInterpretationRadioButton)
-
-        self.hexadecimalInterpretationRadioButton = QRadioButton(self.bitInterpretationFrame)
-        self.hexadecimalInterpretationRadioButton.setObjectName(u"hexadecimalInterpretationRadioButton")
-
-        self.verticalLayout_4.addWidget(self.hexadecimalInterpretationRadioButton)
-
-        self.ASCIIInterpretationRadioButton = QRadioButton(self.bitInterpretationFrame)
-        self.ASCIIInterpretationRadioButton.setObjectName(u"ASCIIInterpretationRadioButton")
-
-        self.verticalLayout_4.addWidget(self.ASCIIInterpretationRadioButton)
-
-
-        self.gridLayout.addWidget(self.bitInterpretationFrame, 1, 0, 1, 1)
-
         self.channelSelectionFrame = QFrame(self.simpleBinaryTab)
         self.channelSelectionFrame.setObjectName(u"channelSelectionFrame")
         self.channelSelectionFrame.setStyleSheet(u"QCheckBox:disabled\n"
@@ -231,230 +182,207 @@ class Ui_mainWindow(object):
         self.protocolAnalyzerWidget.addTab(self.simpleBinaryTab, "")
         self.UARTTab = QWidget()
         self.UARTTab.setObjectName(u"UARTTab")
-        self.verticalLayout_5 = QVBoxLayout(self.UARTTab)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.formLayout = QFormLayout()
-        self.formLayout.setObjectName(u"formLayout")
-        self.label_2 = QLabel(self.UARTTab)
-        self.label_2.setObjectName(u"label_2")
+        self.formLayout_3 = QFormLayout(self.UARTTab)
+        self.formLayout_3.setObjectName(u"formLayout_3")
+        self.baudRateLabel = QLabel(self.UARTTab)
+        self.baudRateLabel.setObjectName(u"baudRateLabel")
 
-        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.label_2)
+        self.formLayout_3.setWidget(0, QFormLayout.LabelRole, self.baudRateLabel)
 
-        self.comboBox = QComboBox(self.UARTTab)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
+        self.baudRateComboBox = QComboBox(self.UARTTab)
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.addItem("")
+        self.baudRateComboBox.setObjectName(u"baudRateComboBox")
 
-        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.comboBox)
+        self.formLayout_3.setWidget(0, QFormLayout.FieldRole, self.baudRateComboBox)
 
-        self.label_4 = QLabel(self.UARTTab)
-        self.label_4.setObjectName(u"label_4")
+        self.dataBitsLabel = QLabel(self.UARTTab)
+        self.dataBitsLabel.setObjectName(u"dataBitsLabel")
 
-        self.formLayout.setWidget(1, QFormLayout.LabelRole, self.label_4)
+        self.formLayout_3.setWidget(1, QFormLayout.LabelRole, self.dataBitsLabel)
 
-        self.comboBox_2 = QComboBox(self.UARTTab)
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.dataBitsComboBox = QComboBox(self.UARTTab)
+        self.dataBitsComboBox.addItem("")
+        self.dataBitsComboBox.addItem("")
+        self.dataBitsComboBox.addItem("")
+        self.dataBitsComboBox.addItem("")
+        self.dataBitsComboBox.addItem("")
+        self.dataBitsComboBox.setObjectName(u"dataBitsComboBox")
 
-        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.comboBox_2)
+        self.formLayout_3.setWidget(1, QFormLayout.FieldRole, self.dataBitsComboBox)
 
-        self.label_3 = QLabel(self.UARTTab)
-        self.label_3.setObjectName(u"label_3")
+        self.parityBitsLabel = QLabel(self.UARTTab)
+        self.parityBitsLabel.setObjectName(u"parityBitsLabel")
 
-        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.label_3)
+        self.formLayout_3.setWidget(2, QFormLayout.LabelRole, self.parityBitsLabel)
 
-        self.comboBox_3 = QComboBox(self.UARTTab)
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.setObjectName(u"comboBox_3")
+        self.parityBitComboBox = QComboBox(self.UARTTab)
+        self.parityBitComboBox.addItem("")
+        self.parityBitComboBox.addItem("")
+        self.parityBitComboBox.addItem("")
+        self.parityBitComboBox.setObjectName(u"parityBitComboBox")
 
-        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.comboBox_3)
+        self.formLayout_3.setWidget(2, QFormLayout.FieldRole, self.parityBitComboBox)
 
-        self.label_5 = QLabel(self.UARTTab)
-        self.label_5.setObjectName(u"label_5")
+        self.stopBitsLabel = QLabel(self.UARTTab)
+        self.stopBitsLabel.setObjectName(u"stopBitsLabel")
 
-        self.formLayout.setWidget(3, QFormLayout.LabelRole, self.label_5)
+        self.formLayout_3.setWidget(3, QFormLayout.LabelRole, self.stopBitsLabel)
 
-        self.comboBox_4 = QComboBox(self.UARTTab)
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.setObjectName(u"comboBox_4")
+        self.stopBitsComboBox = QComboBox(self.UARTTab)
+        self.stopBitsComboBox.addItem("")
+        self.stopBitsComboBox.addItem("")
+        self.stopBitsComboBox.setObjectName(u"stopBitsComboBox")
 
-        self.formLayout.setWidget(3, QFormLayout.FieldRole, self.comboBox_4)
+        self.formLayout_3.setWidget(3, QFormLayout.FieldRole, self.stopBitsComboBox)
 
-        self.comboBox_5 = QComboBox(self.UARTTab)
-        self.comboBox_5.setObjectName(u"comboBox_5")
+        self.txLineLabel = QLabel(self.UARTTab)
+        self.txLineLabel.setObjectName(u"txLineLabel")
 
-        self.formLayout.setWidget(4, QFormLayout.FieldRole, self.comboBox_5)
+        self.formLayout_3.setWidget(4, QFormLayout.LabelRole, self.txLineLabel)
 
-        self.comboBox_6 = QComboBox(self.UARTTab)
-        self.comboBox_6.setObjectName(u"comboBox_6")
+        self.txLineComboBox = QComboBox(self.UARTTab)
+        self.txLineComboBox.setObjectName(u"txLineComboBox")
 
-        self.formLayout.setWidget(5, QFormLayout.FieldRole, self.comboBox_6)
-
-        self.label_6 = QLabel(self.UARTTab)
-        self.label_6.setObjectName(u"label_6")
-
-        self.formLayout.setWidget(4, QFormLayout.LabelRole, self.label_6)
-
-        self.label_7 = QLabel(self.UARTTab)
-        self.label_7.setObjectName(u"label_7")
-
-        self.formLayout.setWidget(5, QFormLayout.LabelRole, self.label_7)
-
-
-        self.verticalLayout_5.addLayout(self.formLayout)
+        self.formLayout_3.setWidget(4, QFormLayout.FieldRole, self.txLineComboBox)
 
         self.protocolAnalyzerWidget.addTab(self.UARTTab, "")
         self.SPITab = QWidget()
         self.SPITab.setObjectName(u"SPITab")
-        self.verticalLayout_6 = QVBoxLayout(self.SPITab)
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.formLayout_2 = QFormLayout()
-        self.formLayout_2.setObjectName(u"formLayout_2")
-        self.comboBox_7 = QComboBox(self.SPITab)
-        self.comboBox_7.setObjectName(u"comboBox_7")
+        self.formLayout = QFormLayout(self.SPITab)
+        self.formLayout.setObjectName(u"formLayout")
+        self.SCKLabel = QLabel(self.SPITab)
+        self.SCKLabel.setObjectName(u"SCKLabel")
 
-        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.comboBox_7)
+        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.SCKLabel)
 
-        self.label_9 = QLabel(self.SPITab)
-        self.label_9.setObjectName(u"label_9")
+        self.SCKComboBox = QComboBox(self.SPITab)
+        self.SCKComboBox.setObjectName(u"SCKComboBox")
 
-        self.formLayout_2.setWidget(2, QFormLayout.LabelRole, self.label_9)
+        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.SCKComboBox)
 
-        self.comboBox_8 = QComboBox(self.SPITab)
-        self.comboBox_8.setObjectName(u"comboBox_8")
+        self.SPIModeComboBox = QComboBox(self.SPITab)
+        self.SPIModeComboBox.addItem("")
+        self.SPIModeComboBox.addItem("")
+        self.SPIModeComboBox.addItem("")
+        self.SPIModeComboBox.addItem("")
+        self.SPIModeComboBox.setObjectName(u"SPIModeComboBox")
 
-        self.formLayout_2.setWidget(2, QFormLayout.FieldRole, self.comboBox_8)
+        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.SPIModeComboBox)
 
-        self.label_10 = QLabel(self.SPITab)
-        self.label_10.setObjectName(u"label_10")
+        self.MOSILabel = QLabel(self.SPITab)
+        self.MOSILabel.setObjectName(u"MOSILabel")
 
-        self.formLayout_2.setWidget(3, QFormLayout.LabelRole, self.label_10)
+        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.MOSILabel)
 
-        self.comboBox_9 = QComboBox(self.SPITab)
-        self.comboBox_9.setObjectName(u"comboBox_9")
+        self.MOSIComboBox = QComboBox(self.SPITab)
+        self.MOSIComboBox.setObjectName(u"MOSIComboBox")
 
-        self.formLayout_2.setWidget(3, QFormLayout.FieldRole, self.comboBox_9)
+        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.MOSIComboBox)
 
-        self.label_11 = QLabel(self.SPITab)
-        self.label_11.setObjectName(u"label_11")
+        self.MISOLabel = QLabel(self.SPITab)
+        self.MISOLabel.setObjectName(u"MISOLabel")
 
-        self.formLayout_2.setWidget(4, QFormLayout.LabelRole, self.label_11)
+        self.formLayout.setWidget(3, QFormLayout.LabelRole, self.MISOLabel)
 
-        self.comboBox_10 = QComboBox(self.SPITab)
-        self.comboBox_10.setObjectName(u"comboBox_10")
+        self.MISOComboBox = QComboBox(self.SPITab)
+        self.MISOComboBox.setObjectName(u"MISOComboBox")
 
-        self.formLayout_2.setWidget(4, QFormLayout.FieldRole, self.comboBox_10)
+        self.formLayout.setWidget(3, QFormLayout.FieldRole, self.MISOComboBox)
 
-        self.checkBox = QCheckBox(self.SPITab)
-        self.checkBox.setObjectName(u"checkBox")
+        self.CSLabel = QLabel(self.SPITab)
+        self.CSLabel.setObjectName(u"CSLabel")
 
-        self.formLayout_2.setWidget(5, QFormLayout.FieldRole, self.checkBox)
+        self.formLayout.setWidget(4, QFormLayout.LabelRole, self.CSLabel)
 
-        self.comboBox_11 = QComboBox(self.SPITab)
-        self.comboBox_11.addItem("")
-        self.comboBox_11.addItem("")
-        self.comboBox_11.addItem("")
-        self.comboBox_11.addItem("")
-        self.comboBox_11.setObjectName(u"comboBox_11")
+        self.CSComboBox = QComboBox(self.SPITab)
+        self.CSComboBox.setObjectName(u"CSComboBox")
+        self.CSComboBox.setStyleSheet(u"QComboBox:!enabled{\n"
+"    color: rgba(238, 238, 238, 127);\n"
+"}\n"
+"")
 
-        self.formLayout_2.setWidget(1, QFormLayout.FieldRole, self.comboBox_11)
+        self.formLayout.setWidget(4, QFormLayout.FieldRole, self.CSComboBox)
 
-        self.label_8 = QLabel(self.SPITab)
-        self.label_8.setObjectName(u"label_8")
+        self.ignoreCSCheckBox = QCheckBox(self.SPITab)
+        self.ignoreCSCheckBox.setObjectName(u"ignoreCSCheckBox")
 
-        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.label_8)
-
-
-        self.verticalLayout_6.addLayout(self.formLayout_2)
+        self.formLayout.setWidget(5, QFormLayout.FieldRole, self.ignoreCSCheckBox)
 
         self.protocolAnalyzerWidget.addTab(self.SPITab, "")
         self.I2CTab = QWidget()
         self.I2CTab.setObjectName(u"I2CTab")
         self.I2CTab.setStyleSheet(u"")
-        self.gridLayout_2 = QGridLayout(self.I2CTab)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.formLayout_2 = QFormLayout(self.I2CTab)
+        self.formLayout_2.setObjectName(u"formLayout_2")
+        self.SCLLabel = QLabel(self.I2CTab)
+        self.SCLLabel.setObjectName(u"SCLLabel")
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.SCLLabel.sizePolicy().hasHeightForWidth())
+        self.SCLLabel.setSizePolicy(sizePolicy)
+        self.SCLLabel.setMinimumSize(QSize(0, 0))
+        self.SCLLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.gridLayout_2.addItem(self.verticalSpacer_2, 2, 1, 1, 1)
+        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.SCLLabel)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.gridLayout_2.addItem(self.verticalSpacer, 0, 1, 1, 1)
-
-        self.formLayout_3 = QFormLayout()
-        self.formLayout_3.setObjectName(u"formLayout_3")
-        self.formLayout_3.setSizeConstraint(QLayout.SetMaximumSize)
-        self.formLayout_3.setLabelAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.formLayout_3.setFormAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.label_13 = QLabel(self.I2CTab)
-        self.label_13.setObjectName(u"label_13")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
+        self.SCLComboBox = QComboBox(self.I2CTab)
+        self.SCLComboBox.setObjectName(u"SCLComboBox")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
-        self.label_13.setSizePolicy(sizePolicy1)
-        self.label_13.setMinimumSize(QSize(75, 0))
-        self.label_13.setAlignment(Qt.AlignCenter)
+        sizePolicy1.setHeightForWidth(self.SCLComboBox.sizePolicy().hasHeightForWidth())
+        self.SCLComboBox.setSizePolicy(sizePolicy1)
+        self.SCLComboBox.setMinimumSize(QSize(100, 0))
 
-        self.formLayout_3.setWidget(0, QFormLayout.LabelRole, self.label_13)
+        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.SCLComboBox)
 
-        self.comboBox_13 = QComboBox(self.I2CTab)
-        self.comboBox_13.setObjectName(u"comboBox_13")
-        self.comboBox_13.setMinimumSize(QSize(100, 0))
+        self.SDALabel = QLabel(self.I2CTab)
+        self.SDALabel.setObjectName(u"SDALabel")
+        sizePolicy.setHeightForWidth(self.SDALabel.sizePolicy().hasHeightForWidth())
+        self.SDALabel.setSizePolicy(sizePolicy)
+        self.SDALabel.setMinimumSize(QSize(0, 0))
+        self.SDALabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.formLayout_3.setWidget(0, QFormLayout.FieldRole, self.comboBox_13)
+        self.formLayout_2.setWidget(1, QFormLayout.LabelRole, self.SDALabel)
 
-        self.label_12 = QLabel(self.I2CTab)
-        self.label_12.setObjectName(u"label_12")
-        sizePolicy1.setHeightForWidth(self.label_12.sizePolicy().hasHeightForWidth())
-        self.label_12.setSizePolicy(sizePolicy1)
-        self.label_12.setMinimumSize(QSize(75, 0))
-        self.label_12.setAlignment(Qt.AlignCenter)
+        self.SDAComboBox = QComboBox(self.I2CTab)
+        self.SDAComboBox.setObjectName(u"SDAComboBox")
+        sizePolicy1.setHeightForWidth(self.SDAComboBox.sizePolicy().hasHeightForWidth())
+        self.SDAComboBox.setSizePolicy(sizePolicy1)
+        self.SDAComboBox.setMinimumSize(QSize(100, 0))
 
-        self.formLayout_3.setWidget(1, QFormLayout.LabelRole, self.label_12)
-
-        self.comboBox_12 = QComboBox(self.I2CTab)
-        self.comboBox_12.setObjectName(u"comboBox_12")
-        self.comboBox_12.setMinimumSize(QSize(100, 0))
-
-        self.formLayout_3.setWidget(1, QFormLayout.FieldRole, self.comboBox_12)
-
-
-        self.gridLayout_2.addLayout(self.formLayout_3, 1, 1, 1, 1)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_2.addItem(self.horizontalSpacer_2, 1, 0, 1, 1)
-
-        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.gridLayout_2.addItem(self.horizontalSpacer_3, 1, 2, 1, 1)
+        self.formLayout_2.setWidget(1, QFormLayout.FieldRole, self.SDAComboBox)
 
         self.protocolAnalyzerWidget.addTab(self.I2CTab, "")
 
-        self.verticalLayout.addWidget(self.protocolAnalyzerWidget)
+        self.horizontalLayout_2.addWidget(self.protocolAnalyzerWidget)
 
-        self.pushButtonFrame = QFrame(self.frame)
+
+        self.verticalLayout.addWidget(self.centralHorizontalFrame)
+
+        self.pushButtonFrame = QFrame(self.mainVerticalFrame)
         self.pushButtonFrame.setObjectName(u"pushButtonFrame")
         self.pushButtonFrame.setFrameShape(QFrame.StyledPanel)
         self.pushButtonFrame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.pushButtonFrame)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.flipMessageBits = QCheckBox(self.pushButtonFrame)
+        self.flipMessageBits.setObjectName(u"flipMessageBits")
+
+        self.horizontalLayout.addWidget(self.flipMessageBits)
+
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
@@ -473,15 +401,15 @@ class Ui_mainWindow(object):
         self.verticalLayout.addWidget(self.pushButtonFrame)
 
 
-        self.verticalLayout_2.addWidget(self.frame)
+        self.verticalLayout_2.addWidget(self.mainVerticalFrame)
 
         mainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(mainWindow)
 
-        self.protocolAnalyzerWidget.setCurrentIndex(0)
-        self.comboBox.setCurrentIndex(4)
-        self.comboBox_2.setCurrentIndex(3)
+        self.protocolAnalyzerWidget.setCurrentIndex(3)
+        self.baudRateComboBox.setCurrentIndex(4)
+        self.dataBitsComboBox.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(mainWindow)
@@ -489,15 +417,7 @@ class Ui_mainWindow(object):
 
     def retranslateUi(self, mainWindow):
         mainWindow.setWindowTitle(QCoreApplication.translate("mainWindow", u"Agregar Analizador", None))
-        self.label.setText(QCoreApplication.translate("mainWindow", u"Agregar un Analizador", None))
-        self.bitPonderationLabel.setText(QCoreApplication.translate("mainWindow", u"Ponderaci\u00f3n de Bits", None))
-        self.channel1MSBRadioButton.setText(QCoreApplication.translate("mainWindow", u"Canal 1 MSB", None))
-        self.channel1LSBRadioButton.setText(QCoreApplication.translate("mainWindow", u"Canal 1 LSB", None))
-        self.interpretationLabel.setText(QCoreApplication.translate("mainWindow", u"Interpretado", None))
-        self.binaryInterpretationRadioButton.setText(QCoreApplication.translate("mainWindow", u"Binario", None))
-        self.decimalInterpretationRadioButton.setText(QCoreApplication.translate("mainWindow", u"Decimal", None))
-        self.hexadecimalInterpretationRadioButton.setText(QCoreApplication.translate("mainWindow", u"Hexadecimal", None))
-        self.ASCIIInterpretationRadioButton.setText(QCoreApplication.translate("mainWindow", u"ASCII", None))
+        self.titleLabel.setText(QCoreApplication.translate("mainWindow", u"Agregar un Analizador", None))
         self.channelSelectionLabel.setText(QCoreApplication.translate("mainWindow", u"Canales:", None))
         self.channel1CheckBox.setText(QCoreApplication.translate("mainWindow", u"1", None))
         self.channel2CheckBox.setText(QCoreApplication.translate("mainWindow", u"2", None))
@@ -508,51 +428,53 @@ class Ui_mainWindow(object):
         self.channel7CheckBox.setText(QCoreApplication.translate("mainWindow", u"7", None))
         self.channel8CheckBox.setText(QCoreApplication.translate("mainWindow", u"8", None))
         self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.simpleBinaryTab), QCoreApplication.translate("mainWindow", u"Paralelo", None))
-        self.label_2.setText(QCoreApplication.translate("mainWindow", u"Baud Rate", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"300", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"1200", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"2400", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("mainWindow", u"4800", None))
-        self.comboBox.setItemText(4, QCoreApplication.translate("mainWindow", u"9600", None))
-        self.comboBox.setItemText(5, QCoreApplication.translate("mainWindow", u"19200", None))
-        self.comboBox.setItemText(6, QCoreApplication.translate("mainWindow", u"38400", None))
-        self.comboBox.setItemText(7, QCoreApplication.translate("mainWindow", u"57600", None))
-        self.comboBox.setItemText(8, QCoreApplication.translate("mainWindow", u"115200", None))
+        self.baudRateLabel.setText(QCoreApplication.translate("mainWindow", u"Baud Rate", None))
+        self.baudRateComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"300", None))
+        self.baudRateComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"1200", None))
+        self.baudRateComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"2400", None))
+        self.baudRateComboBox.setItemText(3, QCoreApplication.translate("mainWindow", u"4800", None))
+        self.baudRateComboBox.setItemText(4, QCoreApplication.translate("mainWindow", u"9600", None))
+        self.baudRateComboBox.setItemText(5, QCoreApplication.translate("mainWindow", u"19200", None))
+        self.baudRateComboBox.setItemText(6, QCoreApplication.translate("mainWindow", u"38400", None))
+        self.baudRateComboBox.setItemText(7, QCoreApplication.translate("mainWindow", u"57600", None))
+        self.baudRateComboBox.setItemText(8, QCoreApplication.translate("mainWindow", u"115200", None))
+        self.baudRateComboBox.setItemText(9, QCoreApplication.translate("mainWindow", u"230400", None))
+        self.baudRateComboBox.setItemText(10, QCoreApplication.translate("mainWindow", u"250000", None))
 
-        self.comboBox.setCurrentText(QCoreApplication.translate("mainWindow", u"9600", None))
-        self.label_4.setText(QCoreApplication.translate("mainWindow", u"Bits de Datos", None))
-        self.comboBox_2.setItemText(0, QCoreApplication.translate("mainWindow", u"5", None))
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("mainWindow", u"6", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("mainWindow", u"7", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("mainWindow", u"8", None))
-        self.comboBox_2.setItemText(4, QCoreApplication.translate("mainWindow", u"9", None))
+        self.baudRateComboBox.setCurrentText(QCoreApplication.translate("mainWindow", u"9600", None))
+        self.dataBitsLabel.setText(QCoreApplication.translate("mainWindow", u"Bits de Datos", None))
+        self.dataBitsComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"5", None))
+        self.dataBitsComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"6", None))
+        self.dataBitsComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"7", None))
+        self.dataBitsComboBox.setItemText(3, QCoreApplication.translate("mainWindow", u"8", None))
+        self.dataBitsComboBox.setItemText(4, QCoreApplication.translate("mainWindow", u"9", None))
 
-        self.label_3.setText(QCoreApplication.translate("mainWindow", u"Bits de Paridad", None))
-        self.comboBox_3.setItemText(0, QCoreApplication.translate("mainWindow", u"Ninguno", None))
-        self.comboBox_3.setItemText(1, QCoreApplication.translate("mainWindow", u"Par", None))
-        self.comboBox_3.setItemText(2, QCoreApplication.translate("mainWindow", u"Impar", None))
+        self.parityBitsLabel.setText(QCoreApplication.translate("mainWindow", u"Bits de Paridad", None))
+        self.parityBitComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"Ninguno", None))
+        self.parityBitComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"Par", None))
+        self.parityBitComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"Impar", None))
 
-        self.label_5.setText(QCoreApplication.translate("mainWindow", u"Bits de Stop", None))
-        self.comboBox_4.setItemText(0, QCoreApplication.translate("mainWindow", u"1", None))
-        self.comboBox_4.setItemText(1, QCoreApplication.translate("mainWindow", u"2", None))
+        self.stopBitsLabel.setText(QCoreApplication.translate("mainWindow", u"Bits de Stop", None))
+        self.stopBitsComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"1", None))
+        self.stopBitsComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"2", None))
 
-        self.label_6.setText(QCoreApplication.translate("mainWindow", u"Transmisor", None))
-        self.label_7.setText(QCoreApplication.translate("mainWindow", u"Receptor", None))
+        self.txLineLabel.setText(QCoreApplication.translate("mainWindow", u"Transmisor", None))
         self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.UARTTab), QCoreApplication.translate("mainWindow", u"UART/USART", None))
-        self.label_9.setText(QCoreApplication.translate("mainWindow", u"Master In/Slave Out", None))
-        self.label_10.setText(QCoreApplication.translate("mainWindow", u"Master Out/Slave In", None))
-        self.label_11.setText(QCoreApplication.translate("mainWindow", u"Chip Select", None))
-        self.checkBox.setText(QCoreApplication.translate("mainWindow", u"Ignorar Chip Select", None))
-        self.comboBox_11.setItemText(0, QCoreApplication.translate("mainWindow", u"Pol 0, Fase 0 ", None))
-        self.comboBox_11.setItemText(1, QCoreApplication.translate("mainWindow", u"Pol 0, Fase 1", None))
-        self.comboBox_11.setItemText(2, QCoreApplication.translate("mainWindow", u"Pol 1, Fase 0", None))
-        self.comboBox_11.setItemText(3, QCoreApplication.translate("mainWindow", u"Pol 1, Fase 1", None))
+        self.SCKLabel.setText(QCoreApplication.translate("mainWindow", u"Clock", None))
+        self.SPIModeComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"Pol 0, Fase 0 ", None))
+        self.SPIModeComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"Pol 0, Fase 1", None))
+        self.SPIModeComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"Pol 1, Fase 0", None))
+        self.SPIModeComboBox.setItemText(3, QCoreApplication.translate("mainWindow", u"Pol 1, Fase 1", None))
 
-        self.label_8.setText(QCoreApplication.translate("mainWindow", u"Clock", None))
+        self.MOSILabel.setText(QCoreApplication.translate("mainWindow", u"Master Out/Slave In", None))
+        self.MISOLabel.setText(QCoreApplication.translate("mainWindow", u"Master In/Slave Out", None))
+        self.CSLabel.setText(QCoreApplication.translate("mainWindow", u"Chip Select", None))
+        self.ignoreCSCheckBox.setText(QCoreApplication.translate("mainWindow", u"Ignorar Chip Select", None))
         self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.SPITab), QCoreApplication.translate("mainWindow", u"SPI", None))
-        self.label_13.setText(QCoreApplication.translate("mainWindow", u"SDA", None))
-        self.label_12.setText(QCoreApplication.translate("mainWindow", u"SCL", None))
+        self.SCLLabel.setText(QCoreApplication.translate("mainWindow", u"SCL    ", None))
+        self.SDALabel.setText(QCoreApplication.translate("mainWindow", u"SDA    ", None))
         self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.I2CTab), QCoreApplication.translate("mainWindow", u"I2C", None))
+        self.flipMessageBits.setText(QCoreApplication.translate("mainWindow", u"Invertir Bits", None))
         self.analyzePushButton.setText(QCoreApplication.translate("mainWindow", u"Analizar", None))
         self.cancelPushButton.setText(QCoreApplication.translate("mainWindow", u"Cancelar", None))
     # retranslateUi

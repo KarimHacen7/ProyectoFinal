@@ -10,18 +10,21 @@ TODO:
 
     should be able to add multiple decoders at the same time
 
-    sacar el scroll de los qgrapichsview
+    sacar el scroll de los qgraphicsview
 
     Emprolijado y paquetizado de la gui
 
     UART Decode
         Add support for reversing bit order
 
-DOING:  
     I2C Decode needs a little more love
 
-HOTFIX:
+DOING:  
 
+    PONE LOS DECODER CON TRY CATCH
+
+
+HOTFIX:
     extremos navigation scrollbar
 
     SPI, UART CAPTURE WITH TRIGGER are DISASTROUS, LOW IMPEDANCE WITH TRIGGER PROGRAM???

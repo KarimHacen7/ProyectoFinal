@@ -16,12 +16,6 @@ class MainWindow(QMainWindow):
     samplingSettings = SamplingSettings()
     plotter = Plotter()
     resizeSignal = Signal()
-
-    plainBinaryAnalyzer = PlainBinaryAnalyzer()
-    uartAnalyzer = UARTAnalyzer()
-    spiAnalyzer = SPIAnalyzer()
-    i2cAnalyzer = I2CAnalyzer()
-
     QGVChannelsList = [] # QGraphicsView Reference List
     QCBChannelsList = [] # QCheckBox Reference List
     QFrChannelsList = [] # QFrame Reference List
@@ -35,6 +29,7 @@ class MainWindow(QMainWindow):
     samplingOngoing = False
     lastCursorIndex = 0
     lastCursorChannel = 0
+    decodedFramesList = []
     # Could not put it in plotting.py without silently crashing
     for i in range(8):
         QGSChannelsList.append(QGraphicsScene())
@@ -45,7 +40,6 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.analyzerUI = analyzerUI()
-        #self.analyzerUI.show()
         # Get a list of QGraphicsView for the channels
         for item in dir(self.ui):
             ref = getattr(self.ui, item)
@@ -65,13 +59,12 @@ class MainWindow(QMainWindow):
             self.QGSChannelsList[index].addWidget(self.plotter.channelPlots[index].canvas)
         self.ui.axisGraphicsView.setScene(self.QGSAxis)
         self.QGSAxis.addWidget(self.plotter.axisPlot.canvas)
-        
-        
         # Zoom in and out signals
         for channel in self.plotter.channelPlots:
             channel.canvas.mpl_connect('scroll_event', self.zoomInOut)
             channel.canvas.mpl_connect('button_press_event', self.displaceOnClick)
-
+        # Analyzer UI callback
+        self.ui.protocolAnalysisPushButton.clicked.connect(self.analyzeProtocol)
         # Slide Animation, with signals for responsiveness
         self.configSlideAnimation = QPropertyAnimation(self.ui.slideFrameContainer, b"maximumWidth")#Animate minimumWidht
         self.configSlideAnimation.finished.connect(self.resizeHandler)
@@ -121,6 +114,7 @@ class MainWindow(QMainWindow):
             if isinstance(ref, QLabel) and (item.find("Protocol") != -1):
                 ref.setVisible(False)
         self.ui.analysisFrame.setVisible(False)
+        self.analyzerUI.framesDecoded.connect(self.decodedFramesReady)
         
 
     # ---------- THREADING -- START SAMPLING ----------
@@ -296,6 +290,16 @@ class MainWindow(QMainWindow):
             self.ui.triggerAnalysisChannelComboBox.addItem("8")
 
     # ---------- USER INPUT ----------
+    def analyzeProtocol(self):
+        if self.samplingOngoing or self.plotter.dataBuffer == [] or self.samplingSettings.mode == SamplingMode.ANALOG:
+            return
+        
+
+        
+        
+        self.analyzerUI.show()
+        pass
+    
     def sample(self):
         self.statusLabelTimer.stop()
         self.ui.samplingProgressBar.setValue(0)
@@ -393,12 +397,16 @@ class MainWindow(QMainWindow):
         self.plotter.processAndPlot(rawdata=data, samplingSettings=self.samplingSettings)
         self.drawCanvasesAndAxes(flush=False)
         self.ui.analysisFrame.setVisible(True)
-
-        #print(self.plainBinaryAnalyzer.decode(data=self.plotter.dataBuffer, format='dec', reverse=True))
-        #self.uartAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, txLine=0, baudRate=250000, dataBits=8, parityBits=None, stopBits=1, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
-        #self.spiAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, MOSI=1, MISO=2, CS=3, spiMode=0, reverseBits=False)
-        self.i2cAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, SDA=1, samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
         
+        self.analyzerUI.updateUI(samplingSettings=self.samplingSettings, data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer)
+        self.decodedFramesList = []
+
+
+        #for frame in self.analyzerUI.i2cAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, SDA=1):
+        '''except AnalyzerError:
+            print("No anduvo analizador")
+        except:
+            print("Otra wea")'''
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True
             self.ui.axisFrame.setVisible(True)
@@ -436,6 +444,15 @@ class MainWindow(QMainWindow):
         self.ui.channelHorizontalScrollBar.setPageStep(np.ceil(rangeLimDivs) if np.ceil(rangeLimDivs) > 10 else 10)
         self.restrictAnalysisOptions()
         self.startStopFixedCursors(forceState=False)
+
+    def decodedFramesReady(self, frames):
+        for frame in frames:
+            self.decodedFramesList.append(frame)
+        for frame in self.decodedFramesList:
+            print(frame.toLabelText(format="bin"))
+        # Implement the following:
+        # self.updateTable()
+        return
 
     def resizeEvent(self, event):
         self.resizeSignal.emit()
