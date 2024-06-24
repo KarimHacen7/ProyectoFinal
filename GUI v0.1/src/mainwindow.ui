@@ -302,6 +302,41 @@ QScrollArea QScrollBar::handle:disabled
            </spacer>
           </item>
           <item>
+           <widget class="QPushButton" name="clearProtocolAnalysisPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Icons.qrc">
+              <normaloff>:/ButtonIcons/ico/Clear Analyze.png</normaloff>:/ButtonIcons/ico/Clear Analyze.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>26</width>
+              <height>26</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="protocolAnalysisPushButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2761,6 +2796,12 @@ padding-bottom:8px
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QFrame" name="fixedMeasurementFrame">
                 <property name="frameShape">
@@ -3398,6 +3439,12 @@ padding-bottom:8px
            <string>Protocolo</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_25">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="protocolFrame">
              <property name="styleSheet">
@@ -3417,6 +3464,18 @@ padding-bottom:8px
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_26">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QFrame" name="bitInterpretationFrame">
                 <property name="frameShape">
@@ -3554,23 +3613,49 @@ font: 500 10pt &quot;Consolas&quot;;
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QTableView" name="framesTableView"/>
+                  <widget class="QTableWidget" name="decodedFramesTableWidget">
+                   <property name="styleSheet">
+                    <string notr="true">QTableView QTableCornerButton::section {
+	border: 2px solid gray;	
+	background-color: rgb(34, 40, 49);
+}
+QTableWidgetItem
+{
+	color: rgb(255, 255, 255);
+	background-color: rgb(34, 40, 49);
+}
+QTableWidgetItem::section:checked
+{
+	background-color: rgb(49, 54, 63);
+	border: 4px solid #007ad9;
+}
+QHeaderView::section
+{
+	border: 2px solid gray;
+	color: rgb(255, 255, 255);
+	background-color: rgb(34, 40, 49);
+}
+QHeaderView::section:checked
+{
+	background-color: rgb(49, 54, 63);
+}</string>
+                   </property>
+                   <property name="editTriggers">
+                    <set>QAbstractItemView::NoEditTriggers</set>
+                   </property>
+                   <attribute name="horizontalHeaderCascadingSectionResizes">
+                    <bool>true</bool>
+                   </attribute>
+                   <attribute name="horizontalHeaderStretchLastSection">
+                    <bool>false</bool>
+                   </attribute>
+                   <attribute name="verticalHeaderStretchLastSection">
+                    <bool>false</bool>
+                   </attribute>
+                  </widget>
                  </item>
                 </layout>
                </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
              </layout>
             </widget>

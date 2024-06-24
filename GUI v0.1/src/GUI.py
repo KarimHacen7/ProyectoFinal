@@ -1,7 +1,7 @@
 from settings import SamplingSettings, SamplingMode
 from communication import CommunicationModule, SamplingWorker
 from plotting import Plotter
-from PySide6.QtWidgets import  QMainWindow, QLabel, QMessageBox, QGraphicsScene, QGraphicsView,  QCheckBox
+from PySide6.QtWidgets import  QMainWindow, QLabel, QMessageBox, QGraphicsScene, QGraphicsView, QCheckBox, QTableWidgetItem
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
 from protocolAnalyzerUI import *
@@ -15,6 +15,7 @@ class MainWindow(QMainWindow):
     communicationModule = CommunicationModule()
     samplingSettings = SamplingSettings()
     plotter = Plotter()
+    decodedFramesList = []
     resizeSignal = Signal()
     QGVChannelsList = [] # QGraphicsView Reference List
     QCBChannelsList = [] # QCheckBox Reference List
@@ -29,7 +30,6 @@ class MainWindow(QMainWindow):
     samplingOngoing = False
     lastCursorIndex = 0
     lastCursorChannel = 0
-    decodedFramesList = []
     # Could not put it in plotting.py without silently crashing
     for i in range(8):
         QGSChannelsList.append(QGraphicsScene())
@@ -113,9 +113,20 @@ class MainWindow(QMainWindow):
             ref = getattr(self.ui, item)
             if isinstance(ref, QLabel) and (item.find("Protocol") != -1):
                 ref.setVisible(False)
-        self.ui.analysisFrame.setVisible(False)
-        self.analyzerUI.framesDecoded.connect(self.decodedFramesReady)
         
+        self.ui.analysisFrame.setVisible(False)
+        
+        self.analyzerUI.framesDecoded.connect(self.decodedFramesReady)
+
+        self.ui.decodedFramesTableWidget.cellDoubleClicked.connect(self.goToFrame)
+
+        self.ui.clearProtocolAnalysisPushButton.clicked.connect(self.clearProtocolAnalysis)
+        
+        self.ui.binaryInterpretationRadioButton.toggled.connect(self.updateTable)
+        self.ui.decimalInterpretationRadioButton.toggled.connect(self.updateTable)
+        self.ui.hexadecimalInterpretationRadioButton.toggled.connect(self.updateTable)
+        self.ui.ASCIIInterpretationRadioButton.toggled.connect(self.updateTable)
+
 
     # ---------- THREADING -- START SAMPLING ----------
     def startSamplingThread(self):
@@ -289,17 +300,20 @@ class MainWindow(QMainWindow):
         elif self.samplingSettings.mode == SamplingMode.ANALOG:
             self.ui.triggerAnalysisChannelComboBox.addItem("8")
 
+    def getDecodingInterpretationPreference(self) -> str:
+        option = ""
+        if self.ui.binaryInterpretationRadioButton.isChecked():
+            option = "bin"
+        elif self.ui.decimalInterpretationRadioButton.isChecked():
+            option = "dec"
+        elif self.ui.hexadecimalInterpretationRadioButton.isChecked():
+            option = "hex"
+        elif self.ui.ASCIIInterpretationRadioButton.isChecked():
+            option = "ascii"
+        else:
+            option = "dec"
+        return option
     # ---------- USER INPUT ----------
-    def analyzeProtocol(self):
-        if self.samplingOngoing or self.plotter.dataBuffer == [] or self.samplingSettings.mode == SamplingMode.ANALOG:
-            return
-        
-
-        
-        
-        self.analyzerUI.show()
-        pass
-    
     def sample(self):
         self.statusLabelTimer.stop()
         self.ui.samplingProgressBar.setValue(0)
@@ -391,7 +405,7 @@ class MainWindow(QMainWindow):
             self.drawCanvasesAndAxes(flush=False)
             self.ui.fixedCursorsPushButton.setStyleSheet("")
             self.ui.fixedMeasurementFrame.setVisible(False)
-
+    
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
         self.plotter.processAndPlot(rawdata=data, samplingSettings=self.samplingSettings)
@@ -401,12 +415,6 @@ class MainWindow(QMainWindow):
         self.analyzerUI.updateUI(samplingSettings=self.samplingSettings, data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer)
         self.decodedFramesList = []
 
-
-        #for frame in self.analyzerUI.i2cAnalyzer.decode(data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer, SCK=0, SDA=1):
-        '''except AnalyzerError:
-            print("No anduvo analizador")
-        except:
-            print("Otra wea")'''
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True
             self.ui.axisFrame.setVisible(True)
@@ -445,15 +453,6 @@ class MainWindow(QMainWindow):
         self.restrictAnalysisOptions()
         self.startStopFixedCursors(forceState=False)
 
-    def decodedFramesReady(self, frames):
-        for frame in frames:
-            self.decodedFramesList.append(frame)
-        for frame in self.decodedFramesList:
-            print(frame.toLabelText(format="bin"))
-        # Implement the following:
-        # self.updateTable()
-        return
-
     def resizeEvent(self, event):
         self.resizeSignal.emit()
 
@@ -467,9 +466,7 @@ class MainWindow(QMainWindow):
             self.firstResizeDone = True
 
     def zoomInOut(self, event):
-        if self.plotter.plottingInProcess:
-            return
-        if self.plotter.dataBuffer == []:
+        if self.plotter.dataBuffer == [] or self.plotter.plottingInProcess:
             return
         scrolledChannel = 0
 
@@ -517,9 +514,7 @@ class MainWindow(QMainWindow):
         self.drawCanvasesAndAxes(flush=True)
 
     def horizontalSliderChanged(self):
-        if self.plotter.plottingInProcess:
-            return
-        if self.plotter.dataBuffer == []:
+        if self.plotter.dataBuffer == [] or self.plotter.plottingInProcess:
             return
         
         leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
@@ -871,5 +866,64 @@ class MainWindow(QMainWindow):
         self.ui.triggerAnalysisGoLeftButton.setEnabled(True)
         self.ui.triggerAnalysisGoRightButton.setEnabled(True)
 
-    
-            
+    #  ---------- PROTOCOL DECODE  ----------
+    def decodedFramesReady(self, frames):
+        for frame in frames:
+            self.decodedFramesList.append(frame)
+        self.updateTable()
+        return
+
+    def analyzeProtocol(self):
+        if self.samplingOngoing or self.plotter.dataBuffer == [] or self.samplingSettings.mode == SamplingMode.ANALOG:
+            return
+        self.analyzerUI.show()
+
+    def updateTable(self):
+        option = self.getDecodingInterpretationPreference()
+        self.ui.decodedFramesTableWidget.clearContents()
+        self.ui.decodedFramesTableWidget.setColumnCount(5)
+        self.ui.decodedFramesTableWidget.setRowCount(len(self.decodedFramesList))
+        self.ui.decodedFramesTableWidget.setHorizontalHeaderLabels(["Mensaje", "Inicio", "Final", "Protocolo", "Canal"])
+        for index, frame in enumerate(self.decodedFramesList):
+            self.ui.decodedFramesTableWidget.setItem(index,0,QTableWidgetItem(frame.toLabelText(option)))
+            self.ui.decodedFramesTableWidget.setItem(index,1,QTableWidgetItem(str(np.round(frame.start*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]), 3))+self.plotter.timeUnitString))
+            self.ui.decodedFramesTableWidget.setItem(index,2,QTableWidgetItem(str(np.round(frame.end*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]), 3))+self.plotter.timeUnitString))
+            self.ui.decodedFramesTableWidget.setItem(index,3,QTableWidgetItem(frame.getProtocol()))
+            self.ui.decodedFramesTableWidget.setItem(index,4,QTableWidgetItem(str(frame.channel+1)))
+
+        self.ui.decodedFramesTableWidget.resizeColumnsToContents()
+
+    def goToFrame(self, row, column):
+        if (self.plotter.dataBuffer == []) or self.plotter.plottingInProcess:
+            return
+        
+        sampleNumber = self.decodedFramesList[row].start
+        
+        leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
+        rangeLim = abs(rightLim-leftLim)
+        
+        centerValue = sampleNumber*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
+        leftLim=centerValue-(rangeLim/2)
+        rightLim=centerValue+(rangeLim/2)
+        
+        if leftLim < 0:
+            leftLim = 0
+            rightLim = rangeLim
+        elif rightLim > self.plotter.channelLengthInUnit:
+            leftLim = self.plotter.channelLengthInUnit - rangeLim
+            rightLim = self.plotter.channelLengthInUnit
+        
+        for channel in self.plotter.channelPlots:
+            channel.axes.set_xlim(left=leftLim, right=rightLim)
+        self.plotter.axisPlot.axes.set_xlim(left=leftLim, right=rightLim)
+
+        self.drawCanvasesAndAxes(flush=True)
+
+        self.ui.channelHorizontalScrollBar.blockSignals(True)
+        self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerValue/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
+        self.ui.channelHorizontalScrollBar.blockSignals(False)
+
+    def clearProtocolAnalysis(self):
+        self.decodedFramesList = []
+        self.updateTable()
+

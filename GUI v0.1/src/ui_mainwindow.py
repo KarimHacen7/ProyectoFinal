@@ -15,12 +15,13 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDoubleSpinBox,
-    QFrame, QGraphicsView, QGridLayout, QHBoxLayout,
-    QHeaderView, QLabel, QMainWindow, QProgressBar,
-    QPushButton, QRadioButton, QScrollArea, QScrollBar,
-    QSizePolicy, QSlider, QSpacerItem, QTabWidget,
-    QTableView, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QCheckBox, QComboBox,
+    QDoubleSpinBox, QFrame, QGraphicsView, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QMainWindow,
+    QProgressBar, QPushButton, QRadioButton, QScrollArea,
+    QScrollBar, QSizePolicy, QSlider, QSpacerItem,
+    QTabWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
 import Icons_rc
 
 class Ui_MainWindow(object):
@@ -169,18 +170,31 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13.addItem(self.horizontalSpacer)
 
-        self.protocolAnalysisPushButton = QPushButton(self.headerMainFrame)
-        self.protocolAnalysisPushButton.setObjectName(u"protocolAnalysisPushButton")
+        self.clearProtocolAnalysisPushButton = QPushButton(self.headerMainFrame)
+        self.clearProtocolAnalysisPushButton.setObjectName(u"clearProtocolAnalysisPushButton")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.clearProtocolAnalysisPushButton.sizePolicy().hasHeightForWidth())
+        self.clearProtocolAnalysisPushButton.setSizePolicy(sizePolicy1)
+        self.clearProtocolAnalysisPushButton.setMinimumSize(QSize(30, 30))
+        self.clearProtocolAnalysisPushButton.setMaximumSize(QSize(30, 30))
+        icon1 = QIcon()
+        icon1.addFile(u":/ButtonIcons/ico/Clear Analyze.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.clearProtocolAnalysisPushButton.setIcon(icon1)
+        self.clearProtocolAnalysisPushButton.setIconSize(QSize(26, 26))
+
+        self.horizontalLayout_13.addWidget(self.clearProtocolAnalysisPushButton)
+
+        self.protocolAnalysisPushButton = QPushButton(self.headerMainFrame)
+        self.protocolAnalysisPushButton.setObjectName(u"protocolAnalysisPushButton")
         sizePolicy1.setHeightForWidth(self.protocolAnalysisPushButton.sizePolicy().hasHeightForWidth())
         self.protocolAnalysisPushButton.setSizePolicy(sizePolicy1)
         self.protocolAnalysisPushButton.setMinimumSize(QSize(30, 30))
         self.protocolAnalysisPushButton.setMaximumSize(QSize(30, 30))
-        icon1 = QIcon()
-        icon1.addFile(u":/ButtonIcons/ico/Analyze.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.protocolAnalysisPushButton.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/ButtonIcons/ico/Analyze.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.protocolAnalysisPushButton.setIcon(icon2)
         self.protocolAnalysisPushButton.setIconSize(QSize(26, 26))
 
         self.horizontalLayout_13.addWidget(self.protocolAnalysisPushButton)
@@ -191,9 +205,9 @@ class Ui_MainWindow(object):
         self.fixedCursorsPushButton.setSizePolicy(sizePolicy1)
         self.fixedCursorsPushButton.setMinimumSize(QSize(30, 30))
         self.fixedCursorsPushButton.setMaximumSize(QSize(30, 30))
-        icon2 = QIcon()
-        icon2.addFile(u":/ButtonIcons/ico/Fixed Measurements.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.fixedCursorsPushButton.setIcon(icon2)
+        icon3 = QIcon()
+        icon3.addFile(u":/ButtonIcons/ico/Fixed Measurements.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.fixedCursorsPushButton.setIcon(icon3)
         self.fixedCursorsPushButton.setIconSize(QSize(27, 27))
 
         self.horizontalLayout_13.addWidget(self.fixedCursorsPushButton)
@@ -202,9 +216,9 @@ class Ui_MainWindow(object):
         self.cursorPushButton.setObjectName(u"cursorPushButton")
         self.cursorPushButton.setMinimumSize(QSize(30, 30))
         self.cursorPushButton.setMaximumSize(QSize(30, 30))
-        icon3 = QIcon()
-        icon3.addFile(u":/ButtonIcons/ico/Crosshair.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.cursorPushButton.setIcon(icon3)
+        icon4 = QIcon()
+        icon4.addFile(u":/ButtonIcons/ico/Crosshair.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.cursorPushButton.setIcon(icon4)
         self.cursorPushButton.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_13.addWidget(self.cursorPushButton)
@@ -215,9 +229,9 @@ class Ui_MainWindow(object):
         self.startSamplingPushButton.setSizePolicy(sizePolicy1)
         self.startSamplingPushButton.setMinimumSize(QSize(30, 30))
         self.startSamplingPushButton.setMaximumSize(QSize(30, 30))
-        icon4 = QIcon()
-        icon4.addFile(u":/ButtonIcons/ico/play.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.startSamplingPushButton.setIcon(icon4)
+        icon5 = QIcon()
+        icon5.addFile(u":/ButtonIcons/ico/play.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.startSamplingPushButton.setIcon(icon5)
         self.startSamplingPushButton.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_13.addWidget(self.startSamplingPushButton)
@@ -227,9 +241,9 @@ class Ui_MainWindow(object):
         self.configSliderPushButton.setMinimumSize(QSize(30, 30))
         self.configSliderPushButton.setMaximumSize(QSize(30, 30))
         self.configSliderPushButton.setStyleSheet(u"")
-        icon5 = QIcon()
-        icon5.addFile(u":/ButtonIcons/ico/Three stripes.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.configSliderPushButton.setIcon(icon5)
+        icon6 = QIcon()
+        icon6.addFile(u":/ButtonIcons/ico/Three stripes.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.configSliderPushButton.setIcon(icon6)
         self.configSliderPushButton.setIconSize(QSize(23, 23))
 
         self.horizontalLayout_13.addWidget(self.configSliderPushButton)
@@ -845,9 +859,9 @@ class Ui_MainWindow(object):
         self.analogModePushButton.setObjectName(u"analogModePushButton")
         self.analogModePushButton.setMinimumSize(QSize(0, 25))
         self.analogModePushButton.setStyleSheet(u"")
-        icon6 = QIcon()
-        icon6.addFile(u":/ButtonIcons/ico/sine wave.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.analogModePushButton.setIcon(icon6)
+        icon7 = QIcon()
+        icon7.addFile(u":/ButtonIcons/ico/sine wave.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.analogModePushButton.setIcon(icon7)
 
         self.horizontalLayout_3.addWidget(self.analogModePushButton)
 
@@ -1043,21 +1057,21 @@ class Ui_MainWindow(object):
         self.horizontalLayout_16.addWidget(self.triggerChannelComboBox)
 
         self.triggerModeComboBox = QComboBox(self.triggerChannelButtonsFrame)
-        icon7 = QIcon()
-        icon7.addFile(u":/ButtonIcons/ico/UNTRIGGERED.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.triggerModeComboBox.addItem(icon7, "")
         icon8 = QIcon()
-        icon8.addFile(u":/ButtonIcons/ico/RISING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u":/ButtonIcons/ico/UNTRIGGERED.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon8, "")
         icon9 = QIcon()
-        icon9.addFile(u":/ButtonIcons/ico/FALLING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon9.addFile(u":/ButtonIcons/ico/RISING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon9, "")
         icon10 = QIcon()
-        icon10.addFile(u":/ButtonIcons/ico/LOW LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon10.addFile(u":/ButtonIcons/ico/FALLING EDGE.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon10, "")
         icon11 = QIcon()
-        icon11.addFile(u":/ButtonIcons/ico/HIGH LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon11.addFile(u":/ButtonIcons/ico/LOW LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
         self.triggerModeComboBox.addItem(icon11, "")
+        icon12 = QIcon()
+        icon12.addFile(u":/ButtonIcons/ico/HIGH LEVEL.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerModeComboBox.addItem(icon12, "")
         self.triggerModeComboBox.setObjectName(u"triggerModeComboBox")
         self.triggerModeComboBox.setMinimumSize(QSize(0, 25))
         self.triggerModeComboBox.setFont(font)
@@ -1160,6 +1174,7 @@ class Ui_MainWindow(object):
         self.analysisFrame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_4 = QVBoxLayout(self.analysisFrame)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, -1, 0, -1)
         self.fixedMeasurementFrame = QFrame(self.analysisFrame)
         self.fixedMeasurementFrame.setObjectName(u"fixedMeasurementFrame")
         self.fixedMeasurementFrame.setFrameShape(QFrame.StyledPanel)
@@ -1256,10 +1271,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_19.addWidget(self.triggerAnalysisChannelComboBox)
 
         self.triggerAnalysisModeComboBox = QComboBox(self.triggerAnalysisSelectorFrame)
-        self.triggerAnalysisModeComboBox.addItem(icon8, "")
         self.triggerAnalysisModeComboBox.addItem(icon9, "")
         self.triggerAnalysisModeComboBox.addItem(icon10, "")
         self.triggerAnalysisModeComboBox.addItem(icon11, "")
+        self.triggerAnalysisModeComboBox.addItem(icon12, "")
         self.triggerAnalysisModeComboBox.setObjectName(u"triggerAnalysisModeComboBox")
         self.triggerAnalysisModeComboBox.setMinimumSize(QSize(0, 25))
         self.triggerAnalysisModeComboBox.setFont(font)
@@ -1280,9 +1295,9 @@ class Ui_MainWindow(object):
         self.triggerAnalysisGoLeftButton.setObjectName(u"triggerAnalysisGoLeftButton")
         self.triggerAnalysisGoLeftButton.setMinimumSize(QSize(0, 25))
         self.triggerAnalysisGoLeftButton.setMaximumSize(QSize(16777215, 25))
-        icon12 = QIcon()
-        icon12.addFile(u":/ButtonIcons/ico/ArrowLeft.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.triggerAnalysisGoLeftButton.setIcon(icon12)
+        icon13 = QIcon()
+        icon13.addFile(u":/ButtonIcons/ico/ArrowLeft.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerAnalysisGoLeftButton.setIcon(icon13)
         self.triggerAnalysisGoLeftButton.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_20.addWidget(self.triggerAnalysisGoLeftButton)
@@ -1291,9 +1306,9 @@ class Ui_MainWindow(object):
         self.triggerAnalysisGoRightButton.setObjectName(u"triggerAnalysisGoRightButton")
         self.triggerAnalysisGoRightButton.setMinimumSize(QSize(0, 25))
         self.triggerAnalysisGoRightButton.setMaximumSize(QSize(16777215, 25))
-        icon13 = QIcon()
-        icon13.addFile(u":/ButtonIcons/ico/ArrowRight.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.triggerAnalysisGoRightButton.setIcon(icon13)
+        icon14 = QIcon()
+        icon14.addFile(u":/ButtonIcons/ico/ArrowRight.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.triggerAnalysisGoRightButton.setIcon(icon14)
         self.triggerAnalysisGoRightButton.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_20.addWidget(self.triggerAnalysisGoRightButton)
@@ -1412,6 +1427,7 @@ class Ui_MainWindow(object):
         self.protocolTab.setObjectName(u"protocolTab")
         self.verticalLayout_25 = QVBoxLayout(self.protocolTab)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")
+        self.verticalLayout_25.setContentsMargins(0, -1, 0, -1)
         self.protocolFrame = QFrame(self.protocolTab)
         self.protocolFrame.setObjectName(u"protocolFrame")
         self.protocolFrame.setStyleSheet(u"QFrame#bitInterpretationFrame,\n"
@@ -1426,6 +1442,7 @@ class Ui_MainWindow(object):
         self.protocolFrame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_26 = QVBoxLayout(self.protocolFrame)
         self.verticalLayout_26.setObjectName(u"verticalLayout_26")
+        self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
         self.bitInterpretationFrame = QFrame(self.protocolFrame)
         self.bitInterpretationFrame.setObjectName(u"bitInterpretationFrame")
         self.bitInterpretationFrame.setFrameShape(QFrame.NoFrame)
@@ -1495,17 +1512,41 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.FramesListLabel, 0, 0, 1, 1)
 
-        self.framesTableView = QTableView(self.framesListFrame)
-        self.framesTableView.setObjectName(u"framesTableView")
+        self.decodedFramesTableWidget = QTableWidget(self.framesListFrame)
+        self.decodedFramesTableWidget.setObjectName(u"decodedFramesTableWidget")
+        self.decodedFramesTableWidget.setStyleSheet(u"QTableView QTableCornerButton::section {\n"
+"	border: 2px solid gray;	\n"
+"	background-color: rgb(34, 40, 49);\n"
+"}\n"
+"QTableWidgetItem\n"
+"{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(34, 40, 49);\n"
+"}\n"
+"QTableWidgetItem::section:checked\n"
+"{\n"
+"	background-color: rgb(49, 54, 63);\n"
+"	border: 4px solid #007ad9;\n"
+"}\n"
+"QHeaderView::section\n"
+"{\n"
+"	border: 2px solid gray;\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: rgb(34, 40, 49);\n"
+"}\n"
+"QHeaderView::section:checked\n"
+"{\n"
+"	background-color: rgb(49, 54, 63);\n"
+"}")
+        self.decodedFramesTableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.decodedFramesTableWidget.horizontalHeader().setCascadingSectionResizes(True)
+        self.decodedFramesTableWidget.horizontalHeader().setStretchLastSection(False)
+        self.decodedFramesTableWidget.verticalHeader().setStretchLastSection(False)
 
-        self.gridLayout_3.addWidget(self.framesTableView, 1, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.decodedFramesTableWidget, 1, 0, 1, 1)
 
 
         self.verticalLayout_26.addWidget(self.framesListFrame)
-
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.verticalLayout_26.addItem(self.verticalSpacer_2)
 
 
         self.verticalLayout_25.addWidget(self.protocolFrame)
@@ -1567,6 +1608,7 @@ class Ui_MainWindow(object):
         self.channel6CheckBox.setText(QCoreApplication.translate("MainWindow", u"6", None))
         self.channel7CheckBox.setText(QCoreApplication.translate("MainWindow", u"7", None))
         self.channel8CheckBox.setText(QCoreApplication.translate("MainWindow", u"8", None))
+        self.clearProtocolAnalysisPushButton.setText("")
         self.protocolAnalysisPushButton.setText("")
         self.fixedCursorsPushButton.setText("")
         self.cursorPushButton.setText("")

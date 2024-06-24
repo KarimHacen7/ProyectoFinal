@@ -395,6 +395,9 @@ class Frame():
         except:
             result = "a"
         return result
+    
+    def getProtocol(self)->str:
+        return ""
 
 class BinaryFrame(Frame):
     '''
@@ -412,6 +415,9 @@ class BinaryFrame(Frame):
 
     def toTableRows(self):
         pass
+
+    def getProtocol(self)->str:
+        return "Binario"
 
 class UARTFrame(Frame):
     '''
@@ -445,6 +451,9 @@ class UARTFrame(Frame):
         
     def toTableRow():
         pass
+    
+    def getProtocol(self)->str:
+        return "UART"
 
 class SPIFrame(Frame):
     '''
@@ -464,6 +473,9 @@ class SPIFrame(Frame):
     
     def toTableRow():
         pass
+    
+    def getProtocol(self)->str:
+        return "SPI"
 
 class I2CFrame(Frame):
     '''
@@ -508,6 +520,9 @@ class I2CFrame(Frame):
     
     def toTableRow():
         pass
+
+    def getProtocol(self)->str:
+        return "I2C"
 
 class AnalyzerError(Exception):
     pass

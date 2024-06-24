@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Clear Analyze.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#b0b0b0"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0460067"
+     inkscape:cx="265.6394"
+     inkscape:cy="565.24742"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1-6" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       inkscape:label="Layer 1"
+       id="layer1-6"
+       transform="translate(-38.892107,-4.0171414)">
+      <g
+         id="g5141"
+         transform="matrix(1.3623577,0,0,1.3623577,5.9047529,7.7053828)"
+         inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\Clear Analyze.png"
+         inkscape:export-xdpi="200"
+         inkscape:export-ydpi="200">
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:2.20206485;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 77.743167,109.61304 h 6.01577 V 89.552954 h 7.505926 v 20.060086 h 6.677553"
+           id="path99"
+           sodipodi:nodetypes="cccccc"
+           inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\RISING EDGE.png"
+           inkscape:export-xdpi="200"
+           inkscape:export-ydpi="200" />
+      </g>
+      <circle
+         style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.94282;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path1021"
+         r="21.392509"
+         cy="145.6055"
+         cx="125.54017"
+         inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\Clear Analyze.png"
+         inkscape:export-xdpi="200"
+         inkscape:export-ydpi="200" />
+      <rect
+         style="fill:#ffffff;fill-opacity:0.983573;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect1667"
+         width="8.0467978"
+         height="21.397167"
+         x="31.180544"
+         y="211.22821"
+         transform="rotate(-30)"
+         inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\Clear Analyze.png"
+         inkscape:export-xdpi="200"
+         inkscape:export-ydpi="200" />
+      <path
+         style="fill:none;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 106.52486,186.74198 38.62622,-68.00889"
+         id="path988"
+         sodipodi:nodetypes="cc"
+         inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\Clear Analyze.png"
+         inkscape:export-xdpi="200"
+         inkscape:export-ydpi="200" />
+    </g>
+  </g>
+</svg>

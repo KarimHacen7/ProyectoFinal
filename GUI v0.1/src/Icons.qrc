@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="ButtonIcons">
+    <file>../ico/Clear Analyze.png</file>
     <file>../ico/grid.png</file>
     <file>../ico/square wave.png</file>
     <file>../ico/ArrowLeft.png</file>

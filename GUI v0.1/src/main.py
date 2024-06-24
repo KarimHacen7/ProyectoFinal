@@ -4,25 +4,14 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QResizeEvent
 '''
 TODO:
-    show decoded messages in other window, possibly in a qlistview
-
-    double click on decoded message should focus on plots
-
-    should be able to add multiple decoders at the same time
-
-    sacar el scroll de los qgraphicsview
-
-    Emprolijado y paquetizado de la gui
-
     UART Decode
         Add support for reversing bit order
 
     I2C Decode needs a little more love
 
+    El decode de binario anda medio raro
 DOING:  
-
-    PONE LOS DECODER CON TRY CATCH
-
+    CARTELITOS
 
 HOTFIX:
     extremos navigation scrollbar
