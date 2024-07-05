@@ -4,7 +4,7 @@ This code is intended for testing the Logic and Protocol Analyzer as a UART Tx L
 
 //Serial, Tx pin is Digital 18 on the board
 void setup() {
-  Serial1.begin(250000, SERIAL_8E1);
+  Serial1.begin(250000);
 }
 
 void loop() {

@@ -1,30 +1,28 @@
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 
-# Sample data
-x = [1, 2, 3, 4, 5]
-y = [10, 20, 25, 30, 40]
+# Function to create a plot with text and demonstrate getting the axes object from the text object
+def plot_signal_with_text_and_get_axes(signal, x_limits, text, text_position):
+    fig, ax = plt.subplots()
+    ax.plot(signal)
+    ax.set_xlim(x_limits)
+    
+    text_obj = ax.text(*text_position, text, fontsize=12, ha='center')
 
-# Create a plot
-fig, ax = plt.subplots()
-ax.plot(x, y, marker='o')
+    # Get the axes object from the text object using the 'axes' attribute
+    axes_from_text = text_obj.axes
 
-# Annotate the point with maximum y value
-max_y = max(y)
-max_y_index = y.index(max_y)
-max_x = x[max_y_index]
+    # Verify that the axes object from the text is the same as the original axes
+    if axes_from_text == ax:
+        print("Successfully retrieved the axes object from the text object")
+    else:
+        print("Failed to retrieve the correct axes object from the text object")
+    
+    plt.show()
 
-# Add a rectangle that spans from (1, 35) to (2, 40)
-rect = patches.Rectangle((1, 35), 1, 5, linewidth=1, edgecolor='black', facecolor='none')
-ax.add_patch(rect)
+# Example usage
+signal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+x_limits = (2, 8)
+text = "Sample Text"
+text_position = (5, 6)  # x, y position in data coordinates
 
-# Add text inside the rectangle
-ax.text(1.5, 37.5, 'Range: 1-2\n, 35-40', horizontalalignment='center', verticalalignment='center')
-
-# Add labels and title
-ax.set_xlabel('X axis')
-ax.set_ylabel('Y axis')
-ax.set_title('Example of a rectangle annotation in matplotlib')
-
-# Show the plot
-plt.show()
+plot_signal_with_text_and_get_axes(signal, x_limits, text, text_position)

@@ -15,33 +15,29 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFormLayout,
-    QFrame, QGridLayout, QHBoxLayout, QLabel,
-    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDialog,
+    QFormLayout, QFrame, QGridLayout, QHBoxLayout,
+    QLabel, QPushButton, QSizePolicy, QSpacerItem,
     QTabWidget, QVBoxLayout, QWidget)
 
-class Ui_mainWindow(object):
-    def setupUi(self, mainWindow):
-        if not mainWindow.objectName():
-            mainWindow.setObjectName(u"mainWindow")
-        mainWindow.resize(408, 291)
-        mainWindow.setStyleSheet(u"*{\n"
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        if not Dialog.objectName():
+            Dialog.setObjectName(u"Dialog")
+        Dialog.resize(363, 309)
+        Dialog.setStyleSheet(u"*{\n"
 "	color: #EEEEEE;\n"
 "	background-color: #222831;\n"
-"	font: 9pt \"Consolas\";\n"
+"	font: 9pt Consolas\n"
 "}\n"
 ".QPushButton, .QComboBox, QDoubleSpinBox\n"
 "{\n"
 "	background-color: #31363F;\n"
 "	color:#EEEEEE\n"
 "}")
-        self.centralwidget = QWidget(mainWindow)
-        self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
-        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2 = QVBoxLayout(Dialog)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.mainVerticalFrame = QFrame(self.centralwidget)
+        self.mainVerticalFrame = QFrame(Dialog)
         self.mainVerticalFrame.setObjectName(u"mainVerticalFrame")
         self.mainVerticalFrame.setFrameShape(QFrame.StyledPanel)
         self.mainVerticalFrame.setFrameShadow(QFrame.Raised)
@@ -116,7 +112,7 @@ class Ui_mainWindow(object):
         self.channelSelectionLabel = QLabel(self.channelSelectionFrame)
         self.channelSelectionLabel.setObjectName(u"channelSelectionLabel")
         self.channelSelectionLabel.setMinimumSize(QSize(0, 20))
-        self.channelSelectionLabel.setMaximumSize(QSize(16777215, 20))
+        self.channelSelectionLabel.setMaximumSize(QSize(16777215, 100))
         font1 = QFont()
         font1.setFamilies([u"Consolas"])
         font1.setPointSize(9)
@@ -124,57 +120,10 @@ class Ui_mainWindow(object):
         font1.setItalic(False)
         self.channelSelectionLabel.setFont(font1)
         self.channelSelectionLabel.setStyleSheet(u"*{padding-right: 5px;}")
-        self.channelSelectionLabel.setWordWrap(False)
+        self.channelSelectionLabel.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.channelSelectionLabel.setWordWrap(True)
 
         self.horizontalLayout_14.addWidget(self.channelSelectionLabel)
-
-        self.channel1CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel1CheckBox.setObjectName(u"channel1CheckBox")
-        self.channel1CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel1CheckBox)
-
-        self.channel2CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel2CheckBox.setObjectName(u"channel2CheckBox")
-        self.channel2CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel2CheckBox)
-
-        self.channel3CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel3CheckBox.setObjectName(u"channel3CheckBox")
-        self.channel3CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel3CheckBox)
-
-        self.channel4CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel4CheckBox.setObjectName(u"channel4CheckBox")
-        self.channel4CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel4CheckBox)
-
-        self.channel5CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel5CheckBox.setObjectName(u"channel5CheckBox")
-        self.channel5CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel5CheckBox)
-
-        self.channel6CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel6CheckBox.setObjectName(u"channel6CheckBox")
-        self.channel6CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel6CheckBox)
-
-        self.channel7CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel7CheckBox.setObjectName(u"channel7CheckBox")
-        self.channel7CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel7CheckBox)
-
-        self.channel8CheckBox = QCheckBox(self.channelSelectionFrame)
-        self.channel8CheckBox.setObjectName(u"channel8CheckBox")
-        self.channel8CheckBox.setChecked(True)
-
-        self.horizontalLayout_14.addWidget(self.channel8CheckBox)
 
 
         self.gridLayout.addWidget(self.channelSelectionFrame, 0, 0, 1, 2)
@@ -403,79 +352,70 @@ class Ui_mainWindow(object):
 
         self.verticalLayout_2.addWidget(self.mainVerticalFrame)
 
-        mainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(mainWindow)
+        self.retranslateUi(Dialog)
 
-        self.protocolAnalyzerWidget.setCurrentIndex(3)
+        self.protocolAnalyzerWidget.setCurrentIndex(0)
         self.baudRateComboBox.setCurrentIndex(4)
         self.dataBitsComboBox.setCurrentIndex(3)
 
 
-        QMetaObject.connectSlotsByName(mainWindow)
+        QMetaObject.connectSlotsByName(Dialog)
     # setupUi
 
-    def retranslateUi(self, mainWindow):
-        mainWindow.setWindowTitle(QCoreApplication.translate("mainWindow", u"Agregar Analizador", None))
-        self.titleLabel.setText(QCoreApplication.translate("mainWindow", u"Agregar un Analizador", None))
-        self.channelSelectionLabel.setText(QCoreApplication.translate("mainWindow", u"Canales:", None))
-        self.channel1CheckBox.setText(QCoreApplication.translate("mainWindow", u"1", None))
-        self.channel2CheckBox.setText(QCoreApplication.translate("mainWindow", u"2", None))
-        self.channel3CheckBox.setText(QCoreApplication.translate("mainWindow", u"3", None))
-        self.channel4CheckBox.setText(QCoreApplication.translate("mainWindow", u"4", None))
-        self.channel5CheckBox.setText(QCoreApplication.translate("mainWindow", u"5", None))
-        self.channel6CheckBox.setText(QCoreApplication.translate("mainWindow", u"6", None))
-        self.channel7CheckBox.setText(QCoreApplication.translate("mainWindow", u"7", None))
-        self.channel8CheckBox.setText(QCoreApplication.translate("mainWindow", u"8", None))
-        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.simpleBinaryTab), QCoreApplication.translate("mainWindow", u"Paralelo", None))
-        self.baudRateLabel.setText(QCoreApplication.translate("mainWindow", u"Baud Rate", None))
-        self.baudRateComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"300", None))
-        self.baudRateComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"1200", None))
-        self.baudRateComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"2400", None))
-        self.baudRateComboBox.setItemText(3, QCoreApplication.translate("mainWindow", u"4800", None))
-        self.baudRateComboBox.setItemText(4, QCoreApplication.translate("mainWindow", u"9600", None))
-        self.baudRateComboBox.setItemText(5, QCoreApplication.translate("mainWindow", u"19200", None))
-        self.baudRateComboBox.setItemText(6, QCoreApplication.translate("mainWindow", u"38400", None))
-        self.baudRateComboBox.setItemText(7, QCoreApplication.translate("mainWindow", u"57600", None))
-        self.baudRateComboBox.setItemText(8, QCoreApplication.translate("mainWindow", u"115200", None))
-        self.baudRateComboBox.setItemText(9, QCoreApplication.translate("mainWindow", u"230400", None))
-        self.baudRateComboBox.setItemText(10, QCoreApplication.translate("mainWindow", u"250000", None))
+    def retranslateUi(self, Dialog):
+        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Analizador de Protocolo", None))
+        self.titleLabel.setText(QCoreApplication.translate("Dialog", u"Agregar un Analizador", None))
+        self.channelSelectionLabel.setText(QCoreApplication.translate("Dialog", u"El Analizador de Puerto Paralelo decodifica todos los canales muestreados, sin la necesidad de una se\u00f1al de reloj.", None))
+        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.simpleBinaryTab), QCoreApplication.translate("Dialog", u"Paralelo", None))
+        self.baudRateLabel.setText(QCoreApplication.translate("Dialog", u"Baud Rate", None))
+        self.baudRateComboBox.setItemText(0, QCoreApplication.translate("Dialog", u"300", None))
+        self.baudRateComboBox.setItemText(1, QCoreApplication.translate("Dialog", u"1200", None))
+        self.baudRateComboBox.setItemText(2, QCoreApplication.translate("Dialog", u"2400", None))
+        self.baudRateComboBox.setItemText(3, QCoreApplication.translate("Dialog", u"4800", None))
+        self.baudRateComboBox.setItemText(4, QCoreApplication.translate("Dialog", u"9600", None))
+        self.baudRateComboBox.setItemText(5, QCoreApplication.translate("Dialog", u"19200", None))
+        self.baudRateComboBox.setItemText(6, QCoreApplication.translate("Dialog", u"38400", None))
+        self.baudRateComboBox.setItemText(7, QCoreApplication.translate("Dialog", u"57600", None))
+        self.baudRateComboBox.setItemText(8, QCoreApplication.translate("Dialog", u"115200", None))
+        self.baudRateComboBox.setItemText(9, QCoreApplication.translate("Dialog", u"230400", None))
+        self.baudRateComboBox.setItemText(10, QCoreApplication.translate("Dialog", u"250000", None))
 
-        self.baudRateComboBox.setCurrentText(QCoreApplication.translate("mainWindow", u"9600", None))
-        self.dataBitsLabel.setText(QCoreApplication.translate("mainWindow", u"Bits de Datos", None))
-        self.dataBitsComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"5", None))
-        self.dataBitsComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"6", None))
-        self.dataBitsComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"7", None))
-        self.dataBitsComboBox.setItemText(3, QCoreApplication.translate("mainWindow", u"8", None))
-        self.dataBitsComboBox.setItemText(4, QCoreApplication.translate("mainWindow", u"9", None))
+        self.baudRateComboBox.setCurrentText(QCoreApplication.translate("Dialog", u"9600", None))
+        self.dataBitsLabel.setText(QCoreApplication.translate("Dialog", u"Bits de Datos", None))
+        self.dataBitsComboBox.setItemText(0, QCoreApplication.translate("Dialog", u"5", None))
+        self.dataBitsComboBox.setItemText(1, QCoreApplication.translate("Dialog", u"6", None))
+        self.dataBitsComboBox.setItemText(2, QCoreApplication.translate("Dialog", u"7", None))
+        self.dataBitsComboBox.setItemText(3, QCoreApplication.translate("Dialog", u"8", None))
+        self.dataBitsComboBox.setItemText(4, QCoreApplication.translate("Dialog", u"9", None))
 
-        self.parityBitsLabel.setText(QCoreApplication.translate("mainWindow", u"Bits de Paridad", None))
-        self.parityBitComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"Ninguno", None))
-        self.parityBitComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"Par", None))
-        self.parityBitComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"Impar", None))
+        self.parityBitsLabel.setText(QCoreApplication.translate("Dialog", u"Bits de Paridad", None))
+        self.parityBitComboBox.setItemText(0, QCoreApplication.translate("Dialog", u"Ninguno", None))
+        self.parityBitComboBox.setItemText(1, QCoreApplication.translate("Dialog", u"Par", None))
+        self.parityBitComboBox.setItemText(2, QCoreApplication.translate("Dialog", u"Impar", None))
 
-        self.stopBitsLabel.setText(QCoreApplication.translate("mainWindow", u"Bits de Stop", None))
-        self.stopBitsComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"1", None))
-        self.stopBitsComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"2", None))
+        self.stopBitsLabel.setText(QCoreApplication.translate("Dialog", u"Bits de Stop", None))
+        self.stopBitsComboBox.setItemText(0, QCoreApplication.translate("Dialog", u"1", None))
+        self.stopBitsComboBox.setItemText(1, QCoreApplication.translate("Dialog", u"2", None))
 
-        self.txLineLabel.setText(QCoreApplication.translate("mainWindow", u"Transmisor", None))
-        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.UARTTab), QCoreApplication.translate("mainWindow", u"UART/USART", None))
-        self.SCKLabel.setText(QCoreApplication.translate("mainWindow", u"Clock", None))
-        self.SPIModeComboBox.setItemText(0, QCoreApplication.translate("mainWindow", u"Pol 0, Fase 0 ", None))
-        self.SPIModeComboBox.setItemText(1, QCoreApplication.translate("mainWindow", u"Pol 0, Fase 1", None))
-        self.SPIModeComboBox.setItemText(2, QCoreApplication.translate("mainWindow", u"Pol 1, Fase 0", None))
-        self.SPIModeComboBox.setItemText(3, QCoreApplication.translate("mainWindow", u"Pol 1, Fase 1", None))
+        self.txLineLabel.setText(QCoreApplication.translate("Dialog", u"Transmisor", None))
+        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.UARTTab), QCoreApplication.translate("Dialog", u"UART/USART", None))
+        self.SCKLabel.setText(QCoreApplication.translate("Dialog", u"Clock", None))
+        self.SPIModeComboBox.setItemText(0, QCoreApplication.translate("Dialog", u"Pol 0, Fase 0 ", None))
+        self.SPIModeComboBox.setItemText(1, QCoreApplication.translate("Dialog", u"Pol 0, Fase 1", None))
+        self.SPIModeComboBox.setItemText(2, QCoreApplication.translate("Dialog", u"Pol 1, Fase 0", None))
+        self.SPIModeComboBox.setItemText(3, QCoreApplication.translate("Dialog", u"Pol 1, Fase 1", None))
 
-        self.MOSILabel.setText(QCoreApplication.translate("mainWindow", u"Master Out/Slave In", None))
-        self.MISOLabel.setText(QCoreApplication.translate("mainWindow", u"Master In/Slave Out", None))
-        self.CSLabel.setText(QCoreApplication.translate("mainWindow", u"Chip Select", None))
-        self.ignoreCSCheckBox.setText(QCoreApplication.translate("mainWindow", u"Ignorar Chip Select", None))
-        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.SPITab), QCoreApplication.translate("mainWindow", u"SPI", None))
-        self.SCLLabel.setText(QCoreApplication.translate("mainWindow", u"SCL    ", None))
-        self.SDALabel.setText(QCoreApplication.translate("mainWindow", u"SDA    ", None))
-        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.I2CTab), QCoreApplication.translate("mainWindow", u"I2C", None))
-        self.flipMessageBits.setText(QCoreApplication.translate("mainWindow", u"Invertir Bits", None))
-        self.analyzePushButton.setText(QCoreApplication.translate("mainWindow", u"Analizar", None))
-        self.cancelPushButton.setText(QCoreApplication.translate("mainWindow", u"Cancelar", None))
+        self.MOSILabel.setText(QCoreApplication.translate("Dialog", u"Master Out/Slave In", None))
+        self.MISOLabel.setText(QCoreApplication.translate("Dialog", u"Master In/Slave Out", None))
+        self.CSLabel.setText(QCoreApplication.translate("Dialog", u"Chip Select", None))
+        self.ignoreCSCheckBox.setText(QCoreApplication.translate("Dialog", u"Ignorar Chip Select", None))
+        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.SPITab), QCoreApplication.translate("Dialog", u"SPI", None))
+        self.SCLLabel.setText(QCoreApplication.translate("Dialog", u"SCL    ", None))
+        self.SDALabel.setText(QCoreApplication.translate("Dialog", u"SDA    ", None))
+        self.protocolAnalyzerWidget.setTabText(self.protocolAnalyzerWidget.indexOf(self.I2CTab), QCoreApplication.translate("Dialog", u"I2C", None))
+        self.flipMessageBits.setText(QCoreApplication.translate("Dialog", u"Invertir Bits", None))
+        self.analyzePushButton.setText(QCoreApplication.translate("Dialog", u"Analizar", None))
+        self.cancelPushButton.setText(QCoreApplication.translate("Dialog", u"Cancelar", None))
     # retranslateUi
 

@@ -1751,10 +1751,12 @@ border-radius: 5px;
         <widget class="QTabWidget" name="slideTabWidget">
          <property name="styleSheet">
           <string notr="true">QTabBar::tab {
-  background: #222831;
+  	background: #222831;
+	border: 5px solid #222831;
 } 
 QTabBar::tab:selected { 
   background: #31363F;
+	border: 5px solid #31363F;
 }
 QTabWidget#slideTabWidget::pane
 {
@@ -1763,7 +1765,7 @@ QTabWidget#slideTabWidget::pane
 </string>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="samplingConfigTab">
           <property name="accessibleName">
@@ -1773,7 +1775,7 @@ QTabWidget#slideTabWidget::pane
            <string notr="true"/>
           </property>
           <attribute name="title">
-           <string>Config</string>
+           <string>Config.</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_9">
            <property name="spacing">
@@ -3715,7 +3717,7 @@ QHeaderView::section:checked
            </font>
           </property>
           <property name="text">
-           <string>ALyP GUI v0.1</string>
+           <string>ALyP GUI v1.0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignJustify|Qt::AlignVCenter</set>

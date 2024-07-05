@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Diagrama de bloques.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.98651786"
+     inkscape:cx="520.51769"
+     inkscape:cy="365.42674"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:connector-spacing="11" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="marker71957"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path71955" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker48574"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path48572" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker43038"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path43036" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker42738"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path42736" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker42732"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path42730" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker2161"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path2159" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1513"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1511" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1503"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1501" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1493"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1491" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1483"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1481" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1473"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1471" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1459"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1457" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1453"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1451" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1433"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1431" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path1143" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1413"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1411" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1146" />
+    </marker>
+    <rect
+       x="389.5"
+       y="126"
+       width="37"
+       height="28"
+       id="rect3122" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#14d000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 1, 0.5, 1;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker48574);marker-end:url(#marker42738)"
+       d="m 63.374228,73.061094 -14.905475,0 v 77.929476 h 15.063425"
+       id="path43329"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3120"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect3122)" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31"
+       width="27.012655"
+       height="10.887967"
+       x="156.12038"
+       y="145.43106"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-9"
+       width="30.45224"
+       height="10.88797"
+       x="104.72508"
+       y="145.43106"
+       inkscape:connector-avoid="true"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-3"
+       width="37.860573"
+       height="10.887966"
+       x="104.72508"
+       y="122.54459"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-5"
+       width="27.012655"
+       height="10.887967"
+       x="64.111549"
+       y="145.43106"
+       inkscape:connector-avoid="true"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-5-5"
+       width="27.012655"
+       height="10.887967"
+       x="101.01492"
+       y="67.478287"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-5-5-5"
+       width="36.96904"
+       height="12.879927"
+       x="59.412033"
+       y="21.296032"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-5-5-3"
+       width="27.012655"
+       height="10.887967"
+       x="64.111549"
+       y="67.478287"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-5-9"
+       width="27.012655"
+       height="10.887967"
+       x="136.95244"
+       y="46.181744"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-5-8"
+       width="27.012655"
+       height="10.887967"
+       x="136.95244"
+       y="67.478271"
+       inkscape:connector-avoid="true"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-5-3"
+       width="27.012655"
+       height="10.887967"
+       x="136.95244"
+       y="88.774811"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-51"
+       width="27.012655"
+       height="10.887967"
+       x="64.111549"
+       y="122.54459"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-51-7"
+       width="27.012655"
+       height="10.887967"
+       x="198.65215"
+       y="145.43106"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-51-7-1"
+       width="27.012655"
+       height="10.887967"
+       x="106.44488"
+       y="166.73001"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:anton;-inkscape-font-specification:anton;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31);stroke-width:0.264583"
+       x="124.18052"
+       y="36.512501"
+       id="text5328"
+       transform="translate(0,0.05555486)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="157.39102"
+         y="149.24483"
+         id="tspan157945"><tspan
+           style="font-family:arial;-inkscape-font-specification:arial"
+           id="tspan157943">Protecciones </tspan></tspan><tspan
+         x="163.27179"
+         y="154.53658"
+         id="tspan157949"><tspan
+           style="font-family:arial;-inkscape-font-specification:arial"
+           id="tspan157947">Voltaje</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-9);stroke-width:0.264583"
+       x="88.062828"
+       y="56.356251"
+       id="text42661"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="105.951"
+         y="149.24483"
+         id="tspan157951">Comparadores </tspan><tspan
+         x="109.59626"
+         y="154.53649"
+         id="tspan157953">Analógicos</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-5);stroke-width:0.264583"
+       x="34.787537"
+       y="49.080208"
+       id="text47203"
+       transform="translate(0,3.1458418)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="72.797791"
+         y="149.24483"
+         id="tspan157955">MCU</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-3);stroke-width:0.264583"
+       x="110.79323"
+       y="22.886457"
+       id="text49587"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="105.77008"
+         y="126.35811"
+         id="tspan157957">Acondicionamiento </tspan><tspan
+         x="118.24165"
+         y="131.64978"
+         id="tspan157959">Señal</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-51-7);stroke-width:0.264583"
+       x="187.49863"
+       y="60.060417"
+       id="text57739"
+       transform="translate(0,3.1220785)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="205.9219"
+         y="149.24483"
+         id="tspan157961">Puerto</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-51);stroke-width:0.264583"
+       x="42.885235"
+       y="38.099998"
+       id="text62933"
+       transform="translate(0,3.1457102)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="73.14919"
+         y="126.35811"
+         id="tspan157963">ADC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-51-7-1);stroke-width:0.264583"
+       x="57.40321"
+       y="91.942711"
+       id="text66703"
+       transform="translate(-0.079842,3.1450598)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="115.4822"
+         y="170.54366"
+         id="tspan157965">DAC</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect31-51-7-6"
+       width="27.012655"
+       height="10.887967"
+       x="156.28374"
+       y="122.54459"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-51-7-6);stroke-width:0.264583"
+       x="135.11009"
+       y="20.902082"
+       id="text68427"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="159.55398"
+         y="126.35811"
+         id="tspan157967">Referencia </tspan><tspan
+         x="163.43488"
+         y="131.64978"
+         id="tspan157969">Voltaje</tspan></text>
+    <g
+       id="g109464"
+       transform="translate(43.486622,81.129638)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <circle
+         style="fill:none;fill-opacity:0.983573;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path109149"
+         cx="203.85291"
+         cy="69.745399"
+         r="6" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200.41514,69.779166 v -2.75156 h 3.43776 v 5.43559 h 3.43776 v -2.68403"
+         id="path857"
+         sodipodi:nodetypes="cccccc"
+         inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\GUI v0.1\ico\square wave.png"
+         inkscape:export-xdpi="200"
+         inkscape:export-ydpi="200" />
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1483)"
+       d="M 198.65215,150.87504 H 183.13303"
+       id="path109488"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-51-7"
+       inkscape:connection-end="#rect31"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1483)"
+       d="m 241.33953,150.87504 -15.67473,0"
+       id="path109490"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g109464"
+       inkscape:connection-end="#rect31-51-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1459)"
+       d="m 156.12038,150.87504 -20.94306,10e-6"
+       id="path109494"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31"
+       inkscape:connection-end="#rect31-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1493)"
+       d="m 156.28374,127.98858 -13.69808,0"
+       id="path109701"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-51-7-6"
+       inkscape:connection-end="#rect31-3"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1503)"
+       d="m 104.72508,127.98858 -13.600875,0"
+       id="path109703"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-3"
+       inkscape:connection-end="#rect31-51"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2161)"
+       d="m 77.617877,133.43256 v 11.9985"
+       id="path109705"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-51"
+       inkscape:connection-end="#rect31-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 123.52309,138.96879 v 0"
+       id="path226"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g1896"
+       transform="translate(55.675812,72.624518)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.465131;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 191.66371,92.405729 v 3.569346"
+         id="path1554"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.465131;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 188.18489,96.015292 c 1.08588,0 6.95765,0 6.95765,0"
+         id="path1669" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.465131;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 189.83381,97.262039 h 3.65981"
+         id="path1671" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.465131;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 191.00013,98.508786 h 1.32718"
+         id="path1673" />
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 247.33953,156.87504 0,11.32302"
+       id="path2057"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g109464"
+       inkscape:connection-end="#g1896"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g4463"
+       transform="translate(43.486622,81.818788)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker1513)"
+         d="m 80.168747,51.613772 v 7.398342 h -0.132285"
+         id="path224"
+         inkscape:connector-type="orthogonal"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect31-3"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 102.82861,69.152647 V 58.872786 H 80.073949"
+         id="path2384"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#ff0000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 4;stroke-dashoffset:0;paint-order:fill markers stroke"
+       id="rect4594"
+       width="171.19373"
+       height="63.277996"
+       x="59.362034"
+       y="118.23365"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#0044d7;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 4;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4594-6"
+       width="109.19115"
+       height="63.278"
+       x="59.362034"
+       y="40.280865"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:ARIAL;-inkscape-font-specification:ARIAL;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-5-5);stroke-width:0.264583"
+       x="-63.06588"
+       y="67.479225"
+       id="text9425"
+       transform="translate(0.07771581,3.1468832)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="110.75841"
+         y="71.291706"
+         id="tspan157971">GUI</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:ARIAL;-inkscape-font-specification:ARIAL;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-5-5-3);stroke-width:0.264583"
+       x="-12.965014"
+       y="71.976898"
+       id="text9425-3"
+       transform="translate(0,3.1468832)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="65.97134"
+         y="71.291706"
+         id="tspan157973">Thread USB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:ARIAL;-inkscape-font-specification:ARIAL;letter-spacing:0px;stroke-width:0.264583"
+       x="-91.751671"
+       y="70.519333"
+       id="text9425-0"><tspan
+         sodipodi:role="line"
+         id="tspan9423-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:ARIAL;-inkscape-font-specification:ARIAL;stroke-width:0.264583"
+         x="-91.751671"
+         y="70.519333" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:ARIAL;-inkscape-font-specification:ARIAL;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-5-9);stroke-width:0.264583"
+       x="-86.673065"
+       y="46.691921"
+       id="text9425-2"
+       transform="translate(-0.11303297,0.4994375)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="141.28229"
+         y="49.994831"
+         id="tspan157975">Graficado </tspan><tspan
+         x="142.80985"
+         y="55.286495"
+         id="tspan157977">Señales</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:ARIAL;-inkscape-font-specification:ARIAL;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-5-3);stroke-width:0.264583"
+       x="-82.084373"
+       y="93.012405"
+       id="text9425-4"
+       transform="translate(0,0.08833021)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="140.22293"
+         y="92.588581"
+         id="tspan157979">Análisis de </tspan><tspan
+         x="140.69318"
+         y="97.880245"
+         id="tspan157981">protocolos</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:anton;-inkscape-font-specification:anton;letter-spacing:0px;stroke-width:0.264583"
+       x="-88.63797"
+       y="68.241699"
+       id="text24539"><tspan
+         sodipodi:role="line"
+         id="tspan24537"
+         style="stroke-width:0.264583"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:ARIAL;-inkscape-font-specification:ARIAL;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-5-8);stroke-width:0.264583"
+       x="-81.667038"
+       y="68.994377"
+       id="text9425-9"
+       transform="translate(0,0.08866972)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="143.16538"
+         y="71.291706"
+         id="tspan157983">Análisis </tspan><tspan
+         x="141.75358"
+         y="76.58337"
+         id="tspan157985">Temporal</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker42732)"
+       d="m 77.617877,156.31903 v 15.85496 h 28.827003"
+       id="path42476"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-5"
+       inkscape:connection-end="#rect31-51-7-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker42738)"
+       d="m 119.9512,166.73001 0,-10.41098"
+       id="path42478"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-51-7-1"
+       inkscape:connection-end="#rect31-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 104.72508,150.87505 -13.600875,-10e-6"
+       id="path43034"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-9"
+       inkscape:connection-end="#rect31-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker48574);marker-end:url(#Arrow2Lend)"
+       d="M 101.01492,72.92227 H 91.124205"
+       id="path43048"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-5-5"
+       inkscape:connection-end="#rect31-5-5-3"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker48574);marker-end:url(#marker1493)"
+       d="M 136.95244,94.218794 H 114.52125 V 78.366254"
+       id="path43050"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-5-3"
+       inkscape:connection-end="#rect31-5-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker48574);marker-end:url(#marker1413)"
+       d="m 128.02758,72.922265 8.92486,-4e-6"
+       id="path43054"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-5-5"
+       inkscape:connection-end="#rect31-5-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker48574);marker-end:url(#marker1459)"
+       d="m 114.52125,67.478287 v -15.85256 h 22.43119"
+       id="path43056"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-5-5"
+       inkscape:connection-end="#rect31-5-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;fill-opacity:0.983573;stroke:#cb00b0;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 3.99999;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect47399"
+       width="24.084978"
+       height="42.101303"
+       x="235.91899"
+       y="139.41034"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31-5-5-5);stroke-width:0.264583"
+       x="104.1396"
+       y="25.412497"
+       id="text51440"
+       transform="translate(0,0.47343241)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="61.836651"
+         y="25.745602"
+         id="tspan157989"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'arial Bold'"
+           id="tspan157987">Directivas del </tspan></tspan><tspan
+         x="68.702384"
+         y="31.919215"
+         id="tspan157993"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'arial Bold'"
+           id="tspan157991">Usuario</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker71957)"
+       d="M 78.314176,34.061302 V 49.616857 L 101.01492,67.478285"
+       id="path71896"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Bold';text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.264583;fill:#0044d7;fill-opacity:1"
+       x="194.56081"
+       y="44.653839"
+       id="text79598"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan79596"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:arial;-inkscape-font-specification:'arial Bold';text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#0044d7;fill-opacity:1"
+         x="194.56081"
+         y="44.653839">Aplicación de </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:arial;-inkscape-font-specification:'arial Bold';text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#0044d7;fill-opacity:1"
+         x="194.56081"
+         y="52.591339"
+         id="tspan86770">Escritorio</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Bold';text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.264583;fill:#ff0000;fill-opacity:1"
+       x="203.5144"
+       y="112.51321"
+       id="text79598-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:arial;-inkscape-font-specification:'arial Bold';text-align:center;text-anchor:middle;stroke-width:0.264583;fill:#ff0000;fill-opacity:1"
+         x="203.5144"
+         y="112.51321"
+         id="tspan93394">Analizador Lógico</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Bold';text-align:center;letter-spacing:0px;text-anchor:middle;white-space:pre;inline-size:29.9434;stroke-width:0.264583;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;fill:#cb00b0;fill-opacity:1"
+       x="271.37582"
+       y="114.14124"
+       id="text79598-1"
+       transform="translate(-26.093688,4.7411375)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="271.37582"
+         y="114.14124"
+         id="tspan157997"><tspan
+           style="text-align:end;text-anchor:end"
+           id="tspan157995">Circuito</tspan><tspan
+           y="114.14124"
+           id="tspan157999"> </tspan></tspan><tspan
+         x="271.37582"
+         y="122.07875"
+         id="tspan158003"><tspan
+           style="text-align:end;text-anchor:end"
+           id="tspan158001">Bajo</tspan><tspan
+           y="122.07875"
+           id="tspan158005"> </tspan></tspan><tspan
+         x="271.37582"
+         y="130.01625"
+         id="tspan158009"><tspan
+           style="text-align:end;text-anchor:end"
+           id="tspan158007">Ensayo</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial Bold';text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.264583;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;fill:#14d000;fill-opacity:1"
+       x="65.141121"
+       y="113.16899"
+       id="text79598-3"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;text-align:center;text-anchor:middle;stroke-width:0.264583;-inkscape-font-specification:'arial Bold';font-family:arial;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;fill:#14d000;fill-opacity:1"
+         x="65.141121"
+         y="113.16899"
+         id="tspan86770-4">USB</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1503)"
+       d="m 112.70447,133.43256 -24.135696,11.9985"
+       id="path119352"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect31-3"
+       inkscape:connection-end="#rect31-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de bloques general.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+  </g>
+</svg>

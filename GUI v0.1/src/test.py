@@ -1,57 +1,39 @@
-import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QTableView
-from PySide6.QtCore import Qt, QAbstractTableModel
+import matplotlib.pyplot as plt
 
-# Sample data
-data = [
-    ["Alice", 25, "Engineer"],
-    ["Bob", 30, "Designer"],
-    ["Charlie", 35, "Manager"],
-]
+def plot_signal_with_text(signal, x_limits, text, text_position):
+    fig, ax = plt.subplots()
+    ax.plot(signal)
+    ax.set_xlim(x_limits)
+    
+    text_obj = ax.text(*text_position, text, fontsize=12, ha='center')
 
-# Column headers
-headers = ["Name", "Age", "Occupation"]
+    # Draw the plot to calculate text positions
+    fig.canvas.draw()
 
-class TableModel(QAbstractTableModel):
-    def __init__(self, data, headers):
-        super(TableModel, self).__init__()
-        self._data = data
-        self._headers = headers
+    # Get the bounding box of the text in display coordinates
+    bbox = text_obj.get_window_extent(renderer=fig.canvas.get_renderer())
 
-    def rowCount(self, parent=None):
-        return len(self._data)
+    # Convert display coordinates to data coordinates
+    bbox_data_coords = ax.transData.inverted().transform(bbox)
 
-    def columnCount(self, parent=None):
-        return len(self._data[0])
+    # Determine if the text is within the x limits of the plot
+    x_data_min, y_data_min = bbox_data_coords[0]
+    x_data_max, y_data_max = bbox_data_coords[1]
 
-    def data(self, index, role=Qt.DisplayRole):
-        if role == Qt.DisplayRole:
-            return self._data[index.row()][index.column()]
-        return None
+    print("x min: %s" %x_data_min)
+    print("x max: %s" %x_data_max)
+    print("y min: %s" %y_data_min)
+    print("y max: %s" %y_data_max)
+    
+    plt.show()
 
-    def headerData(self, section, orientation, role=Qt.DisplayRole):
-        if role == Qt.DisplayRole:
-            if orientation == Qt.Horizontal:
-                return self._headers[section]
-            else:
-                return f"Row {section + 1}"
-        return None
+# Example usage
+signal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+x_limits = (2, 8)
+text = "Sample Text"
+text_position = (5, 6)  # x, y position in data coordinates
 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super(MainWindow, self).__init__()
+#plot_signal_with_text(signal, x_limits, text, text_position)
 
-        self.setWindowTitle("QTableView Example")
-
-        # Create the table view and set the model
-        self.table_view = QTableView()
-        self.table_view.setModel(TableModel(data, headers))
-
-        # Set the central widget
-        self.setCentralWidget(self.table_view)
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
+if 0:
+    print("Asd")

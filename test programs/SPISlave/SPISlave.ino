@@ -4,7 +4,7 @@ ISR(SPI_STC_vect)
 {
   data = SPDR;
   
-  SPDR = 'a';
+  SPDR = data;
 }
 
 void SPI_SlaveInit(void)

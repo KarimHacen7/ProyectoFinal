@@ -5,6 +5,7 @@ from matplotlib.backend_tools import Cursors
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.lines import Line2D
+from matplotlib.patches import Rectangle
 import matplotlib
 import matplotlib.style as mplstyle
 
@@ -23,7 +24,7 @@ class Plotter():
     xAxisData = []
     cursor1PositionSample = None
     cursor2PositionSample = None
-
+    protocolSigns = []
     def __init__(self) -> None:
         mplstyle.use(['dark_background','fast'])
         matplotlib.rcParams['path.simplify'] = True
@@ -90,7 +91,6 @@ class Plotter():
         self.axisPlot.axes.spines['left'].set_visible(False)
         self.axisPlot.axes.xaxis.set_major_formatter('{x} %s' %self.timeUnitString)
         
-        
     '''
     Needs documentation
     '''
@@ -108,7 +108,7 @@ class Plotter():
         for index, channelData in enumerate(self.dataBuffer):
             self.channelPlots[index].plottedLine = self.channelPlots[index].axes.step(self.xAxisData, channelData, color=self.plotColors[index], linewidth=3, where='mid')
             self.channelPlots[index].axes.set_xlim(0,self.channelLengthInUnit/10)
-            self.channelPlots[index].axes.set_ylim(0,1)
+            self.channelPlots[index].axes.set_ylim(-0.1,1.65)
             self.channelPlots[index].axes.set_axis_off()
             self.channelPlots[index].cursorLine = self.channelPlots[index].axes.axvline(color='#ffffff', lw=1, ls='--', animated=True)
             self.channelPlots[index].cursorLine.set_visible(False)
@@ -116,7 +116,9 @@ class Plotter():
             self.channelPlots[index].fixedCursor1.set_visible(False)
             self.channelPlots[index].fixedCursor2 = self.channelPlots[index].axes.axvline(color='#ff88ff', lw=1.5, ls='--')
             self.channelPlots[index].fixedCursor2.set_visible(False)
-            
+        
+
+
     def plotAnalogChannel(self, samplingFrequency:int) -> None:
         self.channelLengthInSamples = len(self.dataBuffer[0])
         self.channelLengthInSeconds = self.channelLengthInSamples*(1/samplingFrequency)
@@ -216,5 +218,54 @@ class Plot():
         self.isVisible = True
         self.plottedLine = Line2D([], [])
         self.background = None
-        
-        
+
+
+class ProtocolFrameSign():
+    def __init__(self, patch, text) -> None:
+        self.patch = patch
+        self.text = text
+        self.inscription = self.text.get_text()
+
+    def defineRender(self, leftLim, rightLim):
+        minimumWidthRatio = 1.1
+        self.text.set(visible=True)
+        textBbox = self.text.get_window_extent()
+        textBbox_data_coords = self.text.axes.transData.inverted().transform(textBbox)
+        textBboxX0, textBboxY0 = textBbox_data_coords[0]
+        textBboxX1, textBboxY1 = textBbox_data_coords[1]
+        textWidth = textBboxX1-textBboxX0
+
+        patchX0 = self.patch.get_x()
+        patchX1 = patchX0 + self.patch.get_width()
+        if leftLim > patchX0 and leftLim < patchX1 and rightLim > patchX1:
+            # se ve un pedazo por izquierda
+            patchWidth = patchX1 - leftLim
+            if patchWidth > minimumWidthRatio*textWidth:
+                self.text.set(visible=True)
+            else:
+                self.text.set(visible=False)
+        elif leftLim <= patchX0 and rightLim >= patchX1:
+            # se ve entero
+            patchWidth = patchX1 - patchX0
+            if patchWidth > minimumWidthRatio*textWidth:
+                self.text.set(visible=True)
+            else:
+                self.text.set(visible=False)
+        elif leftLim < patchX0 and rightLim > patchX0 and rightLim < patchX1:
+            # se ve un pedazo por derecha
+            patchWidth = rightLim-patchX0
+            if patchWidth > minimumWidthRatio*textWidth:
+                self.text.set(visible=True)
+            else:
+                self.text.set(visible=False)
+        elif (leftLim >= patchX0 and rightLim < patchX1) or (leftLim > patchX0 and rightLim <= patchX1):
+            patchWidth = rightLim-leftLim
+            if patchWidth > minimumWidthRatio*textWidth:
+                self.text.set(visible=True)
+            else:
+                self.text.set(visible=False)
+        else:
+            self.text.set(visible=False)
+            return
+        self.text.draw(self.text.axes.figure.canvas.get_renderer())
+

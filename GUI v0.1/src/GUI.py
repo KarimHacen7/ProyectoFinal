@@ -1,11 +1,12 @@
 from settings import SamplingSettings, SamplingMode
 from communication import CommunicationModule, SamplingWorker
-from plotting import Plotter
+from plotting import Plotter, ProtocolFrameSign
 from PySide6.QtWidgets import  QMainWindow, QLabel, QMessageBox, QGraphicsScene, QGraphicsView, QCheckBox, QTableWidgetItem
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, QTimer, QThread, Signal
 from ui_mainwindow import Ui_MainWindow
 from protocolAnalyzerUI import *
 from matplotlib.backend_bases import MouseEvent
+import matplotlib.patches as patches
 import numpy as np
 
 
@@ -40,6 +41,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.analyzerUI = analyzerUI()
+        
         # Get a list of QGraphicsView for the channels
         for item in dir(self.ui):
             ref = getattr(self.ui, item)
@@ -52,7 +54,6 @@ class MainWindow(QMainWindow):
                 self.QCBChannelsList.append(ref)
         # Define a list of the main frames for each channel
         self.QFrChannelsList = [self.ui.channel1Frame,self.ui.channel2Frame,self.ui.channel3Frame,self.ui.channel4Frame,self.ui.channel5Frame,self.ui.channel6Frame,self.ui.channel7Frame,self.ui.channel8Frame] 
-        
         # Proxies for interfacing PySide with Matplotlib
         for index, item in enumerate(self.QGVChannelsList):
             item.setScene(self.QGSChannelsList[index])
@@ -122,10 +123,10 @@ class MainWindow(QMainWindow):
 
         self.ui.clearProtocolAnalysisPushButton.clicked.connect(self.clearProtocolAnalysis)
         
-        self.ui.binaryInterpretationRadioButton.toggled.connect(self.updateTable)
-        self.ui.decimalInterpretationRadioButton.toggled.connect(self.updateTable)
-        self.ui.hexadecimalInterpretationRadioButton.toggled.connect(self.updateTable)
-        self.ui.ASCIIInterpretationRadioButton.toggled.connect(self.updateTable)
+        self.ui.binaryInterpretationRadioButton.toggled.connect(self.updateProtocolAnalysis)
+        self.ui.decimalInterpretationRadioButton.toggled.connect(self.updateProtocolAnalysis)
+        self.ui.hexadecimalInterpretationRadioButton.toggled.connect(self.updateProtocolAnalysis)
+        self.ui.ASCIIInterpretationRadioButton.toggled.connect(self.updateProtocolAnalysis)
 
 
     # ---------- THREADING -- START SAMPLING ----------
@@ -313,6 +314,9 @@ class MainWindow(QMainWindow):
         else:
             option = "dec"
         return option
+    
+    def closeEvent(self, event):
+        self.analyzerUI.reject()
     # ---------- USER INPUT ----------
     def sample(self):
         self.statusLabelTimer.stop()
@@ -408,12 +412,13 @@ class MainWindow(QMainWindow):
     
     #  ---------- PLOTTING  ----------
     def graphChannels(self, data):
+        self.clearProtocolAnalysis()
         self.plotter.processAndPlot(rawdata=data, samplingSettings=self.samplingSettings)
         self.drawCanvasesAndAxes(flush=False)
         self.ui.analysisFrame.setVisible(True)
         
         self.analyzerUI.updateUI(samplingSettings=self.samplingSettings, data=self.plotter.dataBuffer, edges=self.plotter.edgesBuffer)
-        self.decodedFramesList = []
+        
 
         if self.samplingSettings.mode == SamplingMode.DIGITAL:
             self.plotter.axisPlot.isVisible = True
@@ -511,7 +516,7 @@ class MainWindow(QMainWindow):
         self.ui.channelHorizontalScrollBar.blockSignals(True)
         self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerLim/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
         self.ui.channelHorizontalScrollBar.blockSignals(False)
-        self.drawCanvasesAndAxes(flush=True)
+        self.drawCanvasesAndAxes(flush=False)
 
     def horizontalSliderChanged(self):
         if self.plotter.dataBuffer == [] or self.plotter.plottingInProcess:
@@ -631,8 +636,7 @@ class MainWindow(QMainWindow):
         self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerValue/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
         self.ui.channelHorizontalScrollBar.blockSignals(False)
 
-    def drawCanvasesAndAxes(self, flush=bool):
-        
+    def drawCanvasesAndAxes(self, flush=bool):  
         if self.samplingSettings.mode == SamplingMode.ANALOG:
             leftLim, rightLim = self.plotter.channelPlots[0].axes.get_xlim()
         else:
@@ -645,9 +649,9 @@ class MainWindow(QMainWindow):
         stepDecimals = stringStep[::-1].find('.') if stringStep[::-1].find('.') != -1 else 0
         tickStart = np.round(leftLim, decimals=(stepDecimals-1)) if stepDecimals > 0 else np.round(leftLim, decimals=(stepDecimals))
         newTicks = np.arange(start=tickStart, stop=np.round(rightLim, decimals=stepDecimals), step=step)
-        newTicks = np.round(newTicks, decimals=stepDecimals)
         newTicks = np.insert(arr=newTicks, obj=0, values=(tickStart-step))
         newTicks = np.insert(arr=newTicks, obj=0, values=(tickStart-(2*step)))
+        newTicks = np.round(newTicks, decimals=stepDecimals)
 
         
         majorTicks = []
@@ -669,6 +673,8 @@ class MainWindow(QMainWindow):
             self.plotter.axisPlot.axes.set_xticks(minorTicks, minor=True)
             self.plotter.axisPlot.axes.xaxis.set_major_formatter('{x} %s' %self.plotter.timeUnitString)
         
+        
+        
         self.plotter.plottingInProcess = True    
         for channel in self.plotter.channelPlots:
             if channel.isVisible:
@@ -687,6 +693,12 @@ class MainWindow(QMainWindow):
         if self.plotter.axisPlot.isVisible:
             self.plotter.axisPlot.background = self.plotter.axisPlot.figure.canvas.copy_from_bbox(self.plotter.axisPlot.axes.bbox) 
         
+        if self.samplingSettings.mode != SamplingMode.ANALOG:
+            for sign in self.plotter.protocolSigns:
+                sign.defineRender(leftLim=leftLim, rightLim=rightLim)
+            for sign in self.plotter.protocolSigns:
+                sign.defineRender(leftLim=leftLim, rightLim=rightLim)
+
         self.plotter.plottingInProcess = False
 
     def changeAnalogYLims(self, changed:str):
@@ -870,16 +882,58 @@ class MainWindow(QMainWindow):
     def decodedFramesReady(self, frames):
         for frame in frames:
             self.decodedFramesList.append(frame)
-        self.updateTable()
+        self.updateProtocolAnalysis()
         return
 
     def analyzeProtocol(self):
         if self.samplingOngoing or self.plotter.dataBuffer == [] or self.samplingSettings.mode == SamplingMode.ANALOG:
             return
         self.analyzerUI.show()
+        self.analyzerUI.raise_()
 
-    def updateTable(self):
+    def updateProtocolAnalysis(self):
+        self.plotter.plottingInProcess = True
         option = self.getDecodingInterpretationPreference()
+
+        if self.plotter.protocolSigns != []:
+            try:
+                for sign in self.plotter.protocolSigns:
+                    sign.patch.remove()
+                    sign.text.remove()
+            except:
+                print("Excepción!")
+
+        self.plotter.protocolSigns = []
+
+        # REMOVE AND REFACTOR LATER
+        for index, frame in enumerate(self.decodedFramesList):
+            begin = np.round(frame.start*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]), 3)
+            end = np.round(frame.end*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]), 3)
+            width = end-begin
+            patch = self.plotter.channelPlots[frame.channel].axes.add_patch(patches.Rectangle(
+                xy=(begin, 1.1), 
+                width=width, 
+                height=0.5, 
+                linewidth=0, 
+                edgecolor='white', 
+                facecolor='#f2f2f2', 
+                clip_on=True
+            ))  
+            text = self.plotter.channelPlots[frame.channel].axes.text(
+                0.5 * (begin + end), 
+                1.3, 
+                frame.toLabelText(option),
+                horizontalalignment='center',
+                verticalalignment='center',
+                color = "black", 
+                clip_on=True
+            )
+            self.plotter.protocolSigns.append(ProtocolFrameSign(patch=patch, text=text))
+
+        self.drawCanvasesAndAxes(flush=False)
+        # UNTIL HERE
+
+        
         self.ui.decodedFramesTableWidget.clearContents()
         self.ui.decodedFramesTableWidget.setColumnCount(5)
         self.ui.decodedFramesTableWidget.setRowCount(len(self.decodedFramesList))
@@ -890,9 +944,10 @@ class MainWindow(QMainWindow):
             self.ui.decodedFramesTableWidget.setItem(index,2,QTableWidgetItem(str(np.round(frame.end*(self.plotter.timeUnitMultiplier/self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency]), 3))+self.plotter.timeUnitString))
             self.ui.decodedFramesTableWidget.setItem(index,3,QTableWidgetItem(frame.getProtocol()))
             self.ui.decodedFramesTableWidget.setItem(index,4,QTableWidgetItem(str(frame.channel+1)))
-
         self.ui.decodedFramesTableWidget.resizeColumnsToContents()
 
+        self.plotter.plottingInProcess = False
+    
     def goToFrame(self, row, column):
         if (self.plotter.dataBuffer == []) or self.plotter.plottingInProcess:
             return
@@ -917,7 +972,7 @@ class MainWindow(QMainWindow):
             channel.axes.set_xlim(left=leftLim, right=rightLim)
         self.plotter.axisPlot.axes.set_xlim(left=leftLim, right=rightLim)
 
-        self.drawCanvasesAndAxes(flush=True)
+        self.drawCanvasesAndAxes(flush=False)
 
         self.ui.channelHorizontalScrollBar.blockSignals(True)
         self.ui.channelHorizontalScrollBar.setValue(np.ceil((centerValue/self.plotter.channelLengthInUnit)*self.ui.channelHorizontalScrollBar.maximum()))
@@ -925,5 +980,5 @@ class MainWindow(QMainWindow):
 
     def clearProtocolAnalysis(self):
         self.decodedFramesList = []
-        self.updateTable()
+        self.updateProtocolAnalysis()
 

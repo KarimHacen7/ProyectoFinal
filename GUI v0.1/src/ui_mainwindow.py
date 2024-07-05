@@ -777,10 +777,12 @@ class Ui_MainWindow(object):
         self.slideTabWidget = QTabWidget(self.slideFrameContainer)
         self.slideTabWidget.setObjectName(u"slideTabWidget")
         self.slideTabWidget.setStyleSheet(u"QTabBar::tab {\n"
-"  background: #222831;\n"
+"  	background: #222831;\n"
+"	border: 5px solid #222831;\n"
 "} \n"
 "QTabBar::tab:selected { \n"
 "  background: #31363F;\n"
+"	border: 5px solid #31363F;\n"
 "}\n"
 "QTabWidget#slideTabWidget::pane\n"
 "{\n"
@@ -1589,7 +1591,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.slideTabWidget.setCurrentIndex(2)
+        self.slideTabWidget.setCurrentIndex(0)
         self.samplingFrequencyComboBox.setCurrentIndex(13)
         self.samplingChannelsComboBox.setCurrentIndex(3)
 
@@ -1712,7 +1714,7 @@ class Ui_MainWindow(object):
         self.triggerTimeoutDoubleSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" [s]", None))
         self.voltageThresholdLabel.setText(QCoreApplication.translate("MainWindow", u"Umbral de Voltaje", None))
         self.voltageThresholdDoubleSpinBox.setSuffix(QCoreApplication.translate("MainWindow", u" [V]", None))
-        self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.samplingConfigTab), QCoreApplication.translate("MainWindow", u"Config", None))
+        self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.samplingConfigTab), QCoreApplication.translate("MainWindow", u"Config.", None))
         self.fixedMeasurementTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Mediciones Fijas", None))
         self.fixedMeasurementTime1Label.setText(QCoreApplication.translate("MainWindow", u"t1: []", None))
         self.fixedMeasurementTime2Label.setText(QCoreApplication.translate("MainWindow", u"t2: []", None))
@@ -1752,6 +1754,6 @@ class Ui_MainWindow(object):
         self.decimalInterpretationRadioButton.setText(QCoreApplication.translate("MainWindow", u"Decimal", None))
         self.FramesListLabel.setText(QCoreApplication.translate("MainWindow", u"Lista de tramas", None))
         self.slideTabWidget.setTabText(self.slideTabWidget.indexOf(self.protocolTab), QCoreApplication.translate("MainWindow", u"Protocolo", None))
-        self.versionLabel.setText(QCoreApplication.translate("MainWindow", u"ALyP GUI v0.1", None))
+        self.versionLabel.setText(QCoreApplication.translate("MainWindow", u"ALyP GUI v1.0", None))
     # retranslateUi
 

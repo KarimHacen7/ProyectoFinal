@@ -1,30 +1,25 @@
-from ui_protocolAnalyzerUI import Ui_mainWindow
-from PySide6.QtWidgets import QMainWindow, QMessageBox
-from PySide6.QtCore import Signal
+from ui_protocolAnalyzerUI import Ui_Dialog
+from PySide6.QtWidgets import QDialog, QMessageBox
+from PySide6.QtCore import Signal, Qt
 from protocolAnalysis import *
 from settings import *
 
-
-'''
-TODO:
-    - create signal to send decoded frames
-'''
-class analyzerUI(QMainWindow):
+class analyzerUI(QDialog):
     dataBuffer = []
     edgesBuffer = []
     framesDecoded = Signal(list)
     def __init__(self):
         super(analyzerUI, self).__init__()
-        self.ui = Ui_mainWindow()
+        self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         self.i2cAnalyzer = I2CAnalyzer()
         self.spiAnalyzer = SPIAnalyzer()
         self.uartAnalyzer = UARTAnalyzer()
         self.plainBinaryAnalyzer = PlainBinaryAnalyzer()
         self.ui.analyzePushButton.clicked.connect(self.analyze)
-        self.ui.cancelPushButton.clicked.connect(self.close)
+        self.ui.cancelPushButton.clicked.connect(self.hide)
         self.ui.ignoreCSCheckBox.toggled.connect(self.toggleCSComboBox)
-        
+       
     def updateUI(self, samplingSettings:SamplingSettings, data:list[list[int]], edges:list[dict]):
         self.samplingSettings = samplingSettings
         self.dataBuffer = data
@@ -50,8 +45,9 @@ class analyzerUI(QMainWindow):
         decodedFrames = []
         try:
             if pageIndex == 0:
-                decodedFrames = self.plainBinaryAnalyzer.decode(data=self.dataBuffer, reverse=reverseBits)
-                pass 
+                decodedFrames = self.plainBinaryAnalyzer.decode(
+                    data=self.dataBuffer, 
+                    reverse=reverseBits)
             elif pageIndex == 1:
                 decodedFrames = self.uartAnalyzer.decode(
                     data=self.dataBuffer, 
@@ -61,8 +57,8 @@ class analyzerUI(QMainWindow):
                     dataBits=int(self.ui.dataBitsComboBox.currentText()),
                     parityBits=([None, "even", "odd"])[self.ui.parityBitComboBox.currentIndex()],
                     stopBits=int(self.ui.stopBitsComboBox.currentText()),
-                    samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency])
-                pass
+                    samplingFrequency=self.samplingSettings.samplingFrequenciesLUT[self.samplingSettings.frequency],
+                    reverseBits=reverseBits)
             elif pageIndex == 2:
                 chipSelect = None if self.ui.ignoreCSCheckBox.isChecked() else self.ui.CSComboBox.currentIndex()
                 if chipSelect:
@@ -84,9 +80,7 @@ class analyzerUI(QMainWindow):
                     CS=chipSelect,
                     spiMode=self.ui.SPIModeComboBox.currentIndex(),
                     reverseBits=reverseBits)
-                pass
             elif pageIndex == 3:
-                
                 if self.ui.SCLComboBox.currentIndex() == self.ui.SDAComboBox.currentIndex():
                         QMessageBox.warning(self, "Advertencia", "Se ha asignado más de un rol por canal.\nRevise su configuración y vuelva a intentarlo", buttons=QMessageBox.StandardButton.Ok, defaultButton=QMessageBox.StandardButton.NoButton)
                         return
@@ -95,7 +89,6 @@ class analyzerUI(QMainWindow):
                     edges=self.edgesBuffer, 
                     SCL=self.ui.SCLComboBox.currentIndex(),
                     SDA=self.ui.SDAComboBox.currentIndex())
-                pass
             else:
                 pass
         except:

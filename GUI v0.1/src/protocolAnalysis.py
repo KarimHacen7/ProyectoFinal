@@ -205,7 +205,7 @@ class SPIAnalyzer():
         
         SPIMsg = ""
         # Finally, with the frames located, decode on the corresponding channel and edges
-        if MOSI:
+        if MOSI is not None:
             for frameStart in frameStarts:
                 SPIMsg = ""
                 if frameStart+15 >= len(edges[SCK]):
@@ -216,7 +216,7 @@ class SPIAnalyzer():
                 if reverseBits:
                     SPIMsg = SPIMsg[::-1]
                 decodedFrames.append(SPIFrame(channel=MOSI,start=edges[SCK][frameStart]["1"],end=edges[SCK][frameStart+15]["1"], message=SPIMsg, MISOOrMOSI="MOSI"))
-        if MISO:
+        if MISO is not None:
             for frameStart in frameStarts:
                 SPIMsg = ""
                 if frameStart+15 >= len(edges[SCK]):
@@ -235,7 +235,7 @@ class UARTAnalyzer():
     allowedDataBits = [5, 6, 7, 8, 9]
     allowedStopBits = [1, 2]
     allowedParityBits = [None, "even", "odd"]
-    def decode(self, data:list[list[int]], edges:list[dict], txLine:int, baudRate:int, dataBits:int, parityBits:str, stopBits:int, samplingFrequency:int) -> list:
+    def decode(self, data:list[list[int]], edges:list[dict], txLine:int, baudRate:int, dataBits:int, parityBits:str, stopBits:int, samplingFrequency:int, reverseBits:bool) -> list:
         if len(data) == 0 or data == []:
             return []
         if txLine > len(data)-1:
@@ -286,7 +286,8 @@ class UARTAnalyzer():
             parityBit = ""
             for i in range(1, dataBits+1):
                 UARTMsg += (str(data[txLine][int(np.ceil(frameBeginning+((i+0.5)*UARTPeriodInSamples)))]))
-            UARTMsg = UARTMsg[::-1]
+            if not reverseBits:
+                UARTMsg = UARTMsg[::-1]
             # Check for parity bits
             if parityBits == None:
                 parityCheck = None
@@ -360,11 +361,6 @@ class Frame():
         '''
         pass
 
-    def toTableRows(self):
-        '''
-        Create strings to be placed in the Frames table 
-        '''
-        pass
 
     def binaryStringToFormat(self, data:str, format="dec") -> str:
         '''
@@ -390,6 +386,8 @@ class Frame():
                     result = ("%s" %chr((int(data, 2))))
                 else:
                     result = ("%s" %chr((int(data[1:9], 2))))
+                if not result.isprintable():
+                    result = "§"+("%s" %int(data, 2))
             else:
                 raise AnalyzerError("The [%s] 'format' argument is unsupported" %format)
         except:
@@ -412,10 +410,6 @@ class BinaryFrame(Frame):
     def toLabelText(self, format):
         return self.binaryStringToFormat(self.message, format=format)
 
-
-    def toTableRows(self):
-        pass
-
     def getProtocol(self)->str:
         return "Binario"
 
@@ -435,12 +429,9 @@ class UARTFrame(Frame):
         self.parityBit = parityBit
         self.parityOk = parityOk
 
-    def toLabelText(self, format:str, reverse:bool):
+    def toLabelText(self, format:str, ):
         text = ""
-        if reverse:
-            text = self.binaryStringToFormat(data=self.message[::-1], format=format)
-        else:
-            text = self.binaryStringToFormat(data=self.message, format=format)
+        text = self.binaryStringToFormat(data=self.message, format=format)
 
         if self.parityOk != None:
             if self.parityOk:
@@ -448,9 +439,6 @@ class UARTFrame(Frame):
             else:
                 text += "+PNOK"
         return text
-        
-    def toTableRow():
-        pass
     
     def getProtocol(self)->str:
         return "UART"
@@ -470,9 +458,6 @@ class SPIFrame(Frame):
 
     def toLabelText(self, format:str):
         return self.binaryStringToFormat(data=self.message, format=format)
-    
-    def toTableRow():
-        pass
     
     def getProtocol(self)->str:
         return "SPI"
@@ -518,9 +503,6 @@ class I2CFrame(Frame):
 
         return text
     
-    def toTableRow():
-        pass
-
     def getProtocol(self)->str:
         return "I2C"
 
