@@ -5,9 +5,6 @@ from PySide6.QtGui import QResizeEvent
 '''
 TODO:
 
-    I2C Decode needs a little more love
-
-    El decode de binario anda medio raro
 
 DOING:
     ORDENAR TEMPORALMENTE LA TABLA DE TRAMAS

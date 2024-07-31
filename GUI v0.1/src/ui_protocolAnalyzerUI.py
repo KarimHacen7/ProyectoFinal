@@ -355,7 +355,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.protocolAnalyzerWidget.setCurrentIndex(0)
+        self.protocolAnalyzerWidget.setCurrentIndex(2)
         self.baudRateComboBox.setCurrentIndex(4)
         self.dataBitsComboBox.setCurrentIndex(3)
 

@@ -8,8 +8,8 @@ void setup(void)
   SPI.begin();
   
   SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));
-  // Ajusta la velocidad de comunicaciones a 250KHz
-  SPI.setClockDivider(SPI_CLOCK_DIV32);
+  // Ajusta la velocidad de comunicaciones a 1000KHz
+  SPI.setClockDivider(SPI_CLOCK_DIV16);
 }
 
 
