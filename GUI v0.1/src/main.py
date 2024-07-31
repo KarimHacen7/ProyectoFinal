@@ -6,23 +6,18 @@ from PySide6.QtGui import QResizeEvent
 TODO:
 
 
-# MIRA ESTO https://matplotlib.org/stable/users/explain/axes/axes_ticks.html#sphx-glr-users-explain-axes-axes-ticks-py
-
-    HAY QUE HACER TODA LA GILADA DE LOS CANALES PARA EL CANAL ANALOGICO DIOSSSS
-
-    Poner un buscador de flancos de subida y de bajada por canal
-
-    Cambiar la paleta de colores por una oscura
-
-    CORREGIR EJE DE TIEMPO, VALORES Y EL MARGEN DE LA IZQUIERDA
-
-    poner para hacer drag and drop con el mouse
-
-    axes.redraw()?
 DOING:
+    ORDENAR TEMPORALMENTE LA TABLA DE TRAMAS
     
-    USE BLITTING WHERE APPLICABLE
+    CHEQUEAR QUE A VECE NO ANDA EL NO MOSTRAR SI NO ENTRA (SUCEDE AL CAMBIAR LA INTERPRETACION) (SE ARREGLA AL RESIZE EL EJE)
 
+HOTFIX:
+    extremos navigation scrollbar
+
+    SPI, UART CAPTURE WITH TRIGGER are DISASTROUS, LOW IMPEDANCE WITH TRIGGER PROGRAM???
+    Al cambiar de gatillado, se repite la orden anterior    
+                                                            # Hardware noise/parasitic capacitance
+                                                            # ANALOG MODE IS NOT AFFECTED BY THIS
 '''
 
 if __name__ == "__main__":

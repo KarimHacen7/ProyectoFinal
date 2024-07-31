@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Diagrama de Flujo Firmware.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.25575084"
+     inkscape:cx="1139.7812"
+     inkscape:cy="389.05054"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="886.47261"
+       y="348.71379"
+       width="11.404911"
+       height="22.464218"
+       id="rect31417" />
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path103121" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path103103" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846"
+       width="40"
+       height="15"
+       x="50.200001"
+       y="30.200001"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-4"
+       width="40"
+       height="15"
+       x="216.29848"
+       y="30.200001"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-4-4"
+       width="40"
+       height="15"
+       x="280.65762"
+       y="261.5191"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846);stroke-width:0.264583"
+       x="69.187614"
+       y="59.954533"
+       id="text1969"
+       transform="translate(-0.16878097,2.5313769)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="61.023559"
+         y="34.012409"
+         id="tspan121912">Hardware </tspan><tspan
+         x="64.670103"
+         y="39.304073"
+         id="tspan121914">Reset</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853"
+       width="40"
+       height="20"
+       x="50.200001"
+       y="50.200001"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853);stroke-width:0.264583"
+       x="127.53605"
+       y="83.409424"
+       id="text20345"
+       transform="translate(0,2.4110521)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="52.554833"
+         y="54.012409"
+         id="tspan121916">Inicializar Sistema, </tspan><tspan
+         x="59.885645"
+         y="59.304073"
+         id="tspan121918">Variables y </tspan><tspan
+         x="60.200871"
+         y="64.595738"
+         id="tspan121920">Periféricos</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-1"
+       width="40"
+       height="15"
+       x="50.200001"
+       y="75.199997"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-1-4"
+       width="40"
+       height="15"
+       x="216.15123"
+       y="240.2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-1-95"
+       width="40"
+       height="15"
+       x="100.2"
+       y="191.38945"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1);stroke-width:0.264583"
+       x="127.53605"
+       y="83.409424"
+       id="text20345-5"
+       transform="translate(0,5.2014271)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="54.198142"
+         y="79.012409"
+         id="tspan121922">Leer Puerto USB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-8);stroke-width:0.264583"
+       x="127.53605"
+       y="83.409424"
+       id="text20345-5-6"
+       transform="translate(0,5.201427)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637"
+       width="30"
+       height="30"
+       x="116.95545"
+       y="17.677666"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-7"
+       width="30"
+       height="30"
+       x="269.77173"
+       y="-64.42794"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-7-5"
+       width="30"
+       height="30"
+       x="202.14551"
+       y="-132.05418"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-7-1"
+       width="30"
+       height="30"
+       x="236.13185"
+       y="-98.067848"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-7-1-9"
+       width="30"
+       height="30"
+       x="303.30698"
+       y="-30.892689"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637);stroke-width:0.264583"
+       x="138.97424"
+       y="120.6527"
+       id="text63135"
+       transform="translate(0,8.3078035)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="65.142434"
+         y="104.30407"
+         id="tspan121924">¿Hay </tspan><tspan
+         x="63.374312"
+         y="109.59574"
+         id="tspan121926">nuevos </tspan><tspan
+         x="63.84481"
+         y="114.8874"
+         id="tspan121928">datos?</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-2"
+       width="30"
+       height="30"
+       x="151.13458"
+       y="51.8568"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-2);stroke-width:0.264583"
+       x="138.97424"
+       y="120.6527"
+       id="text63135-0"
+       transform="translate(-0.07233177,4.626157)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="66.436411"
+         y="152.64196"
+         id="tspan121930">¿Es </tspan><tspan
+         x="60.90625"
+         y="157.93361"
+         id="tspan121932">la sintaxis </tspan><tspan
+         x="59.608385"
+         y="163.22527"
+         id="tspan121934">de la orden </tspan><tspan
+         x="61.376755"
+         y="168.51693"
+         id="tspan121936">correcta?</tspan></text>
+    <g
+       id="g80533"
+       transform="translate(-3.2520294,-8.0176504)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect18853-1-9"
+         width="40"
+         height="15"
+         x="53.452023"
+         y="199.4071" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 56.834796,199.63302 v 14.61281"
+         id="path80426" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 90.263226,199.56837 v 14.61281"
+         id="path80426-6" />
+    </g>
+    <g
+       id="g80533-7"
+       transform="translate(46.747977,-42.157318)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect18853-1-9-1"
+         width="40"
+         height="15"
+         x="53.452023"
+         y="199.4071" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 56.834796,199.63302 v 14.61281"
+         id="path80426-4" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 90.263226,199.56837 v 14.61281"
+         id="path80426-6-9" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-9-1);stroke-width:0.264583"
+       x="132.03259"
+       y="197.07903"
+       id="text87394"
+       transform="translate(50.328138,-37.399953)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="53.451172"
+         y="203.21944"
+         id="tspan121938">Mensaje de Error</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-9);stroke-width:0.264583"
+       x="110.73899"
+       y="200.0533"
+       id="text93959"
+       transform="translate(-2.7685211,-3.2334135)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="59.21536"
+         y="203.21944"
+         id="tspan121940">Ejecutar Orden</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-95);stroke-width:0.264583"
+       x="114.4455"
+       y="213.50227"
+       id="text101257"
+       transform="translate(1.1254613,5.2027394)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="100.19922"
+         y="195.20186"
+         id="tspan121942">Escribir Puerto USB</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 70.200001,45.200001 v 5"
+       id="path102945"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect846"
+       inkscape:connection-end="#rect18853"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 70.200001,70.200001 v 4.999996"
+       id="path102947"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853"
+       inkscape:connection-end="#rect18853-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 70.2,90.199997 -10e-7,4.999997"
+       id="path102949"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-1"
+       inkscape:connection-end="#rect61637"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 70.199995,137.6264 -10e-7,5.91018"
+       id="path102951"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637"
+       inkscape:connection-end="#rect61637-2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 91.413197,164.74979 8.786803,0"
+       id="path102953"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-2"
+       inkscape:connection-end="#g80533-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 120.2,172.24979 0,19.13966"
+       id="path102955"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g80533-7"
+       inkscape:connection-end="#rect18853-1-95"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 70.199993,185.96299 0,5.42646"
+       id="path102957"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-2"
+       inkscape:connection-end="#g80533"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 90.199993,198.88945 10.000007,0"
+       id="path102961"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g80533"
+       inkscape:connection-end="#rect18853-1-95"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 49.180766,116.41319 -8.930868,0 V 82.762843 h 9.69877"
+       id="path103409"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 140.15967,198.88945 h 7.52028 V 82.762843 H 90.36554"
+       id="path103619"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="42.157322"
+       y="120.78202"
+       id="text107748"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746"
+         style="stroke-width:0.264583"
+         x="42.157322"
+         y="120.78202">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="238.38763"
+       y="96.473259"
+       id="text107748-74"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-6"
+         style="stroke-width:0.264583"
+         x="238.38763"
+         y="96.473259">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="92.259499"
+       y="169.60237"
+       id="text107748-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-5"
+         style="stroke-width:0.264583"
+         x="92.259499"
+         y="169.60237">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="73.767174"
+       y="141.79922"
+       id="text107748-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8"
+         style="stroke-width:0.264583"
+         x="73.767174"
+         y="141.79922">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="258.1138"
+       y="68.759964"
+       id="text107748-7-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-1"
+         style="stroke-width:0.264583"
+         x="258.1138"
+         y="68.759964">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="258.1138"
+       y="117.1245"
+       id="text107748-7-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-7"
+         style="stroke-width:0.264583"
+         x="258.1138"
+         y="117.1245">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="258.1138"
+       y="164.71313"
+       id="text107748-7-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-4"
+         style="stroke-width:0.264583"
+         x="258.1138"
+         y="164.71313">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="73.767174"
+       y="189.28336"
+       id="text107748-7-0"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-6"
+         style="stroke-width:0.264583"
+         x="73.767174"
+         y="189.28336">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="235.18596"
+       y="38.953819"
+       id="text116721"><tspan
+         sodipodi:role="line"
+         id="tspan116719"
+         style="stroke-width:0.264583" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-4);stroke-width:0.264583"
+       x="241.85463"
+       y="49.012314"
+       id="text117751"
+       transform="translate(-0.51032774,4.7826691)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="222.06302"
+         y="34.012409"
+         id="tspan121944">Ejecutar Orden</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-7);stroke-width:0.264583"
+       x="276.73062"
+       y="134.96675"
+       id="text1630"
+       transform="translate(-0.652413,5.6600633)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="226.19828"
+         y="159.59572"
+         id="tspan121946">¿Muestreo </tspan><tspan
+         x="226.78328"
+         y="164.88738"
+         id="tspan121948">Gatillado?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-7-5);stroke-width:0.264583"
+       x="298.00208"
+       y="110.82635"
+       id="text10339"
+       transform="translate(-0.56270414,5.2655584)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="225.84378"
+         y="63.959019"
+         id="tspan121950">¿Configura
+</tspan><tspan
+         x="228.7821"
+         y="69.250683"
+         id="tspan121952">Voltaje?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-7-1);stroke-width:0.264583"
+       x="295.99011"
+       y="120.51909"
+       id="text11597"
+       transform="translate(-0.56310227,5.6872059)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="225.84378"
+         y="112.02347"
+         id="tspan121954">¿Configura</tspan><tspan
+         x="227.56977"
+         y="117.31514"
+         id="tspan121956">Timeout?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-7-1-9);stroke-width:0.264583"
+       x="305.93256"
+       y="132.58929"
+       id="text13189"
+       transform="translate(-0.05680059,-0.05019639)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="236.31446"
+         y="196.44014"
+         id="tspan121958">
+</tspan><tspan
+         x="236.31445"
+         y="201.7318"
+         id="tspan121960">
+</tspan><tspan
+         x="236.31446"
+         y="207.02346"
+         id="tspan121962">
+</tspan><tspan
+         x="227.37445"
+         y="212.31511"
+         id="tspan121964">¿Digital o </tspan><tspan
+         x="225.84069"
+         y="217.60677"
+         id="tspan121966">Analógico?</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text31415"
+       style="line-height:1.25;font-family:arial;font-size:16px;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31417)" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-4);stroke-width:0.264583"
+       x="283.72137"
+       y="251.39214"
+       id="text67981"
+       transform="translate(1.7970206,4.7814181)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="216.15039"
+         y="244.01241"
+         id="tspan121968">Digital No Gatillado</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-1-4-1"
+       width="40"
+       height="15"
+       x="306.15158"
+       y="240.2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-1-4-3"
+       width="40"
+       height="15"
+       x="351.15158"
+       y="240.2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-1-4-1-7"
+       width="40"
+       height="15"
+       x="261.15158"
+       y="240.2"
+       inkscape:connector-avoid="true"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-7-1-9-5"
+       width="30"
+       height="30"
+       x="366.83112"
+       y="-94.416862"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-7-1-9-5);stroke-width:0.264583"
+       x="305.93256"
+       y="132.58929"
+       id="text13189-9"
+       transform="translate(-0.056801,-0.050196)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="326.15231"
+         y="196.43819"
+         id="tspan121970">
+</tspan><tspan
+         x="326.15208"
+         y="201.72985"
+         id="tspan121972">
+</tspan><tspan
+         x="326.15182"
+         y="207.0215"
+         id="tspan121974">
+</tspan><tspan
+         x="317.21157"
+         y="212.31316"
+         id="tspan121976">¿Digital o </tspan><tspan
+         x="315.67783"
+         y="217.60482"
+         id="tspan121978">Analógico?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-4-1);stroke-width:0.264583"
+       x="283.72137"
+       y="251.39214"
+       id="text67981-7"
+       transform="translate(5.0915143,4.781418)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="306.15234"
+         y="244.01241"
+         id="tspan121980">Digital Gatillado</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-4-3);stroke-width:0.264583"
+       x="273.1174"
+       y="288.89404"
+       id="text80224"
+       transform="translate(1.84222,4.7821048)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="351.15234"
+         y="244.01241"
+         id="tspan121982">Analógico Gatillado</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-4-1-7);stroke-width:0.264583"
+       x="370.02554"
+       y="288.11813"
+       id="text82418"
+       transform="translate(0.0027042,2.5390513)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="268.56191"
+         y="244.01241"
+         id="tspan121984">Analógico No </tspan><tspan
+         x="272.79834"
+         y="249.30407"
+         id="tspan121988">Gatillado<tspan
+   dx="2.3543758"
+   id="tspan121986" /></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-4-4);stroke-width:0.264583"
+       x="355.54453"
+       y="148.67194"
+       id="text88204"
+       transform="translate(0,2.529425)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="289.36483"
+         y="265.33272"
+         id="tspan121990">Fin Ejecutar </tspan><tspan
+         x="294.7751"
+         y="270.62438"
+         id="tspan121992">Órden</tspan></text>
+    <g
+       id="g80533-4"
+       transform="translate(216.74798,-136.13186)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect18853-1-9-9"
+         width="40"
+         height="15"
+         x="53.452023"
+         y="199.4071" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 56.834796,199.63302 v 14.61281"
+         id="path80426-46" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 90.263226,199.56837 v 14.61281"
+         id="path80426-6-92" />
+    </g>
+    <g
+       id="g80533-1"
+       transform="translate(216.74798,-88.067908)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect18853-1-9-2"
+         width="40"
+         height="15"
+         x="53.452023"
+         y="199.4071" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 56.834796,199.63302 v 14.61281"
+         id="path80426-0" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 90.263226,199.56837 v 14.61281"
+         id="path80426-6-97" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-9-9);stroke-width:0.264583"
+       x="289.98566"
+       y="85.040031"
+       id="text93523"
+       transform="translate(216.74798,-133.99448)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="62.980502"
+         y="203.21944"
+         id="tspan121994">Configurar 
+</tspan><tspan
+         x="67.09601"
+         y="208.5111"
+         id="tspan121996">Voltaje</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-9-2);stroke-width:0.264583"
+       x="301.12659"
+       y="133.32082"
+       id="text98129"
+       transform="translate(216.74798,-85.509887)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="62.980502"
+         y="203.21944"
+         id="tspan121998">Configurar 
+</tspan><tspan
+         x="65.883681"
+         y="208.5111"
+         id="tspan122000">Timeout</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 236.30219,45.200001 0.002,4.372557"
+       id="path104735"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect846-4"
+       inkscape:connection-end="#rect61637-7-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 236.31487,91.988455 0,5.63754"
+       id="path104737"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-5"
+       inkscape:connection-end="#rect61637-7-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 236.31486,140.05239 0,5.1476"
+       id="path104739"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-1"
+       inkscape:connection-end="#rect61637-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 257.52808,118.8392 12.67192,0"
+       id="path104741"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-1"
+       inkscape:connection-end="#g80533-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 257.52807,70.77525 12.67193,-2e-6"
+       id="path104743"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-5"
+       inkscape:connection-end="#g80533-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 236.31485,187.62639 0,4.9996"
+       id="path104745"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7"
+       inkscape:connection-end="#rect61637-7-1-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 257.52806,166.41319 h 68.62351 v 26.21278"
+       id="path104851"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7"
+       inkscape:connection-end="#rect61637-7-1-9-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 236.21284,234.95039 236.18747,240.2"
+       id="path104853"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-1-9"
+       inkscape:connection-end="#rect18853-1-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 257.52805,213.83919 h 23.62353 V 240.2"
+       id="path104959"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-1-9"
+       inkscape:connection-end="#rect18853-1-4-1-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 326.15158,235.05237 0,5.14763"
+       id="path104961"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-1-9-5"
+       inkscape:connection-end="#rect18853-1-4-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 347.36478,213.83917 h 23.7868 V 240.2"
+       id="path104965"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-7-1-9-5"
+       inkscape:connection-end="#rect18853-1-4-3"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.15123,247.7 v 0"
+       id="path104967"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-1-4"
+       inkscape:connection-end="#rect18853-1-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 236.15123,255.2 v 13.8191 h 44.50639"
+       id="path105071"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-1-4"
+       inkscape:connection-end="#rect846-4-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 288.01375,255.2 5.7817,6.3191"
+       id="path105073"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-1-4-1-7"
+       inkscape:connection-end="#rect846-4-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 317.18288,255.2 -7.55656,6.3191"
+       id="path105075"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-1-4-1"
+       inkscape:connection-end="#rect846-4-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 371.15158,255.2 v 13.8191 h -50.49396"
+       id="path105077"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-1-4-3"
+       inkscape:connection-end="#rect846-4-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g105643"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 371.15158,269.0191 h 29.72526 V 69.733556 h -90.89223"
+         id="path105272"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 310.16749,118.8392 h 90.89223"
+         id="path105274" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="241.95201"
+       y="94.659996"
+       id="text107715"><tspan
+         sodipodi:role="line"
+         id="tspan107713"
+         style="stroke-width:0.264583"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="240.19809"
+       y="144.29222"
+       id="text107748-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-2"
+         style="stroke-width:0.264583"
+         x="240.19809"
+         y="144.29222">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="239.29286"
+       y="191.79222"
+       id="text107748-1-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-2-1"
+         style="stroke-width:0.264583"
+         x="239.29286"
+         y="191.79222">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="239.28873"
+       y="238.23697"
+       id="text110065-0"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan110063-8"
+         style="stroke-width:0.264583"
+         x="239.28873"
+         y="238.23697">Digital</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="329.03461"
+       y="238.23697"
+       id="text110065-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan110063-3"
+         style="stroke-width:0.264583"
+         x="329.03461"
+         y="238.23697">Digital</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="260.71188"
+       y="211.4332"
+       id="text112581"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan112579"
+         style="stroke-width:0.264583"
+         x="260.71188"
+         y="211.4332">Analógico</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="350.63025"
+       y="211.4332"
+       id="text112581-6"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo Firmware 'Ejecutar Orden'.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan112579-1"
+         style="stroke-width:0.264583"
+         x="350.63025"
+         y="211.4332">Analógico</tspan></text>
+  </g>
+</svg>

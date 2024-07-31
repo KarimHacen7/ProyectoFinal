@@ -1,19 +1,22 @@
-"#","Reference","Qty","Value","Footprint","DNP"
-"1","C1, C3, C7, C12, C13","5","10uF","",""
-"2","C2, C4, C6, C8, C9, C10, C11, C14","8","100nF","",""
-"3","C5","1","100uF","",""
-"4","D1, D2, D3, D4, D5, D6, D7, D8","8","BAT54C","Package_TO_SOT_SMD:SOT-23",""
-"5","F1","1","Fuse","",""
-"6","IC1","1","SN74LVTH245ADWR","SOIC127P1030X265-20N",""
-"7","IC2","1","ADA4891-1ARJZ-RL","SOT95P280X145-5N",""
-"8","J1","1","Conn_01x09_Pin","",""
-"9","L1, L2","2","200uH","",""
-"10","Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8","8","BC807","Package_TO_SOT_SMD:SOT-23",""
-"11","R1, R2","2","150","Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal",""
-"12","R3, R4","2","100k","",""
-"13","U1","1","ADC1175CIMTC/NOPB","footprints:MTC24_TEX",""
-"14","U3","1","Raspberry Pi Pico","RaspberryPiPico:MODULE_SC0915",""
-"15","U4","1","LM358","",""
-"16","U5","1","AMS1117-3.3","Package_TO_SOT_SMD:SOT-223-3_TabPin2",""
-"17","U6, U7","2","MAX9108ESD_","MAX9108ESD_:SOIC127P600X175-14N",""
-"18","U8","1","MCP4821","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",""
+#,Reference,Qty,Value,Footprint,DNP
+,"C1, C3, C7, C12, C13",5,10uF,Capacitor_Tantalum_SMD:CP_EIA-3528-15_AVX-H_Pad1.50x2.35mm_HandSolder,
+,"C2, C4, C6, C8, C11, C14",6,100nF,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,
+,C5,1,100uF,Capacitor_SMD:CP_Elec_6.3x7.7,
+,C15,1,10nF,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,
+,"D1, D2, D3, D4, D5, D6, D7, D8",8,BAT54C,Package_TO_SOT_SMD:SOT-23,
+,F1,1,Fuse,Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder,
+,,,,,
+,IC1,1,SN74LVTH245ADWR,SOIC127P1030X265-20N,
+,IC2,1,ADA4891-1ARJZ-RL,SOT95P280X145-5N,
+10,J1,1,Conn_01x09_Pin,Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical,
+11,J2,1,Screw_Terminal_01x02,TerminalBlock:TerminalBlock_bornier-2_P5.08mm,
+,"L1, L2",2,330uH,Inductor_SMD:L_Sunlord_SWRB1205S,
+,"Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8",8,BC807,Package_TO_SOT_SMD:SOT-23,
+,"R1, R2",2,150,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,
+,"R3, R4, R5",3,150k,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,
+,U1,1,ADC1175CIMTC/NOPB,footprints:MTC24_TEX,
+,U3,1,Raspberry Pi Pico,RaspberryPiPico:MODULE_SC0915,
+,U4,1,LM358,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,
+,U5,1,AMS1117-3.3,Package_TO_SOT_SMD:SOT-223-3_TabPin2,
+,"U6, U7",2,MAX9108ESD_,MAX9108ESD_:SOIC127P600X175-14N,
+,U8,1,MCP4821,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,

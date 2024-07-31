@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="420mm"
+   viewBox="0 0 297 420"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Diagrama de Flujo GUI.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.51150168"
+     inkscape:cx="569.89061"
+     inkscape:cy="781.03361"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="marker143678"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path143676" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path50881" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker51124"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path50884" />
+    </marker>
+    <rect
+       x="886.4726"
+       y="348.71378"
+       width="11.404911"
+       height="22.464218"
+       id="rect31417" />
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path103121" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path103103" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-1-8);stroke-width:0.264583"
+       x="127.53605"
+       y="83.409424"
+       id="text20345-5-6"
+       transform="translate(0,5.201427)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-8"
+       width="40"
+       height="15"
+       x="19.570988"
+       y="25.346504"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-8-8"
+       width="40"
+       height="15"
+       x="19.57099"
+       y="174.83313"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3"
+       width="40"
+       height="20"
+       x="19.570988"
+       y="53.361565"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-5"
+       width="40"
+       height="20"
+       x="19.57099"
+       y="224.8232"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-5-4"
+       width="40"
+       height="20"
+       x="19.747292"
+       y="251.87703"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-5-5"
+       width="40"
+       height="20"
+       x="19.747292"
+       y="278.93085"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-5-5-2"
+       width="40"
+       height="20"
+       x="118.23864"
+       y="279.0578"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"
+       inkscape:connector-avoid="true" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-5-9"
+       width="40"
+       height="20"
+       x="19.747292"
+       y="305.98468"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-5-9-2"
+       width="40"
+       height="20"
+       x="19.747292"
+       y="333.03854"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-7"
+       width="40"
+       height="20"
+       x="19.570988"
+       y="86.376617"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-8"
+       width="30"
+       height="30"
+       x="112.40357"
+       y="56.441746"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-8-8"
+       width="30"
+       height="30"
+       x="251.97354"
+       y="126.81593"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-7-5"
+       width="40"
+       height="20"
+       x="96.100121"
+       y="53.361565"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect61637-8-1"
+       width="30"
+       height="30"
+       x="143.17267"
+       y="-21.017696"
+       transform="rotate(45)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="42.004967"
+       y="168.85127"
+       id="text107748-7-0-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-6-6"
+         style="stroke-width:0.264583"
+         x="42.004967"
+         y="168.85127">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="119.59512"
+       y="137.00137"
+       id="text107748-7-0-8-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-6-6-0"
+         style="stroke-width:0.264583"
+         x="119.59512"
+         y="137.00137">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="12.774456"
+       y="145.83286"
+       id="text107748-7-0-8-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-6-6-3"
+         style="stroke-width:0.264583"
+         x="12.774456"
+         y="145.83286">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="139.33087"
+       y="115.15993"
+       id="text107748-7-0-8-1-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-6-6-3-9"
+         style="stroke-width:0.264583"
+         x="139.33087"
+         y="115.15993">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="90.604729"
+       y="314.01178"
+       id="text107748-7-0-8-8-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-6-6-0-5"
+         style="stroke-width:0.264583"
+         x="90.604729"
+         y="314.01178">Si</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="110.79768"
+       y="286.90869"
+       id="text107748-7-0-8-1-4-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan107746-8-6-6-3-9-1"
+         style="stroke-width:0.264583"
+         x="110.79768"
+         y="286.90869">No</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-8);stroke-width:0.264583"
+       x="44.49995"
+       y="55.08902"
+       id="text5563"
+       transform="translate(0,4.016533)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="32.158363"
+         y="31.065494"
+         id="tspan383">Inicio</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="235.18596"
+       y="38.953819"
+       id="text116721"><tspan
+         sodipodi:role="line"
+         id="tspan116719"
+         style="stroke-width:0.264583"
+         x="235.18596"
+         y="38.953819" /></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text31415"
+       style="font-size:16px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect31417)" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;stroke-width:0.264583"
+       x="241.95201"
+       y="94.659996"
+       id="text107715"><tspan
+         sodipodi:role="line"
+         id="tspan107713"
+         style="stroke-width:0.264583"
+         x="241.95201"
+         y="94.659996" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3);stroke-width:0.264583"
+       x="65.971275"
+       y="91.29776"
+       id="text10434"
+       transform="translate(0,5.0308705)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="30.509374"
+         y="57.174519"
+         id="tspan387"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan385">Rutina de </tspan></tspan><tspan
+         x="27.570021"
+         y="62.466183"
+         id="tspan391"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan389">Inicialización</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-8);stroke-width:0.264583"
+       x="40.605518"
+       y="102.41901"
+       id="text36054"
+       transform="translate(0,7.9366403)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="34.043275"
+         y="128.49743"
+         id="tspan393">¿Salir </tspan><tspan
+         x="34.980925"
+         y="133.7891"
+         id="tspan395">de la </tspan><tspan
+         x="28.745895"
+         y="139.08075"
+         id="tspan397">Aplicación?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-8-8);stroke-width:0.264583"
+       x="35.661945"
+       y="146.12254"
+       id="text40124"
+       transform="translate(-0.0411817,4.0526185)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="35.159729"
+         y="180.55377"
+         id="tspan399">Fin</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-7);stroke-width:0.264583"
+       x="30.541256"
+       y="99.853447"
+       id="text41784"
+       transform="translate(0,5.029673)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="27.450132"
+         y="90.190144"
+         id="tspan401">Responder a </tspan><tspan
+         x="22.038581"
+         y="95.481808"
+         id="tspan403">Señales Recibidas</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="M 39.570988,40.346504 V 53.361565"
+       id="path49946"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect846-8"
+       inkscape:connection-end="#rect18853-3"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="M 39.570988,73.361565 V 86.376617"
+       id="path49948"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3"
+       inkscape:connection-end="#rect18853-3-7"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 39.570988,106.37662 -10e-7,13.01505"
+       id="path49950"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-7"
+       inkscape:connection-end="#rect61637-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 39.570988,161.81807 10e-7,13.01506"
+       id="path49954"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-8"
+       inkscape:connection-end="#rect846-8-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="M 18.357786,140.60487 H 11.379891 V 96.793731 h 8.146967"
+       id="path51596"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI General.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-8-1);stroke-width:0.264583"
+       x="135.88116"
+       y="80.010773"
+       id="text54492"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="116.09962"
+         y="90.190144"
+         id="tspan405">
+</tspan><tspan
+         x="116.09961"
+         y="95.481808"
+         id="tspan407">
+</tspan><tspan
+         x="116.0996"
+         y="100.77347"
+         id="tspan409"> </tspan><tspan
+         x="104.57267"
+         y="106.06514"
+         id="tspan411">¿Dispositivo </tspan><tspan
+         x="104.6843"
+         y="111.3568"
+         id="tspan413">Conectado?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-7-5);stroke-width:0.264583"
+       x="138.79642"
+       y="37.566994"
+       id="text64098"
+       transform="translate(-0.02521285,4.6367753)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="98.693968"
+         y="57.174519"
+         id="tspan415">WMI USB Devices </tspan><tspan
+         x="110.33562"
+         y="62.466183"
+         id="tspan417">Query</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-8-7"
+       width="40"
+       height="15"
+       x="96.100121"
+       y="25.346504"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-8-7-5"
+       width="40"
+       height="15"
+       x="19.57099"
+       y="202.76935"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-8-7-5-5"
+       width="40"
+       height="15"
+       x="19.747292"
+       y="360.09238"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect846-8-7-2"
+       width="40"
+       height="15"
+       x="96.100121"
+       y="174.83313"
+       rx="9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-8-7);stroke-width:0.264583"
+       x="117.16116"
+       y="35.432842"
+       id="text71423"
+       transform="translate(0,2.1621236)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="105.15661"
+         y="29.158894"
+         id="tspan419">Inicio Señal </tspan><tspan
+         x="103.27688"
+         y="34.450556"
+         id="tspan421">Temporizador</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-7-4"
+       width="40"
+       height="20"
+       x="96.100121"
+       y="141.81807"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-7-9"
+       width="40"
+       height="20"
+       x="148.94142"
+       y="141.81807"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-7-4);stroke-width:0.264583"
+       x="105.52278"
+       y="152.52339"
+       id="text76556"
+       transform="translate(0,7.3069857)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="96.918367"
+         y="145.63155"
+         id="tspan423">Etiqueta: Conectado</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-7-9);stroke-width:0.264583"
+       x="173.83168"
+       y="147.24287"
+       id="text76556-3"
+       transform="translate(0,5.0311604)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="160.58637"
+         y="145.63155"
+         id="tspan425">Etiqueta: </tspan><tspan
+         x="155.40943"
+         y="150.92321"
+         id="tspan427">Desconectado</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="M 116.10012,40.346504 V 53.361565"
+       id="path82625"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect846-8-7"
+       inkscape:connection-end="#rect18853-3-7-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 116.10012,73.361565 0,13.015044"
+       id="path82627"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-7-5"
+       inkscape:connection-end="#rect61637-8-1"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 116.10012,128.80302 0,13.01505"
+       id="path82629"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-8-1"
+       inkscape:connection-end="#rect18853-3-7-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 137.31332,107.58981 h 31.6281 v 34.22826"
+       id="path82631"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-8-1"
+       inkscape:connection-end="#rect18853-3-7-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 116.10012,161.81807 0,13.01506"
+       id="path82633"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-7-4"
+       inkscape:connection-end="#rect846-8-7-2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 168.94142,161.81807 v 20.51506 h -32.8413"
+       id="path82635"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-7-9"
+       inkscape:connection-end="#rect846-8-7-2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-8-7-2);stroke-width:0.264583"
+       x="111.19212"
+       y="180.68719"
+       id="text86227"
+       transform="translate(0,2.1604709)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Timer.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="107.15752"
+         y="178.64717"
+         id="tspan429">Fin Señal </tspan><tspan
+         x="103.27689"
+         y="183.93883"
+         id="tspan431">Temporizador</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-8-7-5);stroke-width:0.264583"
+       x="208.45891"
+       y="32.458553"
+       id="text95105"
+       transform="translate(0,2.5571426)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="28.62732"
+         y="206.58272"
+         id="tspan433">Inicio Señal </tspan><tspan
+         x="30.747341"
+         y="211.87438"
+         id="tspan435">Muestreo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-5);stroke-width:0.264583"
+       x="33.650246"
+       y="238.47783"
+       id="text105643"
+       transform="translate(0,2.3847676)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="23.097947"
+         y="228.63546"
+         id="tspan437">Iniciar nuevo hilo, </tspan><tspan
+         x="19.808228"
+         y="233.92711"
+         id="tspan439">escribir instrucciones </tspan><tspan
+         x="31.686563"
+         y="239.21877"
+         id="tspan441">en colas</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect18853-3-0"
+       width="40"
+       height="20"
+       x="118.23864"
+       y="305.63538"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-0);stroke-width:0.264583"
+       x="65.822319"
+       y="285.4025"
+       id="text111067"
+       transform="translate(0,4.6112928)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="120.23836"
+         y="309.44796"
+         id="tspan443">Actualizar Barra de </tspan><tspan
+         x="129.64967"
+         y="314.73961"
+         id="tspan445">Progreso</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-5-4);stroke-width:0.264583"
+       x="91.258003"
+       y="256.58313"
+       id="text112651"
+       transform="translate(0,4.6364902)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="20.09965"
+         y="255.69014"
+         id="tspan447">Enviar Configuración </tspan><tspan
+         x="33.392885"
+         y="260.9818"
+         id="tspan449">Voltaje</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-5-5);stroke-width:0.264583"
+       x="98.57328"
+       y="291.33066"
+       id="text123005"
+       transform="translate(0,4.6621798)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="20.09965"
+         y="282.74483"
+         id="tspan451">Enviar Configuración </tspan><tspan
+         x="25.473995"
+         y="288.03649"
+         id="tspan453">Tiempo Espera</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-5-9);stroke-width:0.264583"
+       x="106.25431"
+       y="304.13242"
+       id="text125817"
+       transform="translate(0,5.0580474)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="24.335047"
+         y="309.79757"
+         id="tspan455">Enviar Orden de </tspan><tspan
+         x="30.92482"
+         y="315.08922"
+         id="tspan457">Muestreo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect61637-8-8);stroke-width:0.264583"
+       x="154.40443"
+       y="288.5061"
+       id="text127639"
+       transform="translate(0,0.45598091)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="87.911923"
+         y="271.65694"
+         id="tspan459"> 
+</tspan><tspan
+         x="88.500004"
+         y="276.9486"
+         id="tspan461">
+</tspan><tspan
+         x="88.5"
+         y="282.24025"
+         id="tspan463"> </tspan><tspan
+         x="74.149467"
+         y="287.53191"
+         id="tspan465">¿Confirmación 
+</tspan><tspan
+         x="79.086633"
+         y="292.82357"
+         id="tspan467">Recibida?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-5-5-2);stroke-width:0.264583"
+       x="158.80121"
+       y="322.90442"
+       id="text140609"
+       transform="translate(0,7.2808882)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="130.82685"
+         y="282.87178"
+         id="tspan469">Esperar</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 39.57099,217.76935 v 7.05385"
+       id="path142875"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect846-8-7-5"
+       inkscape:connection-end="#rect18853-3-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 39.636157,244.8232 0.04597,7.05383"
+       id="path143099"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5"
+       inkscape:connection-end="#rect18853-3-5-4"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 39.747292,271.87703 v 7.05382"
+       id="path143101"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5-4"
+       inkscape:connection-end="#rect18853-3-5-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker51124)"
+       d="m 39.747292,298.93085 v 7.05383"
+       id="path143103"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5-5"
+       inkscape:connection-end="#rect18853-3-5-9"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker143678)"
+       d="m 57.68368,271.87703 17.196305,9.58738"
+       id="path143264"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5-4"
+       inkscape:connection-end="#rect61637-8-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker143678)"
+       d="m 59.747292,288.98293 7.594398,0.0198"
+       id="path143370"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5-5"
+       inkscape:connection-end="#rect61637-8-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker143678)"
+       d="M 57.852812,305.98468 74.83429,296.60551"
+       id="path143372"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5-9"
+       inkscape:connection-end="#rect61637-8-8"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker143678)"
+       d="m 109.71299,289.05781 8.52565,-1e-5"
+       id="path143374"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-8-8"
+       inkscape:connection-end="#rect18853-3-5-5-2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker143678)"
+       d="m 88.499793,310.27101 v 5.36437 h 29.738847"
+       id="path143376"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect61637-8-8"
+       inkscape:connection-end="#rect18853-3-0"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Lstart)"
+       d="m 88.499793,267.84461 v -6.88302 l 50.209107,0 v 18.2337"
+       id="path143491"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect18853-3-5-9-2);stroke-width:0.264583"
+       x="33.467365"
+       y="339.9772"
+       id="text145444"
+       transform="translate(0,2.4108194)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="20.57404"
+         y="336.85225"
+         id="tspan471">Graficar Información </tspan><tspan
+         x="20.100684"
+         y="342.14391"
+         id="tspan473">Muestreada, finalizar </tspan><tspan
+         x="36.45316"
+         y="347.43557"
+         id="tspan475">hilo</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker143678)"
+       d="m 39.747292,325.98468 v 7.05386"
+       id="path149550"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5-9"
+       inkscape:connection-end="#rect18853-3-5-9-2"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect846-8-7-5-5);stroke-width:0.264583"
+       x="36.21059"
+       y="365.03201"
+       id="text151130"
+       transform="translate(0,2.5577463)"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         x="30.805966"
+         y="363.90499"
+         id="tspan477">Fin Señal </tspan><tspan
+         x="30.924566"
+         y="369.19664"
+         id="tspan479">Muestreo</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker143678)"
+       d="m 39.747292,353.03854 v 7.05384"
+       id="path151498"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect18853-3-5-9-2"
+       inkscape:connection-end="#rect846-8-7-5-5"
+       inkscape:export-filename="C:\Users\karim\Desktop\Proyecto Final\Informe\Diagrama de Flujo GUI Muestreo.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+  </g>
+</svg>

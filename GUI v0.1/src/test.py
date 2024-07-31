@@ -1,45 +1,39 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
-x = np.linspace(0, 2 * np.pi, 100)
+def plot_signal_with_text(signal, x_limits, text, text_position):
+    fig, ax = plt.subplots()
+    ax.plot(signal)
+    ax.set_xlim(x_limits)
+    
+    text_obj = ax.text(*text_position, text, fontsize=12, ha='center')
 
-fig, ax = plt.subplots()
+    # Draw the plot to calculate text positions
+    fig.canvas.draw()
 
-# animated=True tells matplotlib to only draw the artist when we
-# explicitly request it
-(ln,) = ax.plot(x, np.sin(x), animated=True)
+    # Get the bounding box of the text in display coordinates
+    bbox = text_obj.get_window_extent(renderer=fig.canvas.get_renderer())
 
-# make sure the window is raised, but the script keeps going
-plt.show(block=False)
+    # Convert display coordinates to data coordinates
+    bbox_data_coords = ax.transData.inverted().transform(bbox)
 
-# stop to admire our empty window axes and ensure it is rendered at
-# least once.
-#
-# We need to fully draw the figure at its final size on the screen
-# before we continue on so that :
-#  a) we have the correctly sized and drawn background to grab
-#  b) we have a cached renderer so that ``ax.draw_artist`` works
-# so we spin the event loop to let the backend process any pending operations
-plt.pause(2.5)
+    # Determine if the text is within the x limits of the plot
+    x_data_min, y_data_min = bbox_data_coords[0]
+    x_data_max, y_data_max = bbox_data_coords[1]
 
-# get copy of entire figure (everything inside fig.bbox) sans animated artist
-bg = fig.canvas.copy_from_bbox(fig.bbox)
-# draw the animated artist, this uses a cached renderer
-ax.draw_artist(ln)
-# show the result to the screen, this pushes the updated RGBA buffer from the
-# renderer to the GUI framework so you can see it
-fig.canvas.blit(fig.bbox)
+    print("x min: %s" %x_data_min)
+    print("x max: %s" %x_data_max)
+    print("y min: %s" %y_data_min)
+    print("y max: %s" %y_data_max)
+    
+    plt.show()
 
-for j in range(100):
-    # reset the background back in the canvas state, screen unchanged
-    fig.canvas.restore_region(bg)
-    # update the artist, neither the canvas state nor the screen have changed
-    ln.set_ydata(np.sin(x + (j / 100) * np.pi))
-    # re-render the artist, updating the canvas state, but not the screen
-    ax.draw_artist(ln)
-    # copy the image to the GUI state, but screen might not be changed yet
-    fig.canvas.blit(fig.bbox)
-    # flush any pending GUI events, re-painting the screen if needed
-    fig.canvas.flush_events()
-    # you can put a pause in if you want to slow things down
-    plt.pause(.1)
+# Example usage
+signal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+x_limits = (2, 8)
+text = "Sample Text"
+text_position = (5, 6)  # x, y position in data coordinates
+
+#plot_signal_with_text(signal, x_limits, text, text_position)
+
+if 0:
+    print("Asd")
