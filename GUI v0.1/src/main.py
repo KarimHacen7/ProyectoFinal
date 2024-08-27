@@ -5,19 +5,9 @@ from PySide6.QtGui import QResizeEvent
 '''
 TODO:
 
-
 DOING:
-    ORDENAR TEMPORALMENTE LA TABLA DE TRAMAS
-    
-    CHEQUEAR QUE A VECE NO ANDA EL NO MOSTRAR SI NO ENTRA (SUCEDE AL CAMBIAR LA INTERPRETACION) (SE ARREGLA AL RESIZE EL EJE)
 
 HOTFIX:
-    extremos navigation scrollbar
-
-    SPI, UART CAPTURE WITH TRIGGER are DISASTROUS, LOW IMPEDANCE WITH TRIGGER PROGRAM???
-    Al cambiar de gatillado, se repite la orden anterior    
-                                                            # Hardware noise/parasitic capacitance
-                                                            # ANALOG MODE IS NOT AFFECTED BY THIS
 '''
 
 if __name__ == "__main__":
